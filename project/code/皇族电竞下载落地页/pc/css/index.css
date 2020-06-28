@@ -1,0 +1,220 @@
+body,div,ul,li,p,span,i,b,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑", "宋体", "Arial Narrow";
+    overflow-x: hidden;
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+a {
+    text-decoration: none;
+}
+select {
+    vertical-align: middle;
+}
+img {
+    border: none;
+}
+.clear{ 
+    clear:both;
+} 
+.bx {
+    width: 1280px;
+    margin: 0 auto;
+}
+body {
+    background: url(../images/bg_PC.jpg) no-repeat center;
+    background-size: cover;
+}
+.box {
+    height: 974px;
+    position: relative;
+}
+.footer {
+    position: relative;
+    height:284px;
+    text-align: center;
+    padding-top: 36px;
+    box-sizing: border-box;
+}
+@keyframes debris1 {
+    0% {
+        top: 653px;
+    }
+    50% {
+        top: 633px
+    }
+    100% {
+        top: 653px;
+    }
+}
+@keyframes debris2 {
+    0% {
+        top: 66px;
+    }
+    50% {
+        top: 96px;
+    }
+    100% {
+        top: 66px;
+    }
+}
+@keyframes debris3 {
+    0% {
+        top: 563px;
+    }
+    50% {
+        top: 603px;
+    }
+    100% {
+        top: 563px;
+    }
+}
+
+/* box start */
+.box>img {
+    position: absolute;
+}
+.logo {
+    position: absolute;
+    width: 95px;
+    left: 89px;
+    top: 43px;
+}
+.info {
+    width: 585px;
+    left: 80px;
+    top: 308px;
+}
+.url {
+    width: 310px;
+    left: 74px;
+    top: 581px;
+}
+.code {
+    width: 182px;
+    left: 440px;
+    top: 546px;
+}
+.download-info {
+    position: absolute;
+    left: 430px;
+    top: 742px;
+    font-size:14px;
+    font-family:"MicrosoftYaHei";
+    color:rgba(255,255,255,1);
+}
+.partner-icon {
+    width: 174px;
+    left: 45px;
+    top: 877px;
+}
+.tags {
+    position: absolute;
+    left: 81px;
+    top: 255px;
+    width: 585px;
+    height: 23px;
+    font-size:23px;
+    font-family:"MicrosoftYaHei";
+    color:rgba(255,255,255,1);
+    line-height: 23px;
+}
+.tags .tag {
+    width: 25%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid rgba(190,255,219,1);
+    box-sizing: border-box;
+}
+.tags .tag:last-of-type {
+    border: none;
+}
+.bear {
+    width: 424px;
+    right: 149px;
+    top: 233px;
+}
+.frame {
+    width: 279px;
+    right: 29px;
+    top: 215px;
+}
+.phone {
+    width: 293px;
+    right: 87px;
+    top: 172px;
+}
+.debris1 {
+    width: 80px;
+    right: 433px;
+    top: 653px;
+    animation: debris1 3s infinite;
+}
+.debris2 {
+    width: 45px;
+    right: 389px;
+    top: 66px;
+    animation: debris2 5s infinite;
+}
+.debris3 {
+    width: 81px;
+    right: -51px;
+    top: 563px;
+    animation: debris3 5s infinite;
+}
+.pay {
+    width: 376px;
+    right: 93px;
+    top: 886px;
+}
+.pay-title {
+    position: absolute;
+    left: 660px;
+    top: 888px;
+    font-size:20px;
+    font-family:"Adobe Heiti Std R";
+    color:rgba(67,96,107,1);
+    line-height: 20px;
+}
+.footer p {
+    font-size:14px;
+    font-family:"MicrosoftYaHei";
+    color:rgba(67,96,107,1);
+    line-height:29px;
+}
+.copyright {
+    font-size:18px;
+    font-family:"MicrosoftYaHei";
+    color:rgba(39,55,61,1);
+    margin-top: 80px;
+}
+.footer img {
+    position: absolute;
+}
+.organization1 {
+    width: 169px;
+    left: 225px;
+    top: 168px;
+}
+.organization2 {
+    width: 201px;
+    left: 451px;
+    top: 167px;
+}
+.organization3 {
+    width: 158px;
+    left: 709px;
+    top: 167px;
+}
+.organization4 {
+    width: 97px;
+    left: 923px;
+    top: 174px;
+}
+/* box end */

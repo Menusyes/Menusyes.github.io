@@ -1,0 +1,877 @@
+.BTSBox {
+  width: 1920px;
+  margin: 0 auto;
+}
+.BTSBox .title {
+  height: 54px;
+  background-color: #2A2D33;
+  position: relative;
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 54px;
+}
+.BTSBox .title > div {
+  position: absolute;
+  height: 100%;
+}
+.BTSBox .title .logo {
+  left: 37px;
+}
+.BTSBox .title .logo img {
+  height: 19px;
+}
+.BTSBox .title .client {
+  left: 234px;
+  position: absolute;
+}
+.BTSBox .title .client span {
+  color: #768199;
+}
+.BTSBox .title .client a {
+  display: inline-block;
+  margin-left: 12px;
+  color: #ffffff;
+  position: relative;
+  padding-right: 30px;
+}
+.BTSBox .title .client a::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 5.5px 0 5.5px;
+  border-color: #ffffff transparent transparent transparent;
+}
+.BTSBox .title .select {
+  position: absolute;
+  left: 308px;
+  top: 44px;
+  background-color: #393F4A;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: opacity .5s;
+  z-index: 999;
+  text-align: center;
+}
+.BTSBox .title .select li {
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  padding: 0 15px;
+}
+.BTSBox .title .hidden {
+  opacity: 0;
+  height: 0;
+}
+.BTSBox .title .toDay {
+  left: 502px;
+}
+.BTSBox .title .toMonth {
+  left: 850px;
+}
+.BTSBox .title .average {
+  left: 1200px;
+}
+.BTSBox .title .average span {
+  margin-left: 32px;
+}
+.BTSBox .statistics {
+  margin-top: 36px;
+  height: 262px;
+  display: flex;
+  justify-content: center;
+}
+.BTSBox .statistics .participation,
+.BTSBox .statistics .bet {
+  height: 100%;
+  width: 367px;
+  background: #2d313a;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  margin-right: 7px;
+  font-size: 12px;
+  color: #ffffff;
+  position: relative;
+}
+.BTSBox .statistics .participation .yesterday,
+.BTSBox .statistics .bet .yesterday,
+.BTSBox .statistics .participation .today,
+.BTSBox .statistics .bet .today {
+  position: absolute;
+  bottom: 17px;
+}
+.BTSBox .statistics .participation .yesterday i,
+.BTSBox .statistics .bet .yesterday i,
+.BTSBox .statistics .participation .today i,
+.BTSBox .statistics .bet .today i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  vertical-align: text-bottom;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+.BTSBox .statistics .participation .yesterday,
+.BTSBox .statistics .bet .yesterday {
+  left: 28px;
+}
+.BTSBox .statistics .participation .yesterday i,
+.BTSBox .statistics .bet .yesterday i {
+  border: 1px dashed #81d986;
+}
+.BTSBox .statistics .participation .today,
+.BTSBox .statistics .bet .today {
+  left: 92px;
+}
+.BTSBox .statistics .participation .today i,
+.BTSBox .statistics .bet .today i {
+  background: #13b6ee;
+}
+.BTSBox .statistics .participation .time,
+.BTSBox .statistics .bet .time {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  font-size: 12px;
+  color: #768199;
+}
+.BTSBox .statistics .participation .time img,
+.BTSBox .statistics .bet .time img {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 5px;
+}
+.BTSBox .statistics .participation .echarts,
+.BTSBox .statistics .bet .echarts {
+  position: absolute;
+  left: 8px;
+  bottom: 45px;
+  width: 352px;
+  height: 235px;
+  background: #292e36;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.14);
+}
+.BTSBox .statistics .participation .echarts p,
+.BTSBox .statistics .bet .echarts p {
+  font-size: 12px;
+  color: #768199;
+  text-align: center;
+  margin-top: 4px;
+}
+.BTSBox .statistics .participation .echarts .charts-box,
+.BTSBox .statistics .bet .echarts .charts-box {
+  height: 216px;
+}
+.BTSBox .statistics .users {
+  position: relative;
+  width: 1115px;
+  height: 100%;
+  background: #2d313a;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  opacity: 1;
+  border-radius: 6px;
+}
+.BTSBox .statistics .users > div {
+  position: absolute;
+}
+.BTSBox .statistics .users .risk_user,
+.BTSBox .statistics .users .full_user,
+.BTSBox .statistics .users .unconfirmed_user {
+  top: -16px;
+  width: 135px;
+  height: 108px;
+  background: #353b45;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+}
+.BTSBox .statistics .users .risk_user p,
+.BTSBox .statistics .users .full_user p,
+.BTSBox .statistics .users .unconfirmed_user p {
+  font-size: 12px;
+  color: #768199;
+  text-align: center;
+  margin-top: 13px;
+}
+.BTSBox .statistics .users .risk_user .num,
+.BTSBox .statistics .users .full_user .num,
+.BTSBox .statistics .users .unconfirmed_user .num {
+  margin-top: 21px;
+  text-align: center;
+  font-size: 22px;
+  color: #ffffff;
+}
+.BTSBox .statistics .users .risk_user .hint,
+.BTSBox .statistics .users .full_user .hint,
+.BTSBox .statistics .users .unconfirmed_user .hint {
+  position: absolute;
+  bottom: 0;
+  width: 135px;
+  height: 5px;
+  opacity: 1;
+  border-radius: 0px 0px 4px 4px;
+}
+.BTSBox .statistics .users .risk_user .danger,
+.BTSBox .statistics .users .full_user .danger,
+.BTSBox .statistics .users .unconfirmed_user .danger {
+  background-color: #eb4648;
+}
+.BTSBox .statistics .users .risk_user .warning,
+.BTSBox .statistics .users .full_user .warning,
+.BTSBox .statistics .users .unconfirmed_user .warning {
+  background-color: #ecd879;
+}
+.BTSBox .statistics .users .risk_user .sureness,
+.BTSBox .statistics .users .full_user .sureness,
+.BTSBox .statistics .users .unconfirmed_user .sureness {
+  background-color: #5ada85;
+}
+.BTSBox .statistics .users .risk_user {
+  left: 14px;
+}
+.BTSBox .statistics .users .full_user {
+  left: 155px;
+}
+.BTSBox .statistics .users .unconfirmed_user {
+  left: 296px;
+}
+.BTSBox .statistics .users .today_userNum,
+.BTSBox .statistics .users .today_num {
+  top: 131px;
+  width: 197px;
+  height: 100px;
+  background: #353b45;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+}
+.BTSBox .statistics .users .today_userNum span,
+.BTSBox .statistics .users .today_num span {
+  position: absolute;
+}
+.BTSBox .statistics .users .today_userNum .info,
+.BTSBox .statistics .users .today_num .info {
+  top: 13px;
+  left: 119px;
+  font-size: 16px;
+  color: #768199;
+}
+.BTSBox .statistics .users .today_userNum .num,
+.BTSBox .statistics .users .today_num .num {
+  top: 32px;
+  right: 102px;
+  font-size: 29px;
+  color: #ffffff;
+}
+.BTSBox .statistics .users .today_userNum .change,
+.BTSBox .statistics .users .today_num .change {
+  top: 57px;
+  right: 15px;
+  font-size: 19px;
+}
+.BTSBox .statistics .users .today_userNum .change.add,
+.BTSBox .statistics .users .today_num .change.add {
+  color: #5ada85;
+}
+.BTSBox .statistics .users .today_userNum .change.decrease,
+.BTSBox .statistics .users .today_num .change.decrease {
+  color: #eb4648;
+}
+.BTSBox .statistics .users .today_userNum {
+  left: 14px;
+}
+.BTSBox .statistics .users .today_num {
+  left: 231px;
+}
+.BTSBox .statistics .users .as_compensate,
+.BTSBox .statistics .users .await_compensate,
+.BTSBox .statistics .users .average {
+  top: -16px;
+  width: 215px;
+  height: 270px;
+  background: #353b45;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+}
+.BTSBox .statistics .users .as_compensate p,
+.BTSBox .statistics .users .await_compensate p,
+.BTSBox .statistics .users .average p {
+  font-size: 12px;
+  color: #768199;
+  margin-top: 11px;
+  margin-left: 10px;
+}
+.BTSBox .statistics .users .as_compensate ul,
+.BTSBox .statistics .users .await_compensate ul,
+.BTSBox .statistics .users .average ul {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 13px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.BTSBox .statistics .users .as_compensate ul li,
+.BTSBox .statistics .users .await_compensate ul li,
+.BTSBox .statistics .users .average ul li {
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.BTSBox .statistics .users .as_compensate {
+  left: 438px;
+}
+.BTSBox .statistics .users .await_compensate {
+  left: 660px;
+}
+.BTSBox .statistics .users .average {
+  left: 884px;
+}
+.BTSBox .match {
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+.BTSBox .match .match_item {
+  margin: 0 auto;
+  margin-top: 14px;
+  width: 1860px;
+  background: #2f343d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.BTSBox .match .match_item .match_title {
+  height: 59px;
+  line-height: 59px;
+  position: relative;
+}
+.BTSBox .match .match_item .match_title > div {
+  position: absolute;
+}
+.BTSBox .match .match_item .match_title .line {
+  top: 20px;
+  width: 1px;
+  height: 20px;
+  background: #434957;
+}
+.BTSBox .match .match_item .match_title .line1 {
+  left: 115px;
+}
+.BTSBox .match .match_item .match_title .line2 {
+  left: 212px;
+}
+.BTSBox .match .match_item .match_title .line3 {
+  left: 376px;
+}
+.BTSBox .match .match_item .match_title .line4 {
+  left: 844px;
+}
+.BTSBox .match .match_item .match_title .line5 {
+  left: 1105px;
+}
+.BTSBox .match .match_item .match_title .line6 {
+  left: 1398px;
+}
+.BTSBox .match .match_item .match_title .line7 {
+  left: 1749px;
+}
+.BTSBox .match .match_item .match_title .time {
+  left: 23px;
+  font-size: 13px;
+  color: #5ada85;
+}
+.BTSBox .match .match_item .match_title .game,
+.BTSBox .match .match_item .match_title .competition,
+.BTSBox .match .match_item .match_title .teamA_name,
+.BTSBox .match .match_item .match_title .teamB_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.BTSBox .match .match_item .match_title .game {
+  left: 125px;
+  max-width: 87px;
+  font-size: 13px;
+  color: #768199;
+}
+.BTSBox .match .match_item .match_title .game img {
+  width: 20px;
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+.BTSBox .match .match_item .match_title .competition {
+  left: 222px;
+  max-width: 154px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .odds {
+  top: 18px;
+  width: 53px;
+  height: 26px;
+  background: #3d434f;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 26px;
+}
+.BTSBox .match .match_item .match_title .odds_up {
+  color: #eb4648;
+}
+.BTSBox .match .match_item .match_title .odds_down {
+  color: #5ada85;
+}
+.BTSBox .match .match_item .match_title .teamA_odds {
+  left: 414px;
+}
+.BTSBox .match .match_item .match_title .teamA_odds_chenge,
+.BTSBox .match .match_item .match_title .teamB_odds_chenge {
+  top: 21px;
+  width: 9px;
+  height: 17px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.BTSBox .match .match_item .match_title .teamA_odds_chenge {
+  left: 400px;
+}
+.BTSBox .match .match_item .match_title .teamB_odds_chenge {
+  left: 805px;
+}
+.BTSBox .match .match_item .match_title .chenge_up {
+  background-image: url(../images/shangsheng.png);
+}
+.BTSBox .match .match_item .match_title .chenge_down {
+  background-image: url(../images/xiajiang.png);
+}
+.BTSBox .match .match_item .match_title .teamA_name {
+  right: 1313px;
+  max-width: 77px;
+  font-size: 13px;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .teamA_icon {
+  position: absolute;
+  left: 559px;
+  top: 17px;
+  width: 26px;
+}
+.BTSBox .match .match_item .match_title .than {
+  left: 598px;
+  font-size: 14px;
+  font-family: Roboto;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .teamB_icon {
+  position: absolute;
+  left: 616px;
+  top: 17px;
+  width: 26px;
+}
+.BTSBox .match .match_item .match_title .teamB_name {
+  left: 662px;
+  max-width: 83px;
+  font-size: 13px;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .teamB_odds {
+  left: 745px;
+}
+.BTSBox .match .match_item .match_title .bet_state {
+  left: 863px;
+  top: 18px;
+  width: 218px;
+  height: 26px;
+  background: #353b45;
+  border-radius: 3px;
+  line-height: 26px;
+}
+.BTSBox .match .match_item .match_title .bet_state span {
+  position: absolute;
+  font-size: 14px;
+  color: #ffffff;
+  margin-left: 12px;
+}
+.BTSBox .match .match_item .match_title .bet_state i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(270deg, #42d875 0%, #5fac79 100%);
+}
+.BTSBox .match .match_item .match_title .bet_number,
+.BTSBox .match .match_item .match_title .user_number,
+.BTSBox .match .match_item .match_title .capita {
+  font-size: 12px;
+  color: #768199;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.BTSBox .match .match_item .match_title .bet_number span,
+.BTSBox .match .match_item .match_title .user_number span,
+.BTSBox .match .match_item .match_title .capita span {
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .bet_number {
+  left: 1121px;
+  max-width: 82px;
+}
+.BTSBox .match .match_item .match_title .user_number {
+  left: 1204px;
+  max-width: 85px;
+}
+.BTSBox .match .match_item .match_title .capita {
+  left: 1290px;
+  max-width: 108px;
+}
+.BTSBox .match .match_item .match_title .bast {
+  top: 18px;
+  width: 60px;
+  height: 25px;
+  background: #353b45;
+  border-radius: 4px;
+  color: #49505e;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+}
+.BTSBox .match .match_item .match_title .bast_num {
+  left: 1410px;
+}
+.BTSBox .match .match_item .match_title .bast_num.bright {
+  background: #de4343;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .bast_user {
+  left: 1476px;
+}
+.BTSBox .match .match_item .match_title .bast_user.bright {
+  background: #0f97c4;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .bast_money {
+  left: 1542px;
+}
+.BTSBox .match .match_item .match_title .bast_money.bright {
+  background: #81ab1d;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .bast_all {
+  left: 1608px;
+}
+.BTSBox .match .match_item .match_title .bast_all.bright {
+  background: #714fb8;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .bast_single {
+  left: 1674px;
+}
+.BTSBox .match .match_item .match_title .bast_single.bright {
+  background: #ee8813;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .participation_num {
+  left: 1767px;
+  top: 16px;
+  width: 27px;
+  height: 27px;
+  background: #eb4648;
+  border-radius: 50%;
+  line-height: 29px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_title .is_top {
+  left: 1813px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  background: url(../images/zhiding_off.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.BTSBox .match .match_item .match_title .stick {
+  background-image: url(../images/zhiding.png);
+}
+.BTSBox .match .match_item .match_info {
+  height: 463px;
+  transition: height .7s;
+  position: relative;
+}
+.BTSBox .match .match_item .match_info .match_charts {
+  height: 221px;
+}
+.BTSBox .match .match_item .match_info .teamA_icon,
+.BTSBox .match .match_item .match_info .teamB_icon {
+  position: absolute;
+  left: 22px;
+  width: 23px;
+  z-index: 999;
+}
+.BTSBox .match .match_item .match_info .teamA_icon {
+  top: 100px;
+}
+.BTSBox .match .match_item .match_info .teamB_icon {
+  top: 149px;
+}
+.BTSBox .match .match_item .match_info .match_details {
+  width: 1716px;
+  height: 231px;
+  background: #333942;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+  margin: 0 auto;
+  position: relative;
+}
+.BTSBox .match .match_item .match_info .match_details .cut_off_rule {
+  position: absolute;
+  right: 84px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  border: 1px solid #2f343d;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item {
+  height: 54px;
+  line-height: 54px;
+  position: relative;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item > div {
+  position: absolute;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .danger {
+  background-color: #C93C3E;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .danger_text {
+  color: #EB4648;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .sureness {
+  background-color: #4EBD73;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .sureness_text {
+  color: #5ADA85;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_interval,
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_interval {
+  top: 16px;
+  width: 63px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_interval {
+  left: 64px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_interval {
+  right: 105px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_single_perCapita,
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_single_perCapita {
+  font-size: 14px;
+  color: #768199;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_single_perCapita .unit,
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_single_perCapita .unit {
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_single_perCapita {
+  left: 149px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_single_perCapita {
+  right: 185px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_single_users,
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_single_users {
+  font-size: 14px;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_single_users {
+  right: 1280px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_single_users {
+  right: 355px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_compensate,
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_compensate {
+  top: 17px;
+  width: 226px;
+  height: 22px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 22px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_compensate i,
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_compensate i {
+  position: absolute;
+  height: 100%;
+  border-radius: 2px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_compensate span,
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_compensate span {
+  position: absolute;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_compensate {
+  right: 982px;
+  text-align: right;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_compensate i {
+  right: 0;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamA_compensate span {
+  right: 15px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_compensate {
+  left: 944px;
+  text-align: right;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_compensate i {
+  left: 0;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .teamB_compensate span {
+  left: 15px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .quota {
+  left: 765px;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  text-align: center;
+  padding-top: 12px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .quota p {
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .quota .progress_bar {
+  margin-top: 6px;
+  width: 100%;
+  height: 6px;
+  background: #272c33;
+  border-radius: 4px;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .quota .progress_bar .progress {
+  height: 100%;
+  border-radius: 4px;
+  background: #ecd879;
+}
+.BTSBox .match .match_item .match_info .match_details .match_details_item .risk_users {
+  right: 36px;
+  top: 19px;
+  width: 27px;
+  height: 27px;
+  background: #eb4648;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 29px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.BTSBox .match .match_item .unfold {
+  height: 0;
+}
+.BTSBox .filtrate_box {
+  position: fixed;
+  left: -20px;
+  bottom: 50px;
+  transition: left .3s;
+}
+.BTSBox .filtrate_box .filtrate_menu {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: url(../images/shaixuan_off.png) no-repeat center;
+  background-size: 100% 100%;
+  background-color: #515969;
+  z-index: 99;
+}
+.BTSBox .filtrate_box .filtrate_games {
+  position: absolute;
+  left: 26px;
+  bottom: 26px;
+  display: none;
+  background: #515969;
+  border-radius: 7px;
+  z-index: -1;
+  width: 555px;
+}
+.BTSBox .filtrate_box .filtrate_games .confirm {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-family: Roboto;
+  cursor: pointer;
+}
+.BTSBox .filtrate_box .filtrate_games .games_box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  margin-right: 40px;
+}
+.BTSBox .filtrate_box .filtrate_games .game_item {
+  text-align: center;
+  width: 69px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.BTSBox .filtrate_box .filtrate_games .game_item img {
+  width: 36px;
+  height: 36px;
+}
+.BTSBox .filtrate_box .filtrate_games .game_item p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 5px;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: bold;
+  color: #ffffff;
+}
+.BTSBox .filtrate_box .filtrate_games .game_item.active {
+  opacity: 1;
+}
+.BTSBox .filtrate_box .filtrate_games.show {
+  display: block;
+}
+.BTSBox .filtrate_box.active {
+  left: 7px;
+}
+.BTSBox .filtrate_box.active .filtrate_menu {
+  background-image: url(../images//shaixuan.png);
+}
+.BTSBox .filtrate_box:hover {
+  left: 7px;
+}
+.BTSBox .shade {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.BTSBox .shade.show {
+  display: block;
+}

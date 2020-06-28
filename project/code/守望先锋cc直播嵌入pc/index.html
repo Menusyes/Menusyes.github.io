@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>守望先锋数据面板</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    
+</head>
+<body>
+    <div id="app">
+        <a href="http://by.xxadc.com/"><img src="./images/img_shujutigong.png" ></a>
+        <div class="tab_title clear">
+            <div class="match_integral tab_title_item active" >赛事积分</div>
+            <div class="team_data tab_title_item">战队数据</div>
+            <div class="match_data tab_title_item" >赛事数据</div>
+        </div>
+        <div class="border"></div>
+        <div class="tab_body">
+            <!-- 赛事积分 -->
+            <div class="tab_body_item match_integral active">
+                <div class="integral_tab">
+                    <!-- 常规赛 -->
+                    <div class="integral_tab_title getReady active">常规赛</div>
+                    <!-- 季中赛 -->
+                    <div class="group">季中赛</div>
+                    <!-- 季后赛 -->
+                    <div class="repetition">季后赛</div>
+                </div>
+                <div class="integral_tab_body">
+                    <!-- 常规赛 -->
+                    <div class="integral_tab_body_item group_body active clear">
+                        <div class="group_left" id="groupMatchesSchedule"></div>
+                        <div class="group_right" id="groupRanking"></div>
+                    </div>
+                    <!-- 季中赛 -->
+                    <div class="integral_tab_body_item getReady"></div>
+                    <!-- 季后赛 -->
+                    <div class="integral_tab_body_item repetition_body">
+                    </div>
+                </div>
+            </div>
+            <!-- 战队数据 -->
+            <div class="tab_body_item team_data" id="teamDataBox"></div>
+            <!-- 赛事数据 -->
+            <div class="tab_body_item match_data">
+                <div class="occupied"></div>
+                <div class="match_list" id="matchList">
+                    
+                </div>
+                <div class="match_info" id="matchInfo">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 小组赛比赛列表模板 放在 id为groupMatchesSchedule 盒子里面 -->
+    <script id="groupMatchesSchedule_template" type="text/html"> 
+        <div class="schedule_title">
+            <div class="schedule_title_bottom schedule_button_next"></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {{each myData.data myItem myIndex}}
+                    <div class="swiper-slide {{myIndex == 0 ? 'active' : ''}}">{{myItem.title}}</div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="schedule_title_bottom schedule_button_prev"></div>
+        </div>
+        <div class="schedule_body">
+            {{each myData.data myItem myIndex}}
+            <div class="schedule_body_item {{myIndex == 0 ? 'active' : ''}}">
+                {{each myItem.match_list matchItem matchIndex}}
+                <div class="match_item" >
+                        <div class="date">
+                            {{matchItem.date}}
+                        </div>
+                        <div class="year">{{matchItem.year}}</div>
+                        <div class="time">{{matchItem.time}}</div>
+                        <div class="team_name teamA_name">{{matchItem.team_a_name}}</div>
+                        <div class="team_icon teamA_icon">
+                            <img src="{{matchItem.team_a_icon}}" >
+                        </div>
+                        <div class="line"></div>
+                        {{if matchItem.status == 0}}
+                        {{else}}
+                        <div class="team_score teamA_score">{{matchItem.team_a_score}}</div>
+                        {{/if}}
+                        
+                        <div class="team_name teamB_name">{{matchItem.team_b_name}}</div>
+                        <div class="team_icon teamB_icon">
+                            <img src="{{matchItem.team_b_icon}}" >
+                        </div>
+                        {{if matchItem.status == 0}}
+                        {{else}}
+                        <div class="team_score teamB_score">{{matchItem.team_b_score}}</div>
+                        {{/if}}
+                        
+                        {{if matchItem.status == 0}}
+                        <div class="vs">
+                            <!-- VS -->
+                            <img src="./images/ic_vs.png">
+                        </div>
+                        {{/if}}
+                        <div class="area">{{matchItem.area}}</div>
+                        <div class="status">
+                            {{if matchItem.status == 0}}
+                            <div class="notStart">未开始</div>
+                            <!-- <img src="./images/ic_weikaishi.png" > -->
+                            {{else if matchItem.status == 1}}
+                            <div class="doing">进行中</div>
+                            <!-- <img src="./images/ic_jingxingzhong.png" > -->
+                            {{else if matchItem.status == 2}}
+                            <div class="over">已结束</div>
+                            <!-- <img src="./images/ic_yijieshu.png" > -->
+                            {{/if}}
+                        </div>
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </script>
+    <!-- 小组赛积分榜模板  放在 id为groupRanking 盒子里面  -->
+    <script id="groupRanking_teamplate" type="text/html">
+        <div class="schedule_banner">
+            <img src="./images/img_xiaozujifengbang.png" >
+        </div>
+        <div class="ranking_title">
+            {{each myData item index}}
+                <div class="ranking_title_item  {{index == 0 ? 'active' : ''}}">{{item.title}}</div>
+            {{/each}}
+        </div>
+        <div class="body_info">
+            <div class="mingci">名次</div>
+            <div class="name">战队</div>
+            <div class="team_win">比赛战绩</div>
+            <div class="map_win">地图战绩</div>
+            <div class="score">净胜分</div>
+        </div>
+        <div class="ranking_body">
+            {{each myData item index}}
+            <div class="ranking_body_item {{index == 0 ? 'active' : ''}}">
+                {{each item.rankingList teamItem teamIndex}}
+                <div class="team_item">
+                    <div class="topThree">
+                        {{if teamItem.ranking == 1}}
+                            <img src="./images/rank_1.png" >
+                        {{else if teamItem.ranking == 2}}
+                            <img src="./images/rank_2.png" >
+                        {{else if teamItem.ranking == 3}}
+                            <img src="./images/rank_3.png" >
+                        {{/if}}
+                    </div>
+                    {{if teamItem.ranking > 3}}
+                    <div class="topThreeNum">{{teamItem.ranking}}</div>
+                    {{/if}}
+                    <div class="team_icon">
+                        <img src="{{teamItem.team_icon}}" >
+                    </div>
+                    <div class="team_name">{{teamItem.team_name}}</div>
+                    <div class="team_grade">{{teamItem.team_win}}-{{teamItem.team_lose}}</div>
+                    <div class="map_grade">{{teamItem.map_win}}-{{teamItem.map_lose}}</div>
+                    <div class="score {{teamItem.score > 0 ? 'add' : ''}}">{{teamItem.score > 0 ? '+' : ''}}{{teamItem.score}}</div>
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </script>
+    <!-- 战队数据模板 放在 id为teamDataBox 盒子里面 -->
+    <script id="teamData_teamplate" type="text/html">
+        <div class="teamTab_title">
+            <div class="area_a_name">{{myData.area_a.title}}</div>
+            <div class="area_b_name">{{myData.area_b.title}}</div>
+            <!-- 太平洋 -->
+            <div class="teamTab_title_left">
+                {{each myData.area_a.teams item index}}
+                <div class="teamTab_title_item {{index == 0 ? 'active' : ''}}" onclick="teamClick({{item.team_id}},this,'left')">
+                    <div class="icon"> <img src="{{item.team_icon}}"> </div>
+                    <div class="name">{{item.team_name}}</div>
+                </div>
+                {{/each}} 
+            </div>
+            <!-- 大西洋 -->
+            <div class="teamTab_title_rigth">
+                {{each myData.area_b.teams item index}}
+                <div class="teamTab_title_item" onclick="teamClick({{item.team_id}},this,'right')">
+                    <div class="icon"> <img src="{{item.team_icon}}"> </div>
+                    <div class="name">{{item.team_name}}</div>
+                </div>
+                {{/each}} 
+            </div>
+        </div>
+        <div class="teamTab_body">
+            <div class="team_info">
+                <!-- 基本信息 -->
+                <div class="introduce">
+                    <img src="{{teamInfo.team_icon}}" >
+                    <div class="name">{{teamInfo.team_name}}</div>
+                    <div class="label">胜率:</div>
+                    <div class="win_rate">{{teamInfo.win_rate}}%</div>
+                </div>
+                <!-- 战绩 -->
+                <div class="performance">
+                    <div class="label_1">比赛战绩:</div>
+                    <div class="match">{{teamInfo.score_win_num}}-{{teamInfo.score_lose_num}}</div>
+                    <div class="label_2">地图战绩:</div>
+                    <div class="map">{{teamInfo.map_win_num}}-{{teamInfo.map_lose_num}}</div>
+                </div>
+                <!-- 地图比分 -->
+                <div class="detail">
+                    {{each teamInfo.maps item index}}
+                    <div class="detail_item">
+                        <div class="detail_data">
+                            <div class="detail_data_rate">{{item.map_item_win_rate}}%</div>
+                            <div class="detail_data_record">{{item.map_item_win}}-{{item.map_item_lose}}&nbsp;</div>
+                            {{if item.map_item_type == 0}}
+                                <img class="detail_type_icon" src="./images/ic_zhanlingyaodian.png" >
+                            {{else if item.map_item_type == 1}}
+                                <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                            {{else if item.map_item_type == 2}}
+                                <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                            {{else if item.map_item_type == 3}}
+                                <img class="detail_type_icon" src="./images/ic_gongjihusong.png" >
+                            {{/if}}
+                        </div>
+                        {{if item.map_item_type == 0}}
+                        <div class="detail_type">占领要点&nbsp;&nbsp;</div>
+                        {{else if item.map_item_type == 1}}
+                        <div class="detail_type">运载作战&nbsp;&nbsp;</div>
+                        {{else if item.map_item_type == 2}}
+                        <div class="detail_type">攻防作战&nbsp;&nbsp;</div>
+                        {{else if item.map_item_type == 3}}
+                        <div class="detail_type">攻防运载&nbsp;&nbsp;</div>
+                        {{/if}}
+                    </div>
+                    {{/each}} 
+                    
+                </div>
+                <!-- 分割线 -->
+                <div class="line"></div>
+                <!-- 天敌克制 -->
+                <div class="relation">
+                    <!-- 天敌 -->
+                    <div class="enemy">
+                        <div class="title">天<br />敌</div>
+                        <div class="icon" >
+                            <img src="{{teamInfo.enemy.enemy_icon}}" >
+                        </div>
+                        <div class="name"><div>{{teamInfo.enemy.enemy_name}}</div></div>
+                        <div class="win_rate_box">
+                            <div class="win_rate">{{teamInfo.enemy.enemy_win_rate}}%</div>
+                            <div class="shenglv">胜率</div>
+                        </div>
+                    </div>
+                    <!-- 克制 -->
+                    <div class="restraint">
+                        <div class="title">克<br />制</div>
+                        <div class="icon" >
+                            <img src="{{teamInfo.restraint.restraint_icon}}" >
+                        </div>
+                        <div class="name"><div>{{teamInfo.restraint.restraint_name}}</div></div>
+                        <div class="win_rate_box">
+                            <div class="win_rate">{{teamInfo.restraint.restraint_win_rate}}%</div>
+                            <div class="shenglv">胜率</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 成绩 -->
+                <div class="record">
+                    <div class="match_record">
+                        <div class="top">{{teamInfo.five_score_win_num}}胜{{teamInfo.five_score_lose_num}}负</div>
+                        <div class="bottom">近五场战绩</div>
+                    </div>
+                    <div class="map_record">
+                        <div class="top">{{teamInfo.score}}分</div>
+                        <div class="bottom">近五场地图得分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="player_box">
+                <div class="players">
+                    {{each teamInfo.player item index}}
+                    <div class="player_item {{index == 0 ? 'active' : ''}}">
+                        <div class="icon"><img src="{{item.icon}}" ></div>
+                        <div class="player_name">{{item.nick_name}}</div>
+                    </div>
+                    {{/each}} 
+                </div>
+                <div class="player_info">
+                    {{each teamInfo.player item index}}
+                    <div class="player_info_item {{index == 0 ? 'active' : ''}}">
+                        <div class="icon">
+                            <img src="{{item.icon}}">
+                        </div>
+                        <div class="name">{{item.nick_name}}</div>
+                        <div class="location">
+                            擅长位置:
+                            <img src="" >
+                            {{if item.location == 0}}
+                            <span>输出</span>
+                            {{else if item.location == 1}}
+                            <span>坦克</span>
+                            {{else if item.location == 2}}
+                            <span>辅助</span>
+                            {{/if}}
+                        </div>
+                        <div class="adept">擅长英雄:</div>
+                        <div class="heros">
+                            {{each item.heros hero_item hero_index}}
+                            <div class="hero_item">
+                                <img src="{{hero_item.icon}}" >
+                                <div class="hero_name">{{hero_item.name}}</div>
+                            </div>
+                            {{/each}} 
+                        </div>
+                    </div>
+                    {{/each}} 
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <!-- 赛事数据比赛列表模板 放在 id为matchList 盒子里面 -->
+    <script id="matchList_teamplate" type="text/html">
+        <div class="match_list_button match_list_button_next"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {{each myData.match_list item index}}
+                <div class="match_list_item swiper-slide  {{index == 0 ? 'active' : ''}}" onclick="matchSwitch({{item.game_id}})">
+                    <div class="time">{{item.time}}</div>
+                    <div class="vs">
+                        <img src="./images/ic_vs.png">
+                    </div>
+                    
+                    <div class="icon teamA_icon">
+                        <img src="{{item.team_a_icon}}" >
+                    </div>
+                    <div class="name teamA_name">{{item.team_a_name}}</div>
+
+                    <div class="icon teamB_icon">
+                        <img src="{{item.team_b_icon}}" >
+                    </div>
+                    <div class="name teamB_name">{{item.team_b_name}}</div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        
+        <div class="match_list_button match_list_button_prev"></div>
+    </script> 
+    <!-- 赛事数据比赛详情模板 放在 id为matchInfo 盒子里面 -->
+    <script id="matchData_teamplate" type="text/html">
+        <!-- team_a -->
+        <div class="team_Box team_a">
+            <div class="zhanwei"></div>
+            <div class="icon">
+                <img src="{{myData.team_a.team_icon}}" >
+            </div>
+            <div class="name">{{myData.team_a.team_name}}</div>
+            <!-- 天敌 -->
+            <div class="enemy">
+                <div class="title">天<br />敌</div>
+                <div class="team_icon" >
+                    <img src="{{myData.team_a.enemy.enemy_icon}}" >
+                </div>
+                <div class="team_name"><div>{{myData.team_a.enemy.enemy_name}}</div></div>
+                <div class="win_rate_box">
+                    <div class="win_rate">{{myData.team_a.enemy.enemy_win_rate}}%</div>
+                    <div class="shenglv">胜率</div>
+                </div>
+            </div>
+            <!-- 克制 -->
+            <div class="restraint">
+                <div class="title">克<br />制</div>
+                <div class="team_icon" >
+                    <img src="{{myData.team_a.restraint.restraint_icon}}" >
+                </div>
+                <div class="team_name"><div>{{myData.team_a.restraint.restraint_name}}</div></div>
+                <div class="win_rate_box">
+                    <div class="win_rate">{{myData.team_a.restraint.restraint_win_rate}}%</div>
+                    <div class="shenglv">胜率</div>
+                </div>
+            </div>
+            <!-- 地图胜率 -->
+            <div class="detail">
+                {{each myData.team_a.maps item index}}
+                <div class="detail_item">
+                    <div class="detail_data">
+                        <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;{{item.map_item_win_rate}}%</div>
+                        {{if item.map_item_type == 0}}
+                            <img class="detail_type_icon" src="./images/ic_zhanlingyaodian.png" >
+                        {{else if item.map_item_type == 1}}
+                            <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                        {{else if item.map_item_type == 2}}
+                            <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                        {{else if item.map_item_type == 3}}
+                            <img class="detail_type_icon" src="./images/ic_gongjihusong.png" >
+                        {{/if}}
+                    </div>
+                    {{if item.map_item_type == 0}}
+                    <div class="detail_type">占领要点</div>
+                    {{else if item.map_item_type == 1}}
+                    <div class="detail_type">运载作战</div>
+                    {{else if item.map_item_type == 2}}
+                    <div class="detail_type">攻防作战</div>
+                    {{else if item.map_item_type == 3}}
+                    <div class="detail_type">攻防运载</div>
+                    {{/if}}
+                </div>
+                {{/each}} 
+                
+            </div>
+        </div>
+        <!-- 中间对局信息 -->
+        <div class="match_infoBox">
+            <!-- 未开始 -->
+            {{if myData.status == 0}}
+                <!-- 双方胜率 -->
+                <div class="win_rate_box">
+                    <div class="team_win_rate">
+                        <div class="win_rate">{{myData.team_a.win_rate}}%</div>
+                        <div class="lable">胜率</div>
+                    </div>
+                    <div class="start_time">
+                        <div class="vs">
+                            <img src="./images/ic_vs.png">
+                        </div>
+                        <div class="time">{{myData.time}}</div>
+                    </div>
+                    <div class="team_win_rate">
+                        <div class="win_rate">{{myData.team_b.win_rate}}%</div>
+                        <div class="lable">胜率</div>
+                    </div>
+                </div>
+                <!-- 双方战绩 -->
+                <div class="team_grade">
+                    <div class="info_box">
+                        <div class="grade team_a">
+                            <span class="label">比赛战绩:</span>
+                            <span class="grade_info">{{myData.team_a.team_win}}-{{myData.team_a.team_lose}}</span>
+                        </div>
+                        <div class="description">[{{myData.team_a.description}}]</div>
+                    </div>
+                    <div class="zhanwei"></div>
+                    
+                    <div class="info_box">
+                        <div class="grade team_b">
+                            <span class="grade_info">{{myData.team_b.team_win}}-{{myData.team_b.team_lose}}</span>
+                            <span class="label">:比赛战绩</span>
+                        </div>
+                        <div class="description">[{{myData.team_b.description}}]</div>
+                    </div>
+                </div>
+                <!-- 双方数据对比 -->
+                <div class="data_compared">
+                    {{each myData.team_a.maps item index}}
+                    <div class="data_compared_item">
+                        <div class="team_compared team_a_data">
+                            <div class="win_rate" style="width: {{item.map_item_win_rate}}%"></div>
+                            <div class="win_rate_text">{{item.map_item_win_rate}}%</div>
+                        </div>
+                        <div class="description">
+                            {{if item.map_item_type == 0}}
+                            <img src="./images/ic_zhanlingyaodian_1.png">
+                            <span>占领要点</span>
+                            {{else if item.map_item_type == 1}}
+                            <img src="./images/ic_yunzaimubiao_1.png">
+                            <span>运载作战</span>
+                            {{else if item.map_item_type == 2}}
+                            <img src="./images/ic_gongfang_1.png">
+                            <span>攻防作战</span>
+                            {{else if item.map_item_type == 3}}
+                            <img src="./images/ic_gongjihusong_1.png">
+                            <span>攻防运载</span>
+                            {{/if}}
+                        </div>
+                        <div class="team_compared team_b_data">
+                            <div class="win_rate" style="width: {{myData.team_b.maps[index].map_item_win_rate}}%"></div>
+                            <div class="win_rate_text">{{myData.team_b.maps[index].map_item_win_rate}}%</div>
+                        </div>
+                    </div>
+                    {{/each}} 
+                </div>
+            <!-- 进行中 -->
+            {{else if myData.status == 1}}
+                <div class="score">0 : 0</div>
+                <div class="detail_box">
+                    <div class="small_score_Box">
+                        <div class="score_box">
+                            <div class="small_score">
+                                <div class="box_item">队伍</div>
+                                <div class="box_item team_title">{{myData.team_a.team_name}}</div>
+                                <div class="box_item last_item team_title">{{myData.team_b.team_name}}</div>
+                            </div>
+                            {{each myData.small_score item index}}
+                            <div class="small_score">
+                                <div class="box_item">{{index+1}}st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class="small_score_title">
+                    {{each myData.small_score item index}}
+                    <div class="small_score_title_item {{index == 0 ? 'active' : ''}}" onclick="smallMatchClick(this,{{index}},true)">GAME{{index+1}}</div>
+                    {{/each}}
+                </div>
+                <div class="doing_map_box">地图正在加载中...</div>
+                <div class="map_name">占领要点</div>
+                <!-- 双方数据对比 -->
+                <div class="data_compared doing">
+                    <div class="data_compared_item">
+                        <div class="team_compared team_a_data">
+                            <div class="win_rate" style="width: 0%"></div>
+                            <div class="win_rate_text">0%</div>
+                        </div>
+                        <div class="description">
+                            <span>第一轮</span>
+                        </div>
+                        <div class="team_compared team_b_data">
+                            <div class="win_rate" style="width: 0%"></div>
+                            <div class="win_rate_text">0%</div>
+                        </div>
+                    </div>
+                    <div class="data_compared_item">
+                        <div class="team_compared team_a_data">
+                            <div class="win_rate" style="width: 0%"></div>
+                            <div class="win_rate_text">0%</div>
+                        </div>
+                        <div class="description">
+                            <span>第二轮</span>
+                        </div>
+                        <div class="team_compared team_b_data">
+                            <div class="win_rate" style="width: 0%"></div>
+                            <div class="win_rate_text">0%</div>
+                        </div>
+                    </div>
+                    <div class="data_compared_item">
+                        <div class="team_compared team_a_data">
+                            <div class="win_rate" style="width: 0%"></div>
+                            <div class="win_rate_text">0%</div>
+                        </div>
+                        <div class="description">
+                            <span>第三轮</span>
+                        </div>
+                        <div class="team_compared team_b_data">
+                            <div class="win_rate" style="width: 0%"></div>
+                            <div class="win_rate_text">0%</div>
+                        </div>
+                    </div>
+                </div>
+            <!-- 已结束 -->
+            {{else}}
+                <div class="score">{{myData.team_a.score}} : {{myData.team_b.score}}</div>
+                <div class="detail_box">
+                    <div class="small_score_Box">
+                        <div class="score_box">
+                            <div class="small_score">
+                                <div class="box_item">队伍</div>
+                                <div class="box_item team_title">{{myData.team_a.team_name}}</div>
+                                <div class="box_item last_item team_title">{{myData.team_b.team_name}}</div>
+                            </div>
+                            {{each myData.small_score item index}}
+                            <div class="small_score">
+                                <div class="box_item">{{index+1}}st</div>
+                                <div class="box_item {{item.team_a_score > item.team_b_score ? 'win' : ''}} {{item.team_a_score < item.team_b_score ? 'lose' : ''}}">{{item.team_a_score}}</div>
+                                <div class="box_item last_item {{item.team_b_score > item.team_a_score ? 'win' : ''}} {{item.team_b_score < item.team_a_score ? 'lose' : ''}}">{{item.team_b_score}}</div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class="small_score_title">
+                    {{each myData.small_score item index}}
+                    <div class="small_score_title_item {{index == 0 ? 'active' : ''}}" onclick="smallMatchClick(this,{{index}},false)">GAME{{index+1}}</div>
+                    {{/each}}
+                </div>
+                <div class="small_match_boxs">
+                    {{each myData.small_score small_item small_index}}
+                        <div class="small_match_item {{small_index == 0 ? 'active' : ''}}">
+                            <div class="doing_map_box" style="background: url('./images/map/map{{small_item.map_id}}.jpg') no-repeat;">
+                                <div class="map_name">{{small_item.map_name}}</div>
+                                <div class="team_win team_a_win">
+                                    {{if small_item.team_a_win}}
+                                    <img src="./images/ic_shengli.png" >
+                                    {{else}}
+                                    <img src="./images/ic_shibai.png" >
+                                    {{/if}}
+                                </div>
+                                <div class="team_win team_b_win">
+                                    {{if small_item.team_b_win}}
+                                    <img src="./images/ic_shengli.png" >
+                                    {{else}}
+                                    <img src="./images/ic_shibai.png" >
+                                    {{/if}}
+                                </div>
+                                <div class="map_icon">
+                                    {{if small_item.type == 0}}
+                                    <img src="./images/ic_zhanlingyaodian.png">
+                                    {{else if small_item.type == 1}}
+                                    <img src="./images/ic_yunzaimubiao.png">
+                                    {{else if small_item.type == 2}}
+                                    <img src="./images/ic_gongfangzuozhan.png">
+                                    {{else if small_item.type == 3}}
+                                    <img src="./images/ic_gongjihusong.png">
+                                    {{/if}}
+                                </div>
+                            </div>
+                            {{if small_item.type == 0}}
+                                <!-- 占领要点 -->
+                                <div class="map_name">占领要点</div>
+                            {{else if small_item.type == 1}}
+                                <!-- 运载作战 -->
+                                <div class="map_name">运载作战</div>
+                            {{else if small_item.type == 2}}
+                                <!-- 攻防作战 -->
+                                <div class="map_name">攻防作战</div>
+                            {{else if small_item.type == 3}}
+                                <!-- 攻防运载 -->
+                                <div class="map_name">攻防运载</div>
+                            {{/if}}
+
+                            {{if small_item.type == 0}}
+                                <!-- 占领要点 -->
+                                <!-- 双方数据对比 -->
+                                <div class="data_compared doing">
+                                    <div class="data_compared_item">
+                                        <div class="team_compared team_a_data">
+                                            <div class="win_rate" style="width: {{small_item.occupied.first_round.team_a}}%"></div>
+                                            <div class="win_rate_text">{{small_item.occupied.first_round.team_a}}%</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>第一轮</span>
+                                        </div>
+                                        <div class="team_compared team_b_data">
+                                            <div class="win_rate" style="width: {{small_item.occupied.first_round.team_b}}%"></div>
+                                            <div class="win_rate_text">{{small_item.occupied.first_round.team_b}}%</div>
+                                        </div>
+                                    </div>
+                                    <div class="data_compared_item">
+                                        <div class="team_compared team_a_data">
+                                            <div class="win_rate" style="width: {{small_item.occupied.second_round.team_a}}%"></div>
+                                            <div class="win_rate_text">{{small_item.occupied.second_round.team_a}}%</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>第二轮</span>
+                                        </div>
+                                        <div class="team_compared team_b_data">
+                                            <div class="win_rate" style="width: {{small_item.occupied.second_round.team_b}}%"></div>
+                                            <div class="win_rate_text">{{small_item.occupied.second_round.team_b}}%</div>
+                                        </div>
+                                    </div>
+                                    <div class="data_compared_item">
+                                        <div class="team_compared team_a_data">
+                                            <div class="win_rate" style="width: {{small_item.occupied.third_round.team_a}}%"></div>
+                                            <div class="win_rate_text">{{small_item.occupied.third_round.team_a}}%</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>第三轮</span>
+                                        </div>
+                                        <div class="team_compared team_b_data">
+                                            <div class="win_rate" style="width: {{small_item.occupied.third_round.team_b}}%"></div>
+                                            <div class="win_rate_text">{{small_item.occupied.third_round.team_b}}%</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            {{else if small_item.type == 1 || small_item.type == 3}}
+                                <!-- 运载作战 -->
+                                <!-- 攻防运载 -->
+                               <!-- 双方数据对比 -->
+                               <div class="data_compared over">
+                                    <div class="data_compared_item">
+                                        <div class="team_compared nobg left_other team_a_data">
+                                            <div class="win_rate_text">{{small_item.carry.checking.team_a}}</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>检查点</span>
+                                        </div>
+                                        <div class="team_compared nobg right_other team_b_data">
+                                            <div class="win_rate_text">{{small_item.carry.checking.team_b}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="data_compared_item">
+                                        <div class="team_compared team_a_data">
+                                            <div class="win_rate" style="width: {{small_item.carry.schedule.team_a_percentage}}%"></div>
+                                            <div class="win_rate_text">{{small_item.carry.schedule.team_a_distance}}M</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>推进进度</span>
+                                        </div>
+                                        <div class="team_compared team_b_data">
+                                            <div class="win_rate" style="width: {{small_item.carry.schedule.team_b_percentage}}%"></div>
+                                            <div class="win_rate_text">{{small_item.carry.schedule.team_b_distance}}M</div>
+                                        </div>
+                                    </div>
+                                    <div class="data_compared_item">
+                                        <div class="team_compared nobg left_other team_a_data">
+                                            <div class="win_rate_text">{{small_item.carry.remaining.team_a_time}}秒</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>剩余时间</span>
+                                        </div>
+                                        <div class="team_compared nobg right_other team_b_data">
+                                            <div class="win_rate_text">{{small_item.carry.remaining.team_b_time}}秒</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            {{else if small_item.type == 2}}
+                                <!-- 攻防作战 -->
+                                <!-- 双方数据对比 -->
+                               <div class="data_compared over">
+                                    <div class="data_compared_item">
+                                        <div class="team_compared nobg left_other team_a_data">
+                                            <div class="win_rate_text">{{small_item.combat.checking.team_a}}</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>检查点</span>
+                                        </div>
+                                        <div class="team_compared nobg right_other team_b_data">
+                                            <div class="win_rate_text">{{small_item.combat.checking.team_b}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="data_compared_item">
+                                        <div class="team_compared team_a_data">
+                                            <div class="win_rate" style="width: {{small_item.combat.schedule.team_a}}%"></div>
+                                            <div class="win_rate_text">{{small_item.combat.schedule.team_a}}%</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>占领进度</span>
+                                        </div>
+                                        <div class="team_compared team_b_data">
+                                            <div class="win_rate" style="width: {{small_item.combat.schedule.team_b}}%"></div>
+                                            <div class="win_rate_text">{{small_item.combat.schedule.team_b}}%</div>
+                                        </div>
+                                    </div>
+                                    <div class="data_compared_item">
+                                        <div class="team_compared nobg left_other team_a_data">
+                                            <div class="win_rate_text">{{small_item.combat.remaining.team_a_time}}秒</div>
+                                        </div>
+                                        <div class="description">
+                                            <span>剩余时间</span>
+                                        </div>
+                                        <div class="team_compared nobg right_other team_b_data">
+                                            <div class="win_rate_text">{{small_item.combat.remaining.team_b_time}}秒</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/if}}
+
+                        </div>
+                    {{/each}}
+                </div>
+            {{/if}}
+        </div>
+        <!-- team_b -->
+        <div class="team_Box team_b">
+            <div class="zhanwei"></div>
+            <div class="icon">
+                <img src="{{myData.team_b.team_icon}}" >
+            </div>
+            <div class="name">{{myData.team_b.team_name}}</div>
+            <!-- 天敌 -->
+            <div class="enemy">
+                <div class="title">天<br />敌</div>
+                <div class="team_icon" >
+                    <img src="{{myData.team_b.enemy.enemy_icon}}" >
+                </div>
+                <div class="team_name"><div>{{myData.team_b.enemy.enemy_name}}</div></div>
+                <div class="win_rate_box">
+                    <div class="win_rate">{{myData.team_b.enemy.enemy_win_rate}}%</div>
+                    <div class="shenglv">胜率</div>
+                </div>
+            </div>
+            <!-- 克制 -->
+            <div class="restraint">
+                <div class="title">克<br />制</div>
+                <div class="team_icon" >
+                    <img src="{{myData.team_b.restraint.restraint_icon}}" >
+                </div>
+                <div class="team_name"><div>{{myData.team_b.restraint.restraint_name}}</div></div>
+                <div class="win_rate_box">
+                    <div class="win_rate">{{myData.team_b.restraint.restraint_win_rate}}%</div>
+                    <div class="shenglv">胜率</div>
+                </div>
+            </div>
+            <!-- 地图胜率 -->
+            <div class="detail">
+                {{each myData.team_b.maps item index}}
+                <div class="detail_item">
+                    <div class="detail_data">
+                        <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;{{item.map_item_win_rate}}%</div>
+                        {{if item.map_item_type == 0}}
+                            <img class="detail_type_icon" src="./images/ic_zhanlingyaodian.png" >
+                        {{else if item.map_item_type == 1}}
+                            <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                        {{else if item.map_item_type == 2}}
+                            <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                        {{else if item.map_item_type == 3}}
+                            <img class="detail_type_icon" src="./images/ic_gongjihusong.png" >
+                        {{/if}}
+                    </div>
+                    {{if item.map_item_type == 0}}
+                    <div class="detail_type">占领要点</div>
+                    {{else if item.map_item_type == 1}}
+                    <div class="detail_type">运载作战</div>
+                    {{else if item.map_item_type == 2}}
+                    <div class="detail_type">攻防作战</div>
+                    {{else if item.map_item_type == 3}}
+                    <div class="detail_type">攻防运载</div>
+                    {{/if}}
+                </div>
+                {{/each}} 
+                
+            </div>
+        </div>
+    </script>
+
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/art-template.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/fakerData.js"></script>
+    <script src="./js/event.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  display: none;
+}
+
+.maskWindow {
+  width: 914px;
+  height: 555px;
+  background: rgba(43, 48, 56, 1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  position: absolute;
+  left: 25%;
+  z-index: 10;
+}
+
+#mwDeal {
+  display: none;
+}
+
+#mwIgnore {
+  display: none;
+  width: 574px!important;
+  height: 349px!important;
+  left: 35%!important;
+}
+
+.ignoreStyle {
+  width: 180px;
+  height: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 1);
+  margin: 125px auto;
+}
+
+.closeWindow {
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 17px;
+  right: 26px;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.mwTitle {
+  width: 100%;
+  height: 35px;
+  margin-top: 49px;
+}
+
+.mttName {
+  width: 126px;
+  height: 35px;
+  background: rgba(57, 61, 69, 1);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+  float: left;
+  text-align: center;
+  margin-left: 149px;
+}
+
+.mwContBox {
+  width: 774px;
+  height: 322px;
+  margin: 0 auto;
+  margin-top: 38px;
+}
+
+.mwCBLeftScrollbar {
+  width: 356px;
+  height: 322px;
+  float: left;
+  overflow: hidden;
+}
+
+.mwCBLeft {
+  width: 373px;
+  height: 339px;
+  overflow: scroll;
+}
+
+.mwLeftItem {
+  width: 297px;
+  height: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.mwActive {
+  background: rgba(53, 59, 69, 1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 7px;
+}
+
+.leftItemName,
+.leftItemState {
+  width: 148px;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+.mwActive .leftItemName {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.leftItemName {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 38px;
+  color: rgba(118, 129, 153, 1);
+}
+
+.leftItemState {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 38px;
+  color: rgba(235, 70, 72, 1);
+}
+
+.mwDevide {
+  height: 306px;
+  border-left: 1px solid rgba(118, 129, 153, 1);
+  float: left;
+  margin-top: 8px;
+}
+
+.mwCBRightScrollbar {
+  width: 416px;
+  height: 322px;
+  float: left;
+  overflow: hidden;
+}
+
+.mwCBRight {
+  width: 433px;
+  height: 339px;
+  overflow: scroll;
+}
+
+.mwRightList {
+  width: 376px;
+  height: 23px;
+  padding-left: 40px;
+  margin-bottom: 15px;
+}
+
+.rightListTime,
+.rightListOperator,
+.rightListOperate {
+  height: 100%;
+  float: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.rightListTime {
+  width: 165px;
+}
+
+.rightListOperator {
+  width: 102px;
+  overflow: hidden;
+}
+
+.rightListOperate {
+  width: 105px;
+}
+
+.maskBtn {
+  width: 191px;
+  height: 39px;
+  background: rgba(78, 189, 115, 1);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  cursor: pointer;
+}

@@ -1,0 +1,1774 @@
+body,div,ul,li,p,span,i,b,h1,h2,h3,h4,h5,h6,a,img {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑", "宋体", "Arial Narrow";
+    // background:rgba(0,40,58,1);
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+a {
+    text-decoration: none;
+}
+select {
+    vertical-align: middle;
+}
+img {
+    border: none;
+}
+.clear{ 
+    clear:both;
+} 
+@font-face{
+    font-family: 'Industry'; 
+    src: url('../font/Industry-Bold.otf');
+}
+#app {
+    width: 1180px;
+    height: 896px;
+    margin: 0 auto;
+    position: relative;
+    .tab_title {
+        width: 552px;
+        height: 43px;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        .tab_title_item {
+            width: 184px;
+            height:43px;
+            cursor: pointer;
+            text-align: center;
+            color:rgba(137,137,137,1);
+            line-height: 43px;
+            font-size: 16px;
+            font-weight:bold;
+            float: left;
+            font-family:Microsoft YaHei UI;
+            background-color: #f00;
+            background: url(../images/bt_weixuanzhong.png) no-repeat;
+        }
+        .team_data.active, .match_data.active,.match_integral.active{
+            background: url(../images/bt_xuanzhong.png) no-repeat;
+            background-size: 100% 100%;
+            color:rgba(0,0,0,1);
+        }
+    }
+    
+    >a>img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 47px;
+    }
+    .tab_body {
+        width: 100%;
+        height:849px;
+        background: rgba(244,244,244,1);
+        .tab_body_item {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        .tab_body_item.active {
+            display: block;
+        }
+        // 赛事积分
+        .match_integral {
+            padding-top: 46px;
+            .integral_tab {
+                height: 44px;
+                width: 487px;
+                position: relative;
+                .getReady {
+                    width:164px;
+                    height:44px;
+                    background: url(../images/bt_changguisai-1.png) no-repeat;
+                    background-size: 100% 100%;
+                    cursor: pointer;
+                    line-height: 44px;
+                    text-align: center;
+                    font-size:18px;
+                    font-family:Microsoft YaHei UI;
+                    color:rgba(255,255,255,1);
+                }
+                .getReady.active {
+                    background: url(../images/bt_changguisai.png) no-repeat;
+                }
+                .group {
+                    position: absolute;
+                    left: 157px;
+                    top: 0;
+                    width:174px;
+                    height:44px;
+                    background: url(../images/bt_jizhongsai.png) no-repeat;
+                    background-size: 100% 100%;
+                    cursor: not-allowed;
+                    line-height: 44px;
+                    text-align: center;
+                    font-size:18px;
+                    font-family:Microsoft YaHei UI;
+                    color:rgba(255,255,255,1);
+                }
+                .group.active {
+                    background: url(../images/bt_jizhongsai-1.png) no-repeat;
+                }
+                .repetition {
+                    position: absolute;
+                    left: 323px;
+                    top: 0;
+                    width:164px;
+                    height:44px;
+                    background: url(../images/bt_jihousai.png) no-repeat;
+                    background-size: 100% 100%;
+                    cursor: not-allowed;
+                    line-height: 44px;
+                    text-align: center;
+                    font-size:18px;
+                    font-family:Microsoft YaHei UI;
+                    color:rgba(255,255,255,1);
+                }
+                .repetition.active {
+                    background: url(../images/bt_jihousai-1.png) no-repeat;
+                }
+            }
+            .integral_tab_body {
+                // width: 100%;
+                // height: 100%;
+                margin-top: 29px;
+                .integral_tab_body_item {
+                    display: none;
+                }
+                .integral_tab_body_item.active {
+                    display: block;
+                }
+                .group_body {
+                    width: 100%;
+                    height: 100%;
+                    .group_left {
+                        width: 673px;
+                        float: left;
+                        padding-left: 13px;
+                        box-sizing: border-box;
+                        .schedule_title {
+                            height: 37px;
+                            > div {
+                                float: left;
+                            }
+                            .schedule_title_bottom {
+                                width:38px;
+                                height:37px;
+                                cursor: pointer;
+                            }
+                            .schedule_title_bottom:focus {
+                                outline: none;
+                            }
+                            .schedule_button_next {
+                                background: url(../images/ic_zuo_zhou.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                            .schedule_button_prev {
+                                background: url(../images/ic_you_zhou.png) no-repeat;
+                                background-size: 100% 100%;
+                            }
+                            .swiper-container {
+                                width: 573px;
+                                padding-left: 5px;
+                                padding-right: 5px;
+                                box-sizing: border-box;
+                                .swiper-slide:hover {
+                                    background:rgba(238,159,56,.5);
+                                }
+                                .swiper-slide {
+                                    width:88px;
+                                    // margin-right: 7.5px;
+                                    height:37px;
+                                    background:rgba(204,204,204,1);
+                                    opacity:1;
+                                    border-radius:4px;
+                                    text-align: center;
+                                    line-height: 37px;
+                                    font-size:16px;
+                                    font-family:Microsoft YaHei UI;
+                                    color:rgba(255,255,255,1);
+                                    cursor: pointer;
+                                }
+                                .swiper-slide.active {
+                                    background:rgba(238,159,56,1);
+                                    color:rgba(255,255,255,1);
+                                }
+                            }
+                        }
+                        .schedule_body {
+                            margin-top: 14px;
+                            height: 576px;
+                            overflow-y: scroll;
+                            .schedule_body_item {
+                                display: none;
+                                .match_item {
+                                    width: 649px;
+                                    height:65px;
+                                    background:rgba(255,255,255,1);
+                                    // background:#f00;
+                                    box-shadow:0px 3px 6px rgba(0,0,0,0.06);
+                                    border-radius: 9px;
+                                    margin-bottom: 8px;
+                                    position: relative;
+                                    cursor: pointer;
+                                    >div {
+                                        position: absolute;
+                                    }
+                                    .year,.date {
+                                        left: 14px;
+                                        width: 40px;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        font-family: 'Industry';
+                                        font-weight: bold;
+                                        color:rgba(201,201,201,1);
+                                    }
+                                    .line {
+                                        left: 62px;
+                                        top: 7px;
+                                        width:1px;
+                                        height:50px;
+                                        background-color: rgba(250,250,250,1);
+                                    }
+                                    .year {
+                                        top: 36px;
+                                    }
+                                    .date {
+                                        top: 15px;
+                                    }
+                                    .time {
+                                        left: 69px;
+                                        height:65px;
+                                        line-height: 65px;
+                                        font-size: 16px;
+                                        font-family:'Industry';
+                                        font-weight:bold;
+                                        color:rgba(6,6,6,1);
+                                    }
+                                    .team_name {
+                                        width: 112px;
+                                        text-align: center;
+                                        height:65px;
+                                        line-height: 65px;
+                                        font-size: 14px;
+                                        font-family:'Microsoft YaHei UI';
+                                        color:rgba(0,0,0,1);
+                                        overflow: hidden;
+                                        text-overflow:ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                    .teamA_name {
+                                        left: 120px;
+                                    }
+                                    .teamB_name {
+                                        right: 151px;
+                                    }
+                                    .team_icon {
+                                        width: 35px;
+                                        height: 65px;
+                                        line-height: 65px;
+                                    }
+                                    .team_icon img{
+                                        width: 100%;
+                                        vertical-align: middle;
+                                    }
+                                    .teamA_icon {
+                                        left: 234px;
+                                    }
+                                    .teamB_icon {
+                                        right: 267px;
+                                    }
+                                    .team_score {
+                                        margin-top: 19px;
+                                        width:26px;
+                                        height:28px;
+                                        background:rgba(0,0,0,1);
+                                        box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+                                        border-radius:3px;
+                                        text-align: center;
+                                        line-height: 28px;
+                                        font-size:18px;
+                                        font-family:'Industry';
+                                        font-weight:bold;
+                                        color:rgba(255,255,255,1);
+                                    }
+                                    .teamA_score {
+                                        left: 278px;
+                                    }
+                                    .teamB_score {
+                                        right: 310px;
+                                    }
+                                    .area {
+                                        right: 99px;
+                                        height:65px;
+                                        line-height: 65px;
+                                        font-size:14px;
+                                        font-family:Microsoft YaHei UI;
+                                        color:rgba(201,201,201,1);
+                                    }
+                                    .vs {
+                                        left: 291px;
+                                        height:65px;
+                                        img {
+                                            margin-top: 19px;
+                                            width: 31px;
+                                        }
+                                    }
+                                    .status {
+                                        right: 18px;
+                                        >div {
+                                            margin-top: 17px;
+                                            width:68px;
+                                            height:29px;
+                                            border:1px solid rgba(137,137,137,1);
+                                            border-radius:4px;
+                                            text-align: center;
+                                            line-height: 29px;
+                                            font-size:14px;
+                                            font-family:Microsoft YaHei UI;
+                                            color:rgba(137,137,137,1);
+                                        }
+                                        .notStart {
+                                            border-color: transparent;
+                                            background:rgba(238,159,56,1);
+                                            color:rgba(255,255,255,1);
+                                        }
+                                        .over {
+                                            border-color: transparent;
+                                            background:rgba(197,223,159,1);
+                                            color:rgba(255,255,255,1);
+                                        }
+                                        
+                                    }
+                                }
+                                .match_item:hover {
+                                    box-shadow:0px 3px 6px rgba(0,0,0,0.13);
+                                }
+                            }
+                            .schedule_body_item.active {
+                                display: block;
+                            }
+                        }
+                        .schedule_body::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                    .group_right {
+                        width: 507px;
+                        float: left;
+                        .schedule_banner {
+                            width:479px;
+                            height:68px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .ranking_title {
+                            width:479px;
+                            margin-top: 5px;
+                            height: 48px;
+                            display: flex;
+                            display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
+                            display: -moz-box; /* Firefox 17- */  
+                            display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
+                            display: -moz-flex; /* Firefox 18+ */  
+                            display: -ms-flexbox; /* IE 10 */  
+                            flex-direction: row;
+                            -webkit-box-orient: row;
+                            -ms-flex-direction: row;
+                            -webkit-flex-direction: row;
+                            justify-content: center;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            -webkit-justify-content: center;
+                            .ranking_title_item {
+                                width: 100%;
+                                height: 48px;
+                                line-height: 48px;
+                                background:rgba(204,204,204,1);
+                                border:1px solid transparent;
+                                border-radius:6px;
+                                font-size: 16px;
+                                font-family:'Microsoft YaHei UI';
+                                color:rgba(255,255,255,1);
+                                text-align: center;
+                                margin-right: 10px;
+                                cursor: pointer;
+                            }
+                            .ranking_title_item.active {
+                                background:rgba(238,159,56,1);
+                                border-color: rgba(194,129,46,1);
+                            }
+                            :last-child {
+                                margin-right: 0;
+                            }
+                        }
+                        .body_info {
+                            width: 100%;
+                            height: 40px;
+                            position: relative;
+                            div {
+                                position: absolute;
+                                height: 40px;
+                                line-height: 40px;
+                                font-size:14px;
+                                font-family:'Microsoft YaHei UI';
+                                color:rgba(0,0,0,1);
+                            }
+                            .mingci {
+                                left: 30px;
+                            }
+                            .name {
+                                left: 86px;
+                            }
+                            .team_win {
+                                left: 245px;
+                            }
+                            .map_win {
+                                left: 327px;
+                            }
+                            .score {
+                                left: 404px;
+                            }
+                        }
+                        .ranking_body {
+                            .ranking_body_item {
+                                display: none;
+                                height: 517px;
+                                overflow-y: scroll;
+                                .team_item {
+                                    width:480px;
+                                    height:59px;
+                                    background:rgba(255,255,255,1);
+                                    border-radius:6px;
+                                    margin-bottom: 7px;
+                                    position: relative;
+                                    line-height: 59px;
+                                    div {
+                                        position: absolute;
+                                    }
+                                    .topThree {
+                                        left: 26px;
+                                        img {
+                                            width: 36px;
+                                            vertical-align: middle;
+                                        }
+                                    }
+                                    .topThreeNum {
+                                        left: 40px;
+                                        font-size:15px;
+                                        font-family:'Microsoft YaHei UI';
+                                        color:rgba(0,0,0,1);
+                                    }
+                                    .team_icon {
+                                        left: 81px;
+                                        img {
+                                            width: 36px;
+                                            vertical-align: middle;
+                                        }
+                                    }
+                                    .team_name {
+                                        left: 125px;
+                                        font-size:15px;
+                                        font-family:'Microsoft YaHei UI';
+                                        color:rgba(0,0,0,1);
+                                        width: 120px;
+                                        overflow: hidden;
+                                        text-overflow:ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                    .team_grade {
+                                        left: 245px;
+                                        width: 56px;
+                                        text-align: center;
+                                        font-size:14px;
+                                        font-family:'Microsoft YaHei UI';
+                                        color:rgba(0,0,0,1);
+                                    }
+                                    .map_grade {
+                                        left: 327px;
+                                        width: 56px;
+                                        text-align: center;
+                                        // background-color: #f00;
+                                        font-size:14px;
+                                        font-family:'Microsoft YaHei UI';
+                                        color:rgba(0,0,0,1);
+                                    }
+                                    .score {
+                                        left: 413px;
+                                        font-size:14px;
+                                        font-family:'Microsoft YaHei UI';
+                                        color:rgba(187,42,42,1);
+                                        font-weight:bold;
+                                    }
+                                    .score.add {
+                                        color:rgba(38,116,33,1);
+                                    }
+
+                                }
+                            }
+                            .ranking_body_item::-webkit-scrollbar {
+                                display: none;
+                            }
+                            .ranking_body_item.active {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        // 战队数据
+        .team_data {
+            // background-color: #0f0;
+            padding-top: 21px;
+            // 战队列表选择
+            .teamTab_title {
+                height:291px;
+                margin: 0 auto;
+                margin-left: 3px;
+                margin-right: 3px;
+                background: url("../images/bg_zuo.png") no-repeat left top,
+                        url("../images/bg_zuo-1.png") no-repeat right top;
+                background-size: auto 100%;
+                position: relative;
+                .teamTab_title_left,.teamTab_title_rigth {
+                    width: 421px;
+                    height: 230px;
+                    margin-top: 61px;
+                    // background-color: #f00;
+                    display: flex;
+                    display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
+                    display: -moz-box; /* Firefox 17- */  
+                    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
+                    display: -moz-flex; /* Firefox 18+ */  
+                    display: -ms-flexbox; /* IE 10 */ 
+                    flex-wrap: wrap;
+                    -webkit-flex-wrap: wrap;
+                    -moz-flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
+                    -o-flex-wrap: wrap;
+                    // 每个队伍
+                    .teamTab_title_item {
+                        // width: 66px;
+                        width: 20%;
+                        height: 112px;
+                        // background-color: #00f;
+                        // margin-right: 24px;
+                        padding-left: 12px;
+                        padding-right: 12px;
+                        box-sizing: border-box;
+                        cursor: pointer;
+                        .icon {
+                            width:66px;
+                            height:57px;
+                            text-align: center;
+                            line-height: 57px;
+                            img {
+                                width: 70%;
+                                // margin-top: 6px;
+                                vertical-align: middle;
+                            }
+                        }
+                        .name {
+                            width:66px;
+                            box-sizing: border-box;
+                            padding-left: 3px;
+                            padding-right: 3px;
+                            margin-top: 5px;
+                            font-size:15px;
+                            font-family:Microsoft YaHei UI;
+                            font-weight:400;
+                            color:rgba(255,255,255,1);
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-align: center;
+                        }
+                    }
+                }
+                // 左边赛区
+                .teamTab_title_left {
+                    // left: 37px;
+                    margin-left: 37px;
+                    float: left;
+                    .teamTab_title_item {
+                        .icon {
+                            background: url("../images/bg_duiwu_zuo.png") no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                    .teamTab_title_item.active {
+                        .icon {
+                            background: url("../images/bg_duiwu_zuo-1.png") no-repeat;
+                            background-size: 100% 100%;
+                        }
+                        .name {
+                            color: rgba(51,51,51,1);
+                        }
+                    }
+                }
+                // 右边赛区
+                .teamTab_title_rigth {
+                    // right: 52px;
+                    margin-right: 52px;
+                    float: right;
+                    .teamTab_title_item {
+                        .icon {
+                            background: url("../images/bg_duiwu_you.png") no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                    .teamTab_title_item.active {
+                        .icon {
+                            background: url("../images/bg_duiwu_you-1.png") no-repeat;
+                            background-size: 100% 100%;
+                        }
+                        .name {
+                            color: rgba(238,159,56,1);
+                        }
+                    }
+                }
+                .area_a_name,.area_b_name {
+                    position: absolute;
+                    top: 11px;
+                    font-size:16px;
+                    font-family:Microsoft YaHei UI;
+                    font-weight:bold;
+                    color:rgba(255,255,255,1);
+                }
+                // 左边赛区名字
+                .area_a_name {
+                    left: 37px;
+                }
+                // 右边赛区名字
+                .area_b_name {
+                    right: 29px;
+                }
+            }
+            // 战队详情展示
+            .teamTab_body {
+                width:1165px;
+                height:518px;
+                background:rgba(51,51,51,1);
+                margin: 0 auto;
+                margin-top: 11px;
+                // 队伍信息
+                .team_info {
+                    width: 438px;
+                    height: 100%;
+                    // background-color: #0f0;
+                    float: left;
+                    // 基本信息
+                    .introduce {
+                        height: 142px;
+                        position: relative;
+                        >div {
+                            position: absolute;
+                        }
+                        >img {
+                            position: absolute;
+                            width:94px;
+                            height:94px;
+                            top: 26px;
+                            left: 66px;
+                        }
+                        .name {
+                            top: 26px;
+                            left: 184px;
+                            font-size:20px;
+                            font-family:Microsoft YaHei UI;
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                        }
+                        .label {
+                            top: 86px;
+                            left: 184px;
+                            font-size:20px;
+                            font-family:Microsoft YaHei UI;
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                        }
+                        .win_rate {
+                            top: 72px;
+                            left: 246px;
+                            font-size:36px;
+                            font-family:Industry;
+                            font-weight:bold;
+                            color:rgba(238,159,56,1);
+                        }
+                    }
+                    // 战绩
+                    .performance {
+                        width:432px;
+                        height:52px;
+                        background: url("../images/ic_zhanji.png") no-repeat;
+                        background-size: 100% 100%;
+                        position: relative;
+                        >div {
+                            position: absolute;
+                        }
+                        .label_1,.label_2 {
+                            height:52px;
+                            line-height: 52px;
+                            font-size:16px;
+                            font-family:"Microsoft YaHei UI";
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                        }
+                        .label_1 {
+                            left: 35px;
+                        }
+                        .label_2 {
+                            left: 253px;
+                        }
+                        .match,.map {
+                            height:52px;
+                            line-height: 52px;
+                            font-size:20px;
+                            font-family:"Microsoft YaHei UI";
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                        }
+                        .match {
+                            left: 112px;
+                        }
+                        .map {
+                            left: 330px;
+                        }
+                    }
+                    // 地图比分
+                    .detail {
+                        height: 140px;
+                        padding-left: 20px;
+                        padding-top: 17px;
+                        box-sizing: border-box;
+                        .detail_item {
+                            // background-color: #ff3040;
+                            width:76px;
+                            margin-right: 28px;
+                            float: left;
+                            .detail_data {
+                                width:76px;
+                                height:68px;
+                                background: url("../images/bg_shenglv.png") no-repeat;
+                                background-size: 100% 100%;
+                                text-align: center;
+                                position: relative;
+                                box-sizing: border-box;
+                                padding-top: 1px;
+                                .detail_data_rate {
+                                    font-size:22px;
+                                    font-family:Industry;
+                                    font-weight:bold;
+                                    color:rgba(255,255,255,1);
+                                }
+                                .detail_data_record {
+                                    margin-top: 3px;
+                                    font-size:16px;
+                                    font-family:Industry;
+                                    font-weight:bold;
+                                    color:rgba(255,255,255,1);
+                                }
+                                .detail_type_icon {
+                                    position: absolute;
+                                    left: 18px;
+                                    top: 51px;
+                                    width:34px;
+                                    height:34px;
+                                }
+                            }
+                            .detail_type {
+                                width:76px;
+                                margin-top: 21px;
+                                text-align: center;
+                                font-size:14px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                    // 分割线
+                    .line {
+                        width:429px;
+                        height: 1px;
+                        background-color: rgba(38,38,38,1);
+                        margin-left: 9px;
+                    }
+                    // 天敌克制
+                    .relation {
+                        margin-top: 23px;
+                        height:53px;
+                        padding-left: 14px;
+                        .enemy,.restraint {
+                            float: left;
+                            margin-right: 11px;
+                            width:193px;
+                            height:53px;
+                            background:rgba(64,64,64,1);
+                            >div {
+                                float: left;
+                            }
+                            .title {
+                                width:32px;
+                                height: 100%;
+                                text-align: center;
+                                font-size:14px;
+                                font-family:"Microsoft YaHei UI";
+                                font-weight: bold;
+                                color:rgba(255,255,255,1);
+                                display: flex;
+                                // align-items: left;
+                                justify-content: space-around;
+                                flex-direction: column;
+                            }
+                            .icon {
+                                margin-left: 4px;
+                                width:34px;
+                                height:53px;
+                                line-height: 53px;
+                                img {
+                                    width: 100%;
+                                    vertical-align: middle;
+                                }
+                            }
+                            // 文字不确定行数，一行垂直居中，两行自适应并超过两行显示省略号
+                            .name {
+                                margin-left: 6px;
+                                // margin-top: 9px;
+                                width: 59px;
+                                font-size:14px;
+                                height: 53px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                > div {
+                                    width: 100%;
+                                    text-align: center;
+                                    overflow : hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    vertical-align: middle;
+                                }
+                            }
+                            .win_rate_box {
+                                margin-left: 2px;
+                                width: 56px;
+                                text-align: center;
+                                .win_rate {
+                                    margin-top: 4px;
+                                    font-size:20px;
+                                    font-family:Industry;
+                                    font-weight:bold;
+                                    color:rgba(238,159,56,1);
+                                }
+                                .shenglv {
+                                    margin-top: 2px;
+                                    font-size:12px;
+                                    font-family:"Microsoft YaHei UI";
+                                    color:rgba(255,255,255,1);
+                                }
+                            }
+                        }
+                        .enemy {
+                            .title {
+                                background:rgba(216,48,48,1);
+                            }
+                        }
+                        .restraint {
+                            .title {
+                                background:rgba(75,147,210,1);
+                            }
+                        }
+                    }
+                    // 成绩
+                    .record {
+                        margin-top: 17px;
+                        padding-left: 14px;
+                        .match_record,.map_record {
+                            float: left;
+                            width:180px;
+                            height:74px;
+                            background:rgba(64,64,64,1);
+                            .top {
+                                height:37px;
+                                line-height: 37px;
+                                text-align: center;
+                                background:rgba(238,159,56,1);
+                                font-size:16px;
+                                font-family:"Microsoft YaHei UI";
+                                font-weight:bold;
+                                color:rgba(255,255,255,1);
+                            }
+                            .bottom {
+                                height:37px;
+                                line-height: 37px;
+                                text-align: center;
+                                font-size:14px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                        .match_record {
+                            margin-right: 35px;
+                        }
+                    }
+                }
+                .player_box {
+                    float: right;
+                    width:638px;
+                    height: 100%;
+                    // background-color: #f00;
+                    .players {
+                        margin-left: 60px;
+                        height: 268px;
+                        padding-top: 26px;
+                        box-sizing: border-box;
+                        // background-color: #00f;
+                        display: flex;
+                        display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
+                        display: -moz-box; /* Firefox 17- */  
+                        display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
+                        display: -moz-flex; /* Firefox 18+ */  
+                        display: -ms-flexbox; /* IE 10 */ 
+                        flex-wrap: wrap;
+                        -webkit-flex-wrap: wrap;
+                        -moz-flex-wrap: wrap;
+                        -ms-flex-wrap: wrap;
+                        -o-flex-wrap: wrap;
+                        .player_item {
+                            width: 89px;
+                            margin-right: 6px;
+                            text-align: center;
+                            cursor: pointer;
+                            .icon {
+                                width:88px;
+                                height:88px;
+                                background:rgba(51,51,51,1);
+                                border:1px solid rgba(238,159,56,1);
+                                text-align: center;
+                                line-height: 88px;
+                                >img {
+                                    width: 100%;
+                                }
+                            }
+                            .player_name {
+                                margin-top: 5px;
+                                font-size:15px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                                overflow: hidden;
+                                text-overflow:ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                        .player_item:hover {
+                            .icon {
+                                background:rgba(238,159,56,.5);
+                            }
+                        }
+                        .player_item.active {
+                            .icon {
+                                background:rgba(238,159,56,1);
+                            }
+                        }
+                    }
+                    .player_info {
+                        height:250px;
+                        background: url("../images/bg_kuang.png") no-repeat;
+                        background-size: 100% auto;
+                        position: relative;
+                        .player_info_item {
+                            display: none;
+                            width: 100%;
+                            height: 100%;
+                            >div {
+                                position: absolute;
+                            }
+                            .icon {
+                                top: 21px;
+                                left: 69px;
+                                width:181px;
+                                height:187px;
+                                >img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .name {
+                                top: 55px;
+                                left: 299px;
+                                width:277px;
+                                height:35px;
+                                padding-left: 5px;
+                                padding-right: 5px;
+                                background: url("../images/bg_mingzi.png") no-repeat;
+                                background-size: 100% 100%;
+                                text-align: center;
+                                line-height: 35px;
+                                overflow: hidden;
+                                text-overflow:ellipsis;
+                                white-space: nowrap;
+                                font-size:30px;
+                                font-family:Industry;
+                                font-weight:bold;
+                                color:rgba(255,255,255,1);
+                            }
+                            .location {
+                                top: 111px;
+                                left: 299px;
+                                font-size:14px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                                img {
+                                    margin-left: 14px;
+                                    width:20px;
+                                    height:20px;
+                                    vertical-align: middle;
+                                }
+                                span {
+                                    margin-left: 11px;
+                                }
+                            }
+                            .adept {
+                                top: 165px;
+                                left: 299px;
+                                font-size:14px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                            .heros {
+                                top: 151px;
+                                left: 372px;
+                                .hero_item {
+                                    width: 46px;
+                                    float: left;
+                                    margin-right: 14px;
+                                    >img {
+                                        width: 46px;
+                                        height: 46px;
+                                    }
+                                    .hero_name {
+                                        margin-top: 3px;
+                                        text-align: center;
+                                        font-size:14px;
+                                        font-family:"Microsoft YaHei UI";
+                                        font-weight:bold;
+                                        color:rgba(255,255,255,1);
+                                    }
+                                }
+                            }
+                        }
+                        .player_info_item.active {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        // 赛事数据
+        .match_data {
+            .occupied {
+                height: 38px;
+            }
+            .match_list {
+                // height: 128px;
+                height: 145px;
+                padding-left: 19px;
+                .match_list_button {
+                    float: left;
+                    width:28px;
+                    height:128px;
+                    cursor: pointer;
+                }
+                .match_list_button:focus {
+                    outline: none;
+                }
+                .match_list_button_next {
+                    background: url(../images/bt_zuo_saicheng_xuanzhong.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .match_list_button_next[aria-disabled="true"] {
+                    background: url(../images/bt_zuo_saicheng.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .match_list_button_prev {
+                    background: url(../images/bt_you_saicheng_xuanzhong.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .match_list_button_prev[aria-disabled="true"] {
+                    background: url(../images/bt_you_saicheng.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                .swiper-container {
+                    float: left;
+                    width: 1070px;
+                    margin-left: 8px;
+                    margin-right: 8px;
+                }
+                .match_list_item:hover {
+                    border-color: rgba(238,159,56,.3);
+                }
+                .match_list_item {
+                    height:128px;
+                    border-radius:4px;
+                    box-shadow:0px 3px 6px rgba(0,0,0,0.06);
+                    background:rgba(255,255,255,1);
+                    border:1px solid transparent;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    position: relative;
+                    >div {
+                        position: absolute;
+                    }
+                    // .status {
+                    //     top: 86px;
+                    //     width:271px;
+                    //     height: 20px;
+                    //     text-align: center;
+                    // }
+                    .time {
+                        top: 13px;
+                        width: 100%;
+                        text-align: center;
+                        font-size:16px;
+                        font-family:'Microsoft YaHei UI';
+                        color:rgba(0,0,0,1);
+                    }
+                    .vs {
+                        top: 54px;
+                        width: 100%;
+                        text-align: center;
+                        img {
+                            width: 22px;
+                        }
+                    }
+                    .icon {
+                        // top: 28px;
+                        top: 44px;
+                        width:40px;
+                        height:40px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .teamA_icon {
+                        left: 27px;
+                    }
+                    .teamB_icon {
+                        right: 27px;
+                    }
+                    .name {
+                        top: 85px;
+                        width: 60px;
+                        text-align: center;
+                        font-size:14px;
+                        font-family:'Microsoft YaHei UI';
+                        color:rgba(0,0,0,1);
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                    }
+                    .teamA_name {
+                        left: 18px;
+                    }
+                    .teamB_name {
+                        right: 18px;
+                    }
+                }
+                .match_list_item.active {
+                    border-color: rgba(238,159,56,1);
+                }
+            }
+            // .match_list::-webkit-scrollbar {
+            //     display: none;
+            // }
+            .match_info {
+                width: 1165px;
+                height: 658px;
+                background: url("../images/bg_dibu.png") no-repeat;
+                background-size: 100% 100%;
+                background-color: #404040;
+                margin: 0 auto;
+                >div {
+                    float: left;
+                    height: 100%;
+                }
+                .team_Box {
+                    width:267px;
+                    .zhanwei {
+                        height: 106px;
+                    }
+                    .icon {
+                        text-align: center;
+                        img {
+                            width: 155px;
+                            height: 155px;
+                        }
+                    }
+                    .name {
+                        margin-top: 11px;
+                        text-align: center;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                        font-size:20px;
+                        font-weight:bold;
+                        font-family:'Microsoft YaHei UI';
+                        color:rgba(255,255,255,1);
+                    }
+                    .enemy,.restraint {
+                        width:193px;
+                        height:53px;
+                        background:rgba(64,64,64,1);
+                        >div {
+                            float: left;
+                        }
+                        .title {
+                            width:32px;
+                            height: 100%;
+                            text-align: center;
+                            font-size:14px;
+                            font-family:"Microsoft YaHei UI";
+                            font-weight: bold;
+                            color:rgba(255,255,255,1);
+                            display: flex;
+                            // align-items: left;
+                            justify-content: space-around;
+                            flex-direction: column;
+                        }
+                        .team_icon {
+                            margin-left: 4px;
+                            width:34px;
+                            height:53px;
+                            line-height: 53px;
+                            >img {
+                                width: 100%;
+                                vertical-align: middle;
+                            }
+                        }
+                        // 文字不确定行数，一行垂直居中，两行自适应并超过两行显示省略号
+                        .team_name {
+                            margin-left: 6px;
+                            width: 59px;
+                            font-size:14px;
+                            height: 53px;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(255,255,255,1);
+
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            > div {
+                                width: 100%;
+                                text-align: center;
+                                overflow : hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                vertical-align: middle;
+                            }
+                        }
+                        .win_rate_box {
+                            margin-left: 2px;
+                            width: 56px;
+                            text-align: center;
+                            .win_rate {
+                                margin-top: 4px;
+                                font-size:20px;
+                                font-family:Industry;
+                                font-weight:bold;
+                                color:rgba(238,159,56,1);
+                            }
+                            .shenglv {
+                                margin-top: 2px;
+                                font-size:12px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                    .enemy {
+                        margin-top: 37px;
+                        .title {
+                            background:rgba(216,48,48,1);
+                        }
+                    }
+                    .restraint {
+                        margin-top: 14px;
+                        .title {
+                            background:rgba(75,147,210,1);
+                        }
+                    }
+                    .detail {
+                        width: 100%;
+                        margin-top: 33px;
+                        .detail_item {
+                            margin-bottom: 15px;
+                            .detail_data {
+                                position: relative;
+                                width:91px;
+                                height:24px;
+                                text-align: center;
+                                line-height: 24px;
+                                background: url("../images/bg_zhanlingyaodian.png") no-repeat;
+                                background-size: 100% 100%;
+                                .detail_data_rate {
+                                    font-size:22px;
+                                    font-family:Industry;
+                                    font-weight:bold;
+                                    color:rgba(255,255,255,1);
+                                }
+                                .detail_type_icon {
+                                    position: absolute;
+                                    top: -6px;
+                                    left: -13px;
+                                }
+                            }
+                            .detail_type {
+                                margin-top: 9px;
+                                text-align: center;
+                                font-size:14px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                }
+                .team_a {
+                    .enemy,.restraint {
+                        margin-left: 49px;
+                    }
+                    .detail {
+                        padding-left: 51px;
+                        .detail_item {
+                            float: left;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                .team_b {
+                    .enemy,.restraint {
+                        float: right;
+                        margin-right: 52px;
+                    }
+                    .detail {
+                        float: right;
+                        padding-right: 37px;
+                        .detail_item {
+                            float: right;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+                .match_infoBox {
+                    // width:578px;
+                    width: 631px;
+                    // background:rgba(48,48,48,1);
+                    // 未开始模板样式
+                    // 双方胜率
+                    .win_rate_box {
+                        margin-top: 70px;
+                        height: 129px;
+                        text-align: center;
+                        >div {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        .team_win_rate {
+                            width:129px;
+                            height: 100%;
+                            background: url("../images/bg_shenglv_duizhan.png") no-repeat;
+                            background-size: 100% 100%;
+                            text-align: center;
+                            .win_rate {
+                                margin-top: 36px;
+                                font-size:30px;
+                                font-family:Industry;
+                                font-weight:bold;
+                                color:rgba(238,159,56,1);
+                            }
+                            .lable {
+                                margin-top: 2px;
+                                font-size:12px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                        .start_time {
+                            width: 189px;
+                            height: 100%;
+                            text-align: center;
+                            .vs {
+                                height: 57px;
+                                margin: 0 auto;
+                                margin-top: 34px;
+                                >img {
+                                    height: 100%;
+                                }
+                            }
+                            .time {
+                                margin-top: 10px;
+                                font-size:16px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+
+                            }
+                        }
+                    }
+                    // 双方战绩
+                    .team_grade {
+                        margin-top: 12px;
+                        text-align: center;
+                        >div {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        .info_box {
+                            width:209px;
+                            .grade {
+                                height:46px;
+                                background-size: 100% 100%;
+                                padding-top: 10px;
+                                box-sizing: border-box;
+                                .label {
+                                    font-size:16px;
+                                    font-family:"Microsoft YaHei UI";
+                                    color:rgba(255,255,255,1);
+                                }
+                                .grade_info {
+                                    margin-left: 20px;
+                                    font-size:23px;
+                                    font-family:Industry;
+                                    font-weight:bold;
+                                    color:rgba(255,255,255,1);
+                                }
+                            }
+                            .grade.team_a {
+                                text-align: left;
+                                background: url("../images/bg_bisaizhanji.png") no-repeat;
+                                .label {
+                                    margin-left: 28px;
+                                }
+                                .grade_info {
+                                    margin-left: 20px;
+                                }
+                            }
+                            .grade.team_b {
+                                text-align: right;
+                                background: url("../images/bg_bisaizhanji-1.png") no-repeat;
+                                .label {
+                                    margin-right: 28px;
+                                }
+                                .grade_info {
+                                    margin-right: 20px;
+                                }
+                            }
+                            .description  {
+                                margin-top: 9px;
+                                font-size:16px;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                        .zhanwei {
+                            width: 101px;
+                        }
+                    }
+                    // 双方数据对比
+                    .data_compared {
+                        margin-top: 45px;
+                        .data_compared_item {
+                            height:28px;
+                            margin-bottom: 27px;
+                            text-align: center;
+                            >div {
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            .team_compared {
+                                width:190px;
+                                height:28px;
+                                background:rgba(43,43,43,1);
+                                position: relative;
+                                .win_rate {
+                                    height: 100%;
+                                }
+                                .win_rate_text {
+                                    top: 0;
+                                    height:28px;
+                                    line-height:28px;
+                                    position: absolute;
+                                    font-size:20px;
+                                    font-family:Industry;
+                                    font-weight:bold;
+                                    color:rgba(255,255,255,1);
+                                }
+                            }
+                            .team_compared.team_a_data {
+                                .win_rate {
+                                    float: right;
+                                    background:linear-gradient(94deg,rgba(238,80,80,1) 0%,rgba(187,54,54,1) 100%);
+                                }
+                                .win_rate_text {
+                                    right: 10px;
+                                }
+                            }
+                            .team_compared.team_b_data {
+                                .win_rate {
+                                    float: left;
+                                    background:linear-gradient(266deg,rgba(238,80,80,1) 0%,rgba(187,54,54,1) 100%);
+                                }
+                                .win_rate_text {
+                                    left: 8px;
+                                }
+                            }
+                            .description {
+                                width: 124px;
+                                height: 100%;
+                                line-height: 28px;
+                                >img {
+                                    width:23px;
+                                    vertical-align: middle;
+                                }
+                                >span {
+                                    font-size:16px;
+                                    font-family:Microsoft YaHei UI;
+                                    color:rgba(255,255,255,1);
+
+                                }
+                            }
+                        }
+                    }
+                    // 进行中模板
+                    // 比分
+                    .score {
+                        margin-top: 50px;
+                        text-align: center;
+                        font-size:50px;
+                        font-family:Industry;
+                        font-weight:bold;
+                        color:rgba(255,255,255,1);
+                    }
+                    // 小场比分单元格
+                    .detail_box {
+                        margin-top: 8px;
+                        // background:rgba(64,64,64,1);
+                        .small_score_Box {
+                            width: 100%;
+                            text-align: center;
+                            .score_box {
+                                border:1px solid rgba(229,154,56,1);
+                                overflow: hidden;
+                                background:rgba(59,59,59,1);
+                                // border-radius:4px;
+                                display: inline-block;
+                                .small_score {
+                                    float: left;
+                                    .box_item {
+                                        height: 40px;
+                                        width: 69px;
+                                        // border-bottom:1px solid rgba(75,78,87,1);
+                                        text-align: center;
+                                        line-height: 40px;
+                                        font-size:14px;
+                                        font-family:'Microsoft YaHei UI';
+                                        color:rgba(154,154,154,1);
+                                        overflow: hidden;
+                                        text-overflow:ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                    .box_item.win {
+                                        color:rgba(91,223,82,1);
+                                    }
+                                    .box_item.lose {
+                                        color:rgba(214,68,68,1);
+                                    }
+                                    .box_item.team_title {
+                                        padding-left: 5px;
+                                        padding-right: 5px;
+                                        color:rgba(255,255,255,1);
+                                    }
+                                }
+                                
+                                .small_score:nth-of-type(even){
+                                    .box_item {
+                                        background:rgba(64,64,64,1);
+                                    }
+                                }
+                                .small_score {
+                                    .box_item:nth-of-type(2) {
+                                        position: relative;
+                                    }
+                                    .box_item:nth-of-type(2)::after{
+                                        content: '';
+                                        position: absolute;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background:rgba(0,0,0,0.11);
+                                    }
+                                }
+                                .last_item {
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                    // 小场切换
+                    .small_score_title {
+                        margin-top: 20px;
+                        height:47px;
+                        text-align: center;
+                        font-size: 0px; //解决inline-block中间空隙
+                        .small_score_title_item {
+                            display: inline-block;
+                            width:67px;
+                            height:47px;
+                            background:rgba(64,64,64,1);
+                            cursor: pointer;
+                            text-align: center;
+                            line-height: 47px;
+                            font-size:14px;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(188,188,188,1);
+                        }
+                        .small_score_title_item:hover {
+                            background:rgba(229,154,56,.5);
+                        }
+                        .small_score_title_item.active {
+                            background:rgba(229,154,56,1);
+                            color:rgba(255,255,255,1);
+                        }
+                    }
+                    // 占位地图
+                    .doing_map_box {
+                        width:234px;
+                        height:121px;
+                        background:rgba(64,64,64,1);
+                        text-align: center;
+                        line-height: 121px;
+                        margin: 0 auto;
+                        margin-top: 19px;
+                        font-size:14px;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(154,154,154,1);
+                    }
+                    .map_name {
+                        margin-top: 3px;
+                        text-align: center;
+                        font-size:14px;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(255,255,255,1);
+                    }
+                    .data_compared.doing {
+                        margin-top: 25px;
+                        font-size: 0;
+                        .data_compared_item {
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .data_compared.over {
+                        margin-top: 25px;
+                        font-size: 0;
+                        .data_compared_item {
+                            margin-bottom: 18px;
+                            .team_compared.nobg {
+                                background-color: transparent;
+                            }
+                            .left_other {
+                                .win_rate_text {
+                                    right: 0;
+                                }
+                            }
+                            .right_other {
+                                .win_rate_text {
+                                    left: 0;
+                                }
+
+                            }
+                            
+                        }
+                    }
+                    .small_match_boxs {
+                        .small_match_item {
+                            display: none;
+                            .doing_map_box {
+                                position: relative;
+                                background-size: 100% 100%;
+                                >div {
+                                    position: absolute;
+                                }
+                                .map_name {
+                                    bottom: 0;
+                                    left: 0;
+                                    width:234px;
+                                    height:31px;
+                                    background:rgba(0,0,0,0.59);
+                                    text-align: center;
+                                    line-height: 31px;
+                                    font-size:14px;
+                                    font-family:"Microsoft YaHei UI";
+                                    color:rgba(255,255,255,1);
+                                }
+                                .team_win {
+                                    top: 14px;
+                                    width:77px;
+                                    height:89px;
+                                    >img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                                .team_a_win {
+                                    left: -134px;
+                                }
+                                .team_b_win {
+                                    right: -134px;
+                                }
+                                .map_icon {
+                                    top: 2px;
+                                    left: 4px;
+                                    width:34px;
+                                    height:34px;
+                                    line-height: 34px;
+                                    >img {
+                                        width:34px;
+                                        height:34px;
+                                    }
+                                }
+                            }
+                        }
+                        .small_match_item.active {
+                            display: block;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

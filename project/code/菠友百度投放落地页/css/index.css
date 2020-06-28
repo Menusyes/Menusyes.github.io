@@ -1,0 +1,596 @@
+#app .title {
+  height: 106px;
+  background: #131313;
+}
+#app .title .banner .logoBox {
+  float: left;
+  display: block;
+  padding-top: 28px;
+}
+#app .title .banner .logoBox .logo {
+  display: block;
+  float: left;
+  width: 57px;
+}
+#app .title .banner .logoBox .boyou {
+  float: left;
+  margin-left: 11px;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 16px;
+}
+#app .title .banner .logoBox .boyou .cn {
+  margin-top: 7px;
+  font-size: 17px;
+}
+#app .title .banner .logoBox .boyou .en {
+  margin-top: 9px;
+  font-size: 14px;
+}
+#app .title .banner .boyou_info {
+  float: left;
+  margin-left: 18px;
+  padding-left: 16px;
+  margin-top: 41px;
+  height: 27px;
+  line-height: 27px;
+  border-left: 1px solid #ffffff;
+  font-size: 18px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #ffffff;
+}
+#app .title .banner .btn {
+  float: right;
+  display: block;
+  margin-top: 30px;
+  width: 183px;
+  height: 45px;
+  border: 1px solid #ffffff;
+  border-radius: 23px;
+  text-align: center;
+  line-height: 45px;
+}
+#app .title .banner .btn img {
+  height: 30px;
+  vertical-align: text-bottom;
+}
+#app .title .banner .btn span {
+  margin-left: 12px;
+  font-size: 18px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #ffffff;
+}
+#app .title .banner .ios_btn {
+  margin-right: 41px;
+}
+#app .title .banner .android_btn {
+  margin-right: 44px;
+}
+#app .adb {
+  display: block;
+  height: 80px;
+  background: url(../images/guanggao1.png) center no-repeat;
+  background-size: auto 100%;
+  background-color: #23272a;
+}
+#app .team_info {
+  height: 566px;
+  background: #e1e1e1;
+  background: url(../images/bg1.jpg) center no-repeat;
+  background-size: auto 100%;
+  overflow: hidden;
+}
+#app .team_info .banner > div {
+  float: left;
+}
+#app .team_info .banner .team_logo {
+  width: 370px;
+  height: 566px;
+  position: relative;
+}
+#app .team_info .banner .team_logo img {
+  position: absolute;
+  width: 244px;
+  left: 67px;
+  top: 162px;
+}
+#app .team_info .banner .team_detail {
+  width: 908px;
+  height: 566px;
+  font-size: 16px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #e1e1e1;
+}
+#app .team_info .banner .team_detail .detail_title {
+  margin-top: 111px;
+  font-size: 28px;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  color: #ff5959;
+}
+#app .team_info .banner .team_detail .name {
+  margin-top: 24px;
+  font-size: 24px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #ffffff;
+}
+#app .team_info .banner .team_detail .gang {
+  width: 120px;
+  height: 3px;
+  background: #ffffff;
+  margin-top: 6px;
+}
+#app .team_info .banner .team_detail .info1 :first-child,
+#app .team_info .banner .team_detail .info2 :first-child {
+  display: inline-block;
+  width: 156px;
+}
+#app .team_info .banner .team_detail .info1 {
+  margin-top: 10px;
+}
+#app .team_info .banner .team_detail .info2 {
+  margin-top: 13px;
+}
+#app .team_info .banner .team_detail .content {
+  max-width: 870px;
+  margin-top: 47px;
+  font-size: 17px;
+  text-shadow: 3px 5px 0px #121212;
+  font-family: "Adobe Heiti Std R";
+  line-height: 23px;
+}
+#app .team_info_for_betfriend {
+  height: 650px;
+  background: url(../images/bg2.jpg) center no-repeat;
+  background-size: auto 100%;
+}
+#app .team_info_for_betfriend .banner {
+  position: relative;
+}
+#app .team_info_for_betfriend .banner > * {
+  position: absolute;
+}
+#app .team_info_for_betfriend .banner .title1,
+#app .team_info_for_betfriend .banner .title2 {
+  font-size: 28px;
+  font-family: "MicrosoftYaHei-Bold";
+  font-weight: bold;
+  color: #ff5959;
+}
+#app .team_info_for_betfriend .banner .title1 {
+  left: 80px;
+  top: 72px;
+}
+#app .team_info_for_betfriend .banner .title2 {
+  left: 80px;
+  top: 111px;
+}
+#app .team_info_for_betfriend .banner .title3 {
+  left: 86px;
+  top: 182px;
+  font-size: 30px;
+  color: #000000;
+}
+#app .team_info_for_betfriend .banner .title4 {
+  left: 86px;
+  top: 223px;
+  font-size: 18px;
+  color: #000000;
+}
+#app .team_info_for_betfriend .banner .ranking {
+  left: 85px;
+  top: 267px;
+  width: 328px;
+  height: 65px;
+  line-height: 65px;
+  background: #161819;
+  box-sizing: border-box;
+  padding-left: 21px;
+  font-size: 20px;
+  color: #ffffff;
+}
+#app .team_info_for_betfriend .banner .ranking span {
+  margin-left: 33px;
+  color: #ffffff;
+  font-size: 30px;
+  vertical-align: middle;
+}
+#app .team_info_for_betfriend .banner .integral {
+  left: 85px;
+  top: 361px;
+  width: 526px;
+  height: 65px;
+  background: #a7aaaf;
+  line-height: 65px;
+  box-sizing: border-box;
+  padding-left: 21px;
+  font-size: 20px;
+  color: #000000;
+}
+#app .team_info_for_betfriend .banner .integral span {
+  margin-left: 28px;
+  color: #000000;
+  font-size: 30px;
+  vertical-align: middle;
+}
+#app .team_info_for_betfriend .banner .win {
+  left: 85px;
+  top: 459px;
+  width: 429px;
+  height: 65px;
+  background: #888c8f;
+  line-height: 65px;
+  box-sizing: border-box;
+  padding-left: 21px;
+  font-size: 20px;
+  color: #000000;
+}
+#app .team_info_for_betfriend .banner .win span {
+  margin-left: 28px;
+  color: #000000;
+  font-size: 30px;
+  vertical-align: middle;
+}
+#app .team_info_for_betfriend .banner .team_name {
+  font-size: 31px;
+  font-family: "MicrosoftYaHei-Bold";
+  font-weight: bold;
+  color: #161819;
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -moz-transform: rotate(90deg);
+  /* Firefox */
+  -webkit-transform: rotate(90deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(90deg);
+  /* Opera */
+}
+#app .team_info_for_betfriend .banner .name_ig {
+  left: 600px;
+  top: 350px;
+}
+#app .team_info_for_betfriend .banner .name_rng {
+  left: 565px;
+  top: 350px;
+}
+#app .team_info_for_betfriend .banner .name_we {
+  left: 646px;
+  top: 350px;
+}
+#app .team_info_for_betfriend .banner .name_fpx {
+  left: 590px;
+  top: 350px;
+}
+#app .team_info_for_betfriend .banner .name_top {
+  left: 632px;
+  top: 350px;
+}
+#app .team_info_for_betfriend .banner .name_edg {
+  left: 601px;
+  top: 350px;
+}
+#app .team_info_for_betfriend .banner .kuang {
+  left: 502px;
+  top: 97px;
+  width: 198px;
+}
+#app .team_info_for_betfriend .banner .player {
+  left: 391px;
+  top: 177px;
+  width: 260px;
+}
+#app .team_info_for_betfriend .banner .edg1 {
+  left: 380px;
+  width: 320px;
+}
+#app .team_info_for_betfriend .banner .rng1 {
+  width: 300px;
+}
+#app .team_info_for_betfriend .banner .top1 {
+  left: 360px;
+  width: 350px;
+}
+#app .team_info_for_betfriend .banner .we1 {
+  width: 310px;
+}
+#app .team_info_for_betfriend .banner .fpx1 {
+  width: 280px;
+}
+#app .team_info_for_betfriend .banner .boyouImg1 {
+  left: 933px;
+  top: 64px;
+  width: 240px;
+}
+#app .team_info_for_betfriend .banner .boyouImg2 {
+  left: 771px;
+  top: 350px;
+  width: 352px;
+}
+#app .team_data_for_betfriend {
+  height: 648px;
+  background: #d1d2d2;
+  background: url(../images/bg3.png) center no-repeat;
+  background-size: auto 100%;
+}
+#app .team_data_for_betfriend .banner {
+  position: relative;
+}
+#app .team_data_for_betfriend .banner > * {
+  position: absolute;
+}
+#app .team_data_for_betfriend .banner .boyouImg1 {
+  left: 113px;
+  top: 60px;
+  width: 240px;
+}
+#app .team_data_for_betfriend .banner .boyouImg2 {
+  left: 70px;
+  top: 359px;
+  width: 325px;
+}
+#app .team_data_for_betfriend .banner .title1 {
+  left: 311px;
+  top: 84px;
+  width: 336px;
+  height: 47px;
+  line-height: 47px;
+  box-sizing: border-box;
+  padding-left: 55px;
+  background: url(../images/xingzhuaung1.png) no-repeat;
+  background-size: 100%;
+  font-size: 24px;
+  font-family: "MicrosoftYaHei-Bold";
+  font-weight: bold;
+  color: #ff5959;
+}
+#app .team_data_for_betfriend .banner .title2 {
+  left: 330px;
+  top: 155px;
+  width: 336px;
+  height: 47px;
+  line-height: 47px;
+  box-sizing: border-box;
+  padding-left: 38px;
+  background: url(../images/xingzhuang2.png) no-repeat;
+  background-size: 100%;
+  font-size: 24px;
+  color: #23272a;
+}
+#app .team_data_for_betfriend .banner .title3 {
+  left: 330px;
+  top: 227px;
+  width: 360px;
+  height: 47px;
+  line-height: 47px;
+  box-sizing: border-box;
+  padding-left: 38px;
+  background: url(../images/xingzhuang3.png) no-repeat;
+  background-size: 100%;
+  font-size: 24px;
+  color: #000000;
+}
+#app .team_data_for_betfriend .banner .player {
+  left: 737px;
+  top: 75px;
+  width: 223px;
+}
+#app .team_data_for_betfriend .banner .edg2 {
+  top: 111px;
+}
+#app .team_data_for_betfriend .banner .team_info_img {
+  left: 626px;
+  top: 320px;
+  width: 491px;
+}
+#app .team_data_for_betfriend .banner .win_rate {
+  left: 699px;
+  top: 354px;
+  width: 119px;
+}
+#app .team_data_for_betfriend .banner .win_text {
+  left: 699px;
+  top: 402px;
+  width: 119px;
+  text-align: center;
+  font-size: 22px;
+  color: #ffffff;
+}
+#app .team_data_for_betfriend .banner .win_title {
+  left: 736px;
+  top: 485px;
+  font-size: 16px;
+  color: #ffffff;
+}
+#app .team_data_for_betfriend .banner .steady_rate {
+  left: 910px;
+  top: 354px;
+  width: 119px;
+}
+#app .team_data_for_betfriend .banner .steady_text {
+  left: 910px;
+  top: 402px;
+  width: 119px;
+  text-align: center;
+  font-size: 22px;
+  color: #ffffff;
+}
+#app .team_data_for_betfriend .banner .steady_title {
+  left: 944px;
+  top: 485px;
+  font-size: 16px;
+  color: #ffffff;
+}
+#app .team_data_for_betfriend .banner .versions {
+  left: 686px;
+  top: 553px;
+  font-size: 22px;
+  color: #ffffff;
+}
+#app .team_data_for_betfriend .banner .state_text {
+  left: 895px;
+  top: 553px;
+  font-size: 22px;
+  color: #ffffff;
+}
+#app .team_data_for_betfriend .banner .state {
+  left: 989px;
+  top: 545px;
+  font-size: 32px;
+  color: #ffffff;
+}
+#app .explain {
+  height: 674px;
+  background: #e0e1e1;
+}
+#app .explain .banner {
+  position: relative;
+}
+#app .explain .banner > * {
+  position: absolute;
+}
+#app .explain .banner .explain_title {
+  left: 62px;
+  top: 79px;
+  width: 552px;
+  height: 48px;
+  background: url(../images/dianjingAI.png) no-repeat;
+  line-height: 48px;
+  box-sizing: border-box;
+  padding-left: 16px;
+  background-size: 100%;
+  font-size: 28px;
+  font-family: "MicrosoftYaHei-Bold";
+  font-weight: bold;
+  color: #ff5959;
+}
+#app .explain .banner ul {
+  left: 98px;
+  top: 161px;
+}
+#app .explain .banner ul li {
+  max-width: 557px;
+  margin-bottom: 33px;
+  font-size: 22px;
+  color: #23272a;
+  line-height: 29px;
+  position: relative;
+}
+#app .explain .banner ul li::after {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 5px;
+  width: 12px;
+  height: 16px;
+  background-color: #f00;
+  background: url(../images/dian.png) no-repeat;
+  background-size: cover;
+}
+#app .explain .banner .adimg {
+  left: 700px;
+  top: 191px;
+  width: 530px;
+}
+#app .explain .banner .adimg img {
+  width: 100%;
+}
+#app .download {
+  height: 394px;
+  background: #23272a;
+}
+#app .download .banner {
+  position: relative;
+}
+#app .download .banner > * {
+  position: absolute;
+}
+#app .download .banner p {
+  top: 56px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-family: "MicrosoftYaHei";
+  color: #e1e1e1;
+}
+#app .download .banner .android_img {
+  left: 372px;
+  top: 132px;
+  width: 141px;
+}
+#app .download .banner .ios_img {
+  left: 737px;
+  top: 132px;
+  width: 141px;
+}
+#app .download .banner .click {
+  top: 297px;
+  width: 192px;
+  height: 43px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 43px;
+  font-size: 24px;
+  color: #ffffff;
+}
+#app .download .banner .android_click {
+  left: 347px;
+  background: #3aab4d;
+}
+#app .download .banner .ios_click {
+  left: 715px;
+  background: #05a4e8;
+}
+#app .elevator {
+  width: 59px;
+  position: fixed;
+  right: 20px;
+  bottom: 20%;
+}
+#app .elevator .look_data {
+  display: block;
+  height: 59px;
+  margin-bottom: 5px;
+  background: #fbfbfb;
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "MicrosoftYaHei";
+  font-weight: 400;
+  color: #939393;
+  text-align: center;
+  padding-top: 12px;
+  box-sizing: border-box;
+  line-height: 18px;
+}
+#app .elevator .active {
+  background: #ff5959;
+  color: #ffffff;
+}
+#app .float_download {
+  width: 152px;
+  height: 195px;
+  background: #394046;
+  position: fixed;
+  left: 30px;
+  bottom: 20%;
+  text-align: center;
+  font-size: 18px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  line-height: 18px;
+}
+#app .float_download img {
+  width: 141px;
+  margin-top: 7px;
+}
+#app .float_download a {
+  display: block;
+  margin-top: 14px;
+  color: #ffffff;
+}

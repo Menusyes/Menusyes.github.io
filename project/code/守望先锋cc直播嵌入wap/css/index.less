@@ -1,0 +1,1378 @@
+body,div,ul,li,p,span,i,b,h1,h2,h3,h4,h5,h6,a,img {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    font-family: "微软雅黑", "宋体", "Arial Narrow";
+    background:rgba(244,244,244,1);
+    overflow: hidden;
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+a {
+    text-decoration: none;
+}
+select {
+    vertical-align: middle;
+}
+img {
+    border: none;
+}
+.clear{ 
+    clear:both;
+} 
+@font-face{
+    font-family: 'Industry'; 
+    src: url('../font/Industry-Bold.otf');
+}
+#app {
+    height: 660px;
+    margin: 0 auto;
+    overflow: scroll;
+    // background:rgba(244,0,0,1);
+    position: relative;
+    .select_mask {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        z-index: 9;
+    }
+    .select_mask.show {
+        display: block;
+    }
+    .select_box_list {
+        position: fixed;
+        top: -7.6rem;
+        left: 0;
+        width: 100%;
+        transition: all .3s;
+        height: 3.85rem;
+        overflow: auto;
+        z-index: 99;
+        box-sizing: border-box;
+        border-bottom: solid 0.13rem #ffaa00;
+        background-color: #ffffff;
+        // background-color: #f00;
+        .show_item {
+            width: 100%;
+            height: 1.24rem;
+            line-height: 1.24rem;
+            text-align: center;
+            font-size: .4rem;
+            color: #3a3a3a;
+            border-color: #3a3a3a;
+        }
+    }
+    .select_box_list.show {
+        top: 0;
+    }
+    // 赛事积分
+    .match_integral {
+        display: none;
+        // 赛程阶段title（暂时常规赛）
+        .match_title {
+            margin-top: .345912rem;
+            height: .849057rem;
+            .match_title_item {
+                float: left;
+                width: 2.578616rem;
+                height: .849057rem;
+                background:rgba(238,159,56,1);
+                font-size: .377358rem;
+                font-family:"Microsoft YaHei UI";
+                line-height: .849057rem;
+                color:rgba(255,255,255,1);
+                text-align: center;
+            }
+        }
+        // 积分榜banner图
+        .ranking_banner {
+            width: 10rem;
+            margin-top: .157233rem;
+            height: 1.069182rem;
+            >img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        // 小组切换
+        .ranking_title {
+            margin-top: .157233rem;
+            height:.786164rem;
+            background:rgba(255,255,255,1);
+            display: flex;
+            display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
+            display: -moz-box; /* Firefox 17- */  
+            display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
+            display: -moz-flex; /* Firefox 18+ */  
+            display: -ms-flexbox; /* IE 10 */  
+            flex-direction: row;
+            -webkit-box-orient: row;
+            -ms-flex-direction: row;
+            -webkit-flex-direction: row;
+            justify-content: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            .ranking_title_item {
+                width: 100%;
+                height: .786164rem;
+                line-height: .786164rem;
+                font-size: .377358rem;
+                font-family:'Microsoft YaHei UI';
+                color:rgba(137,137,137,1);
+                text-align: center;
+                cursor: pointer;
+            }
+            .ranking_title_item.active {
+                background:rgba(238,159,56,1);
+                color:rgba(255,255,255,1);
+            }
+        }
+        // 每项描述
+        .body_info {
+            width: 100%;
+            height: 1.194969rem;
+            position: relative;
+            div {
+                position: absolute;
+                height: 1.194969rem;
+                line-height: 1.194969rem;
+                font-size: .314465rem;
+                font-family:'Microsoft YaHei UI';
+                color:rgba(0,0,0,1);
+            }
+            .mingci {
+                left: .283019rem;
+            }
+            .name {
+                left: 1.352201rem;
+            }
+            .team_win {
+                left: 5.283019rem;
+            }
+            .map_win {
+                left: 6.981132rem;
+            }
+            .score {
+                left: 8.647799rem;
+            }
+    
+        }
+        // 战队列表
+        .ranking_body {
+            .ranking_body_item {
+                display: none;
+                .team_item {
+                    width:100%;
+                    height: .943396rem;
+                    background:rgba(255,255,255,1);
+                    border-radius: .125786rem;
+                    margin-bottom: .125786rem;
+                    position: relative;
+                    line-height: .943396rem;
+                    div {
+                        position: absolute;
+                    }
+                    .topThree {
+                        left: .188679rem;
+                        img {
+                            width: .91195rem;
+                            vertical-align: middle;
+                        }
+                    }
+                    .topThreeNum {
+                        left: .534591rem;
+                        font-size: .377358rem;
+                        font-family:'Microsoft YaHei UI';
+                        color:rgba(0,0,0,1);
+                    }
+                    .team_icon {
+                        left: 1.320755rem;
+                        img {
+                            width: .786164rem;
+                            vertical-align: middle;
+                        }
+                    }
+                    .team_name {
+                        left: 2.264151rem;
+                        font-size: .377358rem;
+                        font-family:'Microsoft YaHei UI';
+                        color:rgba(139,139,139,1);
+                        width: 3.018868rem;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                    }
+                    .team_grade {
+                        left: 5.283019rem;
+                        width: 1.257862rem;
+                        text-align: center;
+                        font-size: .377358rem;
+                        font-family:Industry;
+                        color:rgba(0,0,0,1);
+                    }
+                    .map_grade {
+                        left: 6.981132rem;
+                        width: 1.257862rem;
+                        text-align: center;
+                        // background-color: #f00;
+                        font-size: .377358rem;
+                        font-family:Industry;
+                        color:rgba(0,0,0,1);
+                    }
+                    .score {
+                        right: .566038rem;
+                        font-size: .377358rem;
+                        font-family:Industry;
+                        color:rgba(187,42,42,1);
+                        font-weight:bold;
+                    }
+                    .score.add {
+                        color:rgba(38,116,33,1);
+                    }
+                }
+            }
+            .ranking_body_item.active {
+                display: block;
+            }
+        }
+    }
+    // 战队数据
+    .team_data {
+        display: none;
+        // 小组切换
+        .ranking_title {
+            margin-top: .157233rem;
+            height:.786164rem;
+            background:rgba(255,255,255,1);
+            display: flex;
+            display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
+            display: -moz-box; /* Firefox 17- */  
+            display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
+            display: -moz-flex; /* Firefox 18+ */  
+            display: -ms-flexbox; /* IE 10 */  
+            flex-direction: row;
+            -webkit-box-orient: row;
+            -ms-flex-direction: row;
+            -webkit-flex-direction: row;
+            justify-content: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            .ranking_title_item {
+                width: 100%;
+                height: .786164rem;
+                line-height: .786164rem;
+                font-size: .377358rem;
+                font-family:'Microsoft YaHei UI';
+                color:rgba(137,137,137,1);
+                text-align: center;
+                cursor: pointer;
+            }
+            .ranking_title_item.active {
+                background:rgba(238,159,56,1);
+                color:rgba(255,255,255,1);
+            }
+        }
+        // 战队列表
+        .ranking_body {
+            .ranking_body_item {
+                height: 5.566038rem;
+                background:rgba(255,255,255,1);
+                display: none;
+                padding-left: .314465rem;
+                padding-right: .283019rem;
+                // padding-top: .345912rem;
+                box-sizing: border-box;
+                .team_item {
+                    float: left;
+                    width: 1.257862rem;
+                    text-align: center;
+                    // height: 80px;
+                    // background-color: #f00;
+                    margin-right: .77044rem;
+                    margin-top: .345912rem;
+                    .team_icon {
+                        width: 1.226415rem;
+                        height: 1.226415rem;
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .team_name {
+                        margin-top: .157233rem;
+                        font-size: .314465rem;
+                        color:rgba(0,0,0,1);
+                        font-family:"Microsoft YaHei UI";
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        text-align: center;
+                    }
+                }
+                // .team_item.active {
+                //     .team_name {
+                //         color: rgba(238,159,56,1);
+                //     }
+                // }
+                .team_item:nth-of-type(5) {
+                    margin-right: 0;
+                }
+                .team_item:nth-of-type(10) {
+                    margin-right: 0;
+                }
+            }
+            .ranking_body_item.active {
+                display: block;
+            }
+        }
+        // 战队详细数据
+        .team_info_box {
+            width: 10rem;
+            height: 8.427673rem;
+            background: url("../images/bg_dibu.png") no-repeat;
+            background-color: rgba(51,51,51,1);
+            background-size: 100% 100%;
+            .info_one_line {
+                height: 2.54717rem;
+                position: relative;
+                >div {
+                    position: absolute;
+                }
+                .team_icon {
+                    left: .440252rem;
+                    top: .786164rem;
+                    width: 1.477987rem;
+                    height: 1.477987rem;
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .team_name {
+                    width: 3.018868rem;
+                    top: .72327rem;
+                    left: 2.169811rem;
+                    font-size:12px;
+                    font-family:"Microsoft YaHei UI";
+                    font-weight:bold;
+                    color:rgba(255,255,255,1);
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+                .label {
+                    top: 1.572327rem;
+                    left: 2.169811rem;
+                    font-size: .377358rem;
+                    font-family:"Microsoft YaHei UI";
+                    color:rgba(255,255,255,1);
+                }
+                .win_rate {
+                    top: 1.415094rem;
+                    left: 3.238994rem;
+                    font-size: .754717rem;
+                    font-family:Industry;
+                    font-weight:bold;
+                    color:rgba(238,159,56,1);
+                }
+                .match_record,.map_record {
+                    top: .849057rem;
+                    width: 1.855346rem;
+                    height: 1.163522rem;
+                    background:rgba(64,64,64,1);
+                    .top {
+                        height: .566038rem;
+                        background:rgba(238,159,56,1);
+                        text-align: center;
+                        line-height: .566038rem;
+                        font-size: .345912rem;
+                        font-family:"Microsoft YaHei UI";
+                        font-weight:bold;
+                        color:rgba(255,255,255,1);
+                    }
+                    .bottom {
+                        height: .597484rem;
+                        text-align: center;
+                        line-height: .697484rem;
+                        font-size: .345912rem;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(255,255,255,1);
+                    }
+                }
+                .match_record {
+                    left: 5.377358rem;
+                }
+                .map_record {
+                    left: 7.704403rem;
+                }
+
+            }
+            .info_two_line {
+                height: 2.610063rem;
+                display: flex;
+                justify-content: center;
+                .detail_item {
+                    width: 1.603774rem;
+                    // height: 50px;
+                    // background-color: #f00;
+                    margin-left: .314465rem;
+                    margin-right: .314465rem;
+                    .detail_data {
+                        padding-top: .108679rem;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 1.415094rem;
+                        background: url("../images/bg_shenglv.png") no-repeat;
+                        background-size: 100% 100%;
+                        position: relative;
+                        .detail_type_icon {
+                            position: absolute;
+                            top: 1.069182rem;
+                            left: .377358rem;
+                            width: .72327rem;
+                            height: .72327rem;
+                        }
+                        .detail_data_rate {
+                            text-align: center;
+                            font-size: .377358rem;
+                            font-family:Industry;
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                        }
+                        .detail_data_record {
+                            margin-top: .062893rem;
+                            text-align: center;
+                            font-size: .314465rem;
+                            font-family:Industry;
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                        }
+                    }
+                    .detail_type {
+                        margin-top: .440252rem;
+                        margin-left: .09434rem;
+                        font-size: .314465rem;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(255,255,255,1);
+                    }
+                }
+            }
+            .info_line {
+                width: 8.333333rem;
+                height: 1px;
+                background-color: rgba(38,38,38,1);
+                margin: 0 auto;
+            }
+            .enemy_and_restraint {
+                margin-top: .345912rem;
+                height: 1.194969rem;
+                display: flex;
+                justify-content: center;
+                .enemy,.restraint {
+                    width: 4.245283rem;
+                    margin-left: .157233rem;
+                    margin-right: .157233rem;
+                    background:rgba(64,64,64,1);
+                    >div {
+                        float: left;
+                    }
+                    .title {
+                        width: .72327rem;
+                        height: 100%;
+                        font-size: .314465rem;
+                        font-family:"Microsoft YaHei UI";
+                        font-weight: bold;
+                        color:rgba(255,255,255,1);
+                        display: flex;
+                        justify-content: space-around;
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    .icon {
+                        margin-left: .220126rem;
+                        width: .628931rem;
+                        height: 1.194969rem;
+                        line-height: 1.194969rem;
+                        img {
+                            width: 100%;
+                            vertical-align: middle;
+                        }
+                    }
+                    // 文字不确定行数，一行垂直居中，两行自适应并超过两行显示省略号
+                    .name {
+                        margin-left: .125786rem;
+                        // background-color: #f00;
+                        // margin-top: 9px;
+                        width: 1.257862rem;
+                        font-size: .314465rem;
+                        height: 1.194969rem;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(255,255,255,1);
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        > div {
+                            width: 100%;
+                            text-align: center;
+                            overflow : hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            vertical-align: middle;
+                        }
+                    }
+                    .win_rate_box {
+                        margin-left: .157233rem;
+                        width: 1.100629rem;
+                        text-align: center;
+                        // background-color: rgba(255,0,0,.1);
+                        height: 1.194969rem;
+                        .win_rate {
+                            margin-top: .09434rem;
+                            font-size: .408805rem;
+                            font-family: Industry;
+                            font-weight: bold;
+                            color:rgba(238,159,56,1);
+                        }
+                        .shenglv {
+                            // margin-top: .062893rem;
+                            font-size: .314465rem;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(255,255,255,1);
+                        }
+                    }
+                }
+                .enemy {
+                    .title {
+                        background:rgba(216,48,48,1);
+                    }
+                }
+                .restraint {
+                    .title {
+                        background:rgba(75,147,210,1);
+                    }
+                }
+            }
+            .grade {
+                height: .943396rem;
+                position: relative;
+                font-size: .377358rem;
+                font-family:"Microsoft YaHei UI";
+                color:rgba(255,255,255,1);
+                >div {
+                    position: absolute;
+                    top: .377358rem;
+                }
+                .five_match {
+                    left: .566038rem;
+                }
+                .five_match_map {
+                    left: 5.188679rem;
+                }
+            }
+        }
+    }
+    // 赛事数据
+    .match_data {
+        display: none;
+        .match_list_box {
+            margin-top: .377358rem;
+            .match_list_week {
+                margin-bottom: .157233rem;
+                .now_week {
+                    height: .849057rem;
+                    line-height: .849057rem;
+                    padding-left: .408805rem;
+                    background:rgba(238,159,56,1);
+                    font-size: .377358rem;
+                    font-family:"Microsoft YaHei UI";
+                    color:rgba(255,255,255,1);
+                }
+                .match_list {
+                    margin-top: .157233rem;
+                    .match_list_item {
+                        height: 3.144654rem;
+                        background:rgba(255,255,255,1);
+                        border-radius: .125786rem;
+                        margin-bottom: .157233rem;
+                        position: relative;
+                        >div {
+                            position: absolute;
+                        }
+                        .have_data {
+                            top: 0;
+                            right: .408805rem;
+                            >img {
+                                width: .597484rem;
+                            }
+                        }
+                        .time {
+                            left: .377358rem;
+                            top: .220126rem;
+                            font-size:10px;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(139,139,139,1);
+                        }
+                        .vs {
+                            left: 1.100629rem;
+                            top: 1.761006rem;
+                            font-size: .188679rem;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(139,139,139,1);
+                        }
+                        .line {
+                            left: 1.383648rem;
+                            top: 1.886792rem;
+                            width: 8.207547rem;
+                            height: 1px;
+                            background-color: rgba(242,242,242,1);
+                        }
+                        .icon {
+                            left: .408805rem;
+                            width: .849057rem;
+                            height: .849057rem;
+                            border:1px solid rgba(226,226,226,1);
+                            border-radius:50%;
+                            overflow: hidden;
+                            >img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .teamA_icon {
+                            top: .91195rem;
+                        }
+                        .teamB_icon {
+                            top: 2.044025rem;
+                        }
+                        .name {
+                            left: 1.383648rem;
+                            font-size: .377358rem;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(139,139,139,1);
+                        }
+                        .teamA_name {
+                            top: 1.100629rem;
+                        }
+                        .teamB_name {
+                            top: 2.232704rem;
+                        }
+                        .score {
+                            left: 7.610063rem;
+                            width: .534591rem;
+                            height: .660377rem;
+                            background:rgba(0,0,0,1);
+                            border-radius: .062893rem;
+                            line-height: .660377rem;
+                            text-align: center;
+                            font-size: .377358rem;
+                            font-family:Industry;
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                        }
+                        .teamA_score {
+                            top: 1.037736rem;
+                        }
+                        .teamB_score {
+                            top: 2.138365rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 比赛详情
+    .match_info {
+        display: none;
+        // 顶部返回按钮
+        .tab_title {
+            height: .660377rem;
+            .title_button {
+                float: right;
+                width: 1.918239rem;
+                height: .754717rem;
+                background:rgba(19,19,19,1);
+                border-radius: .125786rem;
+                box-sizing: border-box;
+                border:1px solid rgba(245,171,22,1);
+                text-align: center;
+                line-height: .754717rem;
+                font-size: .377358rem;
+                font-family:"Microsoft YaHei UI";
+                color:rgba(255,255,255,1);
+            }
+        }
+        // 比赛详情公共样式
+        .match_box {
+            margin-top: .188679rem;
+            display: none; //临时
+            background:rgba(255,255,255,1);
+            padding-top: .440252rem;
+            .team_vs {
+                text-align: center;
+                >div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .team {
+                    width: 2.075472rem;
+                    .team_icon {
+                        >img {
+                            width: 100%;
+                            height: 2.075472rem;
+                        }
+                    }
+                    .team_name {
+                        margin-top: .09434rem;
+                        font-size: .314465rem;
+                        font-family: "Microsoft YaHei UI";
+                        font-weight:bold;
+                        color:rgba(29,29,29,1);
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            // 小场比分单元格
+            .detail_box {
+                margin-top: .251572rem;
+                // background:rgba(64,64,64,1);
+                .small_score_Box {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 0;
+                    .score_box {
+                        border:1px solid rgba(229,154,56,1);
+                        overflow: hidden;
+                        background:rgba(59,59,59,1);
+                        // border-radius:4px;
+                        display: inline-block;
+                        .small_score {
+                            float: left;
+                            .box_item {
+                                height: .597484rem;
+                                width: 1.163522rem;
+                                // border-bottom:1px solid rgba(75,78,87,1);
+                                line-height: .597484rem;
+                                font-size: .314465rem;
+                                font-family:'Microsoft YaHei UI';
+                                color:rgba(154,154,154,1);
+                                overflow: hidden;
+                                text-overflow:ellipsis;
+                                white-space: nowrap;
+                                text-align: center;
+                            }
+                            .box_item.win {
+                                color:rgba(91,223,82,1);
+                            }
+                            .box_item.lose {
+                                color:rgba(214,68,68,1);
+                            }
+                            .box_item.team_title {
+                                padding-left: .283019rem;
+                                padding-right: .220126rem;
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                        .small_score.title {
+                            .box_item {
+                                width: 1.792453rem;
+                                box-sizing: border-box;
+                            }
+                        }
+                        
+                        .small_score:nth-of-type(even){
+                            .box_item {
+                                background:rgba(64,64,64,1);
+                            }
+                        }
+                        .small_score {
+                            .box_item:nth-of-type(2) {
+                                position: relative;
+                            }
+                            .box_item:nth-of-type(2)::after{
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background:rgba(0,0,0,0.11);
+                            }
+                        }
+                        .last_item {
+                            border: none;
+                        }
+                    }
+                }
+            }
+            // 天敌克制
+            .enemy_and_restraint {
+                font-size: 0;
+                text-align: center;
+                >div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .zhanwei {
+                    width: .754717rem;
+                }
+                .team_data {
+                    // background-color: #00f;
+                    .enemy,.restraint {
+                        width: 4.245283rem;
+                        height: 1.194969rem;
+                        background:rgba(64,64,64,1);
+                        >div {
+                            float: left;
+                        }
+                        .title {
+                            width: .72327rem;
+                            height: 100%;
+                            font-size: .314465rem;
+                            font-family:"Microsoft YaHei UI";
+                            font-weight: bold;
+                            color:rgba(255,255,255,1);
+                            display: flex;
+                            justify-content: space-around;
+                            flex-direction: column;
+                            text-align: center;
+                        }
+                        .icon {
+                            margin-left: .220126rem;
+                            width: .628931rem;
+                            height: 1.194969rem;
+                            line-height: 1.194969rem;
+                            img {
+                                width: 100%;
+                                vertical-align: middle;
+                            }
+                        }
+                        // 文字不确定行数，一行垂直居中，两行自适应并超过两行显示省略号
+                        .name {
+                            margin-left: .125786rem;
+                            // background-color: #f00;
+                            // margin-top: 9px;
+                            width: 1.257862rem;
+                            font-size: .314465rem;
+                            height: 1.194969rem;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(255,255,255,1);
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            > div {
+                                width: 100%;
+                                text-align: center;
+                                overflow : hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                vertical-align: middle;
+                            }
+                        }
+                        .win_rate_box {
+                            margin-left: .157233rem;
+                            width: 1.100629rem;
+                            text-align: center;
+                            // background-color: rgba(255,0,0,.1);
+                            height: 1.194969rem;
+                            .win_rate {
+                                margin-top: .09434rem;
+                                font-size: .408805rem;
+                                font-family: Industry;
+                                font-weight: bold;
+                                color:rgba(238,159,56,1);
+                            }
+                            .shenglv {
+                                // margin-top: .062893rem;
+                                font-size: .314465rem;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                    .enemy {
+                        margin-bottom: .188679rem;
+                        .title {
+                            background:rgba(216,48,48,1);
+                        }
+                    }
+                    .restraint {
+                        .title {
+                            background:rgba(75,147,210,1);
+                        }
+                    }
+                }
+
+            }
+            // 队伍数据对比与比赛详情数据
+            .teamData_and_matchData {
+                height: 14.18239rem;
+                background: url("../images/bg_ditu_long.png") no-repeat;
+                background-size: 100% 100%;
+                margin-top: .251572rem;
+                padding-top: .849057rem;
+                box-sizing: border-box;
+                .map_grade {
+                    margin-top: .471698rem;
+                    font-size: 0;
+                    text-align: center;
+                    >div {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    .zhanwei {
+                        width: .754717rem;
+                    }
+                    .team_data {
+                        width: 4.622642rem;
+                        // background-color: #f00;
+                        .map_item {
+                            margin-bottom: .220126rem;
+                            .detail_data {
+                                position: relative;
+                                width: 1.855346rem;
+                                height: .471698rem;
+                                text-align: center;
+                                line-height: .471698rem;
+                                // background:rgba(238,159,56,1);
+                                // padding-top: .09434rem;
+                                // box-sizing: border-box;
+                                .detail_data_rate {
+                                    font-size: .440252rem;
+                                    // font-size: 10px;
+                                    font-family:Industry;
+                                    font-weight:bold;
+                                    color:rgba(255,255,255,1);
+                                    line-height: .590252rem;
+                                    // margin-top: .09434rem;
+                                }
+                                .detail_type_icon {
+                                    position: absolute;
+                                    top: -0.125786rem;
+                                    width: .691824rem;
+                                    height: .691824rem;
+                                }
+                            }
+                            .detail_type {
+                                margin-top: .157233rem;
+                                text-align: center;
+                                font-size: .314465rem;
+                                font-family:"Microsoft YaHei UI";
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                    .team_data.team_a {
+                        .map_item {
+                            float: right;
+                            margin-left: .408805rem;
+                            .detail_data {
+                                background: url("../images/bg_zhanlingyaodian_zuo.png") no-repeat;
+                                background-size: 100% 100%;
+                                .detail_type_icon {
+                                    left: -0.251572rem;
+                                }
+                            }
+                        }
+                    }
+                    .team_data.team_b {
+                        .map_item {
+                            margin-right: .408805rem;
+                            float: left;
+                            .detail_data {
+                                background: url("../images/bg_zhanlingyaodian_you.png") no-repeat;
+                                background-size: 100% 100%;
+                                .detail_type_icon {
+                                    right: -0.251572rem;
+                                }
+                            }
+                        }
+                    }
+
+                }
+                // 小场切换
+                .small_score_title {
+                    margin-top: .408805rem;
+                    height: .943396rem;
+                    text-align: center;
+                    font-size: 0px; //解决inline-block中间空隙
+                    width: 9.496855rem;
+                    background:rgba(64,64,64,1);
+                    margin: 0 auto;
+                    overflow-y: scroll;
+                    .small_score_title_ul {
+                        width: 31446.509434rem;
+                        .small_score_title_item {
+                            float: left;
+                            margin-right: .534591rem;
+                            width: 1.918239rem;
+                            height: .943396rem;
+                            cursor: pointer;
+                            text-align: center;
+                            line-height: .943396rem;
+                            font-size: .345912rem;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(188,188,188,1);
+                        }
+                        .small_score_title_item.active {
+                            background:rgba(229,154,56,1);
+                            color:rgba(255,255,255,1);
+                        }
+                    }
+                }
+                // 占位地图
+                .doing_map_box {
+                    width: 3.081761rem;
+                    height: 1.603774rem;
+                    background:rgba(64,64,64,1);
+                    text-align: center;
+                    line-height: 1.603774rem;
+                    margin: 0 auto;
+                    margin-top: .314465rem;
+                    font-size: .314465rem;
+                    font-family:"Microsoft YaHei UI";
+                    color:rgba(154,154,154,1);
+                }
+                .map_name {
+                    margin-top: .09434rem;
+                    text-align: center;
+                    font-size: .314465rem;
+                    font-family:"Microsoft YaHei UI";
+                    color:rgba(255,255,255,1);
+                }
+            }
+
+            // 数据对比
+            .data_compared {
+                margin-top: .503145rem;
+                .data_compared_item {
+                    height: .566038rem;
+                    margin-bottom: .408805rem;
+                    text-align: center;
+                    font-size: 0;
+                    >div {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    .team_compared {
+                        width: 3.27044rem;
+                        height: .566038rem;
+                        background:rgba(43,43,43,1);
+                        position: relative;
+                        .win_rate {
+                            height: 100%;
+                        }
+                        .win_rate_text {
+                            top: 0;
+                            height: .566038rem;
+                            position: absolute;
+                            font-size: .377358rem;
+                            font-family:Industry;
+                            font-weight:bold;
+                            color:rgba(255,255,255,1);
+                            line-height: .666038rem;
+                        }
+                    }
+                    .team_compared.team_a_data {
+                        .win_rate {
+                            float: right;
+                            background:linear-gradient(94deg,rgba(238,80,80,1) 0%,rgba(187,54,54,1) 100%);
+                        }
+                        .win_rate_text {
+                            right: .157233rem;
+                        }
+                    }
+                    .team_compared.team_b_data {
+                        .win_rate {
+                            float: left;
+                            background:linear-gradient(266deg,rgba(238,80,80,1) 0%,rgba(187,54,54,1) 100%);
+                        }
+                        .win_rate_text {
+                            left: .125786rem;
+                        }
+                    }
+                    .description {
+                        width: 2.106918rem;
+                        height: 100%;
+                        line-height: .566038rem;
+                        >img {
+                            width: .471698rem;
+                            vertical-align: top;
+                        }
+                        >span {
+                            margin-left: .062893rem;
+                            font-size: .314465rem;
+                            font-family:Microsoft YaHei UI;
+                            color:rgba(255,255,255,1);
+
+                        }
+                    }
+                }
+            }
+            .data_compared.doing {
+                margin-top: 25px;
+                font-size: 0;
+                .data_compared_item {
+                    margin-bottom: 18px;
+                }
+            }
+            .data_compared.over {
+                // margin-top: 25px;
+                font-size: 0;
+                .data_compared_item {
+                    margin-bottom: 18px;
+                    .team_compared.nobg {
+                        background-color: transparent;
+                    }
+                    .left_other {
+                        .win_rate_text {
+                            right: 0;
+                        }
+                    }
+                    .right_other {
+                        .win_rate_text {
+                            left: 0;
+                        }
+
+                    }
+                    
+                }
+            }
+
+            .small_match_boxs {
+                .small_match_item {
+                    display: none;
+                    .doing_map_box {
+                        position: relative;
+                        background-size: 100% 100%;
+                        >div {
+                            position: absolute;
+                        }
+                        .map_name {
+                            bottom: 0;
+                            left: 0;
+                            width: 3.081761rem;
+                            height: .503145rem;
+                            background:rgba(0,0,0,0.59);
+                            text-align: center;
+                            line-height: .503145rem;
+                            font-size: .314465rem;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(255,255,255,1);
+                        }
+                        .team_win {
+                            top: .062893rem;
+                            width: 1.415094rem;
+                            height: 1.63522rem;
+                            >img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .team_a_win {
+                            left: -2.672956rem;
+                        }
+                        .team_b_win {
+                            right: -2.672956rem;
+                        }
+                        .map_icon {
+                            top: .031447rem;
+                            left: .062893rem;
+                            width:.660377rem;
+                            height:.660377rem;
+                            line-height: .660377rem;
+                            >img {
+                                width: .660377rem;
+                                height: .660377rem;
+                            }
+                        }
+                    }
+                }
+                .small_match_item.active {
+                    display: block;
+                }
+            }
+
+        }
+        .match_box.show {
+            display: block;
+        }
+        // 未开始
+        .notStart {
+            // 对阵双方
+            .team_vs {
+                .vs {
+                    width: 4.654088rem;
+                    text-align: center;
+                    padding-top: .628931rem;
+                    img {
+                        width: 1.163522rem;
+                        height: 1.037736rem;
+                    }
+                    .match_time {
+                        margin-top: .09434rem;
+                        font-size: .377358rem;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(0,0,0,1);
+                    }
+                }
+            }
+            // 队伍成绩
+            .team_grade {
+                text-align: center;
+                font-size: 0;
+                >div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .match_record{
+                    width: 2.421384rem;
+                    height: 1.163522rem;
+                    background:rgba(64,64,64,1);
+                    .top {
+                        height: .566038rem;
+                        background:rgba(238,159,56,1);
+                        text-align: center;
+                        line-height: .566038rem;
+                        font-size: .345912rem;
+                        font-family:"Microsoft YaHei UI";
+                        font-weight:bold;
+                        color:rgba(255,255,255,1);
+                    }
+                    .bottom {
+                        height: .597484rem;
+                        text-align: center;
+                        line-height: .697484rem;
+                        font-size: .345912rem;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(255,255,255,1);
+                    }
+                }
+                .zhanwei {
+                    width: .251572rem;
+                }
+                .zhanwei1 {
+                    width: .880503rem;
+                }
+                .team_win_rate {
+                    width: 1.509434rem;
+                    height: 1.509434rem;
+                    background: url("../images/bg_shenglv_duizhan.png") no-repeat;
+                    background-size: 100% 100%;
+                    text-align: center;
+                    .win_rate {
+                        margin-top: .377358rem;
+                        font-size: .534591rem;
+                        font-family:"Industry";
+                        font-weight:bold;
+                        color:rgba(238,159,56,1);
+                        line-height: .534591rem;
+                    }
+                    .lable {
+                        margin-top: .09434rem;
+                        font-size: .283019rem;
+                        font-family: "Microsoft YaHei UI";
+                        color:rgba(68,68,68,1);
+                        line-height: .283019rem;
+                    }
+                }
+            }
+            // 详细数据对比
+            .match_infoBox {
+                margin: 0 auto;
+                margin-top: .283019rem;
+                width: 10rem;
+                height: 8.490566rem;
+                background: url("../images/bg_dibu.png") no-repeat;
+                background-size: 100% 100%;
+                box-sizing: border-box;
+                padding-top: .849057rem;
+                
+            }
+        }
+        // 进行中
+        .doing,.over {
+            // 对阵双方
+            .team_vs {
+                .vs {
+                    // background-color: #f00;
+                    width: 4.454088rem;
+                    text-align: center;
+                    // padding-top: .597484rem;
+                    font-size: .754717rem;
+                    font-family:Industry;
+                    font-weight:bold;
+                    color:rgba(159,159,159,1);
+                    span.win {
+                        color:rgba(238,159,56,1);
+                    }
+                    .dian {
+                        margin-left: .09434rem;
+                        margin-right: .09434rem;
+                        font-family: "宋体";
+                    }
+                }
+            }
+        }
+    }
+
+    .match_integral,
+    .team_data,
+    .match_data{
+        // 顶部赛事积分、赛事数据、战队数据切换
+        .tab_title {
+            height: .660377rem;
+            .title_button {
+                float: right;
+                width: 4.528302rem;
+                height: .660377rem;
+                background:rgba(255,255,255,1);
+                border-radius: .09434rem;
+                box-sizing: border-box;
+                padding-left: .09434rem;
+                padding-top: .062893rem;
+                .left {
+                    float: left;
+                    width: 3.867925rem;
+                    height: .534591rem;
+                    border:1px solid rgba(245,171,22,1);
+                    border-radius: .09434rem;
+                    box-sizing: border-box;
+                    font-size: .377358rem;
+                    font-family:"Microsoft YaHei UI";
+                    line-height:.534591rem;
+                    color:rgba(0,0,0,1);
+                    text-align: center;
+                }
+                .rigth {
+                    float: left;
+                    width: .534591rem;
+                    height: .534591rem;
+                    background: url("../images/ic_xiala.png") no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+    .match_integral.show,
+    .team_data.show,
+    .match_data.show,
+    .match_info.show {
+        display: block;
+    }
+}

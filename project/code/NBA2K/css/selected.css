@@ -1,0 +1,96 @@
+﻿
+#super_citys>.selected_item {
+    border: 1px solid transparent;
+    height: 45px;
+    width: 187px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+}
+#super_citys>.provinces {
+    left: 3px;
+    background: url(../images/bt_qiehuan.png) no-repeat right center;
+}
+#super_citys>.city {
+    left: 330px;
+    background: url(../images/xiala.png) no-repeat right center;
+}
+#super_citys>.area {
+    left: 646px;
+    background: url(../images/xiala.png) no-repeat right center;
+}
+#super_citys>.selected_item>.selection {
+    overflow: hidden;
+    padding-right: 24px;
+    font-size: 13px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow:-1.5px -1.5px #000,	1.5px -1.5px #000,-1.5px 1.5px #000,1.5px 1.5px #000, -1.5px 0 #000,0 -1.5px #000,1.5px 0 #000,0 1.5px #000,-2px -2px #000,2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,	2px 0 #000,0 2px #000;
+    -webkit-text-shadow:-1.5px -1.5px #000,	1.5px -1.5px #000,-1.5px 1.5px #000,1.5px 1.5px #000, -1.5px 0 #000,0 -1.5px #000,1.5px 0 #000,0 1.5px #000,-2px -2px #000,2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,	2px 0 #000,0 2px #000;
+    -moz-text-shadow:-1.5px -1.5px #000,	1.5px -1.5px #000,-1.5px 1.5px #000,1.5px 1.5px #000, -1.5px 0 #000,0 -1.5px #000,1.5px 0 #000,0 1.5px #000,-2px -2px #000,2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,	2px 0 #000,0 2px #000;
+}
+#super_citys>.provinces {
+    width: 170px;
+}
+#super_citys>.area {
+    width: 177px;
+}
+
+#super_citys>.selected_item>ul {
+    /* width: 100%; */
+    width: 97%;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    display: none;
+    box-sizing: border-box;
+    background: #D93B3B;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+}
+
+#super_citys>.selected_item>ul>li {
+    width: 119px;
+    margin: 0 auto;
+    font-size: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    border-bottom: 2px solid #000;
+    text-shadow:-1.5px -1.5px #000,	1.5px -1.5px #000,-1.5px 1.5px #000,1.5px 1.5px #000, -1.5px 0 #000,0 -1.5px #000,1.5px 0 #000,0 1.5px #000,-2px -2px #000,2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,	2px 0 #000,0 2px #000;
+    -webkit-text-shadow:-1.5px -1.5px #000,	1.5px -1.5px #000,-1.5px 1.5px #000,1.5px 1.5px #000, -1.5px 0 #000,0 -1.5px #000,1.5px 0 #000,0 1.5px #000,-2px -2px #000,2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,	2px 0 #000,0 2px #000;
+    -moz-text-shadow:-1.5px -1.5px #000,	1.5px -1.5px #000,-1.5px 1.5px #000,1.5px 1.5px #000, -1.5px 0 #000,0 -1.5px #000,1.5px 0 #000,0 1.5px #000,-2px -2px #000,2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,	2px 0 #000,0 2px #000;
+}
+#super_citys>.selected_item>ul>li:first-child {
+    margin-top: 10px;
+}
+#super_citys>.selected_item>ul>li:last-child {
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+.selectedBox>.inquirNow {
+    display: inline-block;
+    vertical-align: top;
+}
+.selectedBox>.inquirNow:hover {
+    transform: scale(1.1);
+}
+.btn {
+    width: 90px;
+    height: 33px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    background: #1e90ff;
+    border-radius: 5px
+}

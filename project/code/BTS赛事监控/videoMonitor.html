@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <link rel="stylesheet" href="./style/common.css">
+  <link rel="stylesheet" href="./style/videoMonitor.css">
+  <title>视频监控</title>
+</head>
+
+<body>
+  <!-- 视频大盒子 第一个视频 -->
+  <div class="videoBox">
+    <!-- 左边控制栏 -->
+    <div class="leftContorl">
+      <!-- 关闭按钮 参数：iframe的id -->
+      <img src="./image/video/guanbi.png" class="closeImg closeVideo" onclick="closeVideo('video1')">
+
+      <!-- 搜索 search+序号 例如第一个视频大盒子的search为search1 -->
+      <div class="lcIconBox searchBox" id="search1" onclick="openBox('search1')">
+        <img src="./image/video/search.png">
+      </div>
+
+      <div class="searchWindow smallWindow" id="search1Window">
+        <!-- 关闭图标 search+序号 例如第一个视频大盒子的search为search1 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" onclick="closeBox('search1')">
+
+        <!-- 搜索框 -->
+        <div class="searchId">
+          <input type="search" placeholder="输入比赛ID" name="" id="">
+          <div class="iconEnter">
+            <img src="./image/video/jiantou.png" alt="">
+          </div>
+        </div>
+
+        <div class="searchTitle">正在进行的比赛</div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine evenLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine evenLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 切换 change+序号 例如第一个视频大盒子的change为change1 -->
+      <div class="lcIconBox changeBox" id="change1" onclick="openBox('change1')">
+        <img src="./image/video/change.png">
+      </div>
+
+      <div class="changeWindow smallWindow" id="change1Window">
+        <!-- 关闭图标 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" onclick="closeBox('change1')">
+
+        <!-- 命名规则change1+Window 命名规则change1+Channel[i],i=>Channel的序号 -->
+        <div class="changeLine oddLine changeActive" id="change1Channel0"
+          onclick="selectChannel('change1Window','change1Channel0')">斗鱼1台</div>
+        <div class="changeLine evenLine" id="change1Channel1"
+          onclick="selectChannel('change1Window','change1Channel1')">斗鱼2台</div>
+        <div class="changeLine oddLine" id="change1Channel2" onclick="selectChannel('change1Window','change1Channel2')">
+          斗鱼3台</div>
+        <div class="changeLine evenLine" id="change1Channel3"
+          onclick="selectChannel('change1Window','change1Channel3')">斗鱼4台</div>
+        <div class="changeLine oddLine" id="change1Channel4" onclick="selectChannel('change1Window','change1Channel4')">
+          斗鱼5台</div>
+        <div class="changeLine evenLine" id="change1Channel5"
+          onclick="selectChannel('change1Window','change1Channel5')">斗鱼6台</div>
+      </div>
+
+      <!-- 战况 situation+序号 例如第一个视频大盒子的situation为situation1 -->
+      <div class="lcIconBox situationBox" id="situation1" onclick="openBox('situation1')">
+        <img src="./image/video/situation.png">
+      </div>
+
+      <div class="situationWindow smallWindow" id="situation1Window">
+        <!-- 关闭图标 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" style="top:0;
+        right:0" onclick="closeBox('situation1')">
+
+        <div class="situationTitle">最新比分</div>
+
+        <div class="situationTeam">
+          <div class="teamIcon">
+            <img src="./image/video/5378.png" alt="">
+          </div>
+          <div class="siTeamName">VP</div>
+          <div class="siTeamNum">(1)</div>
+        </div>
+
+        <div class="scoreBoard">
+          <div class="teamScore">14</div>
+          <div class="colon">:</div>
+          <div class="teamScore">14</div>
+        </div>
+
+        <div class="situationTeam" style="margin-left:0">
+          <div class="teamIcon">
+            <img src="./image/video/5378.png" alt="">
+          </div>
+          <div class="siTeamName">Astralis</div>
+          <div class="siTeamNum">(2)</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- iframe的id命名规则：video+序号 例如第一个iframe为video1 -->
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="http://liveshare.huya.com/iframe/18015095" id="video1"></iframe>
+  </div>
+
+  <div class="videoBox">
+    <div class="leftContorl">
+      <img src="./image/video/guanbi.png" class="closeImg closeVideo" onclick="closeVideo('video2')">
+
+      <!-- 搜索 -->
+      <div class="lcIconBox searchBox" id="search2" onclick="openBox('search2')">
+        <img src="./image/video/search.png">
+      </div>
+
+      <div class="searchWindow smallWindow" id="search2Window">
+        <!-- 关闭图标 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" onclick="closeBox('search2')">
+
+        <!-- 搜索框 -->
+        <div class="searchId">
+          <input type="search" placeholder="输入比赛ID" name="" id="">
+          <div class="iconEnter">
+            <img src="./image/video/jiantou.png" alt="">
+          </div>
+        </div>
+
+        <div class="searchTitle">正在进行的比赛</div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine evenLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine evenLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 切换 -->
+      <div class="lcIconBox changeBox" id="change2" onclick="openBox('change2')">
+        <img src="./image/video/change.png">
+      </div>
+
+      <div class="changeWindow smallWindow" id="change2Window">
+        <!-- 关闭图标 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" onclick="closeBox('change2')">
+
+        <div class="changeLine oddLine changeActive" id="change2Channel0"
+          onclick="selectChannel('change2Window','change2Channel0')">斗鱼1台</div>
+        <div class="changeLine evenLine" id="change2Channel1"
+          onclick="selectChannel('change2Window','change2Channel1')">斗鱼2台</div>
+        <div class="changeLine oddLine" id="change2Channel2" onclick="selectChannel('change2Window','change2Channel2')">
+          斗鱼3台</div>
+        <div class="changeLine evenLine" id="change2Channel3"
+          onclick="selectChannel('change2Window','change2Channel3')">斗鱼4台</div>
+        <div class="changeLine oddLine" id="change2Channel4" onclick="selectChannel('change2Window','change2Channel4')">
+          斗鱼5台</div>
+        <div class="changeLine evenLine" id="change2Channel5"
+          onclick="selectChannel('change2Window','change2Channel5')">斗鱼6台</div>
+      </div>
+
+      <!-- 战况 -->
+      <div class="lcIconBox situationBox" id="situation2" onclick="openBox('situation2')">
+        <img src="./image/video/situation.png">
+      </div>
+
+      <div class="situationWindow smallWindow" id="situation2Window">
+        <!-- 关闭图标 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" style="top:0;
+          right:0" onclick="closeBox('situation2')">
+
+        <div class="situationTitle">最新比分</div>
+
+        <div class="situationTeam">
+          <div class="teamIcon">
+            <img src="./image/video/5378.png" alt="">
+          </div>
+          <div class="siTeamName">VP</div>
+          <div class="siTeamNum">(1)</div>
+        </div>
+
+        <div class="scoreBoard">
+          <div class="teamScore">14</div>
+          <div class="colon">:</div>
+          <div class="teamScore">14</div>
+        </div>
+
+        <div class="situationTeam" style="margin-left:0">
+          <div class="teamIcon">
+            <img src="./image/video/5378.png" alt="">
+          </div>
+          <div class="siTeamName">Astralis</div>
+          <div class="siTeamNum">(2)</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="http://liveshare.huya.com/iframe/18015095" id="video2"></iframe>
+  </div>
+
+  <div class="videoBox">
+    <div class="leftContorl">
+      <img src="./image/video/guanbi.png" class="closeImg closeVideo" onclick="closeVideo('video3')">
+
+      <!-- 搜索 -->
+      <div class="lcIconBox searchBox" id="search3" onclick="openBox('search3')">
+        <img src="./image/video/search.png">
+      </div>
+
+      <div class="searchWindow smallWindow" id="search3Window">
+        <!-- 关闭图标 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" onclick="closeBox('search3')">
+
+        <!-- 搜索框 -->
+        <div class="searchId">
+          <input type="search" placeholder="输入比赛ID" name="" id="">
+          <div class="iconEnter">
+            <img src="./image/video/jiantou.png" alt="">
+          </div>
+        </div>
+
+        <div class="searchTitle">正在进行的比赛</div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine evenLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine evenLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+        <div class="searchLine oddLine">
+          <div class="idName">123456</div>
+          <div class="GameName">球球大作战</div>
+          <div class="teamName">
+            <div class="teams">CoM19SpadaNJI</div>
+            <div>-</div>
+            <div class="teams">00VP1</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 切换 -->
+      <div class="lcIconBox changeBox" id="change3" onclick="openBox('change3')">
+        <img src="./image/video/change.png">
+      </div>
+
+      <div class="changeWindow smallWindow" id="change3Window">
+        <!-- 关闭图标 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" onclick="closeBox('change3')">
+
+        <div class="changeLine oddLine changeActive" id="change3Channel0"
+          onclick="selectChannel('change3Window','change3Channel0')">斗鱼1台</div>
+        <div class="changeLine evenLine" id="change3Channel1"
+          onclick="selectChannel('change3Window','change3Channel1')">斗鱼2台</div>
+        <div class="changeLine oddLine" id="change3Channel2" onclick="selectChannel('change3Window','change3Channel2')">
+          斗鱼3台</div>
+        <div class="changeLine evenLine" id="change3Channel3"
+          onclick="selectChannel('change3Window','change3Channel3')">斗鱼4台</div>
+        <div class="changeLine oddLine" id="change3Channel4" onclick="selectChannel('change3Window','change3Channel4')">
+          斗鱼5台</div>
+        <div class="changeLine evenLine" id="change3Channel5"
+          onclick="selectChannel('change3Window','change3Channel5')">斗鱼6台</div>
+      </div>
+
+      <!-- 战况 -->
+      <div class="lcIconBox situationBox" id="situation3" onclick="openBox('situation3')">
+        <img src="./image/video/situation.png">
+      </div>
+
+      <div class="situationWindow smallWindow" id="situation3Window">
+        <!-- 关闭图标 -->
+        <img src="./image/video/guanbi.png" class="closeImg closeSearch" style="top:0;
+            right:0" onclick="closeBox('situation3')">
+
+        <div class="situationTitle">最新比分</div>
+
+        <div class="situationTeam">
+          <div class="teamIcon">
+            <img src="./image/video/5378.png" alt="">
+          </div>
+          <div class="siTeamName">VP</div>
+          <div class="siTeamNum">(1)</div>
+        </div>
+
+        <div class="scoreBoard">
+          <div class="teamScore">14</div>
+          <div class="colon">:</div>
+          <div class="teamScore">14</div>
+        </div>
+
+        <div class="situationTeam" style="margin-left:0">
+          <div class="teamIcon">
+            <img src="./image/video/5378.png" alt="">
+          </div>
+          <div class="siTeamName">Astralis</div>
+          <div class="siTeamNum">(2)</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="http://liveshare.huya.com/iframe/18015095" id="video3"></iframe>
+  </div>
+
+</body>
+<script>
+  //打开选择框 参数：大盒子id
+  function openBox(boxName) {
+    var bigBox = document.getElementById(boxName);
+    var box = document.getElementById(boxName + 'Window');
+    var allBoxex=bigBox.parentNode.querySelectorAll('.smallWindow');
+    var allbigBoxex=bigBox.parentNode.querySelectorAll('.lcIconBox');
+    var imgName = boxName.replace(/\d*/g, "");
+
+    for (let i = 0; i < allBoxex.length; i++) {
+      allBoxex[i].style.display = 'none';
+      allbigBoxex[i].style.background = 'rgba(47,50,62,1)';
+    }
+    bigBox.parentNode.querySelector('.searchBox').querySelector('img').src='./image/video/search.png';
+    bigBox.parentNode.querySelector('.changeBox').querySelector('img').src='./image/video/change.png';
+    bigBox.parentNode.querySelector('.situationBox').querySelector('img').src='./image/video/situation.png';
+
+    box.style.display = 'block';
+    bigBox.style.background = 'rgba(61,67,79,1)';
+    bigBox.querySelector('img').src = './image/video/' + imgName + '1.png'
+  }
+
+  //关闭选择框 参数：大盒子id
+  function closeBox(boxName) {
+    var bigBox = document.getElementById(boxName);
+    var box = document.getElementById(boxName + 'Window');
+    var imgName = boxName.replace(/\d*/g, '')
+
+    box.style.display = 'none';
+    bigBox.style.background = 'rgba(47,50,62,1)';
+    bigBox.querySelector('img').src = './image/video/' + imgName + '.png'
+  }
+
+  //选择视频源(视频channel盒子id，channel的id)
+  function selectChannel(windowName, channelName) {
+    var window = document.getElementById(windowName);
+    var channel = document.getElementById(channelName);
+    var allChannel = window.querySelectorAll(".changeLine");
+
+    for (let i = 0; i < allChannel.length; i++) {
+      if (allChannel[i].classList.length > 2) {
+        allChannel[i].classList.remove('changeActive')
+      }
+    }
+
+    channel.classList.add('changeActive');
+  }
+
+  //关闭视频 参数：video[i] i=>第几个iframe视频
+  function closeVideo(videoName){
+    document.getElementById(videoName).src=''
+  }
+
+</script>
+
+</html>

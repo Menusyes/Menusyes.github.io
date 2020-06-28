@@ -1,0 +1,158 @@
+body,div,ul,li,p,span,i,b,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑", "宋体", "Arial Narrow";
+    /* position: relative; */
+    background: url(../images/bg_wap-min.png) no-repeat top ;
+    background-size: 100% ;
+    background-color: #152125;
+}
+a {
+    text-decoration: none;
+}
+select {
+    vertical-align: middle;
+}
+.box {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.box>img {
+    position: absolute;
+}
+.logo {
+    position: absolute;
+    width: 12.67%;
+    left: 5.97%;
+    top: 1.6%;
+}
+.info {
+    width: 77.87%;
+    left: 5.07%;
+    top: 18%;
+}
+.url {
+    width:50%;
+    left: 5.97%;
+    top: 42.16%;
+}
+.url1 {
+    width: 29.6%;
+    left: 5.97%;
+    top: 49.88%;
+}
+.download {
+    position: absolute;
+    width: 49.87%;
+    left: 4.97%;
+    top: 56.96%;
+}
+.code {
+    width: 29.33%;
+    left: 5.82%;
+    top:73.75%;
+}
+.phone {
+    width: 100%;
+    right: -22%;
+    top: 58%;
+}
+.download-info1 {
+    position: absolute;
+    left: 7.4%;
+    top: 68.55%;
+    font-size:25px;
+    font-family:"MicrosoftYaHei";
+    color:rgba(255,255,255,1);
+    opacity:0.67;
+}
+.download-info2 {
+    position: absolute;
+    left: 5.97%;
+    top: 80.34%;
+    font-size:16px;
+    font-family:"MicrosoftYaHei";
+    color:rgba(255,255,255,1);
+    opacity:0.67;
+}
+.tags {
+    position: absolute;
+    left: 3.5%;
+    top: 12.08%;
+    width: 71.87%;
+    font-size:21px;
+    font-family:"MicrosoftYaHei";
+    color:rgba(255,255,255,1);
+    line-height: 23px;
+}
+.tags .tag {
+    width: 25%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid rgba(190,255,219,1);
+    box-sizing: border-box;
+}
+.tags .tag:last-of-type {
+    border: none;
+}
+.footer {
+    position: relative;
+    width: 100%;
+    height: 13.93%;
+    background:rgba(23,32,36,1);
+    opacity:0.8;
+    box-sizing: border-box;
+    padding-top: 1.92%;
+    padding-bottom: 10.6%;
+    z-index: 99;
+}
+.footer p {
+    font-size:12px;
+    font-family:"MicrosoftYaHei";
+    color:rgba(85,121,135,1);
+    line-height:16px;
+    text-align: center;
+}
+.footer img {
+    position: absolute;
+}
+.organization1 {
+    width: 16.8%;
+    left: 11.22%;
+    bottom: 5%;
+}
+.organization2 {
+    width: 19.87%;
+    left: 35.09%;
+    bottom: 5%;
+}
+.organization3 {
+    width: 15.73%;
+    left: 62.05%;
+    bottom: 5%;
+}
+.organization4 {
+    width: 9.6%;
+    left: 85.09%;
+    bottom: 5.4%;
+}
+@media screen and (max-width: 530px) {
+    .tags {
+        font-size: 14px
+    }
+    .download-info1 {
+        font-size: 12px
+    }
+    .download-info2 {
+        font-size: 12px
+    }
+}
+@media screen and (max-width: 325px) {
+    .tags {
+        font-size: 12px
+    }
+}

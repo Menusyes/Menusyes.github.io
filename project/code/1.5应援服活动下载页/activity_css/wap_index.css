@@ -1,0 +1,258 @@
+
+body,div,p,span,ul,li,img{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration:none;
+}
+ul,li {
+    list-style:none;
+}
+body{
+    background-color: #1B1719;
+    position: relative;
+}
+.app {
+    /* margin-top: 3.98vh; */
+    margin-top: 27px;
+    background: url(../activity_images/bg_xiazai.png) no-repeat;
+    /* background-size: contain; */
+    background-size: 100%;
+    /* min-height: 666px; */
+    min-height: 666px;
+    /* background-color: #fff; */
+    /* padding-top: 3.6vh; */
+    padding-top: 24px;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+}
+.swiper_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 27px;
+    /* height: 3.97vh; */
+    background:rgba(247,208,134,.2);
+    /* background:rgba(247,208,134,.8); */
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    /* line-height: 3.97vh; */
+    line-height:  27px;
+    z-index: 999;
+    overflow: hidden;
+}
+.logo {
+    height: 23px;
+    text-align: center;
+    /* height: 3.37vh; */
+}
+.logo img {
+    height: 100%;
+    /* width: 1.1rem; */
+}
+.title {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 9px;
+    /* margin-top: 1.27vh; */
+}
+.info_imgs {
+    height: 218px;
+    /* height: 32.61vh; */
+    text-align: center;
+    position: relative;
+    margin-top: 25px;
+    /* margin-top: 3.67vh; */
+}
+.info_imgs .img_left{
+    position: absolute;
+    /* height: 187px; */
+    /* height: 27.96vh; */
+    /* width: 29.73vw; */
+    width: 122px;
+    /* top: 2.17vh; */
+    top: 15px;
+    /* right: 48.67%; */
+    right: 48.67%;
+}
+.info_imgs .img_rigth{
+    position: absolute;
+    left: 47.73%;
+    top: 15px;
+    /* top: 2.17vh; */
+    /* height: 27.96vh; */
+    /* width: 29.73vw; */
+    
+    width: 122px;
+    /* height: 187px; */
+}
+.info_imgs .img_center{
+    position: absolute;
+    /* height: 100%; */
+    /* width: 32.4vw; */
+    width: 130px;
+    /* height: 218px; */
+    left: 50%;
+    /* margin-left: -16.2vw; */
+    margin-left: -65px;
+    /* w122 */
+}   
+.get_title {
+    text-align: center;
+    /* margin-top: 4.42vh; */
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight:bold;
+    color:rgba(247,208,134,1);
+}
+.title_icon {
+    height: 15px;
+    vertical-align: text-top;
+}
+.get_userNum {
+    /* margin-top: 1.27vh; */
+    margin-top: 9px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.runNum {
+    height: 19px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    /* 3位 */
+    /* min-width: 80px; */
+    /* 4位 */
+    /* min-width: 108px; */
+    /* 5位 */
+    min-width: 134px;
+    vertical-align: middle;
+}
+.runNum>li{
+    position: absolute;
+}
+.runNum li div {
+    display: inline-block;
+    width: 22px;
+    height: 19px;
+    background: url(../activity_images/kuang.png) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 19px;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 12px;
+    color:rgba(247,208,134,1);
+    font-weight:bold;
+}
+
+.clothing_imgBox {
+    width: 81.87vw;
+    /* height: 15.74vh; */
+    height: 105px;
+    background: url(../activity_images/yingbi.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    /* margin-top: 4.8vh; */
+    margin-top: 32px;
+    text-align: center;
+}
+.clothing_imgBox img {
+    /* height: 19.42vh; */
+    height: 130px;
+    /* margin-top: -1.27vh; */
+    margin-top: -9px;
+
+}
+.download_now {
+    display: block;
+    /* margin-top: 4.95vh; */
+    /* margin-top: 33px; */
+    margin-top: 25px;
+    text-align: center;
+}
+.download_now img {
+    width: 47.2vw;
+}
+
+.isWechat {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 99999;
+    display: none;
+    text-align: center;
+}
+.weChatShow {
+    display: block;
+}
+.isWechat .jiantou {
+    margin-top: 15px;
+    width: 70%;
+}
+.isWechat .open {
+    margin-top: 47px;
+    width: 36%;
+}
+@keyframes left {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 48.67%;
+    }
+}
+.left_animation {
+    animation: left 2s ;
+    -moz-animation: left 2s ;	/* Firefox */
+    -webkit-animation: left 2s ;	/* Safari 和 Chrome */
+    -o-animation: left 2s ;	/* Opera */
+}
+@keyframes right {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 47.73%;
+    }
+}
+.right_animation {
+    animation: right 2s ;
+    -moz-animation: right 2s ;	/* Firefox */
+    -webkit-animation: right 2s ;	/* Safari 和 Chrome */
+    -o-animation: right 2s ;	/* Opera */
+}
+
+
+
+
+@keyframes myfirst {
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+.swing {
+    animation: myfirst 3s infinite;
+    -moz-animation: myfirst 3s infinite;	/* Firefox */
+    -webkit-animation: myfirst 3s infinite;	/* Safari 和 Chrome */
+    -o-animation: myfirst 3s infinite;	/* Opera */
+}

@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/flexible.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="select_box_list" >
+            <div class="show_item" onclick="hideTab(1)"><span>赛事积分</span></div>
+            <div class="show_item" onclick="hideTab(2)"><span>战队数据</span></div>
+            <div class="show_item" onclick="hideTab(3)"><span>赛事数据</span></div>
+        </div>
+        <div class="select_mask" onclick="hideTab(0)"></div>
+        <!-- 赛事积分 -->
+        <div class="match_integral show">
+            <!-- 顶部赛事积分、赛事数据、战队数据切换 -->
+            <div class="tab_title">
+                <div class="title_button" onclick="showTab()">
+                    <div class="left">赛事积分</div>
+                    <div class="rigth"></div>
+                </div>
+            </div>
+            <!-- 赛事tab （暂时只有常规赛） -->
+            <div class="match_title">
+                <div class="match_title_item">常规赛</div>
+            </div>
+            <!-- 积分榜banner图 -->
+            <div class="ranking_banner"><img src="./images/bg_xiaozujifeng.png" ></div>
+            <!-- 小组切换 -->
+            <div class="ranking_title">
+                <div class="ranking_title_item active">太平洋</div>
+                <div class="ranking_title_item">大西洋</div>
+            </div>
+            <!-- 每项描述 -->
+            <div class="body_info">
+                <div class="mingci">名次</div>
+                <div class="name">战队</div>
+                <div class="team_win">比赛战绩</div>
+                <div class="map_win">地图战绩</div>
+                <div class="score">净胜分</div>
+            </div>
+            <!-- 战队列表 -->
+            <div class="ranking_body">
+                <div class="ranking_body_item active">
+                    <div class="team_item">
+                        <!-- 前三展示图标 -->
+                        <div class="topThree">
+                            <img src="./images/rank_1.png" >
+                            <!-- <img src="./images/rank_2.png" >
+                            <img src="./images/rank_3.png" > -->
+                        </div>
+                        <!-- 名次 -->
+                        <!-- <div class="topThreeNum">4</div> -->
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">RNGGGGGG</div>
+                        <div class="team_grade">15-7</div>
+                        <div class="map_grade">8-17</div>
+                        <div class="score add">+19</div>
+                        <!-- <div class="score">+19</div> -->
+                    </div>
+                    <div class="team_item">
+                        <!-- 前三展示图标 -->
+                        <div class="topThree">
+                            <img src="./images/rank_2.png" >
+                        </div>
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">RNGGGGGG</div>
+                        <div class="team_grade">15-7</div>
+                        <div class="map_grade">8-17</div>
+                        <div class="score add">+5</div>
+                    </div>
+                    <div class="team_item">
+                        <!-- 前三展示图标 -->
+                        <div class="topThree">
+                            <img src="./images/rank_3.png" >
+                        </div>
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">RNGGGGGG</div>
+                        <div class="team_grade">15-7</div>
+                        <div class="map_grade">8-17</div>
+                        <div class="score">0</div>
+                    </div>
+                    <div class="team_item">
+                        <!-- 名次 -->
+                        <div class="topThreeNum">4</div>
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">RNGGGGGG</div>
+                        <div class="team_grade">15-7</div>
+                        <div class="map_grade">8-17</div>
+                        <div class="score">-8</div>
+                    </div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                    <div class="team_item" ></div>
+                </div>
+                <div class="ranking_body_item">
+                    <div class="team_item" >
+                        <!-- 前三展示图标 -->
+                        <div class="topThree">
+                            <img src="./images/rank_1.png" >
+                        </div>
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">RNGGGGGG</div>
+                        <div class="team_grade">15-7</div>
+                        <div class="map_grade">8-17</div>
+                        <div class="score add">+19</div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 战队数据 -->
+        <div class="team_data">
+            <!-- 顶部赛事积分、赛事数据、战队数据切换 -->
+            <div class="tab_title">
+                <div class="title_button" onclick="showTab()">
+                    <div class="left">战队数据</div>
+                    <div class="rigth"></div>
+                </div>
+            </div>
+            <!-- 小组切换 -->
+            <div class="ranking_title">
+                <div class="ranking_title_item active">太平洋</div>
+                <div class="ranking_title_item">大西洋</div>
+            </div>
+            <!-- 战队列表 -->
+            <div class="ranking_body">
+                <div class="ranking_body_item active">
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                </div>
+                <div class="ranking_body_item">
+                    <div class="team_item">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">八个字八个字八个八个</div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- 战队详细数据 -->
+            <div class="team_info_box">
+                <div class="info_one_line">
+                    <div class="team_icon">
+                        <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                    </div>
+                    <div class="team_name">八个字八个字八个字八个</div>
+                    <div class="label">胜率:</div>
+                    <div class="win_rate">98%</div>
+                    <!-- 成绩 -->
+                    <div class="match_record">
+                        <div class="top">5-1</div>
+                        <div class="bottom">比赛战绩</div>
+                    </div>
+                    <div class="map_record">
+                        <div class="top">4-1</div>
+                        <div class="bottom">地图战绩</div>
+                    </div>
+                </div>
+                <div class="info_two_line">
+                    <div class="detail_item">
+                        <div class="detail_data">
+                            <div class="detail_data_rate">98%</div>
+                            <div class="detail_data_record">11-22&nbsp;</div>
+                            <img class="detail_type_icon" src="./images/ic_zhanlingyaodian.png" >
+                            <!-- <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                            <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                            <img class="detail_type_icon" src="./images/ic_gongjihusong.png" > -->
+                        </div>
+                        <div class="detail_type">占领要点</div>
+                        <!-- <div class="detail_type">运载作战</div>
+                        <div class="detail_type">攻防作战</div>
+                        <div class="detail_type">攻防运载</div> -->
+                    </div>
+                    <div class="detail_item">
+                        <div class="detail_data">
+                            <div class="detail_data_rate">98%</div>
+                            <div class="detail_data_record">11-22&nbsp;</div>
+                            <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                        </div>
+                        <div class="detail_type">运载作战</div>
+                    </div>
+                    <div class="detail_item">
+                        <div class="detail_data">
+                            <div class="detail_data_rate">98%</div>
+                            <div class="detail_data_record">11-22&nbsp;</div>
+                            <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                        </div>
+                        <div class="detail_type">攻防作战</div>
+                    </div>
+                    <div class="detail_item">
+                        <div class="detail_data">
+                            <div class="detail_data_rate">98%</div>
+                            <div class="detail_data_record">11-22&nbsp;</div>
+                            <img class="detail_type_icon" src="./images/ic_gongjihusong.png" >
+                        </div>
+                        <div class="detail_type">攻防运载</div>
+                    </div>
+                    
+                </div>
+                <div class="info_line"></div>
+                <div class="enemy_and_restraint">
+                    <div class="enemy">
+                        <div class="title">天<br />敌</div>
+                        <div class="icon" >
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="name"><div>巴拉巴拉巴拉巴拉巴拉</div></div>
+                        <div class="win_rate_box">
+                            <div class="win_rate">100%</div>
+                            <div class="shenglv">胜率</div>
+                        </div>
+                    </div>
+                    <div class="restraint">
+                        <div class="title">克<br />制</div>
+                        <div class="icon" >
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="name"><div>巴拉巴</div></div>
+                        <div class="win_rate_box">
+                            <div class="win_rate">80%</div>
+                            <div class="shenglv">胜率</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grade">
+                    <div class="five_match">近五场战绩:&nbsp;&nbsp;3-15</div>
+                    <div class="five_match_map">近五场地图得分:&nbsp;&nbsp;3-15</div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 赛事数据 -->
+        <div class="match_data">
+            <!-- 顶部赛事积分、赛事数据、战队数据切换 -->
+            <div class="tab_title">
+                <div class="title_button" onclick="showTab()">
+                    <div class="left">赛事数据</div>
+                    <div class="rigth"></div>
+                </div>
+            </div>
+            <div class="match_list_box">
+                <div class="match_list_week">
+                    <div class="now_week">第一周</div>
+                    <div class="match_list">
+                        <!-- 每场比赛 -->
+                        <div class="match_list_item" onclick="goToMatchInfo(0)">
+                            <div class="have_data">
+                                <img src="./images/ic_shuju.png">
+                            </div>
+                            <div class="time">12-12 12:00</div>
+                            <div class="vs">vs</div>
+                            <div class="line"></div>
+                            <div class="icon teamA_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamA_name">RunAway</div>
+                            <div class="score teamA_score">3</div>
+                            <div class="icon teamB_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamB_name">上海龙之队</div>
+                            <div class="score teamB_score">1</div>
+                        </div>
+                        <div class="match_list_item" onclick="goToMatchInfo(1)">
+                            <div class="have_data">
+                                <img src="./images/ic_shuju.png">
+                            </div>
+                            <div class="time">12-12 12:00</div>
+                            <div class="vs">vs</div>
+                            <div class="line"></div>
+                            <div class="icon teamA_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamA_name">RunAway</div>
+                            <div class="score teamA_score">-</div>
+                            <div class="icon teamB_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamB_name">上海龙之队</div>
+                            <div class="score teamB_score">-</div>
+                        </div>
+                        <div class="match_list_item" onclick="goToMatchInfo(2)">
+                            <div class="have_data">
+                                <img src="./images/ic_shuju.png">
+                            </div>
+                            <div class="time">12-12 12:00</div>
+                            <div class="vs">vs</div>
+                            <div class="line"></div>
+                            <div class="icon teamA_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamA_name">RunAway</div>
+                            <div class="score teamA_score">3</div>
+                            <div class="icon teamB_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamB_name">上海龙之队</div>
+                            <div class="score teamB_score">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="match_list_week">
+                    <div class="now_week">第二周</div>
+                    <div class="match_list">
+                        <div class="match_list_item" onclick="goToMatchInfo()">
+                            <div class="have_data">
+                                <img src="./images/ic_shuju.png">
+                            </div>
+                            <div class="time">12-12 12:00</div>
+                            <div class="vs">vs</div>
+                            <div class="line"></div>
+                            <div class="icon teamA_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamA_name">RunAway</div>
+                            <div class="score teamA_score">3</div>
+                            <div class="icon teamB_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamB_name">上海龙之队</div>
+                            <div class="score teamB_score">1</div>
+                        </div>
+                        <div class="match_list_item" onclick="goToMatchInfo()">
+                            <div class="have_data">
+                                <img src="./images/ic_shuju.png">
+                            </div>
+                            <div class="time">12-12 12:00</div>
+                            <div class="vs">vs</div>
+                            <div class="line"></div>
+                            <div class="icon teamA_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamA_name">RunAway</div>
+                            <div class="score teamA_score">3</div>
+                            <div class="icon teamB_icon">
+                                <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                            </div>
+                            <div class="name teamB_name">上海龙之队</div>
+                            <div class="score teamB_score">1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 比赛详情 -->
+        <div class="match_info">
+            <!-- 顶部返回按钮 -->
+            <div class="tab_title">
+                <div class="title_button" onclick="goBackMatchData()">
+                    <div class="left">返回</div>
+                </div>
+            </div>
+            <!-- 未开始展示模板 -->
+            <div class="match_box notStart">
+                <!-- 双方队伍与开始时间 -->
+                <div class="team_vs">
+                    <div class="team">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">East Division</div>
+                    </div>
+                    <div class="vs">
+                        <div>
+                            <img src="./images/ic_vs.png" >
+                        </div>
+                        <div class="match_time">03-23 14:00</div>
+                    </div>
+                    <div class="team">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">East Division</div>
+                    </div>
+                </div>
+                <!-- 双方队伍胜率、比赛战绩 -->
+                <div class="team_grade">
+                    <!-- team_a战绩 -->
+                    <div class="match_record">
+                        <div class="top">5-1</div>
+                        <div class="bottom">比赛战绩</div>
+                    </div>
+                    <div class="zhanwei"></div>
+                    <!-- team_a胜率 -->
+                    <div class="team_win_rate">
+                        <div class="win_rate">100%</div>
+                        <div class="lable">胜率</div>
+                    </div>
+                    <div class="zhanwei1"></div>
+                    <!-- team_b胜率 -->
+                    <div class="team_win_rate">
+                        <div class="win_rate">80%</div>
+                        <div class="lable">胜率</div>
+                    </div>
+                    <div class="zhanwei"></div>
+                    <!-- team_b战绩 -->
+                    <div class="match_record">
+                        <div class="top">5-1</div>
+                        <div class="bottom">比赛战绩</div>
+                    </div>
+                </div>
+                <!-- 详细数据对比 -->
+                <div class="match_infoBox">
+                    <div class="enemy_and_restraint">
+                        <!-- team_a天敌克制 -->
+                        <div class="team_data">
+                            <div class="enemy">
+                                <div class="title">天<br />敌</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴拉巴拉巴拉巴拉</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">100%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                            <div class="restraint">
+                                <div class="title">克<br />制</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">80%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zhanwei"></div>
+                        <!-- team_b天敌克制 -->
+                        <div class="team_data">
+                            <div class="enemy">
+                                <div class="title">天<br />敌</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴拉巴拉巴拉巴拉</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">100%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                            <div class="restraint">
+                                <div class="title">克<br />制</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">80%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 双方数据对比 -->
+                    <div class="data_compared">
+                        <div class="data_compared_item">
+                            <div class="team_compared team_a_data">
+                                <div class="win_rate" style="width: 20%"></div>
+                                <div class="win_rate_text">20%</div>
+                            </div>
+                            <div class="description">
+                                <img src="./images/ic_zhanlingyaodian_1.png">
+                                <span>占领要点</span>
+                            </div>
+                            <div class="team_compared team_b_data">
+                                <div class="win_rate" style="width: 80%"></div>
+                                <div class="win_rate_text">80%</div>
+                            </div>
+                        </div>
+                        <div class="data_compared_item">
+                            <div class="team_compared team_a_data">
+                                <div class="win_rate" style="width: 40%"></div>
+                                <div class="win_rate_text">40%</div>
+                            </div>
+                            <div class="description">
+                                <img src="./images/ic_yunzaimubiao_1.png">
+                                <span>运载作战</span>
+                            </div>
+                            <div class="team_compared team_b_data">
+                                <div class="win_rate" style="width: 60%"></div>
+                                <div class="win_rate_text">60%</div>
+                            </div>
+                        </div>
+                        <div class="data_compared_item">
+                            <div class="team_compared team_a_data">
+                                <div class="win_rate" style="width: 60%"></div>
+                                <div class="win_rate_text">60%</div>
+                            </div>
+                            <div class="description">
+                                <img src="./images/ic_gongfang_1.png">
+                                <span>攻防作战</span>
+                            </div>
+                            <div class="team_compared team_b_data">
+                                <div class="win_rate" style="width: 40%"></div>
+                                <div class="win_rate_text">40%</div>
+                            </div>
+                        </div>
+                        <div class="data_compared_item">
+                            <div class="team_compared team_a_data">
+                                <div class="win_rate" style="width: 80%"></div>
+                                <div class="win_rate_text">80%</div>
+                            </div>
+                            <div class="description">
+                                <img src="./images/ic_gongjihusong_1.png">
+                                <span>攻防运载</span>
+                            </div>
+                            <div class="team_compared team_b_data">
+                                <div class="win_rate" style="width: 20%"></div>
+                                <div class="win_rate_text">20%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 进行中展示模板 -->
+            <div class="match_box doing">
+                <!-- 双方队伍与比分 -->
+                <div class="team_vs">
+                    <div class="team">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">East Division</div>
+                    </div>
+                    <div class="vs">
+                        <span class="win">2</span>
+                        <span class="dian">:</span>
+                        <span class="">1</span>
+                    </div>
+                    <div class="team">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">East Division</div>
+                    </div>
+                </div>
+                <!-- 小场比分单元格 -->
+                <div class="detail_box">
+                    <div class="small_score_Box">
+                        <div class="score_box">
+                            <div class="small_score title">
+                                <div class="box_item">队伍</div>
+                                <div class="box_item team_title">SKTTTT</div>
+                                <div class="box_item last_item team_title">RNGGGGGGGG</div>
+                            </div>
+
+                            <!-- 从此处开始循环 循环次数为BO数量 -->
+                            <div class="small_score">
+                                <div class="box_item">1st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">2st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">3st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">4st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">5st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">6st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">7st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 队伍数据对比与比赛详情数据 -->
+                <div class="teamData_and_matchData">
+                    <!-- 天敌克制 -->
+                    <div class="enemy_and_restraint">
+                        <!-- team_a天敌克制 -->
+                        <div class="team_data">
+                            <div class="enemy">
+                                <div class="title">天<br />敌</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴拉巴拉巴拉巴拉</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">100%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                            <div class="restraint">
+                                <div class="title">克<br />制</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">80%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zhanwei"></div>
+                        <!-- team_b天敌克制 -->
+                        <div class="team_data">
+                            <div class="enemy">
+                                <div class="title">天<br />敌</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴拉巴拉巴拉巴拉</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">100%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                            <div class="restraint">
+                                <div class="title">克<br />制</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">80%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 各模式战绩 -->
+                    <div class="map_grade">
+                        <!-- team_a -->
+                        <div class="team_data team_a">
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;98%</div>
+                                    <img class="detail_type_icon" src="./images/ic_zhanlingyaodian.png" >
+                                        <!-- <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                                        <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                                        <img class="detail_type_icon" src="./images/ic_gongjihusong.png" > -->
+                                </div>
+                                <div class="detail_type">占领要点</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;98%</div>
+                                    <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                                </div>
+                                <div class="detail_type">运载作战</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;98%</div>
+                                    <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                                </div>
+                                <div class="detail_type">攻防作战</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;98%</div>
+                                    <img class="detail_type_icon" src="./images/ic_gongjihusong.png" >
+                                </div>
+                                <div class="detail_type">攻防运载</div>
+                            </div>
+                        </div>
+                        <div class="zhanwei"></div>
+                        <!-- team_b -->
+                        <div class="team_data team_b">
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">98%&nbsp;&nbsp;&nbsp;</div>
+                                    <img class="detail_type_icon" src="./images/ic_zhanlingyaodian.png" >
+                                </div>
+                                <div class="detail_type">占领要点</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">98%&nbsp;&nbsp;&nbsp;</div>
+                                    <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                                </div>
+                                <div class="detail_type">运载作战</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">98%&nbsp;&nbsp;&nbsp;</div>
+                                    <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                                </div>
+                                <div class="detail_type">攻防作战</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">100%&nbsp;&nbsp;&nbsp;</div>
+                                    <img class="detail_type_icon" src="./images/ic_gongjihusong.png" >
+                                </div>
+                                <div class="detail_type">攻防运载</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 小局切换标题 -->
+                    <div class="small_score_title">
+                        <div class="small_score_title_ul">
+                            <div class="small_score_title_item active" onclick="smallMatchClick(this,true)">GAME1</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,true)">GAME2</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,true)">GAME3</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,true)">GAME4</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,true)">GAME5</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,true)">GAME6</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,true)">GAME7</div>
+                        </div>
+                    </div>
+                    <div class="doing_map_box">地图正在加载中...</div>
+                    <div class="map_name">占领要点</div>
+                    <!-- 双方数据对比 -->
+                    <div class="data_compared doing">
+                        <div class="data_compared_item">
+                            <div class="team_compared team_a_data">
+                                <div class="win_rate" style="width: 0%"></div>
+                                <div class="win_rate_text">0%</div>
+                            </div>
+                            <div class="description">
+                                <span>第一轮</span>
+                            </div>
+                            <div class="team_compared team_b_data">
+                                <div class="win_rate" style="width: 0%"></div>
+                                <div class="win_rate_text">0%</div>
+                            </div>
+                        </div>
+                        <div class="data_compared_item">
+                            <div class="team_compared team_a_data">
+                                <div class="win_rate" style="width: 0%"></div>
+                                <div class="win_rate_text">0%</div>
+                            </div>
+                            <div class="description">
+                                <span>第二轮</span>
+                            </div>
+                            <div class="team_compared team_b_data">
+                                <div class="win_rate" style="width: 0%"></div>
+                                <div class="win_rate_text">0%</div>
+                            </div>
+                        </div>
+                        <div class="data_compared_item">
+                            <div class="team_compared team_a_data">
+                                <div class="win_rate" style="width: 0%"></div>
+                                <div class="win_rate_text">0%</div>
+                            </div>
+                            <div class="description">
+                                <span>第三轮</span>
+                            </div>
+                            <div class="team_compared team_b_data">
+                                <div class="win_rate" style="width: 0%"></div>
+                                <div class="win_rate_text">0%</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- 已结束展示模板 -->
+            <div class="match_box over">
+                <!-- 双方队伍与比分 -->
+                <div class="team_vs">
+                    <div class="team">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">East Division</div>
+                    </div>
+                    <div class="vs">
+                        <span class="win">2</span>
+                        <span class="dian">:</span>
+                        <span class="">1</span>
+                    </div>
+                    <div class="team">
+                        <div class="team_icon">
+                            <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                        </div>
+                        <div class="team_name">East Division</div>
+                    </div>
+                </div>
+                <!-- 小场比分单元格 -->
+                <div class="detail_box">
+                    <div class="small_score_Box">
+                        <div class="score_box">
+                            <div class="small_score title">
+                                <div class="box_item">队伍</div>
+                                <div class="box_item team_title">SKTTTT</div>
+                                <div class="box_item last_item team_title">RNGGGGGGGG</div>
+                            </div>
+
+                            <!-- 从此处开始循环 循环次数为BO数量 -->
+                            <div class="small_score">
+                                <div class="box_item">1st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">2st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">3st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">4st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">5st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">6st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                            <div class="small_score">
+                                <div class="box_item">7st</div>
+                                <div class="box_item">-</div>
+                                <div class="box_item last_item">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 队伍数据对比与比赛详情数据 -->
+                <div class="teamData_and_matchData">
+                    <!-- 天敌克制 -->
+                    <div class="enemy_and_restraint">
+                        <!-- team_a天敌克制 -->
+                        <div class="team_data">
+                            <div class="enemy">
+                                <div class="title">天<br />敌</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴拉巴拉巴拉巴拉</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">100%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                            <div class="restraint">
+                                <div class="title">克<br />制</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">80%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zhanwei"></div>
+                        <!-- team_b天敌克制 -->
+                        <div class="team_data">
+                            <div class="enemy">
+                                <div class="title">天<br />敌</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴拉巴拉巴拉巴拉</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">100%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                            <div class="restraint">
+                                <div class="title">克<br />制</div>
+                                <div class="icon" >
+                                    <img src="https://www.xxdianjing.com/data/upload/20190704/5d1d9b9d28931.png" >
+                                </div>
+                                <div class="name"><div>巴拉巴</div></div>
+                                <div class="win_rate_box">
+                                    <div class="win_rate">80%</div>
+                                    <div class="shenglv">胜率</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 各模式战绩 -->
+                    <div class="map_grade">
+                        <!-- team_a -->
+                        <div class="team_data team_a">
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;98%</div>
+                                    <img class="detail_type_icon" src="./images/ic_zhanlingyaodian.png" >
+                                        <!-- <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                                        <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                                        <img class="detail_type_icon" src="./images/ic_gongjihusong.png" > -->
+                                </div>
+                                <div class="detail_type">占领要点</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;98%</div>
+                                    <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                                </div>
+                                <div class="detail_type">运载作战</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;98%</div>
+                                    <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                                </div>
+                                <div class="detail_type">攻防作战</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">&nbsp;&nbsp;&nbsp;98%</div>
+                                    <img class="detail_type_icon" src="./images/ic_gongjihusong.png" >
+                                </div>
+                                <div class="detail_type">攻防运载</div>
+                            </div>
+                        </div>
+                        <div class="zhanwei"></div>
+                        <!-- team_b -->
+                        <div class="team_data team_b">
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">98%&nbsp;&nbsp;&nbsp;</div>
+                                    <img class="detail_type_icon" src="./images/ic_zhanlingyaodian.png" >
+                                </div>
+                                <div class="detail_type">占领要点</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">98%&nbsp;&nbsp;&nbsp;</div>
+                                    <img class="detail_type_icon" src="./images/ic_yunzaimubiao.png" >
+                                </div>
+                                <div class="detail_type">运载作战</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">98%&nbsp;&nbsp;&nbsp;</div>
+                                    <img class="detail_type_icon" src="./images/ic_gongfangzuozhan.png" >
+                                </div>
+                                <div class="detail_type">攻防作战</div>
+                            </div>
+                            <div class="map_item">
+                                <div class="detail_data">
+                                    <div class="detail_data_rate">100%&nbsp;&nbsp;&nbsp;</div>
+                                    <img class="detail_type_icon" src="./images/ic_gongjihusong.png" >
+                                </div>
+                                <div class="detail_type">攻防运载</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 小局切换标题 -->
+                    <div class="small_score_title">
+                        <div class="small_score_title_ul">
+                            <div class="small_score_title_item active" onclick="smallMatchClick(this,false)">GAME1</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,false)">GAME2</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,false)">GAME3</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,false)">GAME4</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,false)">GAME5</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,false)">GAME6</div>
+                            <div class="small_score_title_item" onclick="smallMatchClick(this,false)">GAME7</div>
+                        </div>
+                    </div>
+                    
+                    <div class="small_match_boxs">
+                        <div class="small_match_item active">
+                            <div class="doing_map_box" style="background: url('./images/map/map3.jpg') no-repeat;background-size: 100% 100%;">
+                                <div class="map_name">多伦多</div>
+                                <div class="team_win team_a_win">
+                                    <img src="./images/ic_shengli.png" >
+                                    <!-- <img src="./images/ic_shibai.png" > -->
+                                </div>
+                                <div class="team_win team_b_win">
+                                    <!-- <img src="./images/ic_shengli.png" > -->
+                                    <img src="./images/ic_shibai.png" >
+                                </div>
+                                <div class="map_icon">
+                                    <!-- {{if small_item.type == 0}} -->
+                                    <img src="./images/ic_zhanlingyaodian.png">
+                                    <!-- <img src="./images/ic_yunzaimubiao.png"> -->
+                                    <!-- <img src="./images/ic_gongfangzuozhan.png"> -->
+                                    <!-- <img src="./images/ic_gongjihusong.png"> -->
+                                </div>
+                            </div>
+                            <div class="map_name">攻防作战</div>
+                            <!-- 攻防作战 模式 模板 -->
+                            <!-- <div class="data_compared doing">
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>第一轮</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>第二轮</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>第三轮</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <!-- 运载作战、攻防运载 模板 -->
+                            <!-- <div class="data_compared over">
+                                <div class="data_compared_item">
+                                    <div class="team_compared nobg left_other team_a_data">
+                                        <div class="win_rate_text">4</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>检查点</span>
+                                    </div>
+                                    <div class="team_compared nobg right_other team_b_data">
+                                        <div class="win_rate_text">1</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 20%"></div>
+                                        <div class="win_rate_text">45.5M</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>推进进度</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 45%"></div>
+                                        <div class="win_rate_text">88M</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared nobg left_other team_a_data">
+                                        <div class="win_rate_text">0.00秒</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>剩余时间</span>
+                                    </div>
+                                    <div class="team_compared nobg right_other team_b_data">
+                                        <div class="win_rate_text">8秒</div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <!-- 攻防作战 模式 模板 -->
+                            <div class="data_compared over">
+                                <div class="data_compared_item">
+                                    <div class="team_compared nobg left_other team_a_data">
+                                        <div class="win_rate_text">5</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>检查点</span>
+                                    </div>
+                                    <div class="team_compared nobg right_other team_b_data">
+                                        <div class="win_rate_text">2</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 20%"></div>
+                                        <div class="win_rate_text">20%</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>占领进度</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 80%"></div>
+                                        <div class="win_rate_text">80%</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared nobg left_other team_a_data">
+                                        <div class="win_rate_text">50秒</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>剩余时间</span>
+                                    </div>
+                                    <div class="team_compared nobg right_other team_b_data">
+                                        <div class="win_rate_text">35秒</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="small_match_item">
+                            <div class="doing_map_box" style="background: url('./images/map/map3.jpg') no-repeat;background-size: 100% 100%;">
+                                <div class="map_name">多伦多</div>
+                                <div class="team_win team_a_win">
+                                    <img src="./images/ic_shengli.png" >
+                                    <!-- <img src="./images/ic_shibai.png" > -->
+                                </div>
+                                <div class="team_win team_b_win">
+                                    <!-- <img src="./images/ic_shengli.png" > -->
+                                    <img src="./images/ic_shibai.png" >
+                                </div>
+                                <div class="map_icon">
+                                    <!-- {{if small_item.type == 0}} -->
+                                    <img src="./images/ic_zhanlingyaodian.png">
+                                    <!-- <img src="./images/ic_yunzaimubiao.png"> -->
+                                    <!-- <img src="./images/ic_gongfangzuozhan.png"> -->
+                                    <!-- <img src="./images/ic_gongjihusong.png"> -->
+                                </div>
+                            </div>
+                            <div class="map_name">占领要点</div>
+                            <!-- 攻防作战 模式 模板 -->
+                            <div class="data_compared doing">
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>第一轮</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>第二轮</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>第三轮</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 0%"></div>
+                                        <div class="win_rate_text">0%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small_match_item">
+                            <div class="doing_map_box" style="background: url('./images/map/map3.jpg') no-repeat;background-size: 100% 100%;">
+                                <div class="map_name">巴拉巴拉</div>
+                                <div class="team_win team_a_win">
+                                    <img src="./images/ic_shengli.png" >
+                                    <!-- <img src="./images/ic_shibai.png" > -->
+                                </div>
+                                <div class="team_win team_b_win">
+                                    <!-- <img src="./images/ic_shengli.png" > -->
+                                    <img src="./images/ic_shibai.png" >
+                                </div>
+                                <div class="map_icon">
+                                    <!-- {{if small_item.type == 0}} -->
+                                    <img src="./images/ic_zhanlingyaodian.png">
+                                    <!-- <img src="./images/ic_yunzaimubiao.png"> -->
+                                    <!-- <img src="./images/ic_gongfangzuozhan.png"> -->
+                                    <!-- <img src="./images/ic_gongjihusong.png"> -->
+                                </div>
+                            </div>
+                            <div class="map_name">运载作战</div>
+                            <!-- 运载作战、攻防运载 模板 -->
+                            <div class="data_compared over">
+                                <div class="data_compared_item">
+                                    <div class="team_compared nobg left_other team_a_data">
+                                        <div class="win_rate_text">4</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>检查点</span>
+                                    </div>
+                                    <div class="team_compared nobg right_other team_b_data">
+                                        <div class="win_rate_text">1</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared team_a_data">
+                                        <div class="win_rate" style="width: 20%"></div>
+                                        <div class="win_rate_text">45.5M</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>推进进度</span>
+                                    </div>
+                                    <div class="team_compared team_b_data">
+                                        <div class="win_rate" style="width: 45%"></div>
+                                        <div class="win_rate_text">88M</div>
+                                    </div>
+                                </div>
+                                <div class="data_compared_item">
+                                    <div class="team_compared nobg left_other team_a_data">
+                                        <div class="win_rate_text">0.00秒</div>
+                                    </div>
+                                    <div class="description">
+                                        <span>剩余时间</span>
+                                    </div>
+                                    <div class="team_compared nobg right_other team_b_data">
+                                        <div class="win_rate_text">8秒</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

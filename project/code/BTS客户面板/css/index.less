@@ -1,0 +1,829 @@
+.BTSBox {
+    width: 1920px;
+    margin: 0 auto;
+    .title {
+        height:54px;
+        background-color: #2A2D33;
+        position: relative;
+        font-size:15px;
+        color:rgba(255,255,255,1);
+        line-height: 54px;
+        >div {
+            position: absolute;
+            height: 100%;
+        }
+        .logo {
+            left: 37px;
+            img {
+                height: 19px;
+            }
+        }
+        .client {
+            left: 234px;
+            // font-size:18px;
+            position: absolute;
+            span {
+                color:rgba(118,129,153,1);
+            }
+            a {
+                display: inline-block;
+                margin-left: 12px;
+                color:rgba(255,255,255,1);
+                position: relative;
+                padding-right: 30px;
+            }
+            a::after{
+                content: "";
+                position: absolute;
+                // right: -20px;
+                right: 8px;
+                top: 25px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 5.5px 0 5.5px;
+                border-color: #ffffff transparent transparent transparent;
+            }
+            
+        }
+        .select {
+            position: absolute;
+            // left: 314px;
+            left: 308px;
+            top: 44px;
+            background-color: #393F4A;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: opacity .5s;
+            z-index: 999;
+            text-align: center;
+            li {
+                cursor: pointer;
+                height: 40px;
+                line-height: 40px;
+                color:rgba(255,255,255,1);
+                padding: 0 15px;
+            }
+        }
+        .hidden {
+            opacity: 0;
+            height: 0;
+        }
+        .toDay {
+            left: 502px;
+        }
+        .toMonth {
+            // left: 923px;
+            left: 850px;
+        }
+        .average {
+            // left: 1344px;
+            left: 1200px;
+            span {
+                margin-left: 32px;
+            }
+        }
+    }
+    .statistics {
+        margin-top: 36px;
+        height:262px;
+        display: flex;
+        justify-content: center;
+        .participation,.bet {
+            height: 100%;
+            width:367px;
+            background:rgba(45,49,58,1);
+            box-shadow:0px 1px 4px rgba(0,0,0,0.14);
+            border-radius:6px;
+            margin-right: 7px;
+            font-size:12px;
+            color:rgba(255,255,255,1);
+            position: relative;
+            .yesterday,.today {
+                position: absolute;
+                bottom: 17px;
+                i {
+                    display: inline-block;
+                    width:14px;
+                    height:14px;
+                    border-radius:50%;
+                    vertical-align: text-bottom;
+                    margin-right: 8px;
+                    box-sizing: border-box;
+                }
+            }
+            .yesterday {
+                left: 28px;
+                i {
+                    border:1px dashed rgba(129,217,134,1);
+                }
+            }
+            .today {
+                left: 92px;
+                i {
+                    background:rgba(19,182,238,1);
+                }
+            }
+            .time {
+                position: absolute;
+                right: 18px;
+                bottom: 16px;
+                font-size:12px;
+                color:rgba(118,129,153,1);
+                img {
+                    width:14px;
+                    height:14px;
+                    display: inline-block;
+                    vertical-align: text-top;
+                    margin-right: 5px;
+                }
+            }
+            .echarts {
+                position: absolute;
+                left: 8px;
+                bottom: 45px;
+                width:352px;
+                height:235px;
+                background:rgba(41,46,54,1);
+                box-shadow:0px 4px 4px rgba(0,0,0,0.14);
+                p {
+                    font-size:12px;
+                    color:rgba(118,129,153,1);
+                    text-align: center;
+                    margin-top: 4px;
+                }
+                .charts-box {
+                    height: 216px;
+                }
+            }
+        }
+        .users {
+            position: relative;
+            width:1115px;
+            height: 100%;
+            background:rgba(45,49,58,1);
+            box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+            opacity:1;
+            border-radius:6px;
+            >div {
+                position: absolute;
+            }
+            .risk_user,.full_user,.unconfirmed_user {
+                top: -16px;
+                width:135px;
+                height:108px;
+                background:rgba(53,59,69,1);
+                box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+                border-radius:4px;
+                p {
+                    font-size:12px;
+                    color:rgba(118,129,153,1);
+                    text-align: center;
+                    margin-top: 13px;
+                }
+                .num{
+                    margin-top: 21px;
+                    text-align: center;
+                    font-size:22px;
+                    color:rgba(255,255,255,1);
+                }
+                .hint {
+                    position: absolute;
+                    bottom: 0;
+                    width:135px;
+                    height:5px;
+                    opacity:1;
+                    border-radius:0px 0px 4px 4px;
+                }
+                .danger {
+                    background-color: rgba(235,70,72,1);
+                }
+                .warning {
+                    background-color: rgba(236,216,121,1);
+                }
+                .sureness {
+                    background-color: rgba(90,218,133,1);
+                }
+            }
+            .risk_user {
+                left: 14px;
+            }
+            .full_user {
+                left: 155px;
+            }
+            .unconfirmed_user {
+                left: 296px;
+            }
+            .today_userNum,.today_num {
+                top: 131px;
+                width:197px;
+                height:100px;
+                background:rgba(53,59,69,1);
+                box-shadow:0px 1px 4px rgba(0,0,0,0.14);
+                border-radius:6px;
+                span {
+                    position: absolute;
+                }
+                .info {
+                    top: 13px;
+                    left: 119px;
+                    font-size:16px;
+                    color:rgba(118,129,153,1);
+                }
+                .num {
+                    top: 32px;
+                    right: 102px;
+                    font-size:29px;
+                    color:rgba(255,255,255,1);
+                }
+                .change {
+                    top: 57px;
+                    right: 15px;
+                    font-size:19px;
+                }
+                .change.add {
+                    color:rgba(90,218,133,1);
+                }
+                .change.decrease {
+                    color:rgba(235,70,72,1);
+                }
+            }
+            .today_userNum {
+                left: 14px;
+            }
+            .today_num  {
+                left: 231px;
+            }
+            .as_compensate,.await_compensate,.average{
+                top: -16px;
+                width:215px;
+                height:270px;
+                background:rgba(53,59,69,1);
+                box-shadow:0px 1px 4px rgba(0,0,0,0.14);
+                border-radius:6px;
+                p {
+                    font-size:12px;
+                    color:rgba(118,129,153,1);
+                    margin-top: 11px;
+                    margin-left: 10px;
+                }
+                ul {
+                    margin-top: 5px;
+                    padding-left: 10px;
+                    padding-right: 13px;
+                    font-size:14px;
+                    color:rgba(255,255,255,1);
+                    li {
+                        margin-top: 5px;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .as_compensate {
+                left: 438px;
+            }
+            .await_compensate {
+                left: 660px;
+            }
+            .average {
+                left: 884px;
+            }
+        }
+    }
+    .match {
+        margin-top: 3px;
+        margin-bottom: 20px;
+        .match_item {
+            margin: 0 auto;
+            margin-top: 14px;
+            width:1860px;
+            background:rgba(47,52,61,1);
+            border-radius:10px;
+            overflow: hidden;
+            .match_title {
+                height: 59px;
+                line-height: 59px;
+                position: relative;
+                >div {
+                    position: absolute;
+                }
+                .line {
+                    top: 20px;
+                    width:1px;
+                    height:20px;
+                    background:rgba(67,73,87,1);
+                }
+                .line1 {
+                    left: 115px;
+                }
+                .line2 {
+                    left: 212px;
+                }
+                .line3 {
+                    left: 376px;
+                }
+                .line4 {
+                    left: 844px;
+                }
+                .line5 {
+                    left: 1105px;
+                }
+                .line6 {
+                    left: 1398px;
+                }
+                .line7 {
+                    left: 1749px;
+                }
+                .time {
+                    left: 23px;
+                    font-size:13px;
+                    color:rgba(90,218,133,1);
+                }
+                .game,.competition,.teamA_name,.teamB_name {
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+                .game {
+                    left: 125px;
+                    max-width: 87px;
+                    font-size:13px;
+                    color:rgba(118,129,153,1);
+                    img {
+                        width: 20px;
+                        margin-right: 4px;
+                        display: inline-block;
+                        vertical-align: text-top;
+                    }
+                }
+                .competition {
+                    left: 222px;
+                    max-width: 154px;
+                    font-size:14px;
+                    color:rgba(255,255,255,1);
+                }
+                .odds {
+                    top: 18px;
+                    width:53px;
+                    height:26px;
+                    background:rgba(61,67,79,1);
+                    border-radius:4px;
+                    text-align: center;
+                    line-height: 26px;
+                }
+                .odds_up {
+                    color:rgba(235,70,72,1);
+                }
+                .odds_down {
+                    color:rgba(90,218,133,1);
+                }
+                .teamA_odds {
+                    left: 414px;
+                }
+                .teamA_odds_chenge,.teamB_odds_chenge {
+                    top: 21px;
+                    width:9px;
+                    height:17px;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                }
+                .teamA_odds_chenge {
+                    left: 400px;
+                }
+                .teamB_odds_chenge {
+                    left: 805px;
+                }
+                .chenge_up {
+                    background-image: url(../images/shangsheng.png);
+                }
+                .chenge_down {
+                    background-image: url(../images/xiajiang.png);
+                }
+                .teamA_name {
+                    right: 1313px;
+                    max-width: 77px;
+                    font-size:13px;
+                    color:rgba(255,255,255,1);
+                }
+                .teamA_icon {
+                    position: absolute;
+                    left: 559px;
+                    top: 17px;
+                    width: 26px;
+                }
+                .than {
+                    left: 598px;
+                    font-size:14px;
+                    font-family:Roboto;
+                    color:rgba(255,255,255,1);
+                }
+                .teamB_icon{
+                    position: absolute;
+                    left: 616px;
+                    top: 17px;
+                    width: 26px;
+                }
+                .teamB_name {
+                    left: 662px;
+                    max-width: 83px;
+                    font-size:13px;
+                    color:rgba(255,255,255,1);
+                }
+                .teamB_odds {
+                    left: 745px;
+                }
+                .bet_state {
+                    left: 863px;
+                    top: 18px;
+                    width:218px;
+                    height:26px;
+                    background:rgba(53,59,69,1);
+                    border-radius:3px;
+                    line-height: 26px;
+                    span {
+                        position: absolute;
+                        font-size:14px;
+                        color:rgba(255,255,255,1);
+                        margin-left: 12px;
+                    }
+                    i {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        border-radius:3px;
+                        background:linear-gradient(270deg,rgba(66,216,117,1) 0%,rgba(95,172,121,1) 100%);
+                    }
+                }
+                .bet_number,.user_number,.capita {
+                    font-size:12px;
+                    color:#768199;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                    span {
+                        color:rgba(255,255,255,1);
+                    }
+                }
+                .bet_number {
+                    left: 1121px;
+                    max-width: 82px;
+                }
+                .user_number {
+                    left: 1204px;
+                    max-width: 85px;
+                }
+                .capita {
+                    left: 1290px;
+                    max-width: 108px;
+                }
+                .bast {
+                    top: 18px;
+                    width:60px;
+                    height:25px;
+                    background:rgba(53,59,69,1);
+                    border-radius:4px;
+                    color:rgba(73,80,94,1);
+                    font-size:12px;
+                    line-height: 25px;
+                    text-align: center;
+                }
+                .bast_num {
+                    left: 1410px;
+                }
+                .bast_num.bright {
+                    background:rgba(222,67,67,1);
+                    color:rgba(255,255,255,1);
+                }
+                .bast_user {
+                    left: 1476px;
+                }
+                .bast_user.bright {
+                    background:rgba(15,151,196,1);
+                    color:rgba(255,255,255,1);
+                }
+                .bast_money {
+                    left: 1542px;
+                }
+                .bast_money.bright {
+                    background:rgba(129,171,29,1);
+                    color:rgba(255,255,255,1);
+                }
+                .bast_all {
+                    left: 1608px;
+                }
+                .bast_all.bright {
+                    background:rgba(113,79,184,1);
+                    color:rgba(255,255,255,1);
+                }
+                .bast_single {
+                    left: 1674px;
+                }
+                .bast_single.bright {
+                    background:rgba(238,136,19,1);
+                    color:rgba(255,255,255,1);
+                }
+                .participation_num {
+                    left: 1767px;
+                    top: 16px;
+                    width:27px;
+                    height:27px;
+                    background:rgba(235,70,72,1);
+                    border-radius:50%;
+                    line-height: 29px;
+                    text-align: center;
+                    font-size:12px; 
+                    color:rgba(255,255,255,1);
+                }
+                .is_top  {
+                    left: 1813px;
+                    top: 15px;
+                    width:30px;
+                    height:30px;
+                    background: url(../images/zhiding_off.png) no-repeat;
+                    background-size: 100% 100%;
+                    cursor: pointer;
+                }
+                .stick {
+                    background-image: url(../images/zhiding.png);
+                }
+            }
+            .match_info {
+                height: 463px;
+                transition: height .7s;
+                position: relative;
+                .match_charts {
+                    height: 221px;
+                    // background-color: #fff;
+                }
+                .teamA_icon,.teamB_icon {
+                    position: absolute;
+                    left: 22px;
+                    width: 23px;
+                    z-index: 999;
+                }
+                .teamA_icon {
+                    top: 100px;
+                }
+                .teamB_icon {
+                    top: 149px;
+                }
+                .match_details{
+                    width:1716px;
+                    height:231px;
+                    background:rgba(51,57,66,1);
+                    box-shadow:0px 0px 6px rgba(0,0,0,0.16);
+                    border-radius:3px;
+                    margin: 0 auto;
+                    position: relative;
+                    .cut_off_rule {
+                        position: absolute;
+                        right: 84px;
+                        top: 0;
+                        height: 100%;
+                        width: 1px;
+                        border:1px solid rgba(47,52,61,1);
+                    }
+                    .match_details_item {
+                        height: 54px;
+                        line-height: 54px;
+                        position: relative;
+                        >div {
+                            position: absolute;
+                        }
+                        .danger {
+                            background-color: #C93C3E;
+                        }
+                        .danger_text {
+                            color: #EB4648;
+                        }
+                        .sureness {
+                            background-color: #4EBD73;
+                            // background: linear-gradient(270deg, #42d875 0%, #5fac79 100%);
+                        }
+                        .sureness_text {
+                            color: #5ADA85;
+                        }
+
+                        .teamA_interval,.teamB_interval {
+                            top: 16px;
+                            width:63px;
+                            height:22px;
+                            line-height: 22px;
+                            text-align: center;
+                            font-size:14px;
+                            color:rgba(255,255,255,1);
+                        }
+                        .teamA_interval {
+                            left: 64px;
+                        }
+                        .teamB_interval {
+                            right: 105px;
+                        }
+                        .teamA_single_perCapita,.teamB_single_perCapita {
+                            font-size:14px;
+                            color:rgba(118,129,153,1);
+                            .unit {
+                                color:rgba(255,255,255,1);
+                            }
+                        }
+                        .teamA_single_perCapita {
+                            left: 149px;
+                        }
+                        .teamB_single_perCapita {
+                            right: 185px;
+                        }
+                        .teamA_single_users, .teamB_single_users{
+                            font-size:14px;
+                            color:rgba(255,255,255,1);
+                        }
+                        .teamA_single_users {
+                            right: 1280px;
+                        }
+                        .teamB_single_users {
+                            right: 355px;
+
+                        }
+                        .teamA_compensate,.teamB_compensate {
+                            top: 17px;
+                            width:226px;
+                            height:22px;
+                            font-size:12px;
+                            color:rgba(255,255,255,1);
+                            line-height: 22px;
+                            i {
+                                position: absolute;
+                                height: 100%;
+                                border-radius:2px;
+                            }
+                            span {
+                                position: absolute;
+                            }
+                        }
+                        .teamA_compensate {
+                            right: 982px;
+                            text-align: right;
+                            i {
+                                right: 0;
+                            }
+                            span {
+                                right: 15px;
+                            }
+                        }
+                        .teamB_compensate {
+                            left: 944px;
+                            text-align: right;
+                            i {
+                                left: 0;
+                            }
+                            span {
+                                left: 15px;
+                            }
+                        }
+                        .quota {
+                            left: 765px;
+                            top: 0;
+                            width: 150px;
+                            height: 100%;
+                            text-align: center;
+                            padding-top: 12px;
+                            p {
+                                font-size:13px;
+                                color:rgba(255,255,255,1);
+                                line-height: 13px;
+                                overflow: hidden;
+                                text-overflow:ellipsis;
+                                white-space: nowrap;
+                            }
+                            .progress_bar {
+                                margin-top: 6px;
+                                width: 100%;
+                                height:6px;
+                                background:rgba(39,44,51,1);
+                                border-radius:4px;
+                                .progress {
+                                    height:100%;
+                                    border-radius:4px;
+                                    background:rgba(236,216,121,1);
+                                }
+                            }
+                        }
+                        
+                        .risk_users {
+                            right: 36px;
+                            top: 19px;
+                            width:27px;
+                            height:27px;
+                            background:rgba(235,70,72,1);
+                            border-radius:50%;
+                            text-align: center;
+                            line-height: 29px;
+                            font-size:14px;
+                            color:rgba(255,255,255,1);
+                        }
+                    }
+                }
+            }
+            .unfold {
+                height: 0;
+            }
+        }
+    }
+    .filtrate_box {
+        position: fixed;
+        left: -20px;
+        // left: 20px;
+        bottom: 50px;
+        transition: left .3s;
+        .filtrate_menu {
+            width:54px;
+            height:54px;
+            border-radius:50%;
+            cursor: pointer;
+            background: url(../images/shaixuan_off.png) no-repeat center;
+            background-size: 100% 100%; 
+            background-color:rgba(81,89,105,1);
+            z-index: 99;
+        }
+        .filtrate_games {
+            position: absolute;
+            left: 26px;
+            bottom: 26px;
+            display: none;
+            background:rgba(81,89,105,1);
+            border-radius:7px;
+            z-index: -1;
+            width: 555px;
+            .confirm {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                color: #fff;
+                font-size: 16px;
+                font-family:Roboto;
+                cursor: pointer;
+            }
+            .games_box  {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 60px;
+                margin-bottom: 40px;
+                padding-left: 30px;
+                box-sizing: border-box;
+                margin-right: 40px;
+            }
+            .game_item {
+                text-align: center;
+                width: 69px;
+                margin-bottom: 7px;
+                cursor: pointer;
+                opacity: 0.5;
+                img {
+                    width: 36px;
+                    height: 36px;
+                }
+                p {
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                    margin-top: 5px;
+                    font-size:12px;
+                    font-family:Roboto;
+                    font-weight:bold;
+                    color:rgba(255,255,255,1);
+                }
+            }
+            .game_item.active {
+                opacity: 1;
+            }
+        }
+        .filtrate_games.show {
+            display: block;
+        }
+        
+    }
+    .filtrate_box.active {
+        left: 7px;
+        .filtrate_menu {
+            background-image: url(../images//shaixuan.png);
+        }
+    }
+    .filtrate_box:hover {
+        left: 7px;
+    }
+    .shade {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.36);
+    }
+    .shade.show {
+        display: block;
+    }
+}

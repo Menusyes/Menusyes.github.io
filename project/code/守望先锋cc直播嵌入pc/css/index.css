@@ -1,0 +1,1723 @@
+body,
+div,
+ul,
+li,
+p,
+span,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+img {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑", "宋体", "Arial Narrow";
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+select {
+  vertical-align: middle;
+}
+img {
+  border: none;
+}
+.clear {
+  clear: both;
+}
+@font-face {
+  font-family: 'Industry';
+  src: url('../font/Industry-Bold.otf');
+}
+#app {
+  width: 1180px;
+  height: 896px;
+  margin: 0 auto;
+  position: relative;
+}
+#app .tab_title {
+  width: 552px;
+  height: 43px;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+#app .tab_title .tab_title_item {
+  width: 184px;
+  height: 43px;
+  cursor: pointer;
+  text-align: center;
+  color: #898989;
+  line-height: 43px;
+  font-size: 16px;
+  font-weight: bold;
+  float: left;
+  font-family: Microsoft YaHei UI;
+  background-color: #f00;
+  background: url(../images/bt_weixuanzhong.png) no-repeat;
+}
+#app .tab_title .team_data.active,
+#app .tab_title .match_data.active,
+#app .tab_title .match_integral.active {
+  background: url(../images/bt_xuanzhong.png) no-repeat;
+  background-size: 100% 100%;
+  color: #000000;
+}
+#app > a > img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 47px;
+}
+#app .tab_body {
+  width: 100%;
+  height: 849px;
+  background: #f4f4f4;
+}
+#app .tab_body .tab_body_item {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+#app .tab_body .tab_body_item.active {
+  display: block;
+}
+#app .tab_body .match_integral {
+  padding-top: 46px;
+}
+#app .tab_body .match_integral .integral_tab {
+  height: 44px;
+  width: 487px;
+  position: relative;
+}
+#app .tab_body .match_integral .integral_tab .getReady {
+  width: 164px;
+  height: 44px;
+  background: url(../images/bt_changguisai-1.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  line-height: 44px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Microsoft YaHei UI;
+  color: #ffffff;
+}
+#app .tab_body .match_integral .integral_tab .getReady.active {
+  background: url(../images/bt_changguisai.png) no-repeat;
+}
+#app .tab_body .match_integral .integral_tab .group {
+  position: absolute;
+  left: 157px;
+  top: 0;
+  width: 174px;
+  height: 44px;
+  background: url(../images/bt_jizhongsai.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: not-allowed;
+  line-height: 44px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Microsoft YaHei UI;
+  color: #ffffff;
+}
+#app .tab_body .match_integral .integral_tab .group.active {
+  background: url(../images/bt_jizhongsai-1.png) no-repeat;
+}
+#app .tab_body .match_integral .integral_tab .repetition {
+  position: absolute;
+  left: 323px;
+  top: 0;
+  width: 164px;
+  height: 44px;
+  background: url(../images/bt_jihousai.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: not-allowed;
+  line-height: 44px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Microsoft YaHei UI;
+  color: #ffffff;
+}
+#app .tab_body .match_integral .integral_tab .repetition.active {
+  background: url(../images/bt_jihousai-1.png) no-repeat;
+}
+#app .tab_body .match_integral .integral_tab_body {
+  margin-top: 29px;
+}
+#app .tab_body .match_integral .integral_tab_body .integral_tab_body_item {
+  display: none;
+}
+#app .tab_body .match_integral .integral_tab_body .integral_tab_body_item.active {
+  display: block;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body {
+  width: 100%;
+  height: 100%;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left {
+  width: 673px;
+  float: left;
+  padding-left: 13px;
+  box-sizing: border-box;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title {
+  height: 37px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title > div {
+  float: left;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title .schedule_title_bottom {
+  width: 38px;
+  height: 37px;
+  cursor: pointer;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title .schedule_title_bottom:focus {
+  outline: none;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title .schedule_button_next {
+  background: url(../images/ic_zuo_zhou.png) no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title .schedule_button_prev {
+  background: url(../images/ic_you_zhou.png) no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title .swiper-container {
+  width: 573px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title .swiper-container .swiper-slide:hover {
+  background: rgba(238, 159, 56, 0.5);
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title .swiper-container .swiper-slide {
+  width: 88px;
+  height: 37px;
+  background: #cccccc;
+  opacity: 1;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 37px;
+  font-size: 16px;
+  font-family: Microsoft YaHei UI;
+  color: #ffffff;
+  cursor: pointer;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_title .swiper-container .swiper-slide.active {
+  background: #ee9f38;
+  color: #ffffff;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body {
+  margin-top: 14px;
+  height: 576px;
+  overflow-y: scroll;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item {
+  display: none;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item {
+  width: 649px;
+  height: 65px;
+  background: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 9px;
+  margin-bottom: 8px;
+  position: relative;
+  cursor: pointer;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item > div {
+  position: absolute;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .year,
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .date {
+  left: 14px;
+  width: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Industry';
+  font-weight: bold;
+  color: #c9c9c9;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .line {
+  left: 62px;
+  top: 7px;
+  width: 1px;
+  height: 50px;
+  background-color: #fafafa;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .year {
+  top: 36px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .date {
+  top: 15px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .time {
+  left: 69px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 16px;
+  font-family: 'Industry';
+  font-weight: bold;
+  color: #060606;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .team_name {
+  width: 112px;
+  text-align: center;
+  height: 65px;
+  line-height: 65px;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .teamA_name {
+  left: 120px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .teamB_name {
+  right: 151px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .team_icon {
+  width: 35px;
+  height: 65px;
+  line-height: 65px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .team_icon img {
+  width: 100%;
+  vertical-align: middle;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .teamA_icon {
+  left: 234px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .teamB_icon {
+  right: 267px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .team_score {
+  margin-top: 19px;
+  width: 26px;
+  height: 28px;
+  background: #000000;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 18px;
+  font-family: 'Industry';
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .teamA_score {
+  left: 278px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .teamB_score {
+  right: 310px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .area {
+  right: 99px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 14px;
+  font-family: Microsoft YaHei UI;
+  color: #c9c9c9;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .vs {
+  left: 291px;
+  height: 65px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .vs img {
+  margin-top: 19px;
+  width: 31px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .status {
+  right: 18px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .status > div {
+  margin-top: 17px;
+  width: 68px;
+  height: 29px;
+  border: 1px solid #898989;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 29px;
+  font-size: 14px;
+  font-family: Microsoft YaHei UI;
+  color: #898989;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .status .notStart {
+  border-color: transparent;
+  background: #ee9f38;
+  color: #ffffff;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item .status .over {
+  border-color: transparent;
+  background: #c5df9f;
+  color: #ffffff;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item .match_item:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.13);
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body .schedule_body_item.active {
+  display: block;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_left .schedule_body::-webkit-scrollbar {
+  display: none;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right {
+  width: 507px;
+  float: left;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .schedule_banner {
+  width: 479px;
+  height: 68px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .schedule_banner img {
+  width: 100%;
+  height: 100%;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_title {
+  width: 479px;
+  margin-top: 5px;
+  height: 48px;
+  display: flex;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box;
+  /* Firefox 17- */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex;
+  /* Firefox 18+ */
+  display: -ms-flexbox;
+  /* IE 10 */
+  flex-direction: row;
+  -webkit-box-orient: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_title .ranking_title_item {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  background: #cccccc;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Microsoft YaHei UI';
+  color: #ffffff;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_title .ranking_title_item.active {
+  background: #ee9f38;
+  border-color: #c2812e;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_title :last-child {
+  margin-right: 0;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .body_info {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .body_info div {
+  position: absolute;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .body_info .mingci {
+  left: 30px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .body_info .name {
+  left: 86px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .body_info .team_win {
+  left: 245px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .body_info .map_win {
+  left: 327px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .body_info .score {
+  left: 404px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item {
+  display: none;
+  height: 517px;
+  overflow-y: scroll;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item {
+  width: 480px;
+  height: 59px;
+  background: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 7px;
+  position: relative;
+  line-height: 59px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item div {
+  position: absolute;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .topThree {
+  left: 26px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .topThree img {
+  width: 36px;
+  vertical-align: middle;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .topThreeNum {
+  left: 40px;
+  font-size: 15px;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .team_icon {
+  left: 81px;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .team_icon img {
+  width: 36px;
+  vertical-align: middle;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .team_name {
+  left: 125px;
+  font-size: 15px;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+  width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .team_grade {
+  left: 245px;
+  width: 56px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .map_grade {
+  left: 327px;
+  width: 56px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .score {
+  left: 413px;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei UI';
+  color: #bb2a2a;
+  font-weight: bold;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item .team_item .score.add {
+  color: #267421;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item::-webkit-scrollbar {
+  display: none;
+}
+#app .tab_body .match_integral .integral_tab_body .group_body .group_right .ranking_body .ranking_body_item.active {
+  display: block;
+}
+#app .tab_body .team_data {
+  padding-top: 21px;
+}
+#app .tab_body .team_data .teamTab_title {
+  height: 291px;
+  margin: 0 auto;
+  margin-left: 3px;
+  margin-right: 3px;
+  background: url("../images/bg_zuo.png") no-repeat left top, url("../images/bg_zuo-1.png") no-repeat right top;
+  background-size: auto 100%;
+  position: relative;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left,
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth {
+  width: 421px;
+  height: 230px;
+  margin-top: 61px;
+  display: flex;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box;
+  /* Firefox 17- */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex;
+  /* Firefox 18+ */
+  display: -ms-flexbox;
+  /* IE 10 */
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left .teamTab_title_item,
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth .teamTab_title_item {
+  width: 20%;
+  height: 112px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left .teamTab_title_item .icon,
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth .teamTab_title_item .icon {
+  width: 66px;
+  height: 57px;
+  text-align: center;
+  line-height: 57px;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left .teamTab_title_item .icon img,
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth .teamTab_title_item .icon img {
+  width: 70%;
+  vertical-align: middle;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left .teamTab_title_item .name,
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth .teamTab_title_item .name {
+  width: 66px;
+  box-sizing: border-box;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: Microsoft YaHei UI;
+  font-weight: 400;
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-align: center;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left {
+  margin-left: 37px;
+  float: left;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left .teamTab_title_item .icon {
+  background: url("../images/bg_duiwu_zuo.png") no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left .teamTab_title_item.active .icon {
+  background: url("../images/bg_duiwu_zuo-1.png") no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_left .teamTab_title_item.active .name {
+  color: #333333;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth {
+  margin-right: 52px;
+  float: right;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth .teamTab_title_item .icon {
+  background: url("../images/bg_duiwu_you.png") no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth .teamTab_title_item.active .icon {
+  background: url("../images/bg_duiwu_you-1.png") no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .team_data .teamTab_title .teamTab_title_rigth .teamTab_title_item.active .name {
+  color: #ee9f38;
+}
+#app .tab_body .team_data .teamTab_title .area_a_name,
+#app .tab_body .team_data .teamTab_title .area_b_name {
+  position: absolute;
+  top: 11px;
+  font-size: 16px;
+  font-family: Microsoft YaHei UI;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_title .area_a_name {
+  left: 37px;
+}
+#app .tab_body .team_data .teamTab_title .area_b_name {
+  right: 29px;
+}
+#app .tab_body .team_data .teamTab_body {
+  width: 1165px;
+  height: 518px;
+  background: #333333;
+  margin: 0 auto;
+  margin-top: 11px;
+}
+#app .tab_body .team_data .teamTab_body .team_info {
+  width: 438px;
+  height: 100%;
+  float: left;
+}
+#app .tab_body .team_data .teamTab_body .team_info .introduce {
+  height: 142px;
+  position: relative;
+}
+#app .tab_body .team_data .teamTab_body .team_info .introduce > div {
+  position: absolute;
+}
+#app .tab_body .team_data .teamTab_body .team_info .introduce > img {
+  position: absolute;
+  width: 94px;
+  height: 94px;
+  top: 26px;
+  left: 66px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .introduce .name {
+  top: 26px;
+  left: 184px;
+  font-size: 20px;
+  font-family: Microsoft YaHei UI;
+  font-weight: bold;
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+#app .tab_body .team_data .teamTab_body .team_info .introduce .label {
+  top: 86px;
+  left: 184px;
+  font-size: 20px;
+  font-family: Microsoft YaHei UI;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .introduce .win_rate {
+  top: 72px;
+  left: 246px;
+  font-size: 36px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ee9f38;
+}
+#app .tab_body .team_data .teamTab_body .team_info .performance {
+  width: 432px;
+  height: 52px;
+  background: url("../images/ic_zhanji.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+#app .tab_body .team_data .teamTab_body .team_info .performance > div {
+  position: absolute;
+}
+#app .tab_body .team_data .teamTab_body .team_info .performance .label_1,
+#app .tab_body .team_data .teamTab_body .team_info .performance .label_2 {
+  height: 52px;
+  line-height: 52px;
+  font-size: 16px;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .performance .label_1 {
+  left: 35px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .performance .label_2 {
+  left: 253px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .performance .match,
+#app .tab_body .team_data .teamTab_body .team_info .performance .map {
+  height: 52px;
+  line-height: 52px;
+  font-size: 20px;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .performance .match {
+  left: 112px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .performance .map {
+  left: 330px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .detail {
+  height: 140px;
+  padding-left: 20px;
+  padding-top: 17px;
+  box-sizing: border-box;
+}
+#app .tab_body .team_data .teamTab_body .team_info .detail .detail_item {
+  width: 76px;
+  margin-right: 28px;
+  float: left;
+}
+#app .tab_body .team_data .teamTab_body .team_info .detail .detail_item .detail_data {
+  width: 76px;
+  height: 68px;
+  background: url("../images/bg_shenglv.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 1px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .detail .detail_item .detail_data .detail_data_rate {
+  font-size: 22px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .detail .detail_item .detail_data .detail_data_record {
+  margin-top: 3px;
+  font-size: 16px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .detail .detail_item .detail_data .detail_type_icon {
+  position: absolute;
+  left: 18px;
+  top: 51px;
+  width: 34px;
+  height: 34px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .detail .detail_item .detail_type {
+  width: 76px;
+  margin-top: 21px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .line {
+  width: 429px;
+  height: 1px;
+  background-color: #262626;
+  margin-left: 9px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation {
+  margin-top: 23px;
+  height: 53px;
+  padding-left: 14px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint {
+  float: left;
+  margin-right: 11px;
+  width: 193px;
+  height: 53px;
+  background: #404040;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy > div,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint > div {
+  float: left;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .title,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .title {
+  width: 32px;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .icon,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .icon {
+  margin-left: 4px;
+  width: 34px;
+  height: 53px;
+  line-height: 53px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .icon img,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .icon img {
+  width: 100%;
+  vertical-align: middle;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .name,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .name {
+  margin-left: 6px;
+  width: 59px;
+  font-size: 14px;
+  height: 53px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .name > div,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .name > div {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  vertical-align: middle;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .win_rate_box,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .win_rate_box {
+  margin-left: 2px;
+  width: 56px;
+  text-align: center;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .win_rate_box .win_rate,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .win_rate_box .win_rate {
+  margin-top: 4px;
+  font-size: 20px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ee9f38;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .win_rate_box .shenglv,
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .win_rate_box .shenglv {
+  margin-top: 2px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .enemy .title {
+  background: #d83030;
+}
+#app .tab_body .team_data .teamTab_body .team_info .relation .restraint .title {
+  background: #4b93d2;
+}
+#app .tab_body .team_data .teamTab_body .team_info .record {
+  margin-top: 17px;
+  padding-left: 14px;
+}
+#app .tab_body .team_data .teamTab_body .team_info .record .match_record,
+#app .tab_body .team_data .teamTab_body .team_info .record .map_record {
+  float: left;
+  width: 180px;
+  height: 74px;
+  background: #404040;
+}
+#app .tab_body .team_data .teamTab_body .team_info .record .match_record .top,
+#app .tab_body .team_data .teamTab_body .team_info .record .map_record .top {
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  background: #ee9f38;
+  font-size: 16px;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .record .match_record .bottom,
+#app .tab_body .team_data .teamTab_body .team_info .record .map_record .bottom {
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .team_info .record .match_record {
+  margin-right: 35px;
+}
+#app .tab_body .team_data .teamTab_body .player_box {
+  float: right;
+  width: 638px;
+  height: 100%;
+}
+#app .tab_body .team_data .teamTab_body .player_box .players {
+  margin-left: 60px;
+  height: 268px;
+  padding-top: 26px;
+  box-sizing: border-box;
+  display: flex;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box;
+  /* Firefox 17- */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex;
+  /* Firefox 18+ */
+  display: -ms-flexbox;
+  /* IE 10 */
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+}
+#app .tab_body .team_data .teamTab_body .player_box .players .player_item {
+  width: 89px;
+  margin-right: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+#app .tab_body .team_data .teamTab_body .player_box .players .player_item .icon {
+  width: 88px;
+  height: 88px;
+  background: #333333;
+  border: 1px solid #ee9f38;
+  text-align: center;
+  line-height: 88px;
+}
+#app .tab_body .team_data .teamTab_body .player_box .players .player_item .icon > img {
+  width: 100%;
+}
+#app .tab_body .team_data .teamTab_body .player_box .players .player_item .player_name {
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .tab_body .team_data .teamTab_body .player_box .players .player_item:hover .icon {
+  background: rgba(238, 159, 56, 0.5);
+}
+#app .tab_body .team_data .teamTab_body .player_box .players .player_item.active .icon {
+  background: #ee9f38;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info {
+  height: 250px;
+  background: url("../images/bg_kuang.png") no-repeat;
+  background-size: 100% auto;
+  position: relative;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item > div {
+  position: absolute;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .icon {
+  top: 21px;
+  left: 69px;
+  width: 181px;
+  height: 187px;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .icon > img {
+  width: 100%;
+  height: 100%;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .name {
+  top: 55px;
+  left: 299px;
+  width: 277px;
+  height: 35px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: url("../images/bg_mingzi.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  line-height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .location {
+  top: 111px;
+  left: 299px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .location img {
+  margin-left: 14px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .location span {
+  margin-left: 11px;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .adept {
+  top: 165px;
+  left: 299px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .heros {
+  top: 151px;
+  left: 372px;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .heros .hero_item {
+  width: 46px;
+  float: left;
+  margin-right: 14px;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .heros .hero_item > img {
+  width: 46px;
+  height: 46px;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item .heros .hero_item .hero_name {
+  margin-top: 3px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .team_data .teamTab_body .player_box .player_info .player_info_item.active {
+  display: block;
+}
+#app .tab_body .match_data .occupied {
+  height: 38px;
+}
+#app .tab_body .match_data .match_list {
+  height: 145px;
+  padding-left: 19px;
+}
+#app .tab_body .match_data .match_list .match_list_button {
+  float: left;
+  width: 28px;
+  height: 128px;
+  cursor: pointer;
+}
+#app .tab_body .match_data .match_list .match_list_button:focus {
+  outline: none;
+}
+#app .tab_body .match_data .match_list .match_list_button_next {
+  background: url(../images/bt_zuo_saicheng_xuanzhong.png) no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .match_data .match_list .match_list_button_next[aria-disabled="true"] {
+  background: url(../images/bt_zuo_saicheng.png) no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .match_data .match_list .match_list_button_prev {
+  background: url(../images/bt_you_saicheng_xuanzhong.png) no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .match_data .match_list .match_list_button_prev[aria-disabled="true"] {
+  background: url(../images/bt_you_saicheng.png) no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .match_data .match_list .swiper-container {
+  float: left;
+  width: 1070px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#app .tab_body .match_data .match_list .match_list_item:hover {
+  border-color: rgba(238, 159, 56, 0.3);
+}
+#app .tab_body .match_data .match_list .match_list_item {
+  height: 128px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+#app .tab_body .match_data .match_list .match_list_item > div {
+  position: absolute;
+}
+#app .tab_body .match_data .match_list .match_list_item .time {
+  top: 13px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+}
+#app .tab_body .match_data .match_list .match_list_item .vs {
+  top: 54px;
+  width: 100%;
+  text-align: center;
+}
+#app .tab_body .match_data .match_list .match_list_item .vs img {
+  width: 22px;
+}
+#app .tab_body .match_data .match_list .match_list_item .icon {
+  top: 44px;
+  width: 40px;
+  height: 40px;
+}
+#app .tab_body .match_data .match_list .match_list_item .icon img {
+  width: 100%;
+  height: 100%;
+}
+#app .tab_body .match_data .match_list .match_list_item .teamA_icon {
+  left: 27px;
+}
+#app .tab_body .match_data .match_list .match_list_item .teamB_icon {
+  right: 27px;
+}
+#app .tab_body .match_data .match_list .match_list_item .name {
+  top: 85px;
+  width: 60px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+#app .tab_body .match_data .match_list .match_list_item .teamA_name {
+  left: 18px;
+}
+#app .tab_body .match_data .match_list .match_list_item .teamB_name {
+  right: 18px;
+}
+#app .tab_body .match_data .match_list .match_list_item.active {
+  border-color: #ee9f38;
+}
+#app .tab_body .match_data .match_info {
+  width: 1165px;
+  height: 658px;
+  background: url("../images/bg_dibu.png") no-repeat;
+  background-size: 100% 100%;
+  background-color: #404040;
+  margin: 0 auto;
+}
+#app .tab_body .match_data .match_info > div {
+  float: left;
+  height: 100%;
+}
+#app .tab_body .match_data .match_info .team_Box {
+  width: 267px;
+}
+#app .tab_body .match_data .match_info .team_Box .zhanwei {
+  height: 106px;
+}
+#app .tab_body .match_data .match_info .team_Box .icon {
+  text-align: center;
+}
+#app .tab_body .match_data .match_info .team_Box .icon img {
+  width: 155px;
+  height: 155px;
+}
+#app .tab_body .match_data .match_info .team_Box .name {
+  margin-top: 11px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Microsoft YaHei UI';
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy,
+#app .tab_body .match_data .match_info .team_Box .restraint {
+  width: 193px;
+  height: 53px;
+  background: #404040;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy > div,
+#app .tab_body .match_data .match_info .team_Box .restraint > div {
+  float: left;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .title,
+#app .tab_body .match_data .match_info .team_Box .restraint .title {
+  width: 32px;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .team_icon,
+#app .tab_body .match_data .match_info .team_Box .restraint .team_icon {
+  margin-left: 4px;
+  width: 34px;
+  height: 53px;
+  line-height: 53px;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .team_icon > img,
+#app .tab_body .match_data .match_info .team_Box .restraint .team_icon > img {
+  width: 100%;
+  vertical-align: middle;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .team_name,
+#app .tab_body .match_data .match_info .team_Box .restraint .team_name {
+  margin-left: 6px;
+  width: 59px;
+  font-size: 14px;
+  height: 53px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .team_name > div,
+#app .tab_body .match_data .match_info .team_Box .restraint .team_name > div {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  vertical-align: middle;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .win_rate_box,
+#app .tab_body .match_data .match_info .team_Box .restraint .win_rate_box {
+  margin-left: 2px;
+  width: 56px;
+  text-align: center;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .win_rate_box .win_rate,
+#app .tab_body .match_data .match_info .team_Box .restraint .win_rate_box .win_rate {
+  margin-top: 4px;
+  font-size: 20px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ee9f38;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .win_rate_box .shenglv,
+#app .tab_body .match_data .match_info .team_Box .restraint .win_rate_box .shenglv {
+  margin-top: 2px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy {
+  margin-top: 37px;
+}
+#app .tab_body .match_data .match_info .team_Box .enemy .title {
+  background: #d83030;
+}
+#app .tab_body .match_data .match_info .team_Box .restraint {
+  margin-top: 14px;
+}
+#app .tab_body .match_data .match_info .team_Box .restraint .title {
+  background: #4b93d2;
+}
+#app .tab_body .match_data .match_info .team_Box .detail {
+  width: 100%;
+  margin-top: 33px;
+}
+#app .tab_body .match_data .match_info .team_Box .detail .detail_item {
+  margin-bottom: 15px;
+}
+#app .tab_body .match_data .match_info .team_Box .detail .detail_item .detail_data {
+  position: relative;
+  width: 91px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  background: url("../images/bg_zhanlingyaodian.png") no-repeat;
+  background-size: 100% 100%;
+}
+#app .tab_body .match_data .match_info .team_Box .detail .detail_item .detail_data .detail_data_rate {
+  font-size: 22px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .team_Box .detail .detail_item .detail_data .detail_type_icon {
+  position: absolute;
+  top: -6px;
+  left: -13px;
+}
+#app .tab_body .match_data .match_info .team_Box .detail .detail_item .detail_type {
+  margin-top: 9px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .team_a .enemy,
+#app .tab_body .match_data .match_info .team_a .restraint {
+  margin-left: 49px;
+}
+#app .tab_body .match_data .match_info .team_a .detail {
+  padding-left: 51px;
+}
+#app .tab_body .match_data .match_info .team_a .detail .detail_item {
+  float: left;
+  margin-right: 20px;
+}
+#app .tab_body .match_data .match_info .team_b .enemy,
+#app .tab_body .match_data .match_info .team_b .restraint {
+  float: right;
+  margin-right: 52px;
+}
+#app .tab_body .match_data .match_info .team_b .detail {
+  float: right;
+  padding-right: 37px;
+}
+#app .tab_body .match_data .match_info .team_b .detail .detail_item {
+  float: right;
+  margin-left: 20px;
+}
+#app .tab_body .match_data .match_info .match_infoBox {
+  width: 631px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box {
+  margin-top: 70px;
+  height: 129px;
+  text-align: center;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box .team_win_rate {
+  width: 129px;
+  height: 100%;
+  background: url("../images/bg_shenglv_duizhan.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box .team_win_rate .win_rate {
+  margin-top: 36px;
+  font-size: 30px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ee9f38;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box .team_win_rate .lable {
+  margin-top: 2px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box .start_time {
+  width: 189px;
+  height: 100%;
+  text-align: center;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box .start_time .vs {
+  height: 57px;
+  margin: 0 auto;
+  margin-top: 34px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box .start_time .vs > img {
+  height: 100%;
+}
+#app .tab_body .match_data .match_info .match_infoBox .win_rate_box .start_time .time {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade {
+  margin-top: 12px;
+  text-align: center;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box {
+  width: 209px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade {
+  height: 46px;
+  background-size: 100% 100%;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade .label {
+  font-size: 16px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade .grade_info {
+  margin-left: 20px;
+  font-size: 23px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade.team_a {
+  text-align: left;
+  background: url("../images/bg_bisaizhanji.png") no-repeat;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade.team_a .label {
+  margin-left: 28px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade.team_a .grade_info {
+  margin-left: 20px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade.team_b {
+  text-align: right;
+  background: url("../images/bg_bisaizhanji-1.png") no-repeat;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade.team_b .label {
+  margin-right: 28px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .grade.team_b .grade_info {
+  margin-right: 20px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .info_box .description {
+  margin-top: 9px;
+  font-size: 16px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .team_grade .zhanwei {
+  width: 101px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared {
+  margin-top: 45px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item {
+  height: 28px;
+  margin-bottom: 27px;
+  text-align: center;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .team_compared {
+  width: 190px;
+  height: 28px;
+  background: #2b2b2b;
+  position: relative;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .team_compared .win_rate {
+  height: 100%;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .team_compared .win_rate_text {
+  top: 0;
+  height: 28px;
+  line-height: 28px;
+  position: absolute;
+  font-size: 20px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .team_compared.team_a_data .win_rate {
+  float: right;
+  background: linear-gradient(94deg, #ee5050 0%, #bb3636 100%);
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .team_compared.team_a_data .win_rate_text {
+  right: 10px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .team_compared.team_b_data .win_rate {
+  float: left;
+  background: linear-gradient(266deg, #ee5050 0%, #bb3636 100%);
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .team_compared.team_b_data .win_rate_text {
+  left: 8px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .description {
+  width: 124px;
+  height: 100%;
+  line-height: 28px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .description > img {
+  width: 23px;
+  vertical-align: middle;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared .data_compared_item .description > span {
+  font-size: 16px;
+  font-family: Microsoft YaHei UI;
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .score {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 50px;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box {
+  margin-top: 8px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box {
+  width: 100%;
+  text-align: center;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box {
+  border: 1px solid #e59a38;
+  overflow: hidden;
+  background: #3b3b3b;
+  display: inline-block;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .small_score {
+  float: left;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .small_score .box_item {
+  height: 40px;
+  width: 69px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei UI';
+  color: #9a9a9a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .small_score .box_item.win {
+  color: #5bdf52;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .small_score .box_item.lose {
+  color: #d64444;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .small_score .box_item.team_title {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .small_score:nth-of-type(even) .box_item {
+  background: #404040;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .small_score .box_item:nth-of-type(2) {
+  position: relative;
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .small_score .box_item:nth-of-type(2)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.11);
+}
+#app .tab_body .match_data .match_info .match_infoBox .detail_box .small_score_Box .score_box .last_item {
+  border: none;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_score_title {
+  margin-top: 20px;
+  height: 47px;
+  text-align: center;
+  font-size: 0px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_score_title .small_score_title_item {
+  display: inline-block;
+  width: 67px;
+  height: 47px;
+  background: #404040;
+  cursor: pointer;
+  text-align: center;
+  line-height: 47px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #bcbcbc;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_score_title .small_score_title_item:hover {
+  background: rgba(229, 154, 56, 0.5);
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_score_title .small_score_title_item.active {
+  background: #e59a38;
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .doing_map_box {
+  width: 234px;
+  height: 121px;
+  background: #404040;
+  text-align: center;
+  line-height: 121px;
+  margin: 0 auto;
+  margin-top: 19px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #9a9a9a;
+}
+#app .tab_body .match_data .match_info .match_infoBox .map_name {
+  margin-top: 3px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared.doing {
+  margin-top: 25px;
+  font-size: 0;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared.doing .data_compared_item {
+  margin-bottom: 18px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared.over {
+  margin-top: 25px;
+  font-size: 0;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared.over .data_compared_item {
+  margin-bottom: 18px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared.over .data_compared_item .team_compared.nobg {
+  background-color: transparent;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared.over .data_compared_item .left_other .win_rate_text {
+  right: 0;
+}
+#app .tab_body .match_data .match_info .match_infoBox .data_compared.over .data_compared_item .right_other .win_rate_text {
+  left: 0;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item {
+  display: none;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box {
+  position: relative;
+  background-size: 100% 100%;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box > div {
+  position: absolute;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box .map_name {
+  bottom: 0;
+  left: 0;
+  width: 234px;
+  height: 31px;
+  background: rgba(0, 0, 0, 0.59);
+  text-align: center;
+  line-height: 31px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box .team_win {
+  top: 14px;
+  width: 77px;
+  height: 89px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box .team_win > img {
+  width: 100%;
+  height: 100%;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box .team_a_win {
+  left: -134px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box .team_b_win {
+  right: -134px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box .map_icon {
+  top: 2px;
+  left: 4px;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item .doing_map_box .map_icon > img {
+  width: 34px;
+  height: 34px;
+}
+#app .tab_body .match_data .match_info .match_infoBox .small_match_boxs .small_match_item.active {
+  display: block;
+}

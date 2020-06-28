@@ -1,0 +1,3 @@
+// build time:Tue Jan 07 2020 15:15:28 GMT+0800 (GMT+08:00)
+(function(){var e=$(".reading-progress-bar");if(!e.length)return;var r=false;try{var t=Object.defineProperty({},"passive",{get:function(){r=true}});window.addEventListener("test",$.noop,t);window.removeEventListener("test",$.noop)}catch(n){}var a=$(window);var i=$(document);i.ready(function(){window.addEventListener("scroll",function(){var r=a.height();var t=i.height();var n=a.scrollTop();var o=n/(t-r)*100;o=o>100?100:o<0?0:o;e.css("width",o+"%")},r?{passive:true}:false)})})();
+//rebuild by neat 

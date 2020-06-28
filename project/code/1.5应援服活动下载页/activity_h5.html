@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="关注战队，关注战队赛程战绩，关注赛事推单——菠友APP，您的私人智能推单顾问。">
+    <meta name="keywords" content="电竞赛事,赛事分析,赛事推单,菠友,菠友APP">
+    <title>【菠友APP】电竞赛事预测分析_电竞赛事智能推单</title>
+    <link rel="stylesheet" href="./activity_css/swiper.min.css">
+    <link rel="stylesheet" href="./activity_css/wap_index.css">
+    <script src="./activity_js/jquery.min.js"></script>
+    <script src="./activity_js/swiper.min.js"></script>
+    
+</head>
+<body >
+    <div class="swiper_box swiper-no-swiping">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">恭喜180xxxx457用户领取 IG应援服</div>
+            <div class="swiper-slide">恭喜135xxxx115用户领取 RNG应援服</div>
+            <div class="swiper-slide">恭喜189xxxx048用户领取 RNG应援服</div>
+            <div class="swiper-slide">恭喜159xxxx871用户领取 TES应援服</div>
+            <div class="swiper-slide">恭喜135xxxx787用户领取 FPX应援服</div>
+        </div>
+    </div>
+    <div class="app">
+        <div class="logo">
+            <img src="./activity_images/boyoudianjing.png" >
+        </div>
+        <div class="title">
+            电竞数据，AI分析，智能推单
+        </div>
+        <div class="info_imgs">
+            <img src="./activity_images/yemian2.png" class="img_left left_animation">
+            <img src="./activity_images/yemian3.png" class="img_rigth right_animation">
+            <img src="./activity_images/yemian1.png" class="img_center">
+        </div>
+        <div class="get_title">
+            <img src="./activity_images/you.png" class="title_icon" >
+            现在下载，免费领取S9战队助威服！
+            <img src="./activity_images/zuo.png" class="title_icon" >
+        </div>
+        <div class="get_userNum">
+            已有
+            <ul class="runNum" id="test"></ul>
+            参加
+        </div>
+        <div class="download_now" onclick="clickBox()">
+            <img src="./activity_images/bt_xiazai.png" >
+        </div>
+        <div class="clothing_imgBox">
+            <img src="./activity_images/yifu.png" class="swing">
+        </div>
+        <!-- href="http://download.xxadc.com/app/betfriend.apk"  -->
+    </div>
+    <div class="isWechat">
+        <img src="./activity_images/img_zailiulanqidakai.png" class="jiantou" >
+        <img src="./activity_images/zailiulanqidakai.png" class="open" >
+    </div>
+    <script>
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+        function isWeiXin(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        
+        function clickBox() {
+            if(isWeiXin()){
+                $(".isWechat").addClass("weChatShow");
+                document.title = '请在浏览器中打开'; 
+            } else {
+                if(isAndroid){
+                    window.location.href = 'http://download.xxadc.com/app/betfriend.apk';
+                } else if(isiOS) {
+                    window.location.href = 'https://apps.apple.com/cn/app/%E8%8F%A0%E5%8F%8B%E7%94%B5%E7%AB%9E-%E8%B5%9B%E4%BA%8B%E5%88%86%E6%9E%90%E6%8E%A8%E8%8D%90/id1461446053';
+                }
+            }
+        }
+
+    </script>
+    <script src="./activity_js/runNum.js"></script>
+    <script type="text/javascript">
+        $("#test").runNum(20000);
+        var mySwiper = new Swiper('.swiper_box', {
+            autoplay: {
+                delay: 2000,//1秒切换一次
+            },
+            direction : 'vertical',
+            loop : true,
+        }) 
+    </script>
+</body>

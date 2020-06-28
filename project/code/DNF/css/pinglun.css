@@ -1,0 +1,110 @@
+
+/* .table02 {
+    margin: 15px auto 0;
+    overflow: hidden;
+} */
+.table02 th,
+.table02 td {
+    padding: 20px 0;
+    position: relative;
+    /* height: 37px */
+    height:36px;
+    /* margin-bottom: 39px; */
+}
+
+.table02 th {
+    /* width: 30%; */
+    font-family: "微软雅黑";
+    font-size:24px;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    text-align: right;
+}
+
+.table02 input {
+    margin-left: 31px;
+    background: #fff;
+    height: 36px;
+    line-height: 30px;
+    padding: 0 5px;
+    width:492px;
+    color: #000;
+    border:2px solid rgba(0, 0, 0, 1);
+}
+
+.table02 a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.dl_b {
+    background: #fa4882;
+    color: #ffd6c2;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    text-align: center;
+    width: 560px;
+}
+
+
+.chongzhi,
+.shangchuan {
+    display: block;
+    margin: 15px auto 0;
+    width:264px;
+    height:57px;
+    background: url(../images/woyaoshangchuanhong-min.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+#litpic {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#queue span {
+    margin-left: 31px;
+    width:492px;
+    height:36px;
+    display: block;
+    background:rgba(255,255,255,1);
+    border:2px solid rgba(0, 0, 0, 1);
+    line-height: 36px;
+    padding: 0 5px;
+    color: #000;
+    left: 0;
+    top: 5px;
+    line-height: 35px;
+    color: #ccc;
+    overflow: hidden
+}
+
+.table02 i {
+    width:77px;
+    height:34px;
+    display: block;
+    color: #fff;
+    position: absolute;
+    right: -20px;
+    top: 24px;
+    font-family: "微软雅黑";
+    font-size:18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+    background:rgba(146,5,5,1);
+    border-radius:6px;
+}

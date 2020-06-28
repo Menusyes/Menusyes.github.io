@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BTS客户面板</title>
+    <link rel="stylesheet" href="./css/formatting.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/jquery.minimaltips.css">
+</head>
+
+<body>
+    <div class="BTSBox">
+        <div class="title">
+            <div class="logo">
+                <img src="./images/kehujiankong.png">
+            </div>
+            <div class="client">
+                <span>当前客户:</span>
+                <a href="javascipt:;">
+                    中京国信
+                </a>
+
+            </div>
+            <ul class="select hidden">
+                <li>中京国信</li>
+                <li>中国移动</li>
+                <li>中国联通</li>
+                <li>中国电信</li>
+            </ul>
+            <div class="toDay">
+                今日：12399401203/12399401203，&nbsp;90%
+            </div>
+            <div class="toMonth">
+                本月：12399401203/12399401203，&nbsp;90%
+            </div>
+            <div class="average">
+                人均：369841，5次
+                <span>历史：92%</span>
+            </div>
+        </div>
+        <div class="statistics">
+            <div class="participation">
+                <div class="yesterday">
+                    <i></i>
+                    昨日
+                </div>
+                <div class="today">
+                    <i></i>
+                    今日
+                </div>
+                <div class="time">
+                    <img src="./images/icon-time.png">
+                    2018/06/17
+                </div>
+                <div class="echarts">
+                    <p>参与人数</p>
+                    <div class="charts-box">
+
+                    </div>
+                </div>
+            </div>
+            <div class="bet">
+                <div class="yesterday">
+                    <i></i>
+                    昨日
+                </div>
+                <div class="today">
+                    <i></i>
+                    今日
+                </div>
+                <div class="time">
+                    <img src="./images/icon-time.png">
+                    2018/06/17
+                </div>
+                <div class="echarts">
+                    <p>投注金额</p>
+                    <div class="charts-box">
+
+                    </div>
+                </div>
+            </div>
+            <div class="users">
+                <div class="risk_user">
+                    <p>当前风险用户</p>
+                    <div class="num">2</div>
+                    <div class="hint danger"></div>
+                </div>
+                <div class="full_user">
+                    <p>当前满额用户</p>
+                    <div class="num">1</div>
+                    <div class="hint warning"></div>
+                </div>
+                <div class="unconfirmed_user">
+                    <p>待确认订单</p>
+                    <div class="num">200</div>
+                    <div class="hint sureness"></div>
+                </div>
+                <div class="today_userNum">
+                    <span class="info">今日人数</span>
+                    <span class="num">9231</span>
+                    <span class="change add">+13%</span>
+                </div>
+                <div class="today_num">
+                    <span class="info">今日次数</span>
+                    <span class="num">12231</span>
+                    <span class="change decrease">-13%</span>
+                </div>
+                <div class="as_compensate">
+                    <p>已赔前五</p>
+                    <ul>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526哈哈哈
+                        </li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                    </ul>
+                </div>
+                <div class="await_compensate">
+                    <p>待赔前五</p>
+                    <ul>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526哈哈哈
+                        </li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                    </ul>
+                </div>
+                <div class="average">
+                    <p>笔均前五</p>
+                    <ul>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526哈哈哈
+                        </li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                        <li data-toggle="tips" title="用户ID：U4548713344 <br /> 金额：87485526">1.U4548713344，87485526</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="match">
+            <!-- 置顶区 -->
+            <div class="stick_box">
+                <div class="match_item">
+                    <div class="match_title">
+                        <div class="time">05-18 12：00</div>
+                        <div class="line line1"></div>
+                        <div class="game" data-toggle="tips" title="DOTA2">
+                            <img src="https://www.xxdianjing.com/data/upload/20160717/578b73016db12.png">
+                            DOTA2
+                        </div>
+                        <div class="line line2"></div>
+                        <div class="competition" data-toggle="tips" title="DOTA2-ESL联赛联赛联赛联赛联赛">DOTA2-ESL联赛联赛联赛联赛联赛</div>
+                        <div class="line line3"></div>
+                        <div class="teamA_odds_chenge chenge_up"></div>
+                        <div class="odds teamA_odds odds_up">1.9</div>
+                        <div class="teamA_name" data-toggle="tips" title="Fanticccccccccccccccccccc">
+                            Fanticccccccccccccccccccc</div>
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20190223/5c70d25933a85.png">
+                        <div class="than">-</div>
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20160616/5762559b227a7.jpg">
+                        <div class="teamB_name" data-toggle="tips" title="EVOSsssssssssssssssss">EVOSsssssssssssssssss</div>
+                        <div class="teamB_odds_chenge chenge_down"></div>
+                        <div class="odds teamB_odds odds_down">1.9</div>
+                        <div class="line line4"></div>
+                        <div class="bet_state">
+                            <i style="width: 60%"></i>
+                            <span>454875，12%</span>
+                        </div>
+                        <div class="line line5"></div>
+                        <div class="bet_number" data-toggle="tips" title="次数：22548">次数：<span>22548</span></div>
+                        <div class="user_number" data-toggle="tips" title="人数：22548">人数：<span>22548</span></div>
+                        <div class="capita" data-toggle="tips" title="人均：248，2.5次">人均：<span>248，2.5次</span></div>
+                        <div class="line line6"></div>
+                        <div class="bast bast_num bright">次数最多</div>
+                        <div class="bast bast_user">人数最多</div>
+                        <div class="bast bast_money">单笔最大</div>
+                        <div class="bast bast_all">总额最多</div>
+                        <div class="bast bast_single">单笔赔多</div>
+                        <div class="line line7"></div>
+                        <div class="participation_num">13</div>
+                        <div class="is_top stick"></div>
+                    </div>
+                    <div class="match_info unfold">
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20180706/5b3ef4c8812c4.png">
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20170915/59bb4e4fae91d.png">
+                        <div class="match_charts">
+                        </div>
+                        <div class="match_details">
+                            
+                            <div class="cut_off_rule"></div>
+                            <div class="match_details_item">
+                                <div class="teamA_interval danger">
+                                    2 S
+                                </div>
+                                <div class="teamA_single_perCapita">
+                                    人均: &nbsp;
+                                    <span class="sureness_text">344</span>&nbsp;,&nbsp;
+                                    <span class="danger_text">4</span>
+                                    <span class="unit">次</span>
+                                </div>
+                                <div class="teamA_single_users">
+                                    1723人&nbsp;,&nbsp;&nbsp;1587次
+                                </div>
+                                <div class="teamA_compensate">
+                                    <i class="sureness" style="width: 50%"></i>
+                                    <span>184878</span>
+                                </div>
+                                <div class="quota">
+                                    <p>获得全场胜利</p>
+                                    <div class="progress_bar">
+                                        <div class="progress" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                                <div class="teamB_compensate">
+                                    <i class="danger" style="width: 50%"></i>
+                                    <span>184878</span>
+                                </div>
+                                <div class="teamB_single_users">
+                                    1723人&nbsp;,&nbsp;&nbsp;1587次
+                                </div>
+                                <div class="teamB_single_perCapita">
+                                    人均: &nbsp;
+                                    <span class="sureness_text">344</span>&nbsp;,&nbsp;
+                                    <span class="danger_text">4</span>
+                                    <span class="unit">次</span>
+                                </div>
+                                <div class="teamB_interval sureness">
+                                    2 S
+                                </div>
+                                <!-- <div class="cut_off_rule"></div> -->
+                                <div class="risk_users">13</div>
+                            </div>
+                            <div class="match_details_item">
+                                <div class="teamA_interval danger">
+                                    2 S
+                                </div>
+                                <div class="teamA_single_perCapita">
+                                    人均: &nbsp;
+                                    <span class="sureness_text">344</span>&nbsp;,&nbsp;
+                                    <span class="danger_text">4</span>
+                                    <span class="unit">次</span>
+                                </div>
+                                <div class="teamA_single_users">
+                                    1723人&nbsp;,&nbsp;&nbsp;1587次
+                                </div>
+                                <div class="teamA_compensate">
+                                    <i class="sureness" style="width: 50%"></i>
+                                    <span>184878</span>
+                                </div>
+                                <div class="quota">
+                                    <p>第一滴血</p>
+                                    <div class="progress_bar">
+                                        <div class="progress" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                                <div class="teamB_compensate">
+                                    <i class="sureness" style="width: 50%"></i>
+                                    <span>184878</span>
+                                </div>
+                                <div class="teamB_single_users">
+                                    1723人&nbsp;,&nbsp;&nbsp;1587次
+                                </div>
+                                <div class="teamB_single_perCapita">
+                                    人均: &nbsp;
+                                    <span class="sureness_text">344</span>&nbsp;,&nbsp;
+                                    <span class="danger_text">4</span>
+                                    <span class="unit">次</span>
+                                </div>
+                                <div class="teamB_interval sureness">
+                                    2 S
+                                </div>
+                                <!-- <div class="cut_off_rule"></div> -->
+                                <div class="risk_users">13</div>
+                            </div>
+                            <div class="match_details_item">
+                                <div class="teamA_interval danger">
+                                    2 S
+                                </div>
+                                <div class="teamA_single_perCapita">
+                                    人均: &nbsp;
+                                    <span class="sureness_text">344</span>&nbsp;,&nbsp;
+                                    <span class="danger_text">4</span>
+                                    <span class="unit">次</span>
+                                </div>
+                                <div class="teamA_single_users">
+                                    1723人&nbsp;,&nbsp;&nbsp;1587次
+                                </div>
+                                <div class="teamA_compensate">
+                                    <i class="sureness" style="width: 50%"></i>
+                                    <span>184878</span>
+                                </div>
+                                <div class="quota">
+                                    <p>摧毁首座防御塔-第2局局局局局局局</p>
+                                    <div class="progress_bar">
+                                        <div class="progress" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                                <div class="teamB_compensate">
+                                    <i class="danger" style="width: 50%"></i>
+                                    <span>184878</span>
+                                </div>
+                                <div class="teamB_single_users">
+                                    1723人&nbsp;,&nbsp;&nbsp;1587次
+                                </div>
+                                <div class="teamB_single_perCapita">
+                                    人均: &nbsp;
+                                    <span class="sureness_text">344</span>&nbsp;,&nbsp;
+                                    <span class="danger_text">4</span>
+                                    <span class="unit">次</span>
+                                </div>
+                                <div class="teamB_interval sureness">
+                                    2 S
+                                </div>
+                                <!-- <div class="cut_off_rule"></div> -->
+                                <div class="risk_users">13</div>
+                            </div>
+                            <div class="match_details_item">
+                                <div class="teamA_interval danger">
+                                    2 S
+                                </div>
+                                <div class="teamA_single_perCapita">
+                                    人均: &nbsp;
+                                    <span class="sureness_text">344</span>&nbsp;,&nbsp;
+                                    <span class="danger_text">4</span>
+                                    <span class="unit">次</span>
+                                </div>
+                                <div class="teamA_single_users">
+                                    1723人&nbsp;,&nbsp;&nbsp;1587次
+                                </div>
+                                <div class="teamA_compensate">
+                                    <i class="sureness" style="width: 100%"></i>
+                                    <span>184878</span>
+                                </div>
+                                <div class="quota">
+                                    <p>首先获得十杀</p>
+                                    <div class="progress_bar">
+                                        <div class="progress" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                                <div class="teamB_compensate">
+                                    <i class="danger" style="width: 70%"></i>
+                                    <span>184878</span>
+                                </div>
+                                <div class="teamB_single_users">
+                                    1723人&nbsp;,&nbsp;&nbsp;1587次
+                                </div>
+                                <div class="teamB_single_perCapita">
+                                    人均: &nbsp;
+                                    <span class="sureness_text">344</span>&nbsp;,&nbsp;
+                                    <span class="danger_text">4</span>
+                                    <span class="unit">次</span>
+                                </div>
+                                <div class="teamB_interval sureness">
+                                    2 S
+                                </div>
+                                <div class="risk_users">13</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 非置顶区 -->
+            <div class="not_stick_box">
+                <div class="match_item">
+                    <div class="match_title">
+                        <div class="time">05-18 12：00</div>
+                        <div class="line line1"></div>
+                        <div class="game" data-toggle="tips" title="DOTA2">
+                            <img src="https://www.xxdianjing.com/data/upload/20160717/578b73016db12.png">
+                            DOTA2
+                        </div>
+                        <div class="line line2"></div>
+                        <div class="competition" data-toggle="tips" title="DOTA2-ESL联赛">DOTA2-ESL联赛</div>
+                        <div class="line line3"></div>
+                        <div class="teamA_odds_chenge chenge_down"></div>
+                        <div class="odds teamA_odds odds_up">1.9</div>
+                        <div class="teamA_name" data-toggle="tips" title="Fanticccccccccccccccccccc">
+                            Fanticccccccccccccccccccc</div>
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20190223/5c70d25933a85.png">
+                        <div class="than">-</div>
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20160616/5762559b227a7.jpg">
+                        <div class="teamB_name" data-toggle="tips" title="EVOSsssssssssssssssss">EVOSsssssssssssssssss</div>
+                        <div class="teamB_odds_chenge chenge_down"></div>
+                        <div class="odds teamB_odds odds_down">1.9</div>
+                        <div class="line line4"></div>
+                        <div class="bet_state">
+                            <i style="width: 50%"></i>
+                            <span>454875，12%</span>
+                        </div>
+                        <div class="line line5"></div>
+                        <div class="bet_number" data-toggle="tips" title="次数：22548">次数：<span>225488888</span></div>
+                        <div class="user_number" data-toggle="tips" title="人数：22548">人数：<span>225488888</span></div>
+                        <div class="capita" data-toggle="tips" title="人均：248，2.5次">人均：<span>2488888，2.5次</span></div>
+                        <div class="line line6"></div>
+                        <div class="bast bast_num bright">次数最多</div>
+                        <div class="bast bast_user bright">人数最多</div>
+                        <div class="bast bast_money bright">单笔最大</div>
+                        <div class="bast bast_all bright">总额最多</div>
+                        <div class="bast bast_single bright">单笔赔多</div>
+                        <div class="line line7"></div>
+                        <div class="participation_num">133</div>
+                        <div class="is_top "></div>
+                    </div>
+                    <div class="match_info unfold">
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20180706/5b3ef4c8812c4.png">
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20170915/59bb4e4fae91d.png">
+                        <div class="match_charts">
+                        </div>
+                    </div>
+                </div>
+                <div class="match_item">
+                    <div class="match_title">
+                        <div class="time">05-18 12：00</div>
+                        <div class="line line1"></div>
+                        <div class="game" data-toggle="tips" title="DOTA2">
+                            <img src="https://www.xxdianjing.com/data/upload/20160717/578b73016db12.png">
+                            DOTA2
+                        </div>
+                        <div class="line line2"></div>
+                        <div class="competition" data-toggle="tips" title="DOTA2-ESL联赛">西巴西巴西巴西巴西巴西巴</div>
+                        <div class="line line3"></div>
+                        <div class="teamA_odds_chenge chenge_down"></div>
+                        <div class="odds teamA_odds odds_up">1.9</div>
+                        <div class="teamA_name" data-toggle="tips" title="Fanticccccccccccccccccccc">
+                            Fanticccccccccccccccccccc</div>
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20190223/5c70d25933a85.png">
+                        <div class="than">-</div>
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20160616/5762559b227a7.jpg">
+                        <div class="teamB_name" data-toggle="tips" title="EVOSsssssssssssssssss">EVOSsssssssssssssssss</div>
+                        <div class="teamB_odds_chenge chenge_down"></div>
+                        <div class="odds teamB_odds odds_down">1.9</div>
+                        <div class="line line4"></div>
+                        <div class="bet_state">
+                            <i style="width: 50%"></i>
+                            <span>454875，12%</span>
+                        </div>
+                        <div class="line line5"></div>
+                        <div class="bet_number" data-toggle="tips" title="次数：22548">次数：<span>225488888</span></div>
+                        <div class="user_number" data-toggle="tips" title="人数：22548">人数：<span>225488888</span></div>
+                        <div class="capita" data-toggle="tips" title="人均：248，2.5次">人均：<span>2488888，2.5次</span></div>
+                        <div class="line line6"></div>
+                        <div class="bast bast_num bright">次数最多</div>
+                        <div class="bast bast_user bright">人数最多</div>
+                        <div class="bast bast_money bright">单笔最大</div>
+                        <div class="bast bast_all bright">总额最多</div>
+                        <div class="bast bast_single bright">单笔赔多</div>
+                        <div class="line line7"></div>
+                        <div class="participation_num">133</div>
+                        <div class="is_top "></div>
+                    </div>
+                    <div class="match_info unfold">
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20180706/5b3ef4c8812c4.png">
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20170915/59bb4e4fae91d.png">
+                        <div class="match_charts">
+                        </div>
+                    </div>
+                </div>
+                <div class="match_item">
+                    <div class="match_title">
+                        <div class="time">05-18 12：00</div>
+                        <div class="line line1"></div>
+                        <div class="game" data-toggle="tips" title="DOTA2">
+                            <img src="https://www.xxdianjing.com/data/upload/20160717/578b73016db12.png">
+                            DOTA2
+                        </div>
+                        <div class="line line2"></div>
+                        <div class="competition" data-toggle="tips" title="DOTA2-ESL联赛">乌拉乌拉乌拉乌拉乌拉乌拉</div>
+                        <div class="line line3"></div>
+                        <div class="teamA_odds_chenge chenge_down"></div>
+                        <div class="odds teamA_odds odds_up">1.9</div>
+                        <div class="teamA_name" data-toggle="tips" title="Fanticccccccccccccccccccc">
+                            Fanticccccccccccccccccccc</div>
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20190223/5c70d25933a85.png">
+                        <div class="than">-</div>
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20160616/5762559b227a7.jpg">
+                        <div class="teamB_name" data-toggle="tips" title="EVOSsssssssssssssssss">EVOSsssssssssssssssss</div>
+                        <div class="teamB_odds_chenge chenge_down"></div>
+                        <div class="odds teamB_odds odds_down">1.9</div>
+                        <div class="line line4"></div>
+                        <div class="bet_state">
+                            <i style="width: 50%"></i>
+                            <span>454875，12%</span>
+                        </div>
+                        <div class="line line5"></div>
+                        <div class="bet_number" data-toggle="tips" title="次数：22548">次数：<span>225488888</span></div>
+                        <div class="user_number" data-toggle="tips" title="人数：22548">人数：<span>225488888</span></div>
+                        <div class="capita" data-toggle="tips" title="人均：248，2.5次">人均：<span>2488888，2.5次</span></div>
+                        <div class="line line6"></div>
+                        <div class="bast bast_num bright">次数最多</div>
+                        <div class="bast bast_user bright">人数最多</div>
+                        <div class="bast bast_money bright">单笔最大</div>
+                        <div class="bast bast_all bright">总额最多</div>
+                        <div class="bast bast_single bright">单笔赔多</div>
+                        <div class="line line7"></div>
+                        <div class="participation_num">133</div>
+                        <div class="is_top "></div>
+                    </div>
+                    <div class="match_info unfold">
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20180706/5b3ef4c8812c4.png">
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20170915/59bb4e4fae91d.png">
+                        <div class="match_charts">
+                        </div>
+                    </div>
+                </div>
+                <div class="match_item">
+                    <div class="match_title">
+                        <div class="time">05-18 12：00</div>
+                        <div class="line line1"></div>
+                        <div class="game" data-toggle="tips" title="DOTA2">
+                            <img src="https://www.xxdianjing.com/data/upload/20160717/578b73016db12.png">
+                            DOTA2
+                        </div>
+                        <div class="line line2"></div>
+                        <div class="competition" data-toggle="tips" title="DOTA2-ESL联赛">巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</div>
+                        <div class="line line3"></div>
+                        <div class="teamA_odds_chenge chenge_down"></div>
+                        <div class="odds teamA_odds odds_up">1.9</div>
+                        <div class="teamA_name" data-toggle="tips" title="Fanticccccccccccccccccccc">
+                            Fanticccccccccccccccccccc</div>
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20190223/5c70d25933a85.png">
+                        <div class="than">-</div>
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20160616/5762559b227a7.jpg">
+                        <div class="teamB_name" data-toggle="tips" title="EVOSsssssssssssssssss">EVOSsssssssssssssssss</div>
+                        <div class="teamB_odds_chenge chenge_down"></div>
+                        <div class="odds teamB_odds odds_down">1.9</div>
+                        <div class="line line4"></div>
+                        <div class="bet_state">
+                            <i style="width: 50%"></i>
+                            <span>454875，12%</span>
+                        </div>
+                        <div class="line line5"></div>
+                        <div class="bet_number" data-toggle="tips" title="次数：22548">次数：<span>225488888</span></div>
+                        <div class="user_number" data-toggle="tips" title="人数：22548">人数：<span>225488888</span></div>
+                        <div class="capita" data-toggle="tips" title="人均：248，2.5次">人均：<span>2488888，2.5次</span></div>
+                        <div class="line line6"></div>
+                        <div class="bast bast_num bright">次数最多</div>
+                        <div class="bast bast_user bright">人数最多</div>
+                        <div class="bast bast_money bright">单笔最大</div>
+                        <div class="bast bast_all bright">总额最多</div>
+                        <div class="bast bast_single bright">单笔赔多</div>
+                        <div class="line line7"></div>
+                        <div class="participation_num">133</div>
+                        <div class="is_top "></div>
+                    </div>
+                    <div class="match_info unfold">
+                        <img class="teamA_icon" src="https://www.xxdianjing.com/data/upload/20180706/5b3ef4c8812c4.png">
+                        <img class="teamB_icon" src="https://www.xxdianjing.com/data/upload/20170915/59bb4e4fae91d.png">
+                        <div class="match_charts">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shade"></div>
+        <div class="filtrate_box">
+            <div class="filtrate_games">
+                <div class="confirm">确定</div>
+                <div class="games_box">
+                    <div class="game_item game_all active">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>全部游戏</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟联盟联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>DOTA2</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟联盟联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟联盟联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                    <div class="game_item">
+                        <img src="./images/logo_suoyouyouxi.png" >
+                        <p>英雄联盟</p>
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="filtrate_menu"></div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.0.0.min.js"></script>
+    <script src="./js/jquery.minimaltips.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/events.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

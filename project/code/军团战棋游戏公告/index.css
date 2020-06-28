@@ -1,0 +1,576 @@
+ul {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+b {
+  font-weight: normal;
+}
+del {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  background-image: url(images/neirongyezhuti.png);
+  background-repeat: no-repeat;
+  background-size: 100% ;
+  background-color: #000;
+  position: relative;
+}
+.box {
+  position: relative;
+}
+.topNav {
+  width: 100%;
+  padding-bottom: 4.79%;
+  background-image: url(images/mutiao.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 25px;
+  position: relative;
+  z-index: 2;
+}
+.navLogo {
+  width: 17.5%;
+  position: absolute;
+  top: 47.5%;
+  left: 41.25%;
+  z-index: 2;
+}
+.QRcode {
+  width: 160px;
+  height: 241px;
+  background-image: url(images/erweima.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 59px;
+  right: 153px;
+  z-index: 2;
+}
+.QRcode img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 53px;
+}
+/* 导航部分 */
+.homePage,
+.notice,
+.video,
+.strategy {
+  height: 31px;
+  position: absolute;
+  top: 27.47%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.homePage {
+  width: 60px;
+  left: 21.77%;
+  background-image: url(images/shouye.png);
+}
+.homePage:hover {
+  background-image: url(images/shouye1.png);
+}
+.notice {
+  width: 120px;
+  left: 31.51%;
+  background-image: url(images/youxigonggao1.png);
+}
+.notice:hover {
+  background-image: url(images/youxigonggao1.png);
+}
+.video {
+  width: 120px;
+  right: 30.83%;
+  background-image: url(images/youxishiping.png);
+}
+.video:hover {
+  background-image: url(images/youxishiping1.png);
+}
+.strategy {
+  width: 120px;
+  right: 17.96%;
+  background-image: url(images/youxigonglv.png);
+}
+.strategy:hover {
+  background-image: url(images/youxigonglv1.png);
+}
+.notices {
+  width: 70%;
+  background-image: url(images/bg_neirong.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 23%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10%;
+  z-index: 2;
+}
+.notices .datu {
+  position: absolute;
+  width: 40%;
+  height: 69%;
+  box-shadow: 0px 8px 11px rgba(0, 0, 0, 0.28);
+  top: 50%;
+  margin-top: -12%;
+  left: -28px;
+  padding: 0.4% 0.59%;
+  text-align: center;
+  background: url('images/bg_zuodatu.png');
+  background-size: 100% 100%;
+}
+.notices .datu img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.notices .right_imgs {
+  position: absolute;
+  right: 4.41%;
+  top: 4%;
+  width: 16%;
+}
+.notices .right_imgs img {
+  width: 100%;
+  height: 22.6%;
+  padding: 1.5%;
+  background: url('images/bg_youxiaotu.png');
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.notices .right_imgs img:hover {
+  transform: scale(1.03);
+}
+.notices .announcement,
+.notices .recommend {
+  position: absolute;
+  width: 13.36%;
+  height: 11.3%;
+  left: 50%;
+}
+.notices .announcement {
+  top: 8.2%;
+}
+.notices .recommend {
+  top: 48.3%;
+}
+.notices .announcement_info,
+.notices .recommend_info {
+  position: absolute;
+  left: 41.1%;
+  width: 30.6%;
+  font-size: 16px;
+  font-family: Microsoft YaHei UI;
+  font-weight: 400;
+  color: #ffffff;
+}
+.notices .announcement_info p,
+.notices .recommend_info p {
+  cursor: pointer;
+}
+.notices .announcement_info p .right,
+.notices .recommend_info p .right {
+  float: right;
+}
+.notices .announcement_info p .left,
+.notices .recommend_info p .left {
+  display: inline-block;
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notices .announcement_info p:hover,
+.notices .recommend_info p:hover {
+  color: #00DBF1;
+}
+.notices .announcement_info {
+  top: 18.7%;
+  line-height: 200%;
+}
+.notices .recommend_info {
+  top: 59.4%;
+  line-height: 150%;
+}
+@media screen and (min-width: 1400px) {
+  .notices .announcement_info {
+    top: 18.7%;
+    line-height: 250%;
+  }
+  .notices .recommend_info {
+    top: 59.4%;
+    line-height: 200%;
+  }
+}
+.content {
+  width: 83.8%;
+  padding-bottom: 110%;
+  margin: 0 auto;
+  margin-top: 6.1%;
+  position: relative;
+}
+.content .informations {
+  position: absolute;
+  left: 4.4%;
+  width: 61.4%;
+}
+.content .informations .information {
+  padding-bottom: 28%;
+  width: 100%;
+  border-bottom: 1px dashed #707070;
+  position: relative;
+}
+.content .informations .information .information_img {
+  position: absolute;
+  left: 10.6%;
+  top: 10%;
+  width: 33.9%;
+  height: 71.9%;
+  padding: .5%;
+  background: url('images/bg_neirong.png');
+  background-size: 100% 100%;
+}
+.content .informations .information .information_title {
+  position: absolute;
+  left: 47.2%;
+  top: 10%;
+  font-size: 20px;
+  font-family: Microsoft YaHei UI;
+  font-weight: bold;
+  color: #0f0f0f;
+  max-width: 48.5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.content .informations .information .information_title:hover {
+  color: #00DBF1;
+}
+.content .informations .information .information_content {
+  position: absolute;
+  left: 47.2%;
+  top: 31.2%;
+  width: 49.5%;
+  font-size: 16px;
+  font-family: Microsoft YaHei UI;
+  font-weight: 400;
+  line-height: 25px;
+  color: #545454;
+  max-height: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content .informations .information .information_time {
+  position: absolute;
+  right: 4.5%;
+  bottom: 8.9%;
+  font-size: 16px;
+  font-family: Microsoft YaHei UI;
+  font-weight: 400;
+  color: #545454;
+}
+.content .informations .information:last-child {
+  border: none;
+}
+.content .else {
+  position: absolute;
+  right: 4.5%;
+  width: 27.9%;
+}
+.content .else .hotArticle {
+  margin-top: 7%;
+  width: 100%;
+  padding-bottom: 12.1%;
+  background: url('images/bg_remenwenzhang.png');
+  background-size: 100% 100%;
+  position: relative;
+  padding-top: 8%;
+}
+.content .else .hotArticle .hotArticle_title {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-left: -90px;
+  width: 180px;
+  height: 52px;
+}
+.content .else .hotArticle ul {
+  margin-left: 5.8%;
+}
+.content .else .hotArticle ul li {
+  margin-top: 5.7%;
+  font-size: 16px;
+  font-family: Microsoft YaHei UI;
+  font-weight: 400;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+.content .else .hotArticle ul li .dian {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -3px;
+}
+.content .else .hotArticle ul li .neirong {
+  display: inline-block;
+  margin-left: 15px;
+  max-width: 87.6%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.content .else .hotArticle ul li:hover {
+  color: #00DBF1;
+}
+.content .else .hotVideo {
+  width: 100%;
+  padding-bottom: 120%;
+  margin-top: 12.1%;
+  background: url('images/bg_shiping.png');
+  background-size: 100% 100%;
+  position: relative;
+  padding-top: 11%;
+  padding-left: .6%;
+}
+.content .else .hotVideo .hotVideo_title {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-left: -90px;
+  width: 180px;
+  height: 52px;
+}
+.content .else .hotVideo .videos {
+  float: left;
+  width: 47%;
+  padding-bottom: 36%;
+  margin: 1.5%;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.content .else .hotVideo .videos .video_img {
+  position: absolute;
+  display: block;
+  width: 96%;
+  height: 70%;
+  padding: 1%;
+  background: url('images/bg_youxiaotu.png');
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.content .else .hotVideo .videos p {
+  position: absolute;
+  left: 0;
+  top: 72%;
+  width: 100%;
+  font-size: 14px;
+  font-family: Microsoft YaHei UI;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+  max-height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content .else .hotVideo .videos:hover {
+  color: #00DBF1;
+}
+.content .else .hotVideo .videos:hover .video_img {
+  transform: scale(1.03);
+}
+.content .pagination {
+  position: absolute;
+  bottom: 4.3%;
+  left: 50%;
+  width: 589px;
+  text-align: center;
+  margin-left: -294.5px;
+}
+.pagination ul {
+  list-style: none;
+  padding-left: 0;
+}
+.pagination ul li {
+  padding: 0 10px;
+  vertical-align: top;
+  display: inline-block;
+  font-size: 14px;
+  min-width: 44px;
+  min-height: 32px;
+  line-height: 28px;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  color: #000000;
+  border-radius: 6px;
+  margin: 0 6px;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  height: 30px;
+}
+.pagination ul li:hover {
+  transform: scale(1.1);
+}
+.pagination li.active {
+  cursor: not-allowed;
+  color: #00DBF1;
+  border-color: #00DBF1;
+}
+.pagination li.disabled {
+  cursor: not-allowed;
+}
+.pagination li.totalPage {
+  background: transparent;
+  cursor: default;
+  border: none;
+  padding: 0 6px;
+}
+.pagination li.totalPage:hover {
+  transform: none;
+  background-color: #ffffff;
+}
+.pagination li input {
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  display: inline-block;
+  font-size: inherit;
+  outline: none;
+  padding: 3px 5px;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 40px;
+  height: 25px;
+  margin: 0 6px;
+}
+.pagination li input:focus {
+  border-color: #98A6AD;
+}
+.pagination {
+  user-select: none;
+}
+.pagination ul:nth-child(2) {
+  border-radius: 6px;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.footer {
+  padding-bottom: 8.3%;
+  background: url(images/mutiaoxia.png);
+  background-size: 100% 100%;
+  position: relative;
+}
+.footer .juntuan {
+  position: absolute;
+  width: 4.3%;
+  left: 8.85%;
+  top: 29.37%;
+}
+.footer .xiaohuan {
+  position: absolute;
+  width: 5.2%;
+  left: 16.25%;
+  top: 26.875%;
+}
+.footer .info {
+  position: absolute;
+  left: 23%;
+  top: 27.5%;
+  color: #FFF1B0;
+  font-size: 16px;
+  font-family: Microsoft YaHei UI;
+  line-height: 32px;
+}
+@media screen and (max-width: 1800px) {
+  .footer .info {
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 1700px) {
+  .footer .info {
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .footer .info {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .footer .info {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .footer .info {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .footer .info {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .footer .info {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

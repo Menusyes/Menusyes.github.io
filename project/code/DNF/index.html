@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DNF专题页</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/pinglun.css">
+</head>
+
+<body>
+    <div class="warp">
+        <!-- banner -->
+        <div class="warp_banner">
+            <div class="wrap_inner" exposure-tag="content">
+                <div class="k_box">
+                    <h1 class="k_slogan"></h1>
+                    <ul class="k_btn_list">
+                        <li class="goArea">
+                            <a href="javascript:;" target="_blank">ְ
+                                <img src="./images/jinruzhuanqu-min.png">
+                            </a>
+                        </li>
+                        <li class="goHome">
+                            <a href="javascript:;" target="_blank">
+                                <img src="./images/jinruguanwang-min.png">
+                            </a>
+                        </li>
+                        <li class="download">
+                            <a href="javascript:;" target="_blank">
+                                <img src="./images/youxixiazai-min.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="pers1 p1"></span>
+                <span class="pers1 pers2 p2"></span>
+                <canvas width="1920" height="1100" id="canvas"></canvas>
+            </div>
+        </div>
+        <!-- 版本视频 -->
+        <div class="versions_video hide">
+            <div class="versions_video_title">
+                <img src="./images/gengxingshiping.png">
+            </div>
+            <div class="versions_video_box">
+                <a href="javascript:;" onclick="openVideo()">
+                    <img src="./images/shiping.png">
+                </a>
+            </div>
+        </div>
+        <!-- 版本介绍 -->
+        <div class="versions_introduce">
+            <div class="w">
+                <div class="versions_introduce_title hide">
+                    <img src="./images/gengxingjieshao.png">
+                </div>
+                <div class="versions_introduce_partition1 hide">
+                    <img src="./images/fenghe1-min.png">
+                </div>
+                <div class="versions_introduce_info hide">
+                    全新的版本更新内容，带你快速晋级，丰厚奖励等你挑战
+                </div>
+                <div class="versions_introduce1_title hide">
+                    <img src="./images/dengluqiandaohaoli-min.png">
+                </div>
+                <ul class="versions_introduce1_box hide">
+                    <li class="introduce1_box1">
+                        <img src="./images/riqiandao-min.png">
+                    </li>
+                    <li class="introduce1_box2">
+                        <img src="./images/zhouqiandao-min.png">
+                    </li>
+                    <li class="introduce1_box3">
+                        <img src="./images/laodongjie-min.png">
+                    </li>
+                </ul>
+                <div class="versions_introduce2_title hide">
+                    <img src="./images/zhuangbeigaiban-min.png">
+                </div>
+                <div class="versions_introduce2_box hide">
+                    <div class="introduce2_box1">
+                        <img src="./images/gaiban1-min.png">
+                    </div>
+                    <div class="introduce2_box2">
+                        <img src="./images/gaiban2-min.png">
+                    </div>
+                </div>
+                <div class="versions_introduce3_title hide">
+                    <img src="./images/quanxinfubeng-min.png">
+                </div>
+                <ul class="versions_introduce3_box hide">
+                    <li class="introduce3_box1">
+                        <img src="./images/antuen-min.png">
+                    </li>
+                    <li class="introduce3_box2">
+                        <img src="./images/xuanhuozhita-min.png">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 版本活动 -->
+        <div class="activity">
+            <div class="w">
+                <div class="activity_title hide">
+                    <img src="./images/dnflingxing-min.png">
+                </div>
+                <div class="activity_partition1 hide">
+                    <img src="./images/fenghe1-min.png">
+                </div>
+                <ul class="activity_box1 hide">
+                    <li class="activity_box_info1">
+                        <img src="./images/xinbanbeng-min.png">
+                    </li>
+                    <li class="activity_box_info2">
+                        <img src="./images/tongguan-min.png">
+                    </li>
+                </ul>
+                <div class="activity_btns hide">
+                    <div class="uploading_btn1">
+                        <a href="javascript:;" onclick="openUploadingBox()">
+                            <img src="./images/woyaoshangchuanlan-min.png">
+                        </a>
+                        <p>(截图需包含套装信息)</p>
+                    </div>
+                    <div class="uploading_btn2">
+                        <a href="javascript:;" onclick="openUploadingBox()">
+                            <img src="./images/woyaoshangchuanhong-min.png">
+                        </a>
+                        <p>(截图需包含通关信息)</p>
+                    </div>
+                </div>
+                <div class="prize_title hide">
+                    <img src="./images/jiangpingzhanshi-min.png">
+                </div>
+                <div class="activity_partition2 hide">
+                    <img src="./images/fengge2-min.png">
+                </div>
+                <ul class="activity_box2 hide">
+                    <li class="activity_box2_info1">
+                        <img src="./images/QB-min.png">
+                        <p>海量Q币</p>
+                    </li>
+                    <li class="activity_box2_info2">
+                        <img src="./images/tuiguangma-min.png">
+                        <p>DNF推广码</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 活动规则 -->
+        <div class="activity_rule">
+            <div class="activity_rule_title hide">
+                <!-- <img src="./images/dnflingxing-min.png"> -->
+                活动规则
+            </div>
+            <div class="activity_rule_partition1 hide">
+                <img src="./images/fenghe1-min.png">
+            </div>
+            <ul class="activity_rule_box hide">
+                <li>
+                    <img src="./images/dian-min.png">
+                    <span>活动时间：2019年4月23日~4月30日,截止后一切本活动相关行为视为无效</span>
+                </li>
+                <li>
+                    <img src="./images/dian-min.png">
+                    <span>玩家按活动要求参与回复，即可参与活动,每个ID不可重复获奖</span>
+                </li>
+                <li>
+                    <img src="./images/dian-min.png">
+                    <span>每个账号每日回复数不能超过20且连续回帖数不得超过5楼</span>
+                </li>
+                <li>
+                    <img src="./images/dian-min.png">
+                    <span>对利用软件或非正常游戏玩家参与活动者有权顺延奖励;我们将在活动结束7 <br /> 个工作日内评选出获奖玩家，获奖名单请关专区相关公告。</span>
+                </li>
+                <li>
+                    <img src="./images/dian-min.png">
+                    <span>活动最终解释权归小獾电竞所有。</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 讨论区 -->
+    <div class="discussion">
+        <div class="w">
+            <div class="discussion_title hide">
+                <img src="./images/lingtingbanbeng.png">
+            </div>
+            <div class="discussion_partition hide">
+                <img src="./images/fenghe1-min.png">
+            </div>
+        </div>
+        <div class="discussions">
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+            <div>评论撑开盒子</div>
+        </div>
+    </div>
+    <div class="videoBox closeVideo">
+        <div class="video">
+            <!-- <video src="https://v.qq.com/txp/iframe/player.html?vid=r086384dtzw" controls="controls"></video> -->
+            <iframe frameborder="0" width="100%" height="100%" src="https://v.qq.com/txp/iframe/player.html?vid=r086384dtzw"  allowFullScreen="true"></iframe>
+            <div class="close" onclick="closeVideo()">x</div>
+        </div>
+    </div>
+    <div class="uploadingBox closeVideo">
+        <div class="zc_dl" >
+            <div class="dlk_t tac re">
+                <h3>上传你的截图</h3>
+                <div class="uploading_partition"><img src="./images/fenghe1-min.png"></div>
+                <div class="explain">请认真填写个人信息，避免获奖后无人领取</div>
+                <span class="closeUploading">
+                    <a href="javascript:vod(0)" onclick="closeUploadingBox()">x</a>
+                </span>
+            </div>
+            <div class="dl_c">
+                <form class="uploadingForm" target="hideiframe" enctype="multipart/form-data" name="uploadform" method="post" action="#">
+                    <table  width="90%" class="table02">
+                        <tbody>
+                            <tr>
+                                <th>昵称</th>
+                                <td><input type="text" id="name" name="name"></td>
+                            </tr>
+                            <tr>
+                                <th>联系QQ</th>
+                                <td><input type="text" id="qq" name="qq"></td>
+                            </tr>
+                            <tr>
+                                <th>上传图片</th>
+                                <td>
+                                    <div id="queue">
+                                        <input type="file" multiple="true" name="litpic" id="litpic">
+                                        <span>未上传</span>
+                                        <i>浏览</i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <a onclick="uploading()" href="javascript:;" class="shangchuan"></a>
+            </div>
+    
+        </div>
+        <div class="uploadingBox_ok hide">
+            <img src="./images/tishi.png" >
+        </div>
+    </div>
+    
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script>
+        $("#litpic").change(function(){
+            var Html = $(this).val();
+            $("#queue span").html(Html);
+        });		
+        function closeVideo() {
+            document.getElementsByClassName("videoBox")[0].classList.add("closeVideo");
+        }
+        function openVideo() {
+            document.getElementsByClassName("videoBox")[0].classList.remove("closeVideo");
+        }
+        function closeUploadingBox() {
+            document.getElementsByClassName("uploadingBox")[0].classList.add("closeVideo");
+        }
+        function openUploadingBox() {
+            document.getElementsByClassName("uploadingBox")[0].classList.remove("closeVideo");
+        }
+        function uploading() {
+            var t = $('.uploadingForm').serializeArray();
+            console.log(t);
+            // document.uploadform.submit();
+            $('.zc_dl').addClass('hide');
+            $('.uploadingBox_ok').removeClass('hide');
+            setTimeout(() => {
+                document.getElementsByClassName("uploadingBox")[0].classList.add("closeVideo");
+                $('.zc_dl').removeClass('hide');
+                $('.uploadingBox_ok').addClass('hide');
+                $('.uploadingForm')[0].reset();
+            }, 1000);
+        }
+        window.onscroll = function () {
+            var slideHeight = document.documentElement.scrollTop || document.body.scrollTop;
+            // console.log(slideHeight)
+
+            if (slideHeight > 400 && slideHeight < 1300) {
+                document.getElementsByClassName("versions_video")[0].classList.add("animation");
+            } else if (slideHeight > 1300 && slideHeight < 1600) {
+                document.getElementsByClassName("versions_introduce_title")[0].classList.add("animation");
+                document.getElementsByClassName("versions_introduce_partition1")[0].classList.add("animation");
+                document.getElementsByClassName("versions_introduce_info")[0].classList.add("animation");
+            } else if (slideHeight > 1600 && slideHeight < 2100) {
+                document.getElementsByClassName("versions_introduce1_title")[0].classList.add("animation");
+                document.getElementsByClassName("versions_introduce1_box")[0].classList.add("animation");
+            } else if (slideHeight > 2100 && slideHeight < 3100) {
+                document.getElementsByClassName("versions_introduce2_title")[0].classList.add("animation");
+                document.getElementsByClassName("versions_introduce2_box")[0].classList.add("animation");
+            } else if (slideHeight > 3100 && slideHeight < 4000) {
+                document.getElementsByClassName("versions_introduce3_title")[0].classList.add("animation");
+                document.getElementsByClassName("versions_introduce3_box")[0].classList.add("animation");
+            } else if (slideHeight > 4200 && slideHeight < 5000) {
+                document.getElementsByClassName("activity_title")[0].classList.add("animation");
+                document.getElementsByClassName("activity_partition1")[0].classList.add("animation");
+                document.getElementsByClassName("activity_box1")[0].classList.add("animation");
+                document.getElementsByClassName("activity_btns")[0].classList.add("animation");
+            } else if (slideHeight > 5000 && slideHeight < 5400) {
+                document.getElementsByClassName("prize_title")[0].classList.add("animation");
+                document.getElementsByClassName("activity_partition2")[0].classList.add("animation");
+                document.getElementsByClassName("activity_box2")[0].classList.add("animation");
+            } else if (slideHeight > 5600 && slideHeight < 6200) {
+                document.getElementsByClassName("activity_rule_title")[0].classList.add("animation");
+                document.getElementsByClassName("activity_rule_partition1")[0].classList.add("animation");
+                document.getElementsByClassName("activity_rule_box")[0].classList.add("animation");
+            } else if (slideHeight > 6500) {
+                document.getElementsByClassName("discussion_title")[0].classList.add("animation");
+                document.getElementsByClassName("discussion_partition")[0].classList.add("animation");
+            }
+        }
+        $(function () {
+            $(".wrap_inner").mousemove(function (e) {
+                var x = e.originalEvent.x || e.originalEvent.layerX || 0;
+                var y = e.originalEvent.y || e.originalEvent.layerY || 0;
+                var ww = window.innerWidth / 2;
+                var wh = window.innerHeight / 2;
+                x -= ww, y -= wh;
+                $(".k_box").css({
+                    "transform": 'rotateY(' + (x * 0.005) + 'deg) rotateX(' + (-y * 0.005) +
+                        'deg) translate(' + x *
+                        0.02 + 'px,' + y * 0.02 + 'px)',
+                });
+                $(".k_btn_list").css({
+                    "transform": 'translate(' + x * 0.02 + 'px,' + y * 0.02 + 'px)',
+                });
+            })
+        })
+        var canvas = document.querySelector('canvas');
+        var context = canvas.getContext('2d');
+
+        requestAnimationFrame = requestAnimationFrame || webkitRequestAnimationFrame;
+
+        var OPTIONS = {
+            AMOUNT: 50,
+            UPPER_LIMIT: 8,
+            LOWER_LIMIT: 1
+        };
+
+        var UPPER_SIZE = 8;
+        var LOWER_SIZE = 4;
+
+        var doIt = function doIt() {
+            return Math.random() > 0.5;
+        };
+        var update = function update(p) {
+            return doIt() ? Math.max(OPTIONS.LOWER_LIMIT, p - 1) : Math.min(p + 1, OPTIONS.UPPER_LIMIT);
+        };
+        var reset = function reset(p) {
+            p.x = p.startX;
+            p.y = p.startY;
+        };
+        var floored = function floored(r) {
+            return Math.floor(Math.random() * r);
+        };
+        var genParticles = function genParticles() {
+            return new Array(OPTIONS.AMOUNT).fill().map(function (p) {
+                var size = floored(UPPER_SIZE) + LOWER_SIZE;
+                var c = document.createElement('canvas');
+                var ctx = c.getContext('2d');
+                var r = Math.PI / 180 * floored(360);
+                var color = 'rgba(255,' + (Math.floor(Math.random() * 25)) + ', 25, ' + Math.random() *
+                    0.9 + ')';
+                // var color = 'rgba(217,25,25,1)';
+                var xDelayed = doIt();
+                var startX = xDelayed ? -(size + floored(canvas.width)) : floored(canvas.width * 0.25);
+                var startY = xDelayed ? size + floored(canvas.height * 0.25) + Math.floor(canvas.height *
+                        0.75) : canvas
+                    .height + size + floored(canvas.height);
+                c.height = size;
+                c.width = size;
+                context.globalCompositeOperation = 'multiply';
+                // ctx.filter = `blur(${Math.random() * size}px)`
+                ctx.translate(size / 2, size / 2);
+                ctx.rotate(r);
+                ctx.translate(-(size / 2), -(size / 2));
+                ctx.fillStyle = color;
+                ctx.fillRect(0, 0, size, size);
+                return {
+                    x: startX,
+                    y: startY,
+                    startY: startY,
+                    startX: startX,
+                    c: c,
+                    r: r,
+                    vx: floored(OPTIONS.UPPER_LIMIT / 4),
+                    vy: floored(OPTIONS.UPPER_LIMIT / 4),
+                    size: size
+                };
+            });
+        };
+
+        var particles = genParticles();
+        var FRAME_COUNT = 0;
+
+        var draw = function draw() {
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = particles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step =
+                        _iterator
+                        .next()).done); _iteratorNormalCompletion = true) {
+                    var particle = _step.value;
+
+                    context.clearRect(particle.x, particle.y, particle.size, particle.size);
+                    FRAME_COUNT++;
+                    if (particle.y < canvas.height || particle.startX < 0) particle.x += particle.vx;
+                    if (particle.x > 0 || particle.startY > canvas.height) particle.y -= particle.vy;
+                    if (FRAME_COUNT % 11 === 0 && doIt()) particle.vx = update(particle.vx);
+                    if (FRAME_COUNT % 13 === 0 && doIt()) particle.vy = update(particle.vy);
+                    context.drawImage(particle.c, particle.x, particle.y);
+                    if (particle.x > canvas.width || particle.y < -particle.size) reset(particle);
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+
+            requestAnimationFrame(draw);
+        };
+        requestAnimationFrame(draw);
+    </script>
+</body>
+
+</html>

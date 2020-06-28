@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>守望先锋数据面板</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="tab_title clear">
+            <div class="team_data tab_title_item">战队数据</div>
+            <div class="match_integral tab_title_item active" >赛事积分</div>
+            <div class="match_data tab_title_item" >赛事数据</div>
+        </div>
+        <div class="border"></div>
+        <div class="tab_body">
+            <!-- 战队数据 -->
+            <div class="tab_body_item team_data" id="teamDataBox">
+                
+            </div>
+            <!-- 赛事积分 -->
+            <div class="tab_body_item match_integral active">
+                <div class="integral_tab">
+                    <!-- 预赛 -->
+                    <div class="getReady"></div>
+                    <!-- 小组赛 -->
+                    <div class="integral_tab_title group active"></div>
+                    <!-- 复赛 -->
+                    <div class="integral_tab_title repetition"></div>
+                </div>
+                <div class="integral_tab_body">
+                    <!-- 预赛 -->
+                    <div class="integral_tab_body_item getReady"></div>
+                    <!-- 小组赛 -->
+                    <div class="integral_tab_body_item group_body active clear">
+                        <div class="group_left" id="groupMatchesSchedule">
+                            
+                        </div>
+                        <div class="group_right" id="groupRanking">
+                            
+                        </div>
+                    </div>
+                    <!-- 复赛 -->
+                    <div class="integral_tab_body_item repetition_body">
+                        <!-- 对阵图 -->
+                        <div class="againstChart" id="againstChartBox" style="background-image: url('http://chuantu.xyz/t6/702/1571992802x1031866013.png');">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 赛事数据 -->
+            <div class="tab_body_item match_data">
+                <div class="occupied"></div>
+                <div class="match_list" id="matchList">
+                    
+                </div>
+                <div class="match_info" id="matchInfo">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 小组赛比赛列表模板 放在 id为groupMatchesSchedule 盒子里面 -->
+    <script id="groupMatchesSchedule_template" type="text/html"> 
+        <div class="schedule_body">
+            <div class="schedule_body_item  active">
+                {{each myData matchItem matchIndex}}
+                <div class="match_item" onclick="matchClick({{matchItem.match_id}})">
+                    <div class="time">{{matchItem.time}}</div>
+                    <div class="date">{{matchItem.date}}</div>
+                    <div class="team_name teamA_name">{{matchItem.teamA_name}}</div>
+                    <div class="team_icon teamA_icon">
+                        <img src="./images/team/{{matchItem.teamA_id}}.jpg" >
+                    </div>
+                    {{if matchItem.status == 0}}
+                    {{else}}
+                        <div class="team_score teamA_score">{{matchItem.teamA_score}}</div>
+                    {{/if}}
+                    
+                    <div class="team_name teamB_name">{{matchItem.teamB_name}}</div>
+                    <div class="team_icon teamB_icon">
+                        <img src="./images/team/{{matchItem.teamB_id}}.jpg" >
+                    </div>
+                    {{if matchItem.status == 0}}
+                    {{else}}
+                        <div class="team_score teamB_score">{{matchItem.teamB_score}}</div>
+                    {{/if}}
+
+                    {{if matchItem.status == 0}}
+                    <div class="vs">
+                        VS
+                    </div>
+                    {{/if}}
+
+                    <div class="status">
+                        {{if matchItem.status == 0}}
+                        <img src="./images/ic_weikaishi.png" >
+                        {{else if matchItem.status == 1}}
+                        <img src="./images/ic_jingxingzhong.png" >
+                        {{else if matchItem.status == 2}}
+                        <img src="./images/ic_yijieshu.png" >
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            </div>
+        </div>
+    </script>
+    <!-- 小组赛积分榜模板  放在 id为groupRanking 盒子里面  -->
+    <script id="groupRanking_teamplate" type="text/html">
+        <div class="schedule_banner">
+            <img src="./images/img_xzsjfb.png" >
+        </div>
+        <div class="ranking_title">
+            {{each myData item index}}
+                <div class="ranking_title_item  {{index == 0 ? 'active' : ''}}">{{item.title}}</div>
+            {{/each}}
+        </div>
+        <div class="body_info">
+            <div class="mingci">名次</div>
+            <div class="country">地区/国家</div>
+            <div class="map_win">地图战绩</div>
+            <div class="match_win">比赛战绩</div>
+        </div>
+        <div class="ranking_body">
+            {{each myData item index}}
+            <div class="ranking_body_item {{index == 0 ? 'active' : ''}}">
+                {{each item.rankingList teamItem teamIndex}}
+                <div class="team_item">
+                    <div class="topThree">
+                        {{if teamItem.ranking == 1}}
+                            <img src="./images/rank_1.png" >
+                        {{else if teamItem.ranking == 2}}
+                            <img src="./images/rank_2.png" >
+                        {{else if teamItem.ranking == 3}}
+                            <img src="./images/rank_3.png" >
+                        {{/if}}
+                    </div>
+                    {{if teamItem.ranking > 3}}
+                    <div class="topThreeNum">{{teamItem.ranking}}</div>
+                    {{/if}}
+                    <div class="team_icon">
+                        <img src="./images/team/{{teamItem.team_id}}.jpg" >
+                    </div>
+                    <div class="team_name">{{teamItem.team_name}}</div>
+                    <div class="map_grade">{{teamItem.map_win}}-{{teamItem.map_lose}}</div>
+                    <div class="match_grade">{{teamItem.match_win}}-{{teamItem.match_lose}}</div>
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </script>
+    <!-- 复赛对阵图模板 放在 id为againstChartBox 盒子里面 -->
+    <script id="againstChart_teamplate" type="text/html">
+        <!-- 第一轮 -->
+        <div class="match_item first_round match_one" onclick="matchClick({{myData.firstRound[0].match_id}})">
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.firstRound[0].teamA_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.firstRound[0].teamA_name}}</div>
+                <div class="team_score">{{myData.firstRound[0].teamA_score}}</div>
+            </div>
+            <div class="placeholder"></div>
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.firstRound[0].teamB_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.firstRound[0].teamB_name}}</div>
+                <div class="team_score">{{myData.firstRound[0].teamB_score}}</div>
+            </div>
+            <div class="match_item_time">{{myData.firstRound[0].time}}</div>
+        </div>
+        <div class="match_item first_round match_two"  onclick="matchClick({{myData.firstRound[1].match_id}})">
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.firstRound[1].teamA_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.firstRound[1].teamA_name}}</div>
+                <div class="team_score">{{myData.firstRound[1].teamA_score}}</div>
+            </div>
+            <div class="placeholder"></div>
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.firstRound[1].teamB_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.firstRound[1].teamB_name}}</div>
+                <div class="team_score">{{myData.firstRound[1].teamB_score}}</div>
+            </div>
+            <div class="match_item_time">{{myData.firstRound[1].time}}</div>
+        </div>
+
+        <!-- 第二轮 -->
+        <div class="match_item second_round match_one"   onclick="matchClick({{myData.secondRound[0].match_id}})">
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.secondRound[0].teamA_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.secondRound[0].teamA_name}}</div>
+                <div class="team_score">{{myData.secondRound[0].teamA_score}}</div>
+            </div>
+            <div class="placeholder"></div>
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.secondRound[0].teamB_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.secondRound[0].teamB_name}}</div>
+                <div class="team_score">{{myData.secondRound[0].teamB_score}}</div>
+            </div>
+            <div class="match_item_time">{{myData.secondRound[0].time}}</div>
+        </div>
+        <div class="match_item second_round match_two" onclick="matchClick({{myData.secondRound[1].match_id}})">
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.secondRound[1].teamA_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.secondRound[1].teamA_name}}</div>
+                <div class="team_score">{{myData.secondRound[1].teamA_score}}</div>
+            </div>
+            <div class="placeholder"></div>
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.secondRound[1].teamB_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.secondRound[1].teamB_name}}</div>
+                <div class="team_score">{{myData.secondRound[1].teamB_score}}</div>
+            </div>
+            <div class="match_item_time">{{myData.secondRound[1].time}}</div>
+        </div>
+
+        <!-- 第三轮 决赛 -->
+        <div class="match_item thirdly_round" onclick="matchClick({{myData.thirdlyRound.match_id}})">
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.thirdlyRound.teamA_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.thirdlyRound.teamA_name}}</div>
+                <div class="team_score">{{myData.thirdlyRound.teamA_score}}</div>
+            </div>
+            <div class="placeholder"></div>
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.thirdlyRound.teamB_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.thirdlyRound.teamB_name}}</div>
+                <div class="team_score">{{myData.thirdlyRound.teamB_score}}</div>
+            </div>
+            <div class="match_item_time">{{myData.thirdlyRound.time}}</div>
+        </div>
+
+        <!-- 季军战 -->
+        <div class="match_item fourthly" onclick="matchClick({{myData.fourthly.match_id}})">
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.fourthly.teamA_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.fourthly.teamA_name}}</div>
+                <div class="team_score">{{myData.fourthly.teamA_score}}</div>
+            </div>
+            <div class="placeholder"></div>
+            <div class="match_item_team">
+                <div class="team_icon">
+                    <img src="./images/team/{{myData.fourthly.teamB_id}}.jpg" >
+                </div>
+                <div class="team_name">{{myData.fourthly.teamB_name}}</div>
+                <div class="team_score">{{myData.fourthly.teamB_score}}</div>
+            </div>
+            <div class="match_item_time">{{myData.fourthly.time}}</div>
+        </div>
+
+        <!-- 冠军  -->
+        <div class="match_item_team champion">
+            <div class="team_icon">
+                <img src="./images/team/{{myData.champion.team_id}}.jpg" >
+            </div>
+            <div class="team_name">{{myData.champion.team_name}}</div>
+        </div>
+
+        <!-- 季军  -->
+        <div class="match_item_team third">
+            <div class="team_icon">
+                <img src="./images/team/{{myData.third.team_id}}.jpg" >
+            </div>
+            <div class="team_name">{{myData.third.team_name}}</div>
+        </div>
+
+    </script>
+    <!-- 战队数据模板 放在 id为teamDataBox 盒子里面 -->
+    <script id="teamData_teamplate" type="text/html">
+        <div class="occupied"></div>
+        <div class="teamTab_title">
+            {{each myData item index}}
+                <div class="teamTab_title_item {{index == 0 ? 'active' : ''}}">
+                    <img src="./images/team/{{item.team_id}}.jpg" >
+                </div>
+            {{/each}}
+        </div>
+        <div class="teamTab_body">
+            {{each myData item index}}
+            <div class="teamTab_body_item  clear {{index == 0 ? 'active' : ''}}">
+                <div class="team_info">
+                    <div class="team_icon">
+                        <img src="./images/team/{{item.team_id}}.jpg" >
+                    </div>
+                    <div class="yuan winRate" data-value="{{item.win_rate}}" ><div>胜率</div></div>
+                    <div class="team_name">{{item.team_name}}</div>
+                    <div class="team_score">
+                        <div class="data">{{item.win_num}}胜{{item.lose_num}}负</div>
+                        <div class="info">近五场战绩</div>
+                    </div>
+                    <div class="team_score grade">
+                        <div class="data">{{item.score}}分</div>
+                        <div class="info">近五张地图得分</div>
+                    </div>
+                </div>
+                <div class="player_box">
+                    {{each item.player playerItem playerIndex}}
+                    <div class="player_item {{playerIndex == 0 ? 'active' : ''}}">
+                        <div class="icon"><img src="{{playerItem.icon}}" ></div>
+                        <div class="player_name">{{playerItem.nick_name}}</div>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="player_info">
+                    {{each item.player playerItem playerIndex}}
+                    <div class="player_info_item {{playerIndex == 0 ? 'active' : ''}}">
+                        <div class="icon">
+                            <img src="{{playerItem.icon}}">
+                        </div>
+                        <div class="name">成员ID:<span>{{playerItem.nick_name}}</span></div>
+                        <div class="location">
+                            擅长位置:
+                            <img src="{{playerItem.location_icon}}" >
+                            {{if playerItem.location == 0}}
+                                <span>输出</span>
+                            {{else if playerItem.location == 1}}
+                                <span>坦克</span>
+                            {{else if playerItem.location == 2}}
+                                <span>辅助</span>
+                            {{/if}}
+                        </div>
+                        <div class="adept">擅长英雄:</div>
+                        <div class="heros">
+                            {{each playerItem.heros heroItem heroIindex}}
+                                <img src="./images/hero/{{heroItem}}.png" >
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+    <!-- 赛事数据比赛列表模板 放在 id为matchList 盒子里面 -->
+    <script id="matchList_teamplate" type="text/html">
+        {{each myData item index}}
+        <div class="match_list_item {{index == 0 ? 'active' : ''}}" onclick="matchSwitch({{item.match_id}})">
+            {{if item.status == 1}}
+                <div class="status doing">
+                    <img src="./images/ic_jingxingzhong.png" >
+                </div>
+            {{else}}
+                <div class="status time">{{item.time}}</div>
+            {{/if}}
+            
+            <div class="icon teamA_icon">
+                <img src="./images/team/{{item.teamA_id}}.jpg" >
+            </div>
+            <div class="name teamA_name">{{item.teamA_name}}</div>
+            <div class="score teamA_score">{{item.teamA_score}}</div>
+
+            <div class="icon teamB_icon">
+                <img src="./images/team/{{item.teamB_id}}.jpg" >
+            </div>
+            <div class="name teamB_name">{{item.teamB_name}}</div>
+            <div class="score teamB_score">{{item.teamB_score}}</div>
+        </div>
+        {{/each}}
+    </script> 
+    <!-- 赛事数据比赛详情模板 放在 id为matchInfo 盒子里面 -->
+    <script id="matchData_teamplate" type="text/html">
+        <div class="team_Box">
+            <div class="zhanwei"></div>
+            <div class="icon">
+                <img src="./images/team/{{myData.teamA_id}}.jpg" >
+            </div>
+            <div class="name">{{myData.teamA_name}}</div>
+        </div>
+        <div class="match_infoBox">
+            <!-- 未开始模板 -->
+            {{if myData.status == 0}}
+                <div class="not_start_box">{{myData.time}}</div>
+            {{else}}
+                <div class="detail_box">
+                    <div class="teamA_score">{{myData.teamA_score}}</div>
+                    <div class="vs">:</div>
+                    <div class="teamB_score">{{myData.teamB_score}}</div>
+                    <div class="small_score_Box">
+                        <div class="score_box">
+                            <div class="small_score">
+                                <div class="box_item zhanwei"></div>
+                                <div class="box_item teamA_title">{{myData.teamA_name}}</div>
+                                <div class="box_item last_item teamB_title">{{myData.teamB_name}}</div>
+                            </div>
+                            {{each myData.small_score item index}}
+                            <div class="small_score">
+                                <div class="box_item">{{index+1}}st</div>
+                                <div class="box_item">{{item.teamA_score}}</div>
+                                <div class="box_item last_item">{{item.teamB_score}}</div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+           
+            <div class="partition">
+                <img src="./images/img_duizhengxinxi.png">
+            </div>
+            <div class="encounter_box">
+                <div class="players teamA_player">
+                    {{each myData.teamA_player item index}}
+                    <div class="player_item">
+                        <div class="icon">
+                            <img src="{{item.icon}}" >
+                        </div>
+                        <div class="name">{{item.nick_name}}</div>
+                        <div class="location">
+                            <img src="{{item.location_icon}}" >
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="players teamB_player">
+                    {{each myData.teamB_player item index}}
+                        <div class="player_item">
+                            <div class="icon">
+                                <img src="{{item.icon}}" >
+                            </div>
+                            <div class="name">{{item.nick_name}}</div>
+                            <div class="location">
+                                <img src="{{item.location_icon}}" >
+                            </div>
+                        </div>
+                    {{/each}}
+                    
+                </div>
+                <img src="./images/ic_vs.png" class="vs">
+            </div>
+        </div>
+        <div class="team_Box">
+            <div class="zhanwei"></div>
+            <div class="icon">
+                <img src="./images/team/{{myData.teamB_id}}.jpg" >          
+            </div>
+            <div class="name">{{myData.teamB_name}}</div>
+        </div>
+    </script>
+
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/art-template.js"></script>
+    <script src="./js/circlechart.min.js"></script>
+    <script src="./js/fakerData.js"></script>
+    <script src="./js/event.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

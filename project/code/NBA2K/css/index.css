@@ -1,0 +1,1067 @@
+body,div,ul,li,p,span,i,b,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑", "宋体", "Arial Narrow";
+    overflow-x: hidden;
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+a {
+    text-decoration: none;
+}
+select {
+    vertical-align: middle;
+}
+img {
+    border: none;
+}
+.clear{ 
+    clear:both;
+} 
+.nbaBox {
+    /* width: 1920px; */
+    width: 100%;
+    height: 6478px;
+    margin: 0 auto;
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.bx {
+    width: 1300px;
+    margin: 0 auto;
+}
+/* elevator start */
+.elevator {
+    width:210px;
+    height:352px;
+    position: fixed;
+    right: 50px;
+    bottom: 110px;
+    background: url(../images/bg_celan.png) no-repeat;
+    background-size: 100% 100%;
+    padding-top: 87px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.elevator .gotop {
+    position: absolute;
+    bottom: -60px;
+    left: 35%;
+    cursor: pointer;
+}
+.elevator .navigation {
+    height: 300px;
+    width: 190px;
+    margin: 0 auto;
+}
+.elevator .navigation li a{
+    display: block;
+    height: 66px;
+    line-height: 66px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -webkit-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -moz-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;    
+    font-weight: 700;
+}
+.elevator .navigation li a.active {
+    /* background-color: yellow; */
+    background: url(../images/celanxuanzhong.png) no-repeat;
+    background-size: cover;
+}
+/* elevator end */
+/* Banner start */
+.banner {
+    height: 1098px;
+}
+.banner .leagueLogo {
+    width:732px;
+    position: absolute;
+    left: 50%;
+    margin-left: -366px;
+    top: 232px;
+}
+.banner .decorate {
+    width: 814px;
+    position: absolute;
+    left: 50%;
+    margin-left: -366px;
+    top: 209px;
+}
+.banner .slogan {
+    width:726px;
+    position: absolute;
+    left: 50%;
+    margin-left: -363px;
+    top: 755px;
+}
+.banner .tag {
+    width:313px;
+    position: absolute;
+    left: 50%;
+    margin-left: -156.5px;
+    top: 818px;
+}
+/* Banner end */
+
+/* 内容 start*/
+.content {
+    height: 5380px;
+}
+    /* 赛事新闻 */
+.news {
+    padding-top: 116px;
+}
+.news .title {
+    display: block;
+    margin: 0 auto;
+}
+.news .videoBox {
+    width:1181px;
+    height:653px;
+    margin: 0 auto;
+    margin-top: 72px;
+    background: url(../images/img_saishixinwen-min.png) no-repeat;
+    padding-top: 14px;
+    cursor: pointer;
+    position: relative;
+    /* background-color: #f00; */
+}
+.news .videoBox .play {
+    position: absolute;
+    width:129px;
+    left: 50%;
+    margin-left: -64.5px;
+    top: 260px;
+}
+.news .videoBox:hover .play {
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);  /*兼容-webkit-引擎浏览器*/
+    -moz-transform:scale(1.1);     /*兼容-moz-引擎浏览器*/
+}
+.news .articleBox {
+    margin-top: 67px;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content:center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+}
+.news .article {
+    display: block;
+    width:285px;
+    margin-left: 13.5px;
+    margin-right: 13.5px;
+    cursor: pointer;
+}
+.news .article .icon {
+    width: 100%;
+    height: 155px;
+    padding-top: 8px;
+    background: url(../images/bg_saishiyuce2.png) no-repeat;
+    /* line-height: 163px; */
+    text-align: center;
+}
+.news .article:hover .icon{
+    background-image: url(../images/bg_saishiyuce1.png);
+}
+.news .article .icon img {
+    width:266px;
+    height:144px;
+    background-color: #fff;
+}
+.news .article .info {
+    margin-top: 11px;
+    font-family:"Adobe Heiti Std R";
+    color:rgba(255,255,255,1);
+    font-size:20px;
+    padding-left: 9px;
+    padding-right: 14px;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+    /* 赛事数据 */
+.match_data {
+    padding-top: 135px;
+}
+.match_data .title {
+    display: block;
+    margin: 0 auto;
+}
+.match_data .selectedBox  {
+    margin-top: 71px;
+    text-align: center;
+}
+.match_data .selectedBox .selected{
+    position: relative;
+    /* width: 792px; */
+    width: 845px;
+    height: 45px;
+    display: inline-block;
+    margin-right: 57px;
+    /* margin-left: 205px; */
+    margin-left: 80px;
+}
+.match_data .selectedBox .selected img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.match_data .data_details {
+    width:1219px;
+    height:1042px;
+    background: url(../images/bg_duizhanshuju.png) no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 96px;
+    padding-top: 14px;
+}
+.data_details .tab_title{
+    width: 601px;
+    height: 60px;
+    margin-left: 306px;
+    position: relative;
+}
+.data_details .tab_title .tabs {
+    position: absolute;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: "Adobe Heiti Std R";
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+.data_details .tab_title .tabs:nth-child(1) {
+    left: 0;
+    width:208px;
+    height:60px;
+    background: url(../images/bt_tuanduishenglv1.png) no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+.data_details .tab_title .tabs:nth-child(2) {
+    left: 200px;
+    width:200px;
+    height:60px;
+    background: url(../images/bt_qiuxingshuju1.png) no-repeat;
+    background-size:auto 100% ;
+    z-index: 4;
+}
+.data_details .tab_title .tabs:nth-child(3) {
+    right: 0;
+    width:214px;
+    height:60px;
+    background: url(../images/bt_zhengrongshuju1.png) no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+.data_details .tab_title .tabs:nth-child(1).active {
+    background-image: url(../images/bt_tuanduishenglv2.png);
+}
+.data_details .tab_title .tabs:nth-child(2).active {
+    background-image: url(../images/bt_qiuxingshuju2.png);
+}
+.data_details .tab_title .tabs:nth-child(3).active {
+    background-image: url(../images/bt_zhengrongshuju2.png);
+}
+.data_details .tab_box .data_box {
+    /* width:1183px; */
+    width:1200px;
+    /* height:949px; */
+    height:954px;
+    margin: 0 auto;
+    display: none;
+}
+.data_details .tab_box .data_box.active {
+    display: block;
+}
+.data_details .tab_box .data_box .charts_box {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+}
+    /* 赛事选择 start */
+
+    /* 赛事选择 end */
+
+    /* 团队胜率 start */
+.data_box .charts_box .team_charts_box {
+    width: 88px;
+    /* height: 735px; */
+    height: 670px;
+    margin-right: 20px;
+    position: relative;
+    
+}
+.data_box .charts_box .team_charts_box .team_name {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    bottom: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Adobe Heiti Std R";
+}
+.data_box .charts_box .team_charts_box.active .team_charts_logo {
+    opacity: 1;
+}
+.data_box .charts_box .team_charts_box:last-child {
+    margin-right: 0;
+}
+.data_box .charts_box .team_charts_box:nth-child(odd) .team_charts_pillar{
+    background-color: #FC4443;
+}
+.data_box .charts_box .team_charts_box:nth-child(even) .team_charts_pillar{
+    background-color: #4389FC;
+}
+.team_charts_box .team_charts_logo {
+    position: absolute;
+    bottom: 55px;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* background-color: #f00; */
+    cursor: pointer;
+    opacity: 0.4;
+}
+.team_charts_box .team_charts_logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.team_charts_box .team_charts {
+    width: 30px;
+    height: 359px;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    bottom: 178px;
+    /* background-color: #0f0; */
+}
+.team_charts_box .team_charts .team_charts_pillar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+.team_charts_box .team_charts .team_charts_pillar .sanjiao {
+    position: absolute;
+    /* height: 20px; */
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 30px 0 0;
+    border-color: #242424 transparent transparent transparent;
+}
+.team_charts_box .team_charts .team_charts_pillar  .team_charts_info {
+    position: absolute;
+    top: -37px;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Adobe Heiti Std R";
+    width: 70px;
+    left: -19px;
+    text-align: center;
+}
+
+.data_details .tab_box .data_box .team_data_box .team_data {
+    display: none;
+    width:1064px;
+    height:208px;
+    margin: 0 auto;
+    background: url(../images/bg_tuanduishenglv.png) no-repeat;
+    background-size: 100% 100%;
+}
+.data_details .tab_box .data_box .team_data_box .team_data.active {
+    display: block;
+}
+
+.team_data_box .team_data .team_data_logo {
+    width: 162px;
+    height: 100%;
+    /* background-color: #00f; */
+    float: left;
+    text-align: center;
+}
+.team_data_box .team_data .team_data_logo img {
+    width:88px;
+    height:88px;
+    margin-top: 38px;
+    border-radius: 50%;
+}
+.team_data_box .team_data .team_data_logo p {
+    font-size:18px;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    line-height: 18px;
+    margin-top: 12px;
+}
+
+.team_data_box .team_data .team_data_score {
+    width: 90px;
+    height: 100%;
+    /* background-color: #0f0; */
+    float: left;
+}
+.team_data_box .team_data .team_data_score p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    font-family: "MicrosoftYaHei-Bold";
+    text-align: center;
+    margin-top: 36px;
+}
+.team_data_box .team_data .team_data_score .score {
+    width:90px;
+    height:90px;
+    background:rgba(77,77,77,1);
+    border-radius:50%;
+    margin-top: 21px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 30px;
+    color: #EC403F;
+    font-weight: bold;
+}
+.team_data_box .team_data .team_data_win {
+    width: 90px;
+    height: 100%;
+    margin-left: 26px;
+    /* background-color: #f00; */
+    float: left;
+}
+.team_data_box .team_data .team_data_win p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    font-family: "MicrosoftYaHei-Bold";
+    text-align: center;
+    margin-top: 36px;
+}
+.team_data_box .team_data .team_data_win .win {
+    width:90px;
+    height:90px;
+    background:rgba(77,77,77,1);
+    border-radius:50%;
+    margin-top: 21px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+    /* 王朝模式队伍数据面板 start */
+.team_data_box .team_data .team_data_good {
+    width: 605px;
+    height: 100%;
+    margin-left: 25px;
+    /* background-color: #f00; */
+    float: left;
+    /* line-height: 208px; */
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "MicrosoftYaHei-Bold";
+}
+.team_data_box .team_data .team_data_good .shanchang {
+    display: inline-block;
+    height: 100%;
+    line-height: 208px;
+    text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -webkit-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -moz-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000; 
+}
+.team_data_box .team_data .team_data_good .stars {
+    width: 464px;
+    margin-left: 28px;
+    flex:1;
+    display: inline-block;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    /* background-color: #fff; */
+}
+.team_data_box .team_data .team_data_good .stars .star {
+    width:83px;
+    height:83px;
+    background-color: #4D4D4D;
+    border-radius: 50%;
+    vertical-align:middle;
+}
+    /* 王朝模式队伍数据面板 end */
+    /* 街头模式队伍数据面板 start */
+.team_data_box .team_data .team_data_jietou_good {
+    width: 620px;
+    height: 100%;
+    margin-left: 13px;
+    float: left;
+}
+.team_data_box .team_data .team_data_jietou_good>div {
+    float: left;
+}
+.team_data_jietou_player>div {
+    float: left;
+}
+/* .team_data_jietou_logo {
+    width: 72px;
+    height: 100%;
+    text-align: center;
+    margin-left: 12px;
+} */
+.team_data_jietou_player {
+    padding-top: 10px;
+}
+.team_data_jietou_player p{
+    text-align: center;
+    width: 252px;
+    font-size:18px;
+    font-family:"MicrosoftYaHei-Bold";
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    margin-top: 26px;
+}
+/* .team_data_jietou_logo img{
+    margin-top: 47px;
+    width:72px;
+    height:72px;
+    border-radius: 50%;
+} */
+.jietou_shanchang {
+    margin-left: 53px;
+    margin-right: 16px;
+    height: 100%;
+    /* line-height: 208px; */
+    line-height: 187px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -webkit-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -moz-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;    
+}
+.masters>div {
+    float: left;
+}
+.master_item {
+    width:62px;
+    height:62px;
+    background:rgba(77,77,77,1);
+    border-radius:50%;
+    margin-right: 5px;
+    margin-top: 65px;
+    line-height: 62px;
+    text-align: center;
+    font-size:24px;
+    font-family:"MicrosoftYaHei-Bold";
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+}
+    /* 街头模式队伍数据面板 end */
+    /* 团队胜率 end */
+
+    /* 阵容数据 start */
+.battle {
+    padding-top: 11px;
+    height: 943px;
+}
+.battle .battle_ranking {
+    width:1114px;
+    height:85px;
+    box-shadow:0px 6px 0px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: 7px;
+    background: url(../images/bg_zhengrongshuju.png) no-repeat;
+    /* background-color:rgba(54,54,54,1); */
+    background-size: 100% 100%;
+}
+.battle .battle_ranking .ranking {
+    width: 185px;
+    height: 100%;
+    /* background-color: #f00; */
+    float: left;
+    text-align: center;
+    line-height: 85px;
+}
+.battle .battle_ranking .ranking img {
+    margin-top: 4px;
+    /* display: inline; */
+
+}
+.battle .battle_ranking .ranking span {
+    font-size: 36px;
+    color: #fff;
+}
+.battle .battle_ranking .heros {
+    width: 500px;
+    height: 100%;
+    /* background-color: #0f0; */
+    float: left;
+}
+.battle .battle_ranking .heros .hero {
+    width: 70px;
+    text-align: center;
+    margin-right: 30px;
+    float: left;
+    /* background-color: #f0f; */
+    padding-top: 8px;
+}
+.battle .battle_ranking .heros .hero:last-child {
+    margin-right: 0;
+}
+.battle .battle_ranking .heros .hero img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* margin-top: 11px; */
+}
+.battle .battle_ranking .heros .hero p {
+    font-size: 15px;
+    color: #fff;
+}
+.battle .battle_ranking .win_rate,
+.battle .battle_ranking .appear_num {
+    height: 100%;
+    font-size: 25px;
+    color: #fff;
+    line-height: 85px;
+    float: left;
+}
+.battle .battle_ranking .win_rate span,
+.battle .battle_ranking .appear_num span {
+    font-weight: bold;
+}
+.battle .battle_ranking .win_rate {
+    width: 200px;
+    /* background-color: #00f; */
+}
+    /* 阵容数据 end */
+
+    /* 球星数据 start */
+.data_box .star_data {
+    width: 1098px;
+    margin: 0 auto;
+    height: 863px;
+    overflow: hidden;
+    position: relative;
+    /* background-color: #fff; */
+}
+.data_box .star_data .line_one,
+.data_box .star_data .line_two {
+    position: absolute;
+    width:3px;
+    height:783px;
+    background:rgba(61,61,61,1);
+    top: 86px;
+}
+.data_box .star_data .line_one {
+    left: 356px;
+}
+.data_box .star_data .line_two {
+    left: 725px;
+}
+.qiuxing_data {
+    position: relative;
+}
+.data_box  .prev, 
+.data_box  .next{
+    position: absolute;
+    width: 37px;
+    top: 440px;
+    cursor: pointer;
+}
+.data_box  .prev img,
+.data_box  .next img {
+    width: 100%;
+}
+.data_box  .prev {
+    left: 13px;
+}
+.data_box  .next {
+    right: 5px;
+}
+.data_box .star_data .star_data_ul {
+    position: absolute;
+    width: 1830px;
+    height: 100%;
+    -webkit-transition: left 0.3s cubic-bezier(1,.01,.32,1);
+	-moz-transition: left 0.3s cubic-bezier(1,.01,.32,1);
+	-o-transition: left 0.3s cubic-bezier(1,.01,.32,1);
+	-ms-transition: left 0.3s cubic-bezier(1,.01,.32,1);
+	transition: left 0.3s cubic-bezier(1,.01,.32,1);	
+    /* left: -364px; */
+    left: 0;
+}
+.star_data .star_ranking_item {
+    width: 366px;
+    height: 100%;
+    float: left;
+}
+.star_data .star_ranking_item .item_title {
+    height: 63px;
+    padding-top: 33px;
+}
+.star_ranking_item .item_title .title_icon {
+    width: 125px;
+    height: 39px;
+    background: url(../images/bg_dingwei.png) no-repeat;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 39px;
+    font-size: 24px;
+    color: #fff;
+    text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -webkit-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -moz-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;    
+    font-weight: 700;
+}
+.star_ranking_item .item_box {
+    height: 783px;
+    width: 100%;
+}
+.star_ranking_item .item_box .item_box_title {
+    height: 53px;
+    width: 100%;
+    position: relative;
+}
+.star_ranking_item .item_box .item_box_title div {
+    position: absolute;
+    font-size: 18px;
+    color: #fff;
+    text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -webkit-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;
+    -moz-text-shadow:-2px -2px #000,	2px -2px #000,-2px 2px #000,2px 2px #000,-2px 0 #000,0 -2px #000,2px 0 #000,0 2px #000,-2.5px -2.5px #000,2.5px -2.5px #000,-2.5px 2.5px #000,2.5px 2.5px #000,-2.5px 0 #000,0 -2.5px #000,	2.5px 0 #000,0 2.5px #000;    
+}
+.star_ranking_item .item_box .item_box_title .player {
+    left: 39px;
+    top: 10px;
+}
+.star_ranking_item .item_box .item_box_title .appear {
+    left: 188px;
+    top: 10px;
+}
+.star_ranking_item .item_box .item_box_title .win {
+    left: 272px;
+    top: 10px;
+}
+/* .item_box .item_player_box  {
+    padding-top: 26px;
+} */
+.item_box .item_player_box .item_box_player {
+    width:282px;
+    height:43px;
+    line-height: 43px;
+    margin-left: 33px;
+    /* background-color: #f00; */
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+}
+.item_box .item_player_box .item_box_player .qiansan {
+    position: absolute;
+    left: -6px;
+    top: -8px;
+    width:22px;
+    height:20px;
+    /* background: url(../images/ic_diyi.png); */
+    z-index: 90;
+}
+.item_box .item_player_box .item_box_player .player_icon {
+    position: absolute;
+    left: 0;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+}
+.item_box .item_player_box .item_box_player  .player_name {
+    position: absolute;
+    left: 50px;
+    max-width: 108px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.item_box .item_player_box .item_box_player  .player_appear {
+    position: absolute;
+    left: 168px;
+}
+.item_box .item_player_box .item_box_player  .player_win {
+    position: absolute;
+    left: 237px;
+}
+    /* 球星数据 end */
+
+    /* 赛程表 */
+.plan {
+    padding-top: 96px;
+}
+.plan .title ,
+.plan .plan_box{
+    display: block;
+    margin: 0 auto;
+}
+.plan .plan_box {
+    margin-top: 93px;
+}
+    /* 实况录像 */
+.live_video {
+    padding-top: 96px;
+}
+.live_video .title {
+    display: block;
+    margin: 0 auto;
+}
+.live_video .more {
+    margin-top: 19px;
+    width: 1200px;
+    text-align: right;
+}
+.live_video .more a{
+    font-size:24px;
+    font-family:"微软雅黑";
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+}
+.live_box {
+    width: 1198px;
+    margin: 0 auto;
+    margin-top: 14px;
+}
+.live_box_left {
+    width:886px;
+    height:489px;
+    float: left;
+    background: url(../images/bg_shikuangluxiang1.png) no-repeat;
+    background-size: cover;
+    /* text-align: center; */
+}
+.live_box_left .video_img_box {
+    margin-top: 14px;
+    margin-left: 48px;
+    width:818px;
+    height:460px;
+    background-color: #fff;
+}
+
+.live_box_right {
+    width:298px;
+    height:489px;
+    float: right;
+}
+.live_box_right .video_box {
+    width: 100%;
+    background-size: cover;
+}
+.live_box_right .video_box:nth-child(1){
+    background: url(../images/bg_shiluangluxiang2.png) no-repeat;
+    height: 155px;
+    margin-bottom: 6px;
+    margin-left: 3px;
+    padding-top: 4px;
+}
+.live_box_right .video_box:nth-child(2) {
+    height:158px;
+    background: url(../images/bg_saishiluxiang3.png) no-repeat;
+    padding-top: 4px;
+}
+.live_box_right .video_box:nth-child(3) {
+    height:161px;
+    margin-top: 4px;
+    background: url(../images/bg_saishiluxiang4.png) no-repeat;
+    padding-top: 4px;
+}
+.video_img_box {
+    cursor: pointer;
+    margin-left: 6px;
+    width:263px;
+    height:148px;
+    position: relative;
+}
+.video_img_box .shade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background:rgba(0,0,0,.7);
+    display: none;
+}
+.video_img_box .video_img {
+    width: 100%;
+    height: 100%;
+}
+.video_img_box .shade .shade_img {
+    width:56px;
+    margin-top: 49px;
+}
+.live_box_left .video_img_box .shade_img {
+    width: 75px;
+    margin-top: 210px;
+}
+.video_img_box:hover .shade{
+    display: block;
+}
+    /* 赛事预测 */
+.forecast {
+    padding-top: 137px;
+}
+.forecast .title {
+    display: block;
+    margin: 0 auto;
+}
+.forecast .more {
+    margin-top: 38px;
+    width: 1200px;
+    text-align: right;
+}
+.forecast .more a{
+    font-size:24px;
+    font-family:"微软雅黑";
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+}
+.forecast .forecast_box {
+    width: 1251px;
+    margin: 0 auto;
+    margin-top: 23px;
+    display: flex;
+    display:-webkit-box;  /* iOS 6-, Safari 3.1-6 */
+    display:-webkit-flex; /* Chrome */
+    display:-moz-box;     /* Firefox 19 */
+    display:-ms-flexbox;   
+    justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+}
+.forecast_item {
+    width: 285px;
+    display: block;
+    cursor: pointer;
+}
+
+.forecast_item .icon {
+    width: 100%;
+    height: 155px;
+    padding-top: 8px;
+    background: url(../images/bg_saishiyuce2.png) no-repeat;
+    text-align: center;
+}
+.forecast_item:hover .icon{
+    background-image: url(../images/bg_saishiyuce1.png);
+}
+.forecast_item .icon img {
+    width:266px;
+    height:144px;
+    background-color: #fff;
+}
+.forecast_item .info {
+    margin-top: 11px;
+    font-family:"Adobe Heiti Std R";
+    color:rgba(255,255,255,1);
+    font-size:20px;
+    padding-left: 9px;
+    padding-right: 14px;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+    /* 合作单位 */
+.cooperation {
+    margin-top: 170px;
+}
+.cooperation .title {
+    display: block;
+    margin: 0 auto;
+}
+.cooperation_box {
+    width: 1190px‬;
+    margin: 0 auto;
+    margin-top: 98px;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: space-between;
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+}
+.cooperation_item {
+    width:206px;
+    height:75px;
+}
+.cooperation_item  img {
+    width: 100%;
+}
+/* 内容 end*/
+/* 视频播放 start */
+.videoBox1 {
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+}
+.videoBox1   .video {
+    position: relative;
+    width: 864px;
+    height: 486px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.videoBox1   .video video {
+    width: 100%;
+    height: 100%;
+}
+.videoBox1   .video .close {
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    font-size: 49px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    font-family: "tahoma";
+    cursor: pointer;
+}
+.closeVideo {
+    display: none;
+}
+/* .closeVideo:nth-child() */
+  /* 视频播放 end */

@@ -1,0 +1,1318 @@
+body,
+div,
+ul,
+li,
+p,
+span,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+img {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  font-family: "微软雅黑", "宋体", "Arial Narrow";
+  background: #f4f4f4;
+  overflow: hidden;
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+select {
+  vertical-align: middle;
+}
+img {
+  border: none;
+}
+.clear {
+  clear: both;
+}
+@font-face {
+  font-family: 'Industry';
+  src: url('../font/Industry-Bold.otf');
+}
+#app {
+  height: 660px;
+  margin: 0 auto;
+  overflow: scroll;
+  position: relative;
+}
+#app .select_mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: 9;
+}
+#app .select_mask.show {
+  display: block;
+}
+#app .select_box_list {
+  position: fixed;
+  top: -7.6rem;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s;
+  height: 3.85rem;
+  overflow: auto;
+  z-index: 99;
+  box-sizing: border-box;
+  border-bottom: solid 0.13rem #ffaa00;
+  background-color: #ffffff;
+}
+#app .select_box_list .show_item {
+  width: 100%;
+  height: 1.24rem;
+  line-height: 1.24rem;
+  text-align: center;
+  font-size: 0.4rem;
+  color: #3a3a3a;
+  border-color: #3a3a3a;
+}
+#app .select_box_list.show {
+  top: 0;
+}
+#app .match_integral {
+  display: none;
+}
+#app .match_integral .match_title {
+  margin-top: 0.345912rem;
+  height: 0.849057rem;
+}
+#app .match_integral .match_title .match_title_item {
+  float: left;
+  width: 2.578616rem;
+  height: 0.849057rem;
+  background: #ee9f38;
+  font-size: 0.377358rem;
+  font-family: "Microsoft YaHei UI";
+  line-height: 0.849057rem;
+  color: #ffffff;
+  text-align: center;
+}
+#app .match_integral .ranking_banner {
+  width: 10rem;
+  margin-top: 0.157233rem;
+  height: 1.069182rem;
+}
+#app .match_integral .ranking_banner > img {
+  width: 100%;
+  height: 100%;
+}
+#app .match_integral .ranking_title {
+  margin-top: 0.157233rem;
+  height: 0.786164rem;
+  background: #ffffff;
+  display: flex;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box;
+  /* Firefox 17- */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex;
+  /* Firefox 18+ */
+  display: -ms-flexbox;
+  /* IE 10 */
+  flex-direction: row;
+  -webkit-box-orient: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+}
+#app .match_integral .ranking_title .ranking_title_item {
+  width: 100%;
+  height: 0.786164rem;
+  line-height: 0.786164rem;
+  font-size: 0.377358rem;
+  font-family: 'Microsoft YaHei UI';
+  color: #898989;
+  text-align: center;
+  cursor: pointer;
+}
+#app .match_integral .ranking_title .ranking_title_item.active {
+  background: #ee9f38;
+  color: #ffffff;
+}
+#app .match_integral .body_info {
+  width: 100%;
+  height: 1.194969rem;
+  position: relative;
+}
+#app .match_integral .body_info div {
+  position: absolute;
+  height: 1.194969rem;
+  line-height: 1.194969rem;
+  font-size: 0.314465rem;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+}
+#app .match_integral .body_info .mingci {
+  left: 0.283019rem;
+}
+#app .match_integral .body_info .name {
+  left: 1.352201rem;
+}
+#app .match_integral .body_info .team_win {
+  left: 5.283019rem;
+}
+#app .match_integral .body_info .map_win {
+  left: 6.981132rem;
+}
+#app .match_integral .body_info .score {
+  left: 8.647799rem;
+}
+#app .match_integral .ranking_body .ranking_body_item {
+  display: none;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item {
+  width: 100%;
+  height: 0.943396rem;
+  background: #ffffff;
+  border-radius: 0.125786rem;
+  margin-bottom: 0.125786rem;
+  position: relative;
+  line-height: 0.943396rem;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item div {
+  position: absolute;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .topThree {
+  left: 0.188679rem;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .topThree img {
+  width: 0.91195rem;
+  vertical-align: middle;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .topThreeNum {
+  left: 0.534591rem;
+  font-size: 0.377358rem;
+  font-family: 'Microsoft YaHei UI';
+  color: #000000;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .team_icon {
+  left: 1.320755rem;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .team_icon img {
+  width: 0.786164rem;
+  vertical-align: middle;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .team_name {
+  left: 2.264151rem;
+  font-size: 0.377358rem;
+  font-family: 'Microsoft YaHei UI';
+  color: #8b8b8b;
+  width: 3.018868rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .team_grade {
+  left: 5.283019rem;
+  width: 1.257862rem;
+  text-align: center;
+  font-size: 0.377358rem;
+  font-family: Industry;
+  color: #000000;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .map_grade {
+  left: 6.981132rem;
+  width: 1.257862rem;
+  text-align: center;
+  font-size: 0.377358rem;
+  font-family: Industry;
+  color: #000000;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .score {
+  right: 0.566038rem;
+  font-size: 0.377358rem;
+  font-family: Industry;
+  color: #bb2a2a;
+  font-weight: bold;
+}
+#app .match_integral .ranking_body .ranking_body_item .team_item .score.add {
+  color: #267421;
+}
+#app .match_integral .ranking_body .ranking_body_item.active {
+  display: block;
+}
+#app .team_data {
+  display: none;
+}
+#app .team_data .ranking_title {
+  margin-top: 0.157233rem;
+  height: 0.786164rem;
+  background: #ffffff;
+  display: flex;
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box;
+  /* Firefox 17- */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex;
+  /* Firefox 18+ */
+  display: -ms-flexbox;
+  /* IE 10 */
+  flex-direction: row;
+  -webkit-box-orient: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+}
+#app .team_data .ranking_title .ranking_title_item {
+  width: 100%;
+  height: 0.786164rem;
+  line-height: 0.786164rem;
+  font-size: 0.377358rem;
+  font-family: 'Microsoft YaHei UI';
+  color: #898989;
+  text-align: center;
+  cursor: pointer;
+}
+#app .team_data .ranking_title .ranking_title_item.active {
+  background: #ee9f38;
+  color: #ffffff;
+}
+#app .team_data .ranking_body .ranking_body_item {
+  height: 5.566038rem;
+  background: #ffffff;
+  display: none;
+  padding-left: 0.314465rem;
+  padding-right: 0.283019rem;
+  box-sizing: border-box;
+}
+#app .team_data .ranking_body .ranking_body_item .team_item {
+  float: left;
+  width: 1.257862rem;
+  text-align: center;
+  margin-right: 0.77044rem;
+  margin-top: 0.345912rem;
+}
+#app .team_data .ranking_body .ranking_body_item .team_item.active .team_name{
+  color: rgba(238,159,56,1);
+}
+#app .team_data .ranking_body .ranking_body_item .team_item .team_icon {
+  width: 1.226415rem;
+  height: 1.226415rem;
+}
+#app .team_data .ranking_body .ranking_body_item .team_item .team_icon > img {
+  width: 100%;
+  height: 100%;
+}
+#app .team_data .ranking_body .ranking_body_item .team_item .team_name {
+  margin-top: 0.157233rem;
+  font-size: 0.314465rem;
+  color: #000000;
+  font-family: "Microsoft YaHei UI";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-align: center;
+}
+#app .team_data .ranking_body .ranking_body_item .team_item:nth-of-type(5) {
+  margin-right: 0;
+}
+#app .team_data .ranking_body .ranking_body_item .team_item:nth-of-type(10) {
+  margin-right: 0;
+}
+#app .team_data .ranking_body .ranking_body_item.active {
+  display: block;
+}
+#app .team_data .team_info_box {
+  width: 10rem;
+  height: 8.427673rem;
+  background: url("../images/bg_dibu.png") no-repeat;
+  background-color: #333333;
+  background-size: 100% 100%;
+}
+#app .team_data .team_info_box .info_one_line {
+  height: 2.54717rem;
+  position: relative;
+}
+#app .team_data .team_info_box .info_one_line > div {
+  position: absolute;
+}
+#app .team_data .team_info_box .info_one_line .team_icon {
+  left: 0.440252rem;
+  top: 0.786164rem;
+  width: 1.477987rem;
+  height: 1.477987rem;
+}
+#app .team_data .team_info_box .info_one_line .team_icon > img {
+  width: 100%;
+  height: 100%;
+}
+#app .team_data .team_info_box .info_one_line .team_name {
+  width: 3.018868rem;
+  top: 0.72327rem;
+  left: 2.169811rem;
+  font-size: 12px;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .team_data .team_info_box .info_one_line .label {
+  top: 1.572327rem;
+  left: 2.169811rem;
+  font-size: 0.377358rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .team_data .team_info_box .info_one_line .win_rate {
+  top: 1.415094rem;
+  left: 3.238994rem;
+  font-size: 0.754717rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ee9f38;
+}
+#app .team_data .team_info_box .info_one_line .match_record,
+#app .team_data .team_info_box .info_one_line .map_record {
+  top: 0.849057rem;
+  width: 1.855346rem;
+  height: 1.163522rem;
+  background: #404040;
+}
+#app .team_data .team_info_box .info_one_line .match_record .top,
+#app .team_data .team_info_box .info_one_line .map_record .top {
+  height: 0.566038rem;
+  background: #ee9f38;
+  text-align: center;
+  line-height: 0.566038rem;
+  font-size: 0.345912rem;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .team_data .team_info_box .info_one_line .match_record .bottom,
+#app .team_data .team_info_box .info_one_line .map_record .bottom {
+  height: 0.597484rem;
+  text-align: center;
+  line-height: 0.697484rem;
+  font-size: 0.345912rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .team_data .team_info_box .info_one_line .match_record {
+  left: 5.377358rem;
+}
+#app .team_data .team_info_box .info_one_line .map_record {
+  left: 7.704403rem;
+}
+#app .team_data .team_info_box .info_two_line {
+  height: 2.610063rem;
+  display: flex;
+  justify-content: center;
+}
+#app .team_data .team_info_box .info_two_line .detail_item {
+  width: 1.603774rem;
+  margin-left: 0.314465rem;
+  margin-right: 0.314465rem;
+}
+#app .team_data .team_info_box .info_two_line .detail_item .detail_data {
+  padding-top: 0.108679rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.415094rem;
+  background: url("../images/bg_shenglv.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+#app .team_data .team_info_box .info_two_line .detail_item .detail_data .detail_type_icon {
+  position: absolute;
+  top: 1.069182rem;
+  left: 0.377358rem;
+  width: 0.72327rem;
+  height: 0.72327rem;
+}
+#app .team_data .team_info_box .info_two_line .detail_item .detail_data .detail_data_rate {
+  text-align: center;
+  font-size: 0.377358rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .team_data .team_info_box .info_two_line .detail_item .detail_data .detail_data_record {
+  margin-top: 0.062893rem;
+  text-align: center;
+  font-size: 0.314465rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .team_data .team_info_box .info_two_line .detail_item .detail_type {
+  margin-top: 0.440252rem;
+  margin-left: 0.09434rem;
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .team_data .team_info_box .info_line {
+  width: 8.333333rem;
+  height: 1px;
+  background-color: #262626;
+  margin: 0 auto;
+}
+#app .team_data .team_info_box .enemy_and_restraint {
+  margin-top: 0.345912rem;
+  height: 1.194969rem;
+  display: flex;
+  justify-content: center;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy,
+#app .team_data .team_info_box .enemy_and_restraint .restraint {
+  width: 4.245283rem;
+  margin-left: 0.157233rem;
+  margin-right: 0.157233rem;
+  background: #404040;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy > div,
+#app .team_data .team_info_box .enemy_and_restraint .restraint > div {
+  float: left;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .title,
+#app .team_data .team_info_box .enemy_and_restraint .restraint .title {
+  width: 0.72327rem;
+  height: 100%;
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .icon,
+#app .team_data .team_info_box .enemy_and_restraint .restraint .icon {
+  margin-left: 0.220126rem;
+  width: 0.628931rem;
+  height: 1.194969rem;
+  line-height: 1.194969rem;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .icon img,
+#app .team_data .team_info_box .enemy_and_restraint .restraint .icon img {
+  width: 100%;
+  vertical-align: middle;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .name,
+#app .team_data .team_info_box .enemy_and_restraint .restraint .name {
+  margin-left: 0.125786rem;
+  width: 1.257862rem;
+  font-size: 0.314465rem;
+  height: 1.194969rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .name > div,
+#app .team_data .team_info_box .enemy_and_restraint .restraint .name > div {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  vertical-align: middle;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .win_rate_box,
+#app .team_data .team_info_box .enemy_and_restraint .restraint .win_rate_box {
+  margin-left: 0.157233rem;
+  width: 1.100629rem;
+  text-align: center;
+  height: 1.194969rem;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .win_rate_box .win_rate,
+#app .team_data .team_info_box .enemy_and_restraint .restraint .win_rate_box .win_rate {
+  margin-top: 0.09434rem;
+  font-size: 0.408805rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ee9f38;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .win_rate_box .shenglv,
+#app .team_data .team_info_box .enemy_and_restraint .restraint .win_rate_box .shenglv {
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .team_data .team_info_box .enemy_and_restraint .enemy .title {
+  background: #d83030;
+}
+#app .team_data .team_info_box .enemy_and_restraint .restraint .title {
+  background: #4b93d2;
+}
+#app .team_data .team_info_box .grade {
+  height: 0.943396rem;
+  position: relative;
+  font-size: 0.377358rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .team_data .team_info_box .grade > div {
+  position: absolute;
+  top: 0.377358rem;
+}
+#app .team_data .team_info_box .grade .five_match {
+  left: 0.566038rem;
+}
+#app .team_data .team_info_box .grade .five_match_map {
+  left: 5.188679rem;
+}
+#app .match_data {
+  display: none;
+}
+#app .match_data .match_list_box {
+  margin-top: 0.377358rem;
+}
+#app .match_data .match_list_box .match_list_week {
+  margin-bottom: 0.157233rem;
+}
+#app .match_data .match_list_box .match_list_week .now_week {
+  height: 0.849057rem;
+  line-height: 0.849057rem;
+  padding-left: 0.408805rem;
+  background: #ee9f38;
+  font-size: 0.377358rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .match_data .match_list_box .match_list_week .match_list {
+  margin-top: 0.157233rem;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item {
+  height: 3.144654rem;
+  background: #ffffff;
+  border-radius: 0.125786rem;
+  margin-bottom: 0.157233rem;
+  position: relative;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item > div {
+  position: absolute;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .have_data {
+  top: 0;
+  right: 0.408805rem;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .have_data > img {
+  width: 0.597484rem;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .time {
+  left: 0.377358rem;
+  top: 0.220126rem;
+  font-size: 10px;
+  font-family: "Microsoft YaHei UI";
+  color: #8b8b8b;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .vs {
+  left: 1.100629rem;
+  top: 1.761006rem;
+  font-size: 0.188679rem;
+  font-family: "Microsoft YaHei UI";
+  color: #8b8b8b;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .line {
+  left: 1.383648rem;
+  top: 1.886792rem;
+  width: 8.207547rem;
+  height: 1px;
+  background-color: #f2f2f2;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .icon {
+  left: 0.408805rem;
+  width: 0.849057rem;
+  height: 0.849057rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .icon > img {
+  width: 100%;
+  height: 100%;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .teamA_icon {
+  top: 0.91195rem;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .teamB_icon {
+  top: 2.044025rem;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .name {
+  left: 1.383648rem;
+  font-size: 0.377358rem;
+  font-family: "Microsoft YaHei UI";
+  color: #8b8b8b;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .teamA_name {
+  top: 1.100629rem;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .teamB_name {
+  top: 2.232704rem;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .score {
+  left: 7.610063rem;
+  width: 0.534591rem;
+  height: 0.660377rem;
+  background: #000000;
+  border-radius: 0.062893rem;
+  line-height: 0.660377rem;
+  text-align: center;
+  font-size: 0.377358rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .teamA_score {
+  top: 1.037736rem;
+}
+#app .match_data .match_list_box .match_list_week .match_list .match_list_item .teamB_score {
+  top: 2.138365rem;
+}
+#app .match_info {
+  display: none;
+}
+#app .match_info .tab_title {
+  height: 0.660377rem;
+}
+#app .match_info .tab_title .title_button {
+  float: right;
+  width: 1.918239rem;
+  height: 0.754717rem;
+  background: #131313;
+  border-radius: 0.125786rem;
+  box-sizing: border-box;
+  border: 1px solid #f5ab16;
+  text-align: center;
+  line-height: 0.754717rem;
+  font-size: 0.377358rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .match_info .match_box {
+  margin-top: 0.188679rem;
+  display: none;
+  background: #ffffff;
+  padding-top: 0.440252rem;
+}
+#app .match_info .match_box .team_vs {
+  text-align: center;
+}
+#app .match_info .match_box .team_vs > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#app .match_info .match_box .team_vs .team {
+  width: 2.075472rem;
+}
+#app .match_info .match_box .team_vs .team .team_icon > img {
+  width: 100%;
+  height: 2.075472rem;
+}
+#app .match_info .match_box .team_vs .team .team_name {
+  margin-top: 0.09434rem;
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #1d1d1d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .match_info .match_box .detail_box {
+  margin-top: 0.251572rem;
+}
+#app .match_info .match_box .detail_box .small_score_Box {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box {
+  border: 1px solid #e59a38;
+  overflow: hidden;
+  background: #3b3b3b;
+  display: inline-block;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score {
+  float: left;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score .box_item {
+  height: 0.597484rem;
+  width: 1.163522rem;
+  line-height: 0.597484rem;
+  font-size: 0.314465rem;
+  font-family: 'Microsoft YaHei UI';
+  color: #9a9a9a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score .box_item.win {
+  color: #5bdf52;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score .box_item.lose {
+  color: #d64444;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score .box_item.team_title {
+  padding-left: 0.283019rem;
+  padding-right: 0.220126rem;
+  color: #ffffff;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score.title .box_item {
+  width: 1.792453rem;
+  box-sizing: border-box;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score:nth-of-type(even) .box_item {
+  background: #404040;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score .box_item:nth-of-type(2) {
+  position: relative;
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .small_score .box_item:nth-of-type(2)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.11);
+}
+#app .match_info .match_box .detail_box .small_score_Box .score_box .last_item {
+  border: none;
+}
+#app .match_info .match_box .enemy_and_restraint {
+  font-size: 0;
+  text-align: center;
+}
+#app .match_info .match_box .enemy_and_restraint > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#app .match_info .match_box .enemy_and_restraint .zhanwei {
+  width: 0.754717rem;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint {
+  width: 4.245283rem;
+  height: 1.194969rem;
+  background: #404040;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy > div,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint > div {
+  float: left;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .title,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .title {
+  width: 0.72327rem;
+  height: 100%;
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .icon,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .icon {
+  margin-left: 0.220126rem;
+  width: 0.628931rem;
+  height: 1.194969rem;
+  line-height: 1.194969rem;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .icon img,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .icon img {
+  width: 100%;
+  vertical-align: middle;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .name,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .name {
+  margin-left: 0.125786rem;
+  width: 1.257862rem;
+  font-size: 0.314465rem;
+  height: 1.194969rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .name > div,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .name > div {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  vertical-align: middle;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .win_rate_box,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .win_rate_box {
+  margin-left: 0.157233rem;
+  width: 1.100629rem;
+  text-align: center;
+  height: 1.194969rem;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .win_rate_box .win_rate,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .win_rate_box .win_rate {
+  margin-top: 0.09434rem;
+  font-size: 0.408805rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ee9f38;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .win_rate_box .shenglv,
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .win_rate_box .shenglv {
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy {
+  margin-bottom: 0.188679rem;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .enemy .title {
+  background: #d83030;
+}
+#app .match_info .match_box .enemy_and_restraint .team_data .restraint .title {
+  background: #4b93d2;
+}
+#app .match_info .match_box .teamData_and_matchData {
+  height: 14.18239rem;
+  background: url("../images/bg_ditu_long.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 0.251572rem;
+  padding-top: 0.849057rem;
+  box-sizing: border-box;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade {
+  margin-top: 0.471698rem;
+  font-size: 0;
+  text-align: center;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .zhanwei {
+  width: 0.754717rem;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data {
+  width: 4.622642rem;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data .map_item {
+  margin-bottom: 0.220126rem;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data .map_item .detail_data {
+  position: relative;
+  width: 1.855346rem;
+  height: 0.471698rem;
+  text-align: center;
+  line-height: 0.471698rem;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data .map_item .detail_data .detail_data_rate {
+  font-size: 0.440252rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 0.590252rem;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data .map_item .detail_data .detail_type_icon {
+  position: absolute;
+  top: -0.125786rem;
+  width: 0.691824rem;
+  height: 0.691824rem;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data .map_item .detail_type {
+  margin-top: 0.157233rem;
+  text-align: center;
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data.team_a .map_item {
+  float: right;
+  margin-left: 0.408805rem;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data.team_a .map_item .detail_data {
+  background: url("../images/bg_zhanlingyaodian_zuo.png") no-repeat;
+  background-size: 100% 100%;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data.team_a .map_item .detail_data .detail_type_icon {
+  left: -0.251572rem;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data.team_b .map_item {
+  margin-right: 0.408805rem;
+  float: left;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data.team_b .map_item .detail_data {
+  background: url("../images/bg_zhanlingyaodian_you.png") no-repeat;
+  background-size: 100% 100%;
+}
+#app .match_info .match_box .teamData_and_matchData .map_grade .team_data.team_b .map_item .detail_data .detail_type_icon {
+  right: -0.251572rem;
+}
+#app .match_info .match_box .teamData_and_matchData .small_score_title {
+  margin-top: 0.408805rem;
+  height: 0.943396rem;
+  text-align: center;
+  font-size: 0px;
+  width: 9.496855rem;
+  background: #404040;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+#app .match_info .match_box .teamData_and_matchData .small_score_title .small_score_title_ul {
+  width: 31446.509434rem;
+}
+#app .match_info .match_box .teamData_and_matchData .small_score_title .small_score_title_ul .small_score_title_item {
+  float: left;
+  margin-right: 0.534591rem;
+  width: 1.918239rem;
+  height: 0.943396rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 0.943396rem;
+  font-size: 0.345912rem;
+  font-family: "Microsoft YaHei UI";
+  color: #bcbcbc;
+}
+#app .match_info .match_box .teamData_and_matchData .small_score_title .small_score_title_ul .small_score_title_item.active {
+  background: #e59a38;
+  color: #ffffff;
+}
+#app .match_info .match_box .teamData_and_matchData .doing_map_box {
+  width: 3.081761rem;
+  height: 1.603774rem;
+  background: #404040;
+  text-align: center;
+  line-height: 1.603774rem;
+  margin: 0 auto;
+  margin-top: 0.314465rem;
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  color: #9a9a9a;
+}
+#app .match_info .match_box .teamData_and_matchData .map_name {
+  margin-top: 0.09434rem;
+  text-align: center;
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .match_info .match_box .data_compared {
+  margin-top: 0.503145rem;
+}
+#app .match_info .match_box .data_compared .data_compared_item {
+  height: 0.566038rem;
+  margin-bottom: 0.408805rem;
+  text-align: center;
+  font-size: 0;
+}
+#app .match_info .match_box .data_compared .data_compared_item > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#app .match_info .match_box .data_compared .data_compared_item .team_compared {
+  width: 3.27044rem;
+  height: 0.566038rem;
+  background: #2b2b2b;
+  position: relative;
+}
+#app .match_info .match_box .data_compared .data_compared_item .team_compared .win_rate {
+  height: 100%;
+}
+#app .match_info .match_box .data_compared .data_compared_item .team_compared .win_rate_text {
+  top: 0;
+  height: 0.566038rem;
+  position: absolute;
+  font-size: 0.377358rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 0.666038rem;
+}
+#app .match_info .match_box .data_compared .data_compared_item .team_compared.team_a_data .win_rate {
+  float: right;
+  background: linear-gradient(94deg, #ee5050 0%, #bb3636 100%);
+}
+#app .match_info .match_box .data_compared .data_compared_item .team_compared.team_a_data .win_rate_text {
+  right: 0.157233rem;
+}
+#app .match_info .match_box .data_compared .data_compared_item .team_compared.team_b_data .win_rate {
+  float: left;
+  background: linear-gradient(266deg, #ee5050 0%, #bb3636 100%);
+}
+#app .match_info .match_box .data_compared .data_compared_item .team_compared.team_b_data .win_rate_text {
+  left: 0.125786rem;
+}
+#app .match_info .match_box .data_compared .data_compared_item .description {
+  width: 2.106918rem;
+  height: 100%;
+  line-height: 0.566038rem;
+}
+#app .match_info .match_box .data_compared .data_compared_item .description > img {
+  width: 0.471698rem;
+  vertical-align: top;
+}
+#app .match_info .match_box .data_compared .data_compared_item .description > span {
+  margin-left: 0.062893rem;
+  font-size: 0.314465rem;
+  font-family: Microsoft YaHei UI;
+  color: #ffffff;
+}
+#app .match_info .match_box .data_compared.doing {
+  margin-top: 25px;
+  font-size: 0;
+}
+#app .match_info .match_box .data_compared.doing .data_compared_item {
+  margin-bottom: 18px;
+}
+#app .match_info .match_box .data_compared.over {
+  font-size: 0;
+}
+#app .match_info .match_box .data_compared.over .data_compared_item {
+  margin-bottom: 18px;
+}
+#app .match_info .match_box .data_compared.over .data_compared_item .team_compared.nobg {
+  background-color: transparent;
+}
+#app .match_info .match_box .data_compared.over .data_compared_item .left_other .win_rate_text {
+  right: 0;
+}
+#app .match_info .match_box .data_compared.over .data_compared_item .right_other .win_rate_text {
+  left: 0;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item {
+  display: none;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box {
+  position: relative;
+  background-size: 100% 100%;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box > div {
+  position: absolute;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box .map_name {
+  bottom: 0;
+  left: 0;
+  width: 3.081761rem;
+  height: 0.503145rem;
+  background: rgba(0, 0, 0, 0.59);
+  text-align: center;
+  line-height: 0.503145rem;
+  font-size: 0.314465rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box .team_win {
+  top: 0.062893rem;
+  width: 1.415094rem;
+  height: 1.63522rem;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box .team_win > img {
+  width: 100%;
+  height: 100%;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box .team_a_win {
+  left: -2.672956rem;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box .team_b_win {
+  right: -2.672956rem;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box .map_icon {
+  top: 0.031447rem;
+  left: 0.062893rem;
+  width: 0.660377rem;
+  height: 0.660377rem;
+  line-height: 0.660377rem;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item .doing_map_box .map_icon > img {
+  width: 0.660377rem;
+  height: 0.660377rem;
+}
+#app .match_info .match_box .small_match_boxs .small_match_item.active {
+  display: block;
+}
+#app .match_info .match_box.show {
+  display: block;
+}
+#app .match_info .notStart .team_vs .vs {
+  width: 4.654088rem;
+  text-align: center;
+  padding-top: 0.628931rem;
+}
+#app .match_info .notStart .team_vs .vs img {
+  width: 1.163522rem;
+  height: 1.037736rem;
+}
+#app .match_info .notStart .team_vs .vs .match_time {
+  margin-top: 0.09434rem;
+  font-size: 0.377358rem;
+  font-family: "Microsoft YaHei UI";
+  color: #000000;
+}
+#app .match_info .notStart .team_grade {
+  text-align: center;
+  font-size: 0;
+}
+#app .match_info .notStart .team_grade > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#app .match_info .notStart .team_grade .match_record {
+  width: 2.421384rem;
+  height: 1.163522rem;
+  background: #404040;
+}
+#app .match_info .notStart .team_grade .match_record .top {
+  height: 0.566038rem;
+  background: #ee9f38;
+  text-align: center;
+  line-height: 0.566038rem;
+  font-size: 0.345912rem;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+}
+#app .match_info .notStart .team_grade .match_record .bottom {
+  height: 0.597484rem;
+  text-align: center;
+  line-height: 0.697484rem;
+  font-size: 0.345912rem;
+  font-family: "Microsoft YaHei UI";
+  color: #ffffff;
+}
+#app .match_info .notStart .team_grade .zhanwei {
+  width: 0.251572rem;
+}
+#app .match_info .notStart .team_grade .zhanwei1 {
+  width: 0.880503rem;
+}
+#app .match_info .notStart .team_grade .team_win_rate {
+  width: 1.509434rem;
+  height: 1.509434rem;
+  background: url("../images/bg_shenglv_duizhan.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+#app .match_info .notStart .team_grade .team_win_rate .win_rate {
+  margin-top: 0.377358rem;
+  font-size: 0.534591rem;
+  font-family: "Industry";
+  font-weight: bold;
+  color: #ee9f38;
+  line-height: 0.534591rem;
+}
+#app .match_info .notStart .team_grade .team_win_rate .lable {
+  margin-top: 0.09434rem;
+  font-size: 0.283019rem;
+  font-family: "Microsoft YaHei UI";
+  color: #444444;
+  line-height: 0.283019rem;
+}
+#app .match_info .notStart .match_infoBox {
+  margin: 0 auto;
+  margin-top: 0.283019rem;
+  width: 10rem;
+  height: 8.490566rem;
+  background: url("../images/bg_dibu.png") no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding-top: 0.849057rem;
+}
+#app .match_info .doing .team_vs .vs,
+#app .match_info .over .team_vs .vs {
+  width: 4.454088rem;
+  text-align: center;
+  font-size: 0.754717rem;
+  font-family: Industry;
+  font-weight: bold;
+  color: #9f9f9f;
+}
+#app .match_info .doing .team_vs .vs span.win,
+#app .match_info .over .team_vs .vs span.win {
+  color: #ee9f38;
+}
+#app .match_info .doing .team_vs .vs .dian,
+#app .match_info .over .team_vs .vs .dian {
+  margin-left: 0.09434rem;
+  margin-right: 0.09434rem;
+  font-family: "宋体";
+}
+#app .match_integral .tab_title,
+#app .team_data .tab_title,
+#app .match_data .tab_title {
+  height: 0.660377rem;
+}
+#app .match_integral .tab_title .title_button,
+#app .team_data .tab_title .title_button,
+#app .match_data .tab_title .title_button {
+  float: right;
+  width: 4.528302rem;
+  height: 0.660377rem;
+  background: #ffffff;
+  border-radius: 0.09434rem;
+  box-sizing: border-box;
+  padding-left: 0.09434rem;
+  padding-top: 0.062893rem;
+}
+#app .match_integral .tab_title .title_button .left,
+#app .team_data .tab_title .title_button .left,
+#app .match_data .tab_title .title_button .left {
+  float: left;
+  width: 3.867925rem;
+  height: 0.534591rem;
+  border: 1px solid #f5ab16;
+  border-radius: 0.09434rem;
+  box-sizing: border-box;
+  font-size: 0.377358rem;
+  font-family: "Microsoft YaHei UI";
+  line-height: 0.534591rem;
+  color: #000000;
+  text-align: center;
+}
+#app .match_integral .tab_title .title_button .rigth,
+#app .team_data .tab_title .title_button .rigth,
+#app .match_data .tab_title .title_button .rigth {
+  float: left;
+  width: 0.534591rem;
+  height: 0.534591rem;
+  background: url("../images/ic_xiala.png") no-repeat;
+  background-size: 100% 100%;
+}
+#app .match_integral.show,
+#app .team_data.show,
+#app .match_data.show,
+#app .match_info.show {
+  display: block;
+}

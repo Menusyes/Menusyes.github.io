@@ -1,0 +1,242 @@
+.magneticBox .title {
+    height: 54px;
+    background-color: #2A2D33;
+    position: relative;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 54px;
+}
+
+.magneticBox .title>div {
+    position: absolute;
+    height: 100%;
+}
+
+.magneticBox .title .logo {
+    left: 37px;
+}
+
+.magneticBox .title .logo img {
+    height: 19px;
+}
+
+.magneticBox .title .client {
+    left: 234px;
+    position: absolute;
+}
+
+.magneticBox .title .client span {
+    color: #768199;
+}
+
+.magneticBox .title .client a {
+    display: inline-block;
+    margin-left: 12px;
+    color: #ffffff;
+    position: relative;
+    padding-right: 30px;
+}
+
+.magneticBox .title .client a::after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5.5px 0 5.5px;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.magneticBox .title .select {
+    position: absolute;
+    left: 308px;
+    top: 44px;
+    background-color: #393F4A;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: opacity .5s;
+    z-index: 999;
+    text-align: center;
+}
+
+.magneticBox .title .select li {
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    padding: 0 15px;
+}
+
+.magneticBox .title .hidden {
+    opacity: 0;
+    height: 0;
+}
+.magneticBox .content {
+    /* width: 1920px; */
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display:-webkit-box;
+    display:-webkit-flex; 
+    display:-moz-box; 
+    display:-ms-flexbox; 
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+}
+.magneticBox .content .item {
+    /* width:40px;
+    height:40px; */
+    /* width:20px;
+    height:20px; */
+    width:60px;
+    height:60px;
+    box-sizing: border-box;
+    border:1px solid rgba(38,41,46,1);
+    /* border-radius:4px; */
+    /* border-radius:2px; */
+    border-radius:6px;
+    cursor: pointer;
+}
+.magneticBox .content .item.active {
+    border-color: #FF0000;
+}
+/* .magneticBox .content .item:hover {
+    opacity: 0.9;
+} */
+.white {
+    background:rgba(255,255,255,1);
+}
+.green {
+    background:rgba(75,203,118,1);
+}
+.yellow {
+    background:rgba(220,215,68,1);
+}
+.red {
+    background:rgba(233,85,87,1);
+}
+
+.shade {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.shade_bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.shadeBoxs {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%) ;
+    width: 999999px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.shadeBox {
+    position: relative;
+    width:677px;
+    height: auto;
+    /* height:494px; */
+    border-radius:5px;
+    background:rgba(43,48,56,1);
+    box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+    font-size: 16px;
+    padding-bottom: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.shade_show {
+    display: block;
+}
+.shade_close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    /* color: #fff; */
+}
+.shade_close img {
+    /* width: 35px; */
+    /* width: 10px; */
+    width: 30px;
+}
+
+.shadeBox .match_data {
+    width:677px;
+    /* height:134px; */
+    background:rgba(55,61,71,1);
+    opacity:1;
+    border-radius:5px 5px 0px 0px;
+    padding-top: 46px;
+    padding-bottom: 18px;
+    box-sizing: border-box;
+}
+
+.shade_content {
+    text-align: center;
+    color:rgba(212,212,212,1);
+}
+
+.shade_content span {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.team {
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+
+}
+.guess {
+    color:rgba(75,203,118,1);
+    text-align: center;
+    margin-top: 5px;
+}
+.bet_title {
+    margin-top: 11px;
+    padding-left: 54px;
+    font-size:16px;
+    font-family:"Microsoft YaHei UI";
+    color:rgba(162,162,162,1);
+}
+.bet_list {
+    margin-top: 15px;
+}
+.bet_list .bet_item {
+    height:30px;
+    color:rgba(220,220,220,1);
+    position: relative;
+    line-height: 30px;
+}
+.bet_list .bet_item > div {
+    position: absolute;
+    top: 0;
+    height: 30px;
+}
+.bet_list .bet_item .time {
+    left: 54px;
+}
+.bet_list .bet_item .user_name {
+    left: 222px;
+}
+.bet_list .bet_item .bet_num {
+    left: 382px;
+}
+.bet_list .bet_item .money {
+    left: 543px;
+}
+.bet_list .bet_item:nth-of-type(even) {
+    background:rgba(39,44,51,1);
+}

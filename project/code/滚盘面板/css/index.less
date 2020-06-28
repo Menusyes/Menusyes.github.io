@@ -1,0 +1,552 @@
+body,div,ul,li,p,span,i,b,h1,h2,h3,h4,h5,h6,a,img,table,tr,td,button {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑", "宋体", "Arial Narrow";
+    background:rgba(245,246,250,1);
+    // overflow: scroll;
+}
+// table { border-collapse:collapse; }
+table{border-collapse:collapse;border-spacing:0} 
+button {
+    border: none;
+    outline: none;
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+// a {
+//     text-decoration: none;
+// }
+// select {
+//     vertical-align: middle;
+// }
+// img {
+//     border: none;
+// }
+.clear{ 
+    clear:both;
+} 
+body::-webkit-scrollbar {
+    display:none
+}
+#app {
+    width: 1900px;
+    height: 1070px;
+    margin: 0 auto;
+    position: relative;
+    .guessing_box {
+        position: absolute;
+        // position: fixed;
+        left: 0;
+        top: 0;
+        width:556px;
+        // height: 100vh;
+        height:1070px;
+        background:rgba(255,255,255,1);
+        box-shadow:2px 0px 7px rgba(0,0,0,0.06);
+        padding-top: 9px;
+        box-sizing: border-box;
+        overflow: scroll;
+        .filter_box {
+            .filter_title{
+                margin-left: 19px;
+                font-size:14px;
+                font-family:"Microsoft YaHei UI";
+                color:rgba(187,187,187,1);
+            }
+            .filter_body {
+                margin-top: 10px;
+                position: relative;
+                >div {
+                    float: left;
+                }
+                .quiz_item {
+                    margin-left: 15px;
+                    width:189px;
+                    height:30px;
+                    background:rgba(245,246,250,1);
+                    border:1px solid rgba(213,213,213,1);
+                    border-radius:15px;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    .now_select {
+                        float: left;
+                        width: 164px;
+                        height:30px;
+                        line-height: 30px;
+                        text-align: center;
+                        font-size:14px;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(26,26,26,.74);
+                    }
+                }
+                .quiz_item,.client_item {
+                    .lable {
+                        float: left;
+                        i {
+                            display :inline-block;
+                            position: relative;
+                        }
+                        i::after {
+                            display: inline-block;
+                            content: " ";
+                            height: 8px;
+                            width: 8px;
+                            border-width: 0 1px 1px 0;
+                            border-color: #999999;
+                            border-style: solid;
+                            transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+                            transform-origin: center;
+                            transition: transform .2s;
+                            position: absolute;
+                            top: 50%;
+                            // right: 10px;
+                            margin-top: -10px;
+                        }
+                    }
+                }
+                .client_item.active,
+                .quiz_item.active {
+                    .lable {
+                        // 加上active旋转成 上箭头
+                        i::after {
+                            transform-origin: center;
+                            transform: rotate(-135deg);
+                            margin-top: -5px;
+                        }
+                    }
+                }
+                .refresh_button {
+                    width:81px;
+                    height:30px;
+                    background:rgba(89,140,255,1);
+                    box-shadow:0px 3px 6px rgba(45,121,228,0.24);
+                    border-radius:4px;
+                    font-size:14px;
+                    font-family:"Microsoft YaHei UI";
+                    color:rgba(248,248,248,1);
+                    text-align: center;
+                    line-height: 30px;
+                    cursor: pointer;
+                    .sk-fading-circle {
+                        display: none;
+                    }
+                }
+                .refresh_button.loading {
+                    span {
+                        display: none;
+                    }
+                    .sk-fading-circle {
+                        display: inline-block;
+                    }
+                }
+                .refresh_button:hover {
+                    background:rgba(89,140,255,.8);
+                }
+                .client_item {
+                    margin-left: 29px;
+                    width:123px;
+                    height:30px;
+                    background:rgba(245,246,250,1);
+                    border:1px solid rgba(213,213,213,1);
+                    border-radius:15px;
+                    cursor: pointer;
+                    // position: relative;
+                    box-sizing: border-box;
+                    .now_select {
+                        width: 94px;
+                        float: left;
+                        height:30px;
+                        line-height: 30px;
+                        font-size:14px;
+                        font-family:"Microsoft YaHei UI";
+                        color:rgba(26,26,26,.74);
+                        box-sizing: border-box;
+                        // padding-left: 14px;
+                        text-align: center;
+                    }
+                }
+                .quiz_refresh {
+                    margin-left: 11px;
+                }
+                .client_refresh {
+                    margin-left: 7px;
+                }
+                .quiz_select,
+                .client_select {
+                    position: absolute;
+                    opacity: 0;
+                    height: 0;
+                    top: 30px;
+                    background:rgba(245,246,250,1);
+                    border-radius: 5px;
+                    overflow: hidden;
+                    transition: opacity .5s;
+                    z-index: 999;
+                    text-align: center;
+                    >li {
+                        cursor: pointer;
+                        height: 40px;
+                        line-height: 40px;
+                        color:rgba(26,26,26,1);
+                        padding: 0 15px;
+                        font-size: 14px;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                    }
+                    >li:hover {
+                        color:rgba(120,120,120,1);
+                    }
+                }
+                .quiz_select {
+                    left: 15px;
+                    width:189px;
+                }
+                .client_select {
+                    left: 325px;
+                    width:123px;
+                }
+                .quiz_select.show,
+                .client_select.show {
+                    opacity: 1;
+                    height: auto;
+                }
+            }
+        }
+        .title_info {
+            height: 55px;
+            font-size:14px;
+            font-family:"Microsoft YaHei UI";
+            color:rgba(116,116,116,1);
+            position: relative;
+            >div {
+                position: absolute;
+                top: 29px;
+            }
+            .time {
+                left: 19px;
+            }
+            .user_name {
+                left: 83px;
+            }
+            .content {
+                left: 182px;
+            }
+            .bet_name {
+                left: 313px;
+            }
+            .bet_odds {
+                left: 380px;
+            }
+            .money {
+                left: 436px;
+            }
+            .client {
+                left: 498px;
+            }
+            .line {
+                left: 0;
+                width:518px;
+                height: 1px;
+                top: 54px;
+                background-color: rgba(214,214,214,1);
+            }
+        }
+        .bet_history_list {
+            height: 945px;
+            overflow: scroll;
+            padding-bottom: 3px;
+            box-sizing: border-box;
+            .bet_history_item {
+                height:49px;
+                position: relative;
+                font-size:12px;
+                font-family:"Microsoft YaHei UI";
+                color:rgba(92,92,92,1);
+                >div {
+                    position: absolute;
+                    height:49px;
+                    line-height: 49px;
+                }
+                .time {
+                    left: 19px;
+                }
+                .user_name {
+                    left: 83px;
+                    width: 90px;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+                .content {
+                    left: 182px;
+                    width: 127px;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+                .bet_name {
+                    left: 313px;
+                    width: 62px;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+                .bet_odds {
+                    left: 380px;
+                }
+                .money {
+                    left: 436px;
+                }
+                .client {
+                    left: 498px;
+                }
+            }
+            .bet_history_item:nth-of-type(even) {
+                background:rgba(247,247,247,1);
+            }
+            .bet_history_item.active {
+                background:rgba(230,238,255,1);
+                color:rgba(72,128,255,1);
+            }
+        }
+        .bet_history_list::-webkit-scrollbar {
+            display:none
+        }
+    }
+    .roller_box::-webkit-scrollbar,
+    .guessing_box::-webkit-scrollbar {
+        display:none;
+    }
+    .roller_box {
+        margin-left: 556px;
+        width: 1344px;
+        height: 1070px;
+        overflow: scroll;
+        // background-color: #f00;
+        .control_box {
+            width:1344px;
+            height:74px;
+            background:rgba(255,255,255,1);
+            >div {
+                float: left;
+            }
+            .range_range {
+                // background-color: #f00;
+                height: 74px;
+                line-height: 77px;
+                padding-left: 11px;
+                box-sizing: border-box;
+                font-size:14px;
+                font-family:Roboto;
+                color:rgba(85,85,85,1);
+                >label {
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+                .regular-radio {
+                    display: none;
+                }
+                .regular-radio + label {
+                    -webkit-appearance: none;
+                    border: 1px solid rgba(112,112,112,1);
+                    padding: 8px;
+                    border-radius: 50px;
+                    display: inline-block;
+                    position: relative;
+                    vertical-align: text-bottom;
+                    margin-right: 3px;
+                }
+                .regular-radio:checked + label:after {
+                    content:' ';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50px;
+                    position: absolute;
+                    top: 3px;
+                    background: rgba(89,140,255,1);
+                    left: 3px;
+                }
+                .regular-radio:checked + label {
+                    border: 1px solid rgba(89,140,255,1);
+                }
+            }
+            .line {
+                margin-top: 27px;
+                width: 1px;
+                height: 24px;
+                background-color: rgba(216,216,216,1);
+            }
+            .open,.suspend {
+                margin-top: 18px;
+                width:106px;
+                height:44px;
+                background:rgba(255,255,255,1);
+                border:1px solid rgba(186,207,255,1);
+                border-radius:4px;
+                text-align: center;
+                line-height: 44px;
+                box-sizing: border-box;
+                font-size:16px;
+                font-family:"Microsoft YaHei UI";
+                color:rgba(106,106,106,1);
+                cursor: pointer;
+            }
+            .open:hover,
+            .suspend:hover {
+                color: #fff;
+                background-color: rgba(186,207,255,1);
+                border-color: transparent;
+            }
+            .open:active,
+            .suspend:active {
+                color: #fff;
+                background-color: rgba(186,207,255,1);
+                border-color: transparent;
+                transform: scale(0.8);
+            }
+            .open {
+                margin-left: 13px;
+            }
+            .suspend {
+                margin-left: 8px;
+                margin-right: 19px;
+            }
+            .refresh_button {
+                margin-top: 24px;
+                margin-left: 13px;
+                width:32px;
+                height:32px;
+                // background:rgba(45,121,228,1);
+                // box-shadow:0px 3px 6px rgba(45,121,228,0.18);
+                cursor: pointer;
+                >img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .only_open,.only_suspend {
+                margin-top: 18px;
+                width:100px;
+                height:44px;
+                text-align: center;
+                line-height: 44px;
+                font-size:16px;
+                font-family:"Microsoft YaHei UI";
+                border-radius:4px;
+                cursor: pointer;
+            }
+            .only_open {
+                margin-left: 22px;
+                background:rgba(255,255,255,1);
+                border:1px solid rgba(66,205,123,1);
+                box-sizing: border-box;
+                color:rgba(106,106,106,1);
+            }
+            .only_open:hover {
+                background-color: rgba(66,205,123,1);
+                border-color: transparent;
+                color: #fff;
+            }
+            .only_open:active {
+                background-color: rgba(66,205,123,1);
+                border-color: transparent;
+                color: #fff;
+                transform: scale(0.8);
+            }
+            .only_suspend {
+                margin-left: 11px;
+                margin-right: 10px;
+                background:rgba(228,45,45,1);
+                color:rgba(255,255,255,1);
+            }
+            .only_suspend:hover {
+                background:rgba(228,45,45,.8);
+            }
+            .only_suspend:active {
+                background:rgba(228,45,45,.8);
+                transform: scale(0.8);
+            }
+            .match_control {
+                padding-left: 7px;
+                padding-top: 18px;
+                width: 573px;
+                height: 74px;
+                // background-color: #f00;
+                overflow-x: scroll;
+                // overflow-y: hidden;
+                box-sizing: border-box;
+                .match_control_ul {
+                    height: 44px;
+                    .match {
+                        float: left;
+                        margin-right: 15px;
+                        .match_button {
+                            float: left;
+                            width:61px;
+                            height:44px;
+                            background:rgba(255,255,255,1);
+                            border:1px solid rgba(186,207,255,1);
+                            border-radius:4px;
+                            box-sizing: border-box;
+                            margin-right: 4px;
+                            text-align: center;
+                            line-height: 44px;
+                            font-size:14px;
+                            font-family:"Microsoft YaHei UI";
+                            color:rgba(106,106,106,1);
+                            cursor: pointer;
+                        }
+                        .match_button:active {
+                            transform: scale(0.8);
+                        }
+                        .match_button:hover {
+                            background-color: rgba(186,207,255,1);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            // .match_control
+            .match_control::-webkit-scrollbar {
+                width: 10px;
+                height: 6px;
+            }
+            // 滚动条滑块
+            .match_control::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                background-color: gray;
+                // background:linear-gradient(0deg,rgba(241,70,71,1) 0,rgba(241,70,71,.5) 50%,rgba(241,70,71,1) 100%);
+            }
+            // 滚动条轨道
+            // .match_control::-webkit-scrollbar-track {
+            //     -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+            //     opacity:0.5;
+            // }
+        
+        }
+        .roller {
+            width:1344px;
+            height: 896px;
+            // background-color: #f00;
+            overflow: scroll;
+        }
+        .roller::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        // 滚动条滑块
+        .roller::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background-color: gray;
+            // background:linear-gradient(0deg,rgba(241,70,71,1) 0,rgba(241,70,71,.5) 50%,rgba(241,70,71,1) 100%);
+        }
+    }
+}

@@ -1,0 +1,304 @@
+.videoBox {
+  width: 1080px;
+  height: 640px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.leftContorl {
+  width: 32px;
+  height: 640px;
+  background: rgba(47, 50, 62, 1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.closeImg {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.closeVideo {
+  top: 64px;
+  left: 0;
+}
+
+.closeSearch {
+  top: -15px;
+  right: -15px;
+}
+
+.lcIconBox {
+  width: 32px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.searchBox {
+  top: 266px;
+}
+
+.changeBox {
+  top: 310px;
+}
+
+.situationBox {
+  top: 350px;
+}
+
+.lcIconBox img {
+  width: 24px;
+  display: block;
+  margin: 0 auto;
+}
+
+.searchWindow {
+  width: 220px;
+  min-height: 255px;
+  padding-bottom: 5px;
+  background: rgba(61, 67, 79, 1);
+  position: absolute;
+  top: 185px;
+  left: 32px;
+  z-index: 10;
+  display: none;
+}
+
+.searchId {
+  width: 154px;
+  height: 22px;
+  background: rgba(47, 50, 62, 1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 1px;
+  position: absolute;
+  z-index: 5;
+  top: -9px;
+  left: 28px;
+}
+
+.searchId input {
+  width: 123px;
+  height: 22px;
+  padding-left: 8px;
+  display: block;
+  background: rgba(47, 50, 62, 1);
+  float: left;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.iconEnter {
+  width: 31px;
+  height: 22px;
+  background: rgba(90, 218, 133, 1);
+  border-radius: 1px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  float: left;
+  cursor: pointer;
+}
+
+.iconEnter img {
+  width: 14px;
+  height: 8px;
+  display: block;
+  margin: 8px auto;
+}
+
+.searchTitle {
+  width: 197px;
+  height: 13px;
+  padding-left: 12px;
+  margin-top: 24px;
+  margin-bottom: 11px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgba(142, 155, 184, 1);
+}
+
+.searchLine {
+  width: 215px;
+  height: 19px;
+  padding-left: 5px;
+  padding-top: 4px;
+}
+
+.oddLine {
+  background: rgba(57, 63, 74, 1);
+}
+
+.evenLine {
+  background: rgba(61, 67, 79, 1);
+}
+
+.searchLine div {
+  height: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  float: left;
+}
+
+.idName {
+  width: 43px;
+}
+
+.GameName {
+  width: 71px;
+}
+
+.teamName {
+  width: 100px;
+}
+
+.teamName div {
+  float: left;
+}
+
+.teams {
+  width: 47px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.changeWindow {
+  width: 131px;
+  min-height: 210px;
+  padding-top: 20px;
+  background: rgba(61, 67, 79, 1);
+  position: absolute;
+  top: 197px;
+  left: 32px;
+  z-index: 10;
+  display: none;
+}
+
+.changeLine{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-size:12px;
+  font-weight:400;
+  line-height:28px;
+  color:rgba(255,255,255,1);
+  cursor: pointer;
+}
+
+.changeActive{
+  background:rgba(122,130,145,1)!important;
+}
+
+.situationWindow{
+  width:201px;
+  height:167px;
+  background:rgba(61,67,79,1);
+  position: absolute;
+  top: 237px;
+  left: 32px;
+  z-index: 10;
+  display: none;
+}
+
+.situationTitle{
+  width:100%;
+  height:15px;
+  font-size:12px;
+  font-weight:400;
+  line-height:15px;
+  color:rgba(118,129,153,1);
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 32px;
+}
+
+.situationTeam{
+  width:49px;
+  height: 82px;
+  float: left;
+  margin-left: 13px;
+}
+
+.teamIcon{
+  width:49px;
+  height:46px;
+  background:rgba(48,55,71,1);
+  overflow: hidden;
+}
+
+.teamIcon img{
+  width: 31px;
+  display: block;
+  margin: 7px auto;
+}
+
+.siTeamName{
+  width: 100%;
+  height: 13px;
+  margin-top: 6px;
+  font-size:10px;
+  font-weight:400;
+  line-height:13px;
+  color:rgba(118,129,153,1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.siTeamNum{
+  width:100%;
+  height:14px;
+  margin-top: 3px;
+  font-size:12px;
+  font-family:Roboto;
+  font-weight:500;
+  line-height:14px;
+  color:rgba(255,255,255,1);
+  text-align: center;
+}
+
+.scoreBoard{
+  width: 77px;
+  height: 20px;
+  float: left;
+  margin-top: 14px;
+}
+
+.teamScore{
+  width: 28px;
+  height: 20px;
+  float: left;
+  font-size:16px;
+  font-family:Roboto;
+  font-weight:500;
+  line-height:21px;
+  color:rgba(255,255,255,1);
+  text-align: center;
+}
+
+.colon{
+  width: 10px;
+  height: 20px;
+  float: left;
+  font-size:16px;
+  font-family:Roboto;
+  font-weight:500;
+  line-height:19px;
+  color:rgba(118,129,153,1);
+  text-align: center;
+}

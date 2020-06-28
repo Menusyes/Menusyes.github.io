@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NBA</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/selected.css">
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/art-template.js"></script>
+</head>
+<body>
+    <div class="nbaBox">
+        <div class="bx">
+            <!-- banner -->
+            <div class="banner anchor" >
+                <img class="decorate" src="./images/bg_dongtai1.png">
+                <img class="slogan" src="./images/xunzhaoquanguozuiqiang.png">
+                <img class="tag" src="./images/s2shangjing.png">
+                <img class="leagueLogo" src="./images/liansailogo.png">
+            </div>
+            <!-- content -->
+            <div class="content">
+                <!-- 赛事新闻 -->
+                <div class="news anchor"  id="xinwen">
+                    <img class="title" src="./images/saishixinwen.png">
+                    <div class="videoBox" onclick="openVideo()">
+                        <img class="play" src="./images/bofanganniu.png">
+                    </div>
+                    <div class="articleBox" id="newsArticle">
+                        <a href="javascript:;"  class="article">
+                            <div class="icon">
+                                <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                            </div>
+                            <div class="info">
+                                黄金公开赛厦门站分组出炉大师组套牌公布
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="article">
+                            <div class="icon">
+                                <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                            </div>
+                            <div class="info">
+                                黄金公开赛厦门站分组出炉大师组套牌公布大师组套牌公布大师组套牌公布大师组套牌公布
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="article">
+                            <div class="icon">
+                                <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                            </div>
+                            <div class="info">
+                                黄金公开赛厦门站分组出炉大师组套牌公布
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="article">
+                            <div class="icon">
+                                <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                            </div>
+                            <div class="info">
+                                黄金公开赛厦门站分组出炉大师组套牌公布
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- 赛事数据 -->
+                <div class="match_data anchor"  id="duizhan">
+                    <img class="title" src="./images/duizhanshuju.png">
+                    <div class="selectedBox">  
+                        <div class="selected" id="super_citys">
+                            <img src="./images/bg_chazhao.png"> 
+                            <div class="provinces selected_item">
+                                <input class="input1" type="hidden" value="0" name="">
+                                <input class="input2" type="hidden" value="0" name="">
+                                <div class="selection">请选择赛事类型</div>
+                                <ul class="shadow_ul">
+                                    <!-- <li><input type="hidden" value="0"><span>请选择赛事类型</span></li> -->
+                                </ul>
+                            </div>
+                            <div class="city selected_item">
+                                <input class="input1" type="hidden" value="0" name="">
+                                <input class="input2" type="hidden" value="0" name="">
+                                <div class="selection">请选择赛事流程</div>
+                                <ul>
+                                    <!-- <li><input type="hidden" value="0"><span>请选择赛事流程</span></li> -->
+                                </ul>
+                            </div>
+                            <div class="area selected_item">
+                                <input class="input1" type="hidden" value="0" name="">
+                                <input class="input2" type="hidden" value="0" name="">
+                                <div class="selection">请选择地区</div>
+                                <ul>
+                                    <!-- <li><input type="hidden" value="0"><span>请选择赛事地区</span></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="inquirNow">
+                            <img src="./images/bt_lijichaxun.png"> 
+                        </a>
+                    </div>
+                    <div class="data_details">
+                        <div class="tab_title">
+                            <div class="tabs active">选手胜率</div>
+                            <div class="tabs">球星数据</div>
+                            <div class="tabs">阵容数据</div>
+                        </div>
+                        <!-- 请求模板 -->
+                        <div class="tab_box" id="tab_box">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 赛程表 -->
+                <div class="plan anchor"  id="saicheng">
+                    <img class="title" src="./images/saichengbiao.png">
+                    <img class="plan_box" src="./images/img_saichengbiao-min.png">
+                </div>
+                <!-- 实况录像 -->
+                <div class="live_video anchor"  id="shikuang">
+                    <img class="title" src="./images/shikuangluxiang.png">
+                    <div class="more">
+                        <a href="javascript">查看更多</a>
+                    </div>
+                    <div class="live_box">
+                        <div class="live_box_left">
+                            <!-- <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg"> -->
+                            <div class="video_img_box">
+                                <img class="video_img"  src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                                <a href="https://www.baidu.com">
+                                    <div class="shade">
+                                        <img class="shade_img" src="./images/bofanganniu.png">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="live_box_right">
+                            <div class="video_box">
+                                <div class="video_img_box">
+                                    <img class="video_img"  src="./images/liansailogo.png">
+                                    <a href="javascript:;">
+                                        <div class="shade">
+                                            <img class="shade_img" src="./images/bofanganniu.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video_box">
+                                <div class="video_img_box">
+                                    <img class="video_img"  src="./images/liansailogo.png">
+                                    <a href="javascript:;">
+                                        <div class="shade">
+                                            <img class="shade_img" src="./images/bofanganniu.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video_box">
+                                <div class="video_img_box">
+                                    <img class="video_img"  src="./images/liansailogo.png">
+                                    <a href="javascript:;">
+                                        <div class="shade">
+                                            <img class="shade_img" src="./images/bofanganniu.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!-- 赛事预测 -->
+                <div class="forecast anchor"  id="saishi">
+                    <img class="title" src="./images/saishiyuce.png">
+                    <div class="more">
+                        <a href="javascript">查看更多</a>
+                    </div>
+                    <div class="forecast_box">
+                        <a  href="javascript:;" class="forecast_item">
+                            <div class="icon">
+                                <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                            </div>
+                            <div class="info">
+                                黄金公开赛厦门站分组出炉大师组套牌公布
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="forecast_item">
+                            <div class="icon">
+                                <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                            </div>
+                            <div class="info">
+                                黄金公开赛厦门站分组出炉大师组套牌公布套牌公布套牌公布套牌公布
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="forecast_item">
+                            <div class="icon">
+                                <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                            </div>
+                            <div class="info">
+                                黄金公开赛厦门站分组出炉大师组套牌公布
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="forecast_item">
+                            <div class="icon">
+                                <img src="https://i0.hdslb.com/bfs/archive/71778c8ad0d7a140587d48a599a31f56a541539f.jpg@880w_440h.jpg">
+                            </div>
+                            <div class="info">
+                                黄金公开赛厦门站分组出炉大师组套牌公布
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- 合作单位 -->
+                <div class="cooperation" >
+                    <img class="title" src="./images/hezuodanwei.png">
+                    <div class="cooperation_box">
+                        <div class="cooperation_item">
+                            <a href="https://nba2k.qq.com/"><img src="./images/2kol.png"></a>
+                        </div>
+                        <div class="cooperation_item">
+                            <a href="https://xxadc.com/"><img src="./images/xiaohuandianjing.png"></a>
+                        </div>
+                        <div class="cooperation_item">
+                            <a href="http://www.xxe.io/"><img src="./images/yezikeji.png"></a>
+                        </div>
+                        <div class="cooperation_item">
+                            <a href="https://www.xxdianjing.com/"><img src="./images/chachadianjing.png"></a>
+                        </div>
+                        <div class="cooperation_item">
+                            <a href="http://by.xxadc.com/"><img src="./images/boyou.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 电梯导航 -->
+        <div class="elevator">
+            <img class="gotop" onclick="smoothscroll()" src="./images/fanhuidingbu.png">
+            <ul class="navigation">
+                <li><a href="#xinwen" class="active">新闻</a></li>
+                <li><a href="#duizhan" >对战数据</a></li>
+                <li><a href="#saicheng" >赛程表</a></li>
+                <li><a href="#shikuang" >实况录像</a></li>
+                <li><a href="#saishi">赛事预测</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="videoBox" class="videoBox1 closeVideo">
+        <div class="video">
+            <!-- <video src="https://v.qq.com/txp/iframe/player.html?vid=r086384dtzw" controls="controls"></video> -->
+            <iframe frameborder="0" width="100%" height="100%" src="https://v.qq.com/txp/iframe/player.html?vid=r086384dtzw"  allowFullScreen="true"></iframe>
+            <div class="close" onclick="closeVideo()">x</div>
+        </div>
+    </div>
+    <script id="team_charts_box_template" type="text/html"> 
+        <div class="data_box active">
+            <div class="charts_box">
+                {{each fightData.baseList chartsItem chartsIndex}}
+                <div class="team_charts_box {{chartsIndex == 0 ? 'active' : ''}}">
+                    <div class="team_charts_logo">
+                        {{if chartsItem.image.length != ''}}
+                        <img src="{{chartsItem.image}}">
+                        {{else}}
+                        <img src="./images/morenxuanshou.png" >
+                        {{/if}}
+                    </div>
+                    <div class="team_charts">
+                        <div class="team_charts_pillar" style="height: {{chartsItem.win_rate}}%">
+                            <div class="team_charts_info">{{chartsItem.win_rate}}%</div>
+                            <div class="sanjiao"></div>
+                        </div>
+                    </div>
+                    <div class="team_name">{{chartsItem.name}}</div>
+                </div>
+                {{/each}}
+            </div>
+            <div class="team_data_box">
+                {{each fightData.baseList dataItem dataIndex}}
+                <div class="team_data {{dataIndex == 0 ? 'active' : ''}}">
+                    <div class="team_data_logo">
+                        {{if dataItem.image.length != ''}}
+                        <img src="{{dataItem.image}}">
+                        {{else}}
+                        <img src="./images/morenxuanshou.png" >
+                        {{/if}}
+                        <p>{{dataItem.name}}</p>
+                    </div>
+                    {{if isKing}}
+                    <div class="team_data_good">
+                        <div class="shanchang">擅长:</div>
+                        <div class="stars">
+                            {{each dataItem.ball_star_headimg ballItem}}
+                                {{if ballItem.length != ''}}
+                                <img class="star" src="{{ballItem}}" >
+                                {{else}}
+                                <img class="star"  src="./images/morenxuanshou.png" >
+                                {{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{else}}
+                    <div class="team_data_jietou_good">
+                        <div class="team_data_jietou_player">
+                                {{each dataItem.players jietouPlayerItem}}
+                                <p>{{jietouPlayerItem}}</p>
+                                {{/each}}
+                        </div>
+                        <div class="jietou_shanchang">擅长 :</div>
+                        <div class="masters">
+                            {{each dataItem.ball_star_headimg jietouBallItem}}
+                                {{if jietouBallItem.length != ''}}
+                                <img src="{{jietouBallItem}}" class="master_item">
+                                {{else}}
+                                <img class="master_item"  src="./images/morenxuanshou.png" >
+                                {{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/if}}
+                    <div class="team_data_score">
+                        <p>场均得分</p>
+                        <div class="score">{{dataItem.average_score}}分</div>
+                    </div>
+                    <div class="team_data_win">
+                        <p>胜率</p>
+                        <div class="win">{{dataItem.win_rate}}%</div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="data_box qiuxing_data">
+            <div class="star_data">
+                <div class="star_data_ul">
+                    {{each fightData.starList rankingItem rankingIndex}}
+                    <div class="star_ranking_item">
+                        <div class="item_title">
+                            <div class="title_icon">{{rankingItem.title}}</div>
+                        </div>
+                        <div class="item_box">
+                            <div class="item_box_title">
+                                <div class="player">球员</div>
+                                <div class="appear">出场数</div>
+                                <div class="win">胜率</div>
+                            </div>
+                            <div class="item_player_box">
+                                {{each rankingItem.data rakingPlayerItem rakingPlayerIndex}}
+                                <div class="item_box_player">
+                                    {{if rakingPlayerIndex == 0 }}
+                                    <img src="./images/ic_diyi.png" class="qiansan">
+                                    {{else if rakingPlayerIndex == 1}}
+                                    <img src="./images/ic_dier.png" class="qiansan">
+                                    {{else if rakingPlayerIndex == 2}}
+                                    <img src="./images/ic_disan.png" class="qiansan">
+                                    {{/if}}
+                                    {{if rakingPlayerItem.ball_star_headimg.length != ''}}
+                                    <img src="{{rakingPlayerItem.ball_star_headimg}}" class="player_icon">
+                                    {{else}}
+                                    <img  class="player_icon" src="./images/morenxuanshou.png" >
+                                    {{/if}}
+                                    
+                                    <div class="player_name">{{rakingPlayerItem.ball_star_name}}</div>
+                                    <div class="player_appear">{{rakingPlayerItem.num}}</div>
+                                    <div class="player_win">{{rakingPlayerItem.win_rate}}%</div>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="line_one"></div>
+                <div class="line_two"></div>
+                
+            </div>
+            {{if isKing}}
+            <div class="prev">
+                <img src="./images/zuohua.png">
+            </div>
+            <div class="next">
+                <img src="./images/youhua.png">
+            </div>
+            {{/if}}
+        </div>
+        <div class="data_box battle">
+            {{each fightData.teamList battleItem battleIndex}}
+            <div class="battle_ranking">
+                <div class="ranking">
+                    {{if battleIndex == 0}}
+                    <img src="./images/ic_1.png">
+                    {{else if battleIndex == 1}}
+                    <img src="./images/ic_2.png" >
+                    {{else if battleIndex == 2}}
+                    <img src="./images/ic_3.png" >
+                    {{else}}
+                    <span>{{battleIndex}}</span>
+                    {{/if}}
+                </div>
+                <div class="heros">
+                    {{each battleItem.ball_stars heroItem heroIndex}}
+                    <div class="hero">
+                        
+                        {{if heroItem.ball_star_headimg.length != ''}}
+                        <img src="{{heroItem.ball_star_headimg}}">
+                        {{else}}
+                        <img src="./images/morenxuanshou.png" >
+                        {{/if}}
+                        <p>{{heroItem.title}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="win_rate">
+                    胜率： <span>{{battleItem.win_rate}}%</span>
+                </div>
+                <div class="appear_num">
+                    出场次数： <span>{{battleItem.num}}次</span>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+    <script src="./js/index.js"></script>
+    <script src="./js/events.js"></script>
+    <script src="./js/selected.js"></script>
+</body>
+</html>

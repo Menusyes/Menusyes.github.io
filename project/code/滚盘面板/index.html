@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滚盘面板</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/roller.css">
+    <style>
+        .sk-fading-circle {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            /* margin: auto; */
+            margin-top: 5px;
+        }
+        .sk-fading-circle .sk-circle {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .sk-fading-circle .sk-circle:before {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 15%;
+            height: 15%;
+            background-color: #fff;
+            border-radius: 100%;
+            -webkit-animation: sk-fading-circle-delay 1.2s infinite ease-in-out both;
+                    animation: sk-fading-circle-delay 1.2s infinite ease-in-out both;
+        }
+        .sk-fading-circle .sk-circle-2 {
+            -webkit-transform: rotate(30deg);
+                    transform: rotate(30deg);
+        }
+        .sk-fading-circle .sk-circle-3 {
+            -webkit-transform: rotate(60deg);
+                    transform: rotate(60deg);
+        }
+        .sk-fading-circle .sk-circle-4 {
+            -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+        }
+        .sk-fading-circle .sk-circle-5 {
+            -webkit-transform: rotate(120deg);
+                    transform: rotate(120deg);
+        }
+        .sk-fading-circle .sk-circle-6 {
+            -webkit-transform: rotate(150deg);
+                    transform: rotate(150deg);
+        }
+        .sk-fading-circle .sk-circle-7 {
+            -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+        }
+        .sk-fading-circle .sk-circle-8 {
+            -webkit-transform: rotate(210deg);
+                    transform: rotate(210deg);
+        }
+        .sk-fading-circle .sk-circle-9 {
+            -webkit-transform: rotate(240deg);
+                    transform: rotate(240deg);
+        }
+        .sk-fading-circle .sk-circle-10 {
+            -webkit-transform: rotate(270deg);
+                    transform: rotate(270deg);
+        }
+        .sk-fading-circle .sk-circle-11 {
+            -webkit-transform: rotate(300deg);
+                    transform: rotate(300deg);
+        }
+        .sk-fading-circle .sk-circle-12 {
+            -webkit-transform: rotate(330deg);
+                    transform: rotate(330deg);
+        }
+        .sk-fading-circle .sk-circle-2:before {
+            -webkit-animation-delay: -1.1s;
+                    animation-delay: -1.1s;
+        }
+        .sk-fading-circle .sk-circle-3:before {
+        -webkit-animation-delay: -1s;
+                animation-delay: -1s;
+        }
+        .sk-fading-circle .sk-circle-4:before {
+            -webkit-animation-delay: -0.9s;
+                    animation-delay: -0.9s;
+        }
+        .sk-fading-circle .sk-circle-5:before {
+            -webkit-animation-delay: -0.8s;
+                    animation-delay: -0.8s;
+        }
+        .sk-fading-circle .sk-circle-6:before {
+            -webkit-animation-delay: -0.7s;
+                    animation-delay: -0.7s;
+        }
+        .sk-fading-circle .sk-circle-7:before {
+            -webkit-animation-delay: -0.6s;
+                    animation-delay: -0.6s;
+        }
+        .sk-fading-circle .sk-circle-8:before {
+            -webkit-animation-delay: -0.5s;
+                    animation-delay: -0.5s;
+        }
+        .sk-fading-circle .sk-circle-9:before {
+            -webkit-animation-delay: -0.4s;
+                    animation-delay: -0.4s;
+        }
+        .sk-fading-circle .sk-circle-10:before {
+            -webkit-animation-delay: -0.3s;
+                    animation-delay: -0.3s;
+        }
+        .sk-fading-circle .sk-circle-11:before {
+            -webkit-animation-delay: -0.2s;
+                    animation-delay: -0.2s;
+        }
+        .sk-fading-circle .sk-circle-12:before {
+            -webkit-animation-delay: -0.1s;
+                    animation-delay: -0.1s;
+        }
+
+        @-webkit-keyframes sk-fading-circle-delay {
+            0%, 39%, 100% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes sk-fading-circle-delay {
+            0%, 39%, 100% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 左侧竞猜列表 -->
+        <div class="guessing_box">
+            <!-- 顶部筛选区域 -->
+            <div class="filter_box">
+                <div class="filter_title">筛选</div>
+                <div class="filter_body">
+                    <!-- 竞猜项选择 -->
+                    <div class="quiz_item" onclick="quizSelectShow(this)">
+                        <!-- 当前选择的 -->
+                        <div class="now_select">全部竞猜项</div>
+                        <div class="lable"><i ></i></div>
+                    </div>
+                    <!-- 竞猜项选择框 -->
+                    <ul class="quiz_select">
+                        <li onclick="quizSelectHide('中京国信')">中京国信</li>
+                        <li onclick="quizSelectHide('中国移动')">中国移动</li>
+                        <li onclick="quizSelectHide('中国联通')">中国联通</li>
+                        <li onclick="quizSelectHide('中国电信')">中国电信</li>
+                        <li onclick="quizSelectHide('中国电信')">中国电信</li>
+                        <li onclick="quizSelectHide('中国电信')">中国电信</li>
+                        <li onclick="quizSelectHide('中国电信')">中国电信</li>
+                    </ul>
+                    <!-- 竞猜项 刷新按钮 -->
+                    <div class="refresh_button quiz_refresh" onclick="refreshBetList(this,0)">
+                        <span>刷新</span>
+                        <div class='sk-fading-circle'>
+                            <div class='sk-circle sk-circle-1'></div>
+                            <div class='sk-circle sk-circle-2'></div>
+                            <div class='sk-circle sk-circle-3'></div>
+                            <div class='sk-circle sk-circle-4'></div>
+                            <div class='sk-circle sk-circle-5'></div>
+                            <div class='sk-circle sk-circle-6'></div>
+                            <div class='sk-circle sk-circle-7'></div>
+                            <div class='sk-circle sk-circle-8'></div>
+                            <div class='sk-circle sk-circle-9'></div>
+                            <div class='sk-circle sk-circle-10'></div>
+                            <div class='sk-circle sk-circle-11'></div>
+                            <div class='sk-circle sk-circle-12'></div>
+                        </div>
+                    </div>
+                    <!-- 客户选择 -->
+                    <div class="client_item" onclick="clientSelectShow(this)">
+                        <!-- 当前选择的 -->
+                        <div class="now_select">全部客户</div>
+                        <div class="lable"><i ></i></div>
+
+                    </div>
+                    <!-- 客户选择框 -->
+                    <ul class="client_select">
+                        <li onclick="clientSelectHide('中京国信')">中京国信</li>
+                        <li onclick="clientSelectHide('中国移动')">中国移动</li>
+                        <li onclick="clientSelectHide('中国联通')">中国联通</li>
+                        <li onclick="clientSelectHide('中国电信')">中国电信</li>
+                        <li onclick="clientSelectHide('中国电信')">中国电信</li>
+                        <li onclick="clientSelectHide('中国电信')">中国电信</li>
+                        <li onclick="clientSelectHide('中国电信')">中国电信</li>
+                    </ul>
+                    <!-- 竞猜项 刷新按钮 -->
+                    <!-- <div class="refresh_button client_refresh">刷新</div> -->
+                    <div class="refresh_button client_refresh" onclick="refreshBetList(this,1)">
+                        <span>刷新</span>
+                        <div class='sk-fading-circle'>
+                            <div class='sk-circle sk-circle-1'></div>
+                            <div class='sk-circle sk-circle-2'></div>
+                            <div class='sk-circle sk-circle-3'></div>
+                            <div class='sk-circle sk-circle-4'></div>
+                            <div class='sk-circle sk-circle-5'></div>
+                            <div class='sk-circle sk-circle-6'></div>
+                            <div class='sk-circle sk-circle-7'></div>
+                            <div class='sk-circle sk-circle-8'></div>
+                            <div class='sk-circle sk-circle-9'></div>
+                            <div class='sk-circle sk-circle-10'></div>
+                            <div class='sk-circle sk-circle-11'></div>
+                            <div class='sk-circle sk-circle-12'></div>
+                        </div>
+                    </div>
+                    <p class="clear"></p>
+                </div>
+            </div>
+            <!-- 标题描述 -->
+            <div class="title_info">
+                <!-- 时间 -->
+                <div class="time">时间</div>
+                <!-- 用户名 -->
+                <div class="user_name">用户</div>
+                <!-- 内容 -->
+                <div class="content">内容</div>
+                <!-- 投注项 -->
+                <div class="bet_name">投注项</div>
+                <!-- 赔率 -->
+                <div class="bet_odds">赔率</div>
+                <!-- 金额 -->
+                <div class="money">金额</div>
+                <!-- 客户 -->
+                <div class="client">客户</div>
+                <div class="line"></div>
+            </div>
+            <!-- 投注记录列表 -->
+            <div class="bet_history_list">
+                <div class="bet_history_item active">
+                    <!-- 时间 -->
+                    <div class="time">09:1212</div>
+                    <!-- 用户名 -->
+                    <div class="user_name">HZxiaoming</div>
+                    <!-- 内容 -->
+                    <div class="content">获得全场胜利</div>
+                    <!-- 投注项 -->
+                    <div class="bet_name">RNG</div>
+                    <!-- 赔率 -->
+                    <div class="bet_odds">1.3</div>
+                    <!-- 金额 -->
+                    <div class="money">1200</div>
+                    <!-- 客户 -->
+                    <div class="client">HZ</div>
+                </div>
+                <div class="bet_history_item">
+                    <!-- 时间 -->
+                    <div class="time">09:1212</div>
+                    <!-- 用户名 -->
+                    <div class="user_name">HZxiaomingSSSssssssssssssss</div>
+                    <!-- 内容 -->
+                    <div class="content">获得全场胜利场胜利场胜利场胜利场胜利场胜利</div>
+                    <!-- 投注项 -->
+                    <div class="bet_name">RNG Ssdjoqwjdowjd</div>
+                    <!-- 赔率 -->
+                    <div class="bet_odds">1.3</div>
+                    <!-- 金额 -->
+                    <div class="money">1200</div>
+                    <!-- 客户 -->
+                    <div class="client">HZ</div>
+                </div>
+                <div class="bet_history_item">
+                    <!-- 时间 -->
+                    <div class="time">09:1212</div>
+                    <!-- 用户名 -->
+                    <div class="user_name">HZxiaoming</div>
+                    <!-- 内容 -->
+                    <div class="content">获得全场胜利</div>
+                    <!-- 投注项 -->
+                    <div class="bet_name">RNG</div>
+                    <!-- 赔率 -->
+                    <div class="bet_odds">1.3</div>
+                    <!-- 金额 -->
+                    <div class="money">1200</div>
+                    <!-- 客户 -->
+                    <div class="client">HZ</div>
+                </div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+                <div class="bet_history_item"></div>
+            </div>
+        </div>
+        <!-- 右侧滚盘 -->
+        <div class="roller_box">
+            <!-- 顶部控制区域 -->
+            <div class="control_box">
+                <!-- 幅度调整 -->
+                <div class="range_range">
+                    <label>
+                        <input id="radio-1-1" name="fudu" type="radio" value="0.5" class="regular-radio">
+                        <label for="radio-1-1"></label>
+                        0.5
+                    </label>
+                    <label>
+                        <input id="radio-1-2" name="fudu" type="radio" value="1" checked="" class="regular-radio">
+                        <label for="radio-1-2"></label> 
+                        1
+                    </label>
+
+                    <label>
+                        <input id="radio-1-3" name="fudu" type="radio" value="5" class="regular-radio">
+                        <label for="radio-1-3"></label>
+                        5
+                    </label>
+
+                    <label>
+                        <input id="radio-1-4" name="fudu" type="radio" value="10" class="regular-radio">
+                        <label for="radio-1-4"></label>
+                        10
+                    </label>
+                </div>
+                <div class="line"></div>
+                <div class="open">开启</div>
+                <div class="suspend">暂停</div>
+                <div class="line"></div>
+                <div class="refresh_button">
+                    <img src="./refresh_button.png">
+                </div>
+                <div class="only_open">唯一开启</div>
+                <div class="only_suspend">唯一暂停</div>
+                <div class="line"></div>
+                <!-- 游戏小局控制区域 -->
+                <div class="match_control">
+                    <!-- 145*bo数量 -->
+                    <div class="match_control_ul" style="width:725px">
+                        <div class="match">
+                            <div class="match_button">1 开启</div>
+                            <div class="match_button">1 暂停</div>
+                        </div>
+                        <div class="match">
+                            <div class="match_button">2 开启</div>
+                            <div class="match_button">2 暂停</div>
+                        </div>
+                        <div class="match">
+                            <div class="match_button">3 开启</div>
+                            <div class="match_button">3 暂停</div>
+                        </div>
+                        <div class="match">
+                            <div class="match_button">4 开启</div>
+                            <div class="match_button">4 暂停</div>
+                        </div>
+                        <div class="match">
+                            <div class="match_button">5 开启</div>
+                            <div class="match_button">5 暂停</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="roller_title">
+                <span>1 &nbsp; 叉叉电竞</span>
+                <span>2 &nbsp; HZ电竞</span>
+                <span>3 &nbsp; 中信国际</span>
+            </div>
+            <!-- 下方滚盘面板 -->
+            <div class="roller">
+                <!-- 196*tr中所有td的数量 -->
+                <div class="cotBoard" style="width:3136px">
+                    <table>
+                        <tr style="border-top: 1px solid rgba(235,235,235,1);">
+                            <td class="borderRight"></td>
+                            <td class="borderRight" colspan="3">
+                                <span>叉叉电竞</span>
+                                <div class="editBtn"><span>编</span></div>
+                            </td>
+                            <td class="borderRight" colspan="3">
+                                <span>1电竞</span>
+                                <div class="editBtn"><span>编</span></div>
+                            </td>
+                            <td class="borderRight" colspan="3">
+                                <span>2电竞</span>
+                                <div class="editBtn"><span>编</span></div>
+                            </td>
+                            <td class="borderRight" colspan="3">
+                                <span>3电竞</span>
+                                <div class="editBtn"><span>编</span></div>
+                            </td>
+                            <td colspan="3">
+                                <span>4电竞</span>
+                                <div class="editBtn"><span>编</span></div>
+                            </td>
+                        </tr>
+                        <tr class="ongoing">
+                            <td rowspan="4" class="matchState borderRight">
+                                <span class="doing">进行中</span><!-- 如果是暂停则给class="pause" -->
+                                <span>全场比赛胜利</span>
+                                <div class="button">关闭</div>
+                                <div class="button open_button">开启</div>
+                            </td>
+                            <td>
+                                <span class="teamName">队伍名称名名名 <span class="label">100</span></span>
+                                <span class="winRate down">89%</span>
+                                <span class="odds rise">1.25</span>
+                            </td>
+                            <td class="clientSep">
+                                <span class="teamName">队伍名称名名名 <span class="label">100</span></span>
+                                <span class="winRate down">89%</span>
+                                <span class="odds rise">1.25</span>
+                            </td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=" borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>   
+                            <td class=""></td>   
+                            <td class=""></td>   
+                        </tr>
+                        <tr class="ongoing">
+                            <td>
+                                <span class="bet">999999999</span>
+                                <div class="kp"><span>K</span></div>
+                            </td>
+                            <td>
+                                <span class="bet">总投注额</span>
+                                <div class="kp"><span>K</span></div>
+                            </td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="ongoing">
+                            <td>
+                                <span class="lastBet">60</span>
+                                <span class="lastTime">20小时前</span>
+                            </td>
+                            <td>
+                                <span class="lastBet">60</span>
+                                <span class="lastTime">20小时前</span>
+                            </td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="ongoing">
+                            <td>
+                                <span class="down">20</span>
+                            </td>
+                            <td>
+                                <span class="rise">-30</span>
+                            </td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td></td>
+                            <td></td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    
+                        <tr class="pauseGame">
+                            <td rowspan="4" class="matchState borderRight">
+                                <span class="pause">暂停中</span><!-- 如果是暂停则给class="pause" -->
+                                <span>第一条小龙属性-第一局</span>
+                                <div class="button">关闭</div>
+                                <div class="button suspend_button">暂停</div>
+                            </td>
+                            <td>
+                                <span class="teamName">队伍名称名名名称名名名称名名名 <span class="label">100</span></span>
+                                <span class="winRate down">89%</span>
+                                <span class="odds rise">1.25</span>
+                            </td>
+                            <td>
+                                <span class="teamName">名名名 <span class="label">100</span></span>
+                                <span class="winRate down">89%</span>
+                                <span class="odds rise">1.25</span>
+                            </td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>
+                        <tr class="pauseGame">
+                            <td>
+                                <span class="bet">总投注额</span>
+                                <div class="kp"><span>K</span></div>
+                            </td>
+                            <td>
+                                <span class="bet">总投注额</span>
+                                <div class="kp"><span>K</span></div>
+                            </td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>
+                        <tr class="pauseGame">
+                            <td>
+                                <span class="lastBet">60</span>
+                                <span class="lastTime">20秒前</span>
+                            </td>
+                            <td>
+                                <span class="lastBet">60</span>
+                                <span class="lastTime">20秒前</span>
+                            </td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>
+                        <tr class="pauseGame">
+                            <td>
+                                <span class="down">20</span>
+                            </td>
+                            <td>
+                                <span class="rise">-20</span>
+                            </td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class="borderRight"></td>
+                            <td class="black"></td>
+                            <td class="black"></td>
+                            <td class="black borderRight"></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                        </tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                        <tr><td></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 竞猜项选择
+        function quizSelectShow(ele) {  
+            var selectBox = document.querySelector(".quiz_select");
+            if(ele.classList.contains('active')){
+                ele.classList.remove('active');
+                selectBox.classList.remove('show');
+            } else {
+                ele.classList.add('active');
+                selectBox.classList.add('show');
+            }
+        }
+        // 关闭竞猜项选择
+        function quizSelectHide(newText) {
+            document.querySelector(".quiz_item .now_select").textContent = newText;
+            document.querySelector(".quiz_item").classList.remove('active');
+            document.querySelector(".quiz_select").classList.remove('show');
+        }
+
+        // 客户选择
+        function clientSelectShow(ele) {  
+            var selectBox = document.querySelector(".client_select");
+            if(ele.classList.contains('active')){
+                ele.classList.remove('active');
+                selectBox.classList.remove('show');
+            } else {
+                ele.classList.add('active');
+                selectBox.classList.add('show');
+            }
+        }
+        // 关闭客户选择
+        function clientSelectHide(newText) {  
+            document.querySelector(".client_item .now_select").textContent = newText;
+            document.querySelector(".client_select").classList.remove('show');
+            document.querySelector(".client_item").classList.remove('active');
+        }
+
+        /**
+         * 刷新投注记录列表
+         * @param ele 当前点击的按钮 切换loading使用
+         * @param type {Number} 0:竞猜项选择 1:客户选择框
+        */
+        function refreshBetList(ele,type) {  
+            if(ele.classList.contains('loading')) { //已经在loading状态 什么也不做
+                console.log("正在loading....");
+            } else {
+                ele.classList.add('loading');
+                // if(type == 0) {
+                    
+                // } else if(type == 1) {
+                    
+                // }
+                setTimeout(function(){
+                    ele.classList.remove('loading');
+                }, 1000);
+            }
+        }
+
+    </script>
+</body>
+</html>

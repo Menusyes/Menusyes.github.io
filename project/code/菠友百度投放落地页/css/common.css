@@ -1,0 +1,28 @@
+body,div,ul,li,p,span,i,b,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑", "MicrosoftYaHei","宋体", "Arial Narrow";
+    overflow-x: hidden;
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: none;
+}
+.clear{ 
+    clear:both;
+} 
+.banner {
+    width: 1280px;
+    margin: 0 auto;
+    /* background-color: #f00;
+    height: 100px; */
+}

@@ -1,0 +1,536 @@
+body,
+div,
+ul,
+li,
+p,
+span,
+i,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+img,
+table,
+tr,
+td,
+button {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑", "宋体", "Arial Narrow";
+  background: #f5f6fa;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  border: none;
+  outline: none;
+}
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+.clear {
+  clear: both;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#app {
+  width: 1900px;
+  height: 1070px;
+  margin: 0 auto;
+  position: relative;
+}
+#app .guessing_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 556px;
+  height: 1070px;
+  background: #ffffff;
+  box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.06);
+  padding-top: 9px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+#app .guessing_box .filter_box .filter_title {
+  margin-left: 19px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #bbbbbb;
+}
+#app .guessing_box .filter_box .filter_body {
+  margin-top: 10px;
+  position: relative;
+}
+#app .guessing_box .filter_box .filter_body > div {
+  float: left;
+}
+#app .guessing_box .filter_box .filter_body .quiz_item {
+  margin-left: 15px;
+  width: 189px;
+  height: 30px;
+  background: #f5f6fa;
+  border: 1px solid #d5d5d5;
+  border-radius: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+#app .guessing_box .filter_box .filter_body .quiz_item .now_select {
+  float: left;
+  width: 164px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: rgba(26, 26, 26, 0.74);
+}
+#app .guessing_box .filter_box .filter_body .quiz_item .lable,
+#app .guessing_box .filter_box .filter_body .client_item .lable {
+  float: left;
+}
+#app .guessing_box .filter_box .filter_body .quiz_item .lable i,
+#app .guessing_box .filter_box .filter_body .client_item .lable i {
+  display: inline-block;
+  position: relative;
+}
+#app .guessing_box .filter_box .filter_body .quiz_item .lable i::after,
+#app .guessing_box .filter_box .filter_body .client_item .lable i::after {
+  display: inline-block;
+  content: " ";
+  height: 8px;
+  width: 8px;
+  border-width: 0 1px 1px 0;
+  border-color: #999999;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform-origin: center;
+  transition: transform 0.2s;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+}
+#app .guessing_box .filter_box .filter_body .client_item.active .lable i::after,
+#app .guessing_box .filter_box .filter_body .quiz_item.active .lable i::after {
+  transform-origin: center;
+  transform: rotate(-135deg);
+  margin-top: -5px;
+}
+#app .guessing_box .filter_box .filter_body .refresh_button {
+  width: 81px;
+  height: 30px;
+  background: #598cff;
+  box-shadow: 0px 3px 6px rgba(45, 121, 228, 0.24);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #f8f8f8;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+#app .guessing_box .filter_box .filter_body .refresh_button .sk-fading-circle {
+  display: none;
+}
+#app .guessing_box .filter_box .filter_body .refresh_button.loading span {
+  display: none;
+}
+#app .guessing_box .filter_box .filter_body .refresh_button.loading .sk-fading-circle {
+  display: inline-block;
+}
+#app .guessing_box .filter_box .filter_body .refresh_button:hover {
+  background: rgba(89, 140, 255, 0.8);
+}
+#app .guessing_box .filter_box .filter_body .client_item {
+  margin-left: 29px;
+  width: 123px;
+  height: 30px;
+  background: #f5f6fa;
+  border: 1px solid #d5d5d5;
+  border-radius: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+#app .guessing_box .filter_box .filter_body .client_item .now_select {
+  width: 94px;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: rgba(26, 26, 26, 0.74);
+  box-sizing: border-box;
+  text-align: center;
+}
+#app .guessing_box .filter_box .filter_body .quiz_refresh {
+  margin-left: 11px;
+}
+#app .guessing_box .filter_box .filter_body .client_refresh {
+  margin-left: 7px;
+}
+#app .guessing_box .filter_box .filter_body .quiz_select,
+#app .guessing_box .filter_box .filter_body .client_select {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  top: 30px;
+  background: #f5f6fa;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: opacity 0.5s;
+  z-index: 999;
+  text-align: center;
+}
+#app .guessing_box .filter_box .filter_body .quiz_select > li,
+#app .guessing_box .filter_box .filter_body .client_select > li {
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  color: #1a1a1a;
+  padding: 0 15px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .guessing_box .filter_box .filter_body .quiz_select > li:hover,
+#app .guessing_box .filter_box .filter_body .client_select > li:hover {
+  color: #787878;
+}
+#app .guessing_box .filter_box .filter_body .quiz_select {
+  left: 15px;
+  width: 189px;
+}
+#app .guessing_box .filter_box .filter_body .client_select {
+  left: 325px;
+  width: 123px;
+}
+#app .guessing_box .filter_box .filter_body .quiz_select.show,
+#app .guessing_box .filter_box .filter_body .client_select.show {
+  opacity: 1;
+  height: auto;
+}
+#app .guessing_box .title_info {
+  height: 55px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #747474;
+  position: relative;
+}
+#app .guessing_box .title_info > div {
+  position: absolute;
+  top: 29px;
+}
+#app .guessing_box .title_info .time {
+  left: 19px;
+}
+#app .guessing_box .title_info .user_name {
+  left: 83px;
+}
+#app .guessing_box .title_info .content {
+  left: 182px;
+}
+#app .guessing_box .title_info .bet_name {
+  left: 313px;
+}
+#app .guessing_box .title_info .bet_odds {
+  left: 380px;
+}
+#app .guessing_box .title_info .money {
+  left: 436px;
+}
+#app .guessing_box .title_info .client {
+  left: 498px;
+}
+#app .guessing_box .title_info .line {
+  left: 0;
+  width: 518px;
+  height: 1px;
+  top: 54px;
+  background-color: #d6d6d6;
+}
+#app .guessing_box .bet_history_list {
+  height: 945px;
+  overflow: scroll;
+  padding-bottom: 3px;
+  box-sizing: border-box;
+}
+#app .guessing_box .bet_history_list .bet_history_item {
+  height: 49px;
+  position: relative;
+  font-size: 12px;
+  font-family: "Microsoft YaHei UI";
+  color: #5c5c5c;
+}
+#app .guessing_box .bet_history_list .bet_history_item > div {
+  position: absolute;
+  height: 49px;
+  line-height: 49px;
+}
+#app .guessing_box .bet_history_list .bet_history_item .time {
+  left: 19px;
+}
+#app .guessing_box .bet_history_list .bet_history_item .user_name {
+  left: 83px;
+  width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .guessing_box .bet_history_list .bet_history_item .content {
+  left: 182px;
+  width: 127px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .guessing_box .bet_history_list .bet_history_item .bet_name {
+  left: 313px;
+  width: 62px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#app .guessing_box .bet_history_list .bet_history_item .bet_odds {
+  left: 380px;
+}
+#app .guessing_box .bet_history_list .bet_history_item .money {
+  left: 436px;
+}
+#app .guessing_box .bet_history_list .bet_history_item .client {
+  left: 498px;
+}
+#app .guessing_box .bet_history_list .bet_history_item:nth-of-type(even) {
+  background: #f7f7f7;
+}
+#app .guessing_box .bet_history_list .bet_history_item.active {
+  background: #e6eeff;
+  color: #4880ff;
+}
+#app .guessing_box .bet_history_list::-webkit-scrollbar {
+  display: none;
+}
+#app .roller_box::-webkit-scrollbar,
+#app .guessing_box::-webkit-scrollbar {
+  display: none;
+}
+#app .roller_box {
+  margin-left: 556px;
+  width: 1344px;
+  height: 1070px;
+  overflow: scroll;
+}
+#app .roller_box .control_box {
+  width: 1344px;
+  height: 74px;
+  background: #ffffff;
+}
+#app .roller_box .control_box > div {
+  float: left;
+}
+#app .roller_box .control_box .range_range {
+  height: 74px;
+  line-height: 77px;
+  padding-left: 11px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: Roboto;
+  color: #555555;
+}
+#app .roller_box .control_box .range_range > label {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+#app .roller_box .control_box .range_range .regular-radio {
+  display: none;
+}
+#app .roller_box .control_box .range_range .regular-radio + label {
+  -webkit-appearance: none;
+  border: 1px solid #707070;
+  padding: 8px;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  vertical-align: text-bottom;
+  margin-right: 3px;
+}
+#app .roller_box .control_box .range_range .regular-radio:checked + label:after {
+  content: ' ';
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  position: absolute;
+  top: 3px;
+  background: #598cff;
+  left: 3px;
+}
+#app .roller_box .control_box .range_range .regular-radio:checked + label {
+  border: 1px solid #598cff;
+}
+#app .roller_box .control_box .line {
+  margin-top: 27px;
+  width: 1px;
+  height: 24px;
+  background-color: #d8d8d8;
+}
+#app .roller_box .control_box .open,
+#app .roller_box .control_box .suspend {
+  margin-top: 18px;
+  width: 106px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #bacfff;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 44px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Microsoft YaHei UI";
+  color: #6a6a6a;
+  cursor: pointer;
+}
+#app .roller_box .control_box .open:hover,
+#app .roller_box .control_box .suspend:hover {
+  color: #fff;
+  background-color: #bacfff;
+  border-color: transparent;
+}
+#app .roller_box .control_box .open:active,
+#app .roller_box .control_box .suspend:active {
+  color: #fff;
+  background-color: #bacfff;
+  border-color: transparent;
+  transform: scale(0.8);
+}
+#app .roller_box .control_box .open {
+  margin-left: 13px;
+}
+#app .roller_box .control_box .suspend {
+  margin-left: 8px;
+  margin-right: 19px;
+}
+#app .roller_box .control_box .refresh_button {
+  margin-top: 24px;
+  margin-left: 13px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+#app .roller_box .control_box .refresh_button > img {
+  width: 100%;
+  height: 100%;
+}
+#app .roller_box .control_box .only_open,
+#app .roller_box .control_box .only_suspend {
+  margin-top: 18px;
+  width: 100px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 16px;
+  font-family: "Microsoft YaHei UI";
+  border-radius: 4px;
+  cursor: pointer;
+}
+#app .roller_box .control_box .only_open {
+  margin-left: 22px;
+  background: #ffffff;
+  border: 1px solid #42cd7b;
+  box-sizing: border-box;
+  color: #6a6a6a;
+}
+#app .roller_box .control_box .only_open:hover {
+  background-color: #42cd7b;
+  border-color: transparent;
+  color: #fff;
+}
+#app .roller_box .control_box .only_open:active {
+  background-color: #42cd7b;
+  border-color: transparent;
+  color: #fff;
+  transform: scale(0.8);
+}
+#app .roller_box .control_box .only_suspend {
+  margin-left: 11px;
+  margin-right: 10px;
+  background: #e42d2d;
+  color: #ffffff;
+}
+#app .roller_box .control_box .only_suspend:hover {
+  background: rgba(228, 45, 45, 0.8);
+}
+#app .roller_box .control_box .only_suspend:active {
+  background: rgba(228, 45, 45, 0.8);
+  transform: scale(0.8);
+}
+#app .roller_box .control_box .match_control {
+  padding-left: 7px;
+  padding-top: 18px;
+  width: 573px;
+  height: 74px;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+#app .roller_box .control_box .match_control .match_control_ul {
+  height: 44px;
+}
+#app .roller_box .control_box .match_control .match_control_ul .match {
+  float: left;
+  margin-right: 15px;
+}
+#app .roller_box .control_box .match_control .match_control_ul .match .match_button {
+  float: left;
+  width: 61px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #bacfff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 4px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei UI";
+  color: #6a6a6a;
+  cursor: pointer;
+}
+#app .roller_box .control_box .match_control .match_control_ul .match .match_button:active {
+  transform: scale(0.8);
+}
+#app .roller_box .control_box .match_control .match_control_ul .match .match_button:hover {
+  background-color: #bacfff;
+  color: #fff;
+}
+#app .roller_box .control_box .match_control::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+#app .roller_box .control_box .match_control::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: gray;
+}
+#app .roller_box .roller {
+  width: 1344px;
+  height: 896px;
+  overflow: scroll;
+}
+#app .roller_box .roller::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#app .roller_box .roller::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: gray;
+}

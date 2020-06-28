@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <link rel="stylesheet" href="./style/common.css">
+  <link rel="stylesheet" href="./style/bts.css">
+  <link rel="stylesheet" href="./style/popStyle.css">
+  <title>BTS-赛事监控</title>
+</head>
+
+<body>
+  <div class="mask">
+    <div class="maskWindow" id="mwDeal">
+      <img src="./image/guanbi.png" class="closeWindow" onclick="closePop()">
+
+      <div class="mwTitle">
+        <div class="mttName">当前警告</div>
+        <div class="mttName" style="margin-left: 328px;">确认记录</div>
+      </div>
+
+      <div class="mwContBox">
+        <div class="mwCBLeftScrollbar">
+          <div class="mwCBLeft">
+            <div class="mwLeftItem mwActive" id="mwLeftItem0" onclick="seltMWItem('mwLeftItem0')">
+              <div class="leftItemName">开赛监控</div>
+              <div class="leftItemState">危险(2/8)</div>
+            </div>
+
+            <div class="mwLeftItem" id="mwLeftItem1" onclick="seltMWItem('mwLeftItem1')">
+              <div class="leftItemName">赔率监控</div>
+              <div class="leftItemState">危险(2/8)</div>
+            </div>
+
+            <div class="mwLeftItem" id="mwLeftItem2" onclick="seltMWItem('mwLeftItem2')">
+              <div class="leftItemName">赔率监控</div>
+              <div class="leftItemState">危险(2/8)</div>
+            </div>
+
+            <div class="mwLeftItem" id="mwLeftItem3" onclick="seltMWItem('mwLeftItem3')">
+              <div class="leftItemName">赔率监控</div>
+              <div class="leftItemState">危险(2/8)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mwDevide"></div>
+
+        <div class="mwCBRightScrollbar">
+          <div class="mwCBRight">
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+
+            <div class="mwRightList">
+              <div class="rightListTime">18-05-02 12:12</div>
+              <div class="rightListOperator">laoluo</div>
+              <div class="rightListOperate">开赛监控</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="maskBtn">处理</div>
+    </div>
+
+    <div class="maskWindow" id="mwIgnore">
+      <img src="./image/guanbi.png" class="closeWindow" onclick="closePop()">
+      <div class="ignoreStyle">确认忽略本场比赛？</div>
+      <div class="maskBtn">确认处理</div>
+    </div>
+  </div>
+
+  <div class="fixTop">
+    <div class="topTitle">
+      <img src="./image/celancaidan.png" class="meauIcon">
+      <img src="./image/BTS-saihijiankong.png" class="btsName">
+    </div>
+
+    <!-- 顶部卡片 -->
+    <div class="topCardsBox">
+      <div class="matchNum">
+        <div class="matchNumTitle">赛事数量</div>
+        <div class="mnNumber">85/100</div>
+        <div class="mnDes">有盘口/无盘口</div>
+      </div>
+
+      <div class="tcbDivideLine"></div>
+
+      <div class="futureBox">未来<br>48小时</div>
+
+      <!-- 赛事数量卡片 -->
+      <div class="bigMatchNum">
+        <div class="cardsGreen"></div>
+        <div class="bmnCard">
+          <div class="bmnCardCont">
+            <div class="bmnCardTitle">赛事数量</div>
+            <div class="bmnCardNum">85/100</div>
+            <div class="bmnCardDes">有盘口/无盘口</div>
+          </div>
+
+          <canvas id="progressBar" width="72" height="72">您的浏览器不支持canvas，请升级您的浏览器。</canvas>
+        </div>
+      </div>
+
+      <!-- 进行中卡片 -->
+      <div class="ongoing">
+        <div class="cardsGreen"></div>
+        <div class="ongoingCard">
+          <div class="cardTitle">进行中</div>
+          <div class="cardNum">14</div>
+        </div>
+      </div>
+
+      <!-- 开赛异常卡片 -->
+      <div class="matchAnomaly">
+        <div class="cardsRed"></div>
+        <div class="maCard">
+          <div class="cardTitle">开赛异常</div>
+          <div class="cardNum1">1</div>
+          <div class="cardNum2">(2/3)</div>
+        </div>
+      </div>
+
+      <!-- 赔率异常卡片 -->
+      <div class="oddsAnomaly">
+        <div class="cardsRed"></div>
+        <div class="maCard">
+          <div class="cardTitle">赔率异常</div>
+          <div class="cardNum1">1</div>
+          <div class="cardNum2">(2/3)</div>
+        </div>
+      </div>
+
+      <!-- 未入库 -->
+      <div class="warehousing">
+        <div class="cardsYellow"></div>
+        <div class="whCard">
+          <div class="cardTitle">未入库</div>
+          <div class="cardNum">2</div>
+        </div>
+      </div>
+
+      <!-- 未视频监控 -->
+      <div class="noMonitor">
+        <div class="cardsGreen"></div>
+        <div class="nmCard">
+          <div class="cardTitle">未视频监控</div>
+          <div class="cardNum">0</div>
+        </div>
+      </div>
+
+      <!-- 无数据 -->
+      <div class="noData">
+        <div class="cardsGrey"></div>
+        <div class="ndCard">
+          <div class="cardTitle">无数据</div>
+          <div class="cardNum">3</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 顶部时间以及分割线 -->
+    <div class="topDate">
+      <div class="topDateTitle">未来48小时 实时赛事情况</div>
+      <div class="topDateTime" id="time"></div>
+    </div>
+
+    <!-- 表格title -->
+    <div class="formTitleBox">
+      <div class="formTitle" style="width:100px">时间</div>
+      <div class="formTitle" style="width: 130px">项目</div>
+      <div class="formTitle" style="width:140px">赛事</div>
+      <div class="formTitle" style="width:193px">赔率</div>
+      <div class="formTitle" style="width:185px">队伍</div>
+      <div class="formTitle" style="width:64px">赔率</div>
+      <div class="formTitle" style="width:102px">盘口数</div>
+      <div class="formTitle" style="width:232px">开赛状态</div>
+      <div class="formTitle" style="width:202px">赔率状态</div>
+      <div class="formTitle" style="width:64px">早盘</div>
+      <div class="formTitle" style="width:88px">滚盘</div>
+      <div class="formTitle" style="width:104px">实时数据</div>
+      <div class="formTitle" style="width:94px">视频监控</div>
+      <div class="formTitle" style="width:92px">准点数</div>
+      <div class="formTitle" style="width:40">处理</div>
+    </div>
+
+  </div>
+
+  <!-- 表格内容 -->
+  <div class="formLine matchOngoing" id="formLine1" onclick="openFormLine('formLine1')">
+    <div class="matchState stateOngoing">进行中</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">2.2</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">2.2</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">2.2</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStateBtnSafe">安全(10/10)</div>
+
+    <div class="oddsStateBox">
+      <div class="oddsSContent">90%,+4%,两项</div>
+      <div class="osTips osTipsSafe">安全</div>
+    </div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/yijieru.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">处理</div>
+
+    <!-- 展开后内容 -->
+    <!-- 比分面板 -->
+    <div class="matchInfoCard">
+      <div class="micTitle">
+        <div class="boNum">BO5</div>
+        <div class="micTName" style="text-align:right">VP</div>
+        <div class="mictDivide">-</div>
+        <div class="micTName" style="text-align:left">RNG</div>
+      </div>
+
+      <div class="eachRound">
+        <div class="roundNum">第一局</div>
+        <div class="scoreBoard highScore">24</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard lowScore">20</div>
+      </div>
+      <div class="roundDevide"></div>
+
+      <div class="eachRound">
+        <div class="roundNum">第二局</div>
+        <div class="scoreBoard">22</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard">22</div>
+      </div>
+      <div class="roundDevide"></div>
+
+      <div class="eachRound">
+        <div class="roundNum">第三局</div>
+        <div class="scoreBoard lowScore">14</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard highScore">20</div>
+      </div>
+      <div class="roundDevide"></div>
+
+      <div class="eachRound">
+        <div class="roundNum">第四局</div>
+        <div class="scoreBoard">-</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard">-</div>
+      </div>
+      <div class="roundDevide"></div>
+
+      <div class="eachRound">
+        <div class="roundNum">第五局</div>
+        <div class="scoreBoard">-</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard">-</div>
+      </div>
+
+    </div>
+
+    <!-- 竞猜项面板 -->
+    <!-- guessItemBoard命名规则为formLine的id+guessItemBoard -->
+    <div class="guessItemBoard" id="formLine1guessItemBoard">
+      <div class="itemsCard" id="formLine1itemsCard">
+        <!-- items命名规则为formLine的id+items【序号】 -->
+        <div class="items chooseItem" id="formLine1items0" onclick="chooseItems('formLine1items0')">
+          <div class="itemName chooseIName">第一条小龙属性-第一局</div>
+          <div class="itemRight">
+            <!-- 此处width为1/小项总个数*100% -->
+            <div class="irItems" style="width:25%">
+              <span class="irItemsName">风</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:25%">
+              <span class="irItemsName">水</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:25%">
+              <span class="irItemsName">土</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:25%">
+              <span class="irItemsName">火</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine1items1" onclick="chooseItems('formLine1items1')">
+          <div class="itemName">获得比赛胜利</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:33%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:33%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:33%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine1items2" onclick="chooseItems('formLine1items2')">
+          <div class="itemName">第一座塔-第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine1items3" onclick="chooseItems('formLine1items3')">
+          <div class="itemName">双方人头总数第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">单数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">双数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine1items4" onclick="chooseItems('formLine1items4')">
+          <div class="itemName">双方人头总数第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">单数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">双数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine1items5" onclick="chooseItems('formLine1items5')">
+          <div class="itemName">双方人头总数第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">单数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">双数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine1items6" onclick="chooseItems('formLine1items6')">
+          <div class="itemName">第一座塔-第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="forMore" onclick="checkMoreItems('formLine1')">
+        <img src="./image/gengduojingcai.png" alt="">
+      </div>
+    </div>
+
+    <!-- 盘口数据面板 -->
+    <div class="handicapBoard">
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">365</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsClose">封盘</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">雷竞技</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNoState">-</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">官网</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsClose">封盘</div>
+      </div>
+    </div>
+
+    <!-- 盘口对比比赛详情 -->
+    <div class="handicapDetail">
+      <div class="hcDTitle">
+        <div class="hcDName hcDNameLeft">RNG</div>
+        <img src="./image/teamIc.png" class="hcDTeamIcon hcDTeamIcon1">
+        <div class="hcDTDevide"></div>
+        <img src="./image/teamIc.png" class="hcDTeamIcon hcDTeamIcon2">
+        <div class="hcDName hcDNameRight">RNG</div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox">
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">风</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">水</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">土</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">火</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">365</div>
+        <!-- 小项的盒子 无内容 内容不填 -->
+        <div class="hcdItemBox"></div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">雷竞技</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox">
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:50%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">单数</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:50%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">双数</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">官网</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox">
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:50%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName"></span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:50%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName"></span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">188</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox">
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">风</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">水</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">土</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">火</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox"></div>
+      </div>
+
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox"></div>
+      </div>
+
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox"></div>
+      </div>
+
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="formLine matchOngoing dangerous" id="formLine2" onclick="openFormLine('formLine2')">
+    <div class="matchState stateOngoing">进行中</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">2.2</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">2.2</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">2.2</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStateBtnDanger">危险(10/10)</div>
+
+    <div class="oddsStateBox oddsStateStop">停止</div>
+
+    <img src="./image/guanbi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_1.png" class="realTimeBox">
+
+    <div class="monitorNum monitorRed">0人</div>
+
+    <div class="punctuality puncOrange">85%</div>
+    <div class="deal dealYellow" onclick="popup(1)">处理</div>
+
+    <!-- 展开后内容 -->
+    <!-- 比分面板 -->
+    <div class="matchInfoCard">
+      <div class="micTitle">
+        <div class="boNum">BO5</div>
+        <div class="micTName" style="text-align:right">VP</div>
+        <div class="mictDivide">-</div>
+        <div class="micTName" style="text-align:left">RNG</div>
+      </div>
+
+      <div class="eachRound">
+        <div class="roundNum">第一局</div>
+        <div class="scoreBoard highScore">24</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard lowScore">20</div>
+      </div>
+      <div class="roundDevide"></div>
+
+      <div class="eachRound">
+        <div class="roundNum">第二局</div>
+        <div class="scoreBoard">22</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard">22</div>
+      </div>
+      <div class="roundDevide"></div>
+
+      <div class="eachRound">
+        <div class="roundNum">第三局</div>
+        <div class="scoreBoard lowScore">14</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard highScore">20</div>
+      </div>
+      <div class="roundDevide"></div>
+
+      <div class="eachRound">
+        <div class="roundNum">第四局</div>
+        <div class="scoreBoard">-</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard">-</div>
+      </div>
+      <div class="roundDevide"></div>
+
+      <div class="eachRound">
+        <div class="roundNum">第五局</div>
+        <div class="scoreBoard">-</div>
+        <div class="mictDivide">-</div>
+        <div class="scoreBoard">-</div>
+      </div>
+
+    </div>
+
+    <!-- 竞猜项面板 -->
+    <div class="guessItemBoard" id="formLine2guessItemBoard">
+      <div class="itemsCard" id="formLine2itemsCard">
+        <div class="items chooseItem" id="formLine2items0" onclick="chooseItems('formLine2items0')">
+          <div class="itemName chooseIName">第一条小龙属性-第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:25%">
+              <span class="irItemsName">风</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:25%">
+              <span class="irItemsName">水</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:25%">
+              <span class="irItemsName">土</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:25%">
+              <span class="irItemsName">火</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine2items1" onclick="chooseItems('formLine2items1')">
+          <div class="itemName">获得比赛胜利</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:33%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:33%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:33%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine2items2" onclick="chooseItems('formLine2items2')">
+          <div class="itemName">第一座塔-第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine2items3" onclick="chooseItems('formLine2items3')">
+          <div class="itemName">双方人头总数第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">单数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">双数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine2items4" onclick="chooseItems('formLine2items4')">
+          <div class="itemName">双方人头总数第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">单数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">双数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine2items5" onclick="chooseItems('formLine2items5')">
+          <div class="itemName">双方人头总数第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">单数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName">双数</span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="itemsDevideLine"></div>
+
+        <div class="items" id="formLine2items6" onclick="chooseItems('formLine2items6')">
+          <div class="itemName">第一座塔-第一局</div>
+          <div class="itemRight">
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+            <div class="irItems" style="width:50%">
+              <span class="irItemsName"></span>
+              <span class="irItemsOdds">2.23</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="forMore" onclick="checkMoreItems('formLine2')">
+        <img src="./image/gengduojingcai.png" alt="">
+      </div>
+    </div>
+
+    <!-- 盘口数据面板 -->
+    <div class="handicapBoard">
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">马头</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNormal">正常</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">365</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsClose">封盘</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">雷竞技</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsNoState">-</div>
+      </div>
+
+      <div class="hbLine">
+        <div class="handicapName">官网</div>
+        <div class="handicapTime">16:00</div>
+        <div class="handicapState hsClose">封盘</div>
+      </div>
+    </div>
+
+    <!-- 盘口对比比赛详情 -->
+    <div class="handicapDetail">
+      <div class="hcDTitle">
+        <div class="hcDName hcDNameLeft">RNG</div>
+        <img src="./image/teamIc.png" class="hcDTeamIcon hcDTeamIcon1">
+        <div class="hcDTDevide"></div>
+        <img src="./image/teamIc.png" class="hcDTeamIcon hcDTeamIcon2">
+        <div class="hcDName hcDNameRight">RNG</div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox">
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">风</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">水</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">土</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">火</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">365</div>
+        <!-- 小项的盒子 无内容 内容不填 -->
+        <div class="hcdItemBox"></div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">雷竞技</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox">
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:50%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">单数</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:50%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">双数</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">官网</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox">
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:50%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName"></span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:50%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName"></span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 每一行 -->
+      <div class="hcDLine">
+        <div class="hcdLineName">188</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox">
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">风</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">水</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">土</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+
+          <!-- 每个小项的总宽度,包含左右间距,宽度为1/小项总数*100% -->
+          <div class="hcdSmallItems" style="width:25%">
+            <!-- 小项背景色块 -->
+            <div class="hcdSItem">
+              <span class="hcdSItemName">火</span>
+              <span class="hcdSItemOdds">2.23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox"></div>
+      </div>
+
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox"></div>
+      </div>
+
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox"></div>
+      </div>
+
+      <div class="hcDLine">
+        <div class="hcdLineName">马头</div>
+        <!-- 小项的盒子 -->
+        <div class="hcdItemBox"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine3">
+    <div class="matchState stateFuture">今日<br>12:00</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">2.2</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">2.2</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">2.2</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStateBtnSafe">危险(10/10)</div>
+
+    <div class="oddsStateBox">
+      <div class="oddsSContent">90%,+4%,两项</div>
+      <div class="osTips osTipsDanger">危险</div>
+    </div>
+
+    <img src="./image/zanting.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorYellowG">1人</div>
+
+    <div class="punctuality puncRed">35%</div>
+    <div class="deal dealGreen">确认</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine4">
+    <div class="matchState stateFuture">今日<br>12:04</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">2.2</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">2.2</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">2.2</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStateBtnSafe">危险(10/10)</div>
+
+    <div class="oddsStateBox">
+      <div class="oddsSContent">90%,+4%,两项</div>
+      <div class="osTips osTipsSafe">
+        <div class="redDot"></div>
+        风险
+      </div>
+    </div>
+
+    <img src="./image/zanting.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorYellowG">1人</div>
+
+    <div class="punctuality puncRed">35%</div>
+    <div class="deal dealGreen">确认</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine5">
+    <div class="matchState stateFuture">明天<br>12:05</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealIgnore" onclick="popup(2)">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine6">
+    <div class="matchState stateFuture">明天<br>12:06</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine7">
+    <div class="matchState stateFuture">明天<br>12:07</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine8">
+    <div class="matchState stateFuture">明天<br>12:08</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine9">
+    <div class="matchState stateFuture">明天<br>12:09</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine10">
+    <div class="matchState stateFuture">明天<br>12:10</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine11">
+    <div class="matchState stateFuture">明天<br>12:11</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine12">
+    <div class="matchState stateFuture">明天<br>12:12</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine13">
+    <div class="matchState stateFuture">明天<br>12:13</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine14">
+    <div class="matchState stateFuture">明天<br>12:14</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine15">
+    <div class="matchState stateFuture">明天<br>12:15</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealYellow" onclick="popup(1)">处理</div>
+
+  </div>
+
+  <div class="formLine matchFuture" id="formLine16">
+    <div class="matchState stateFuture">明天<br>12:16</div>
+    <div class="formDevideLine"></div>
+
+    <div class="projectInfo">
+      <img src="./image/ic_qiuqiu.png" alt="">
+      <div class="piName">球球大作战</div>
+    </div>
+    <div class="formDevideLine"></div>
+
+    <div class="matchName">LPL-春季赛-常规赛规LPL-春季赛-常规赛规</div>
+    <div class="formDevideLine"></div>
+
+    <div class="odds">-</div>
+    <div class="teamName tnLeft">VP</div>
+    <img src="./image/teamIc.png" class="teamIcon">
+    <div class="odds" style="margin-left:13px">-</div>
+    <img src="./image/teamIc.png" class="teamIcon" style="margin-left:6px">
+    <div class="teamName tnRight">RNGRNGRNGRNG</div>
+    <div class="odds" style="margin-left:10px">-</div>
+    <div class="handicapNum">18</div>
+    <div class="matchStateBtn mStBtnNoWH">-</div>
+
+    <div class="oddsStateBox oddsStateNoWH">-</div>
+
+    <img src="./image/kaiqi.png" class="oOrCState">
+    <img src="./image/guanbi.png" class="oOrCState">
+
+    <img src="./image/weijieru_2.png" class="realTimeBox">
+
+    <div class="monitorNum monitorGreen">2人</div>
+
+    <div class="punctuality puncGreen">100%</div>
+    <div class="deal dealGrey">忽略</div>
+
+  </div>
+
+</body>
+<script>
+  window.onload = function () {
+    toCanvas('progressBar', 80);
+    setInterval("getTime();", 1000);
+  }
+
+  function toCanvas(id, progress) {
+    var canvas = document.getElementById(id),
+      ctx = canvas.getContext("2d"),
+      percent = progress,
+      circleX = canvas.width / 2,
+      circleY = canvas.height / 2,
+      radius = 29,
+      lineWidth = 7,
+      fontSize = 16;
+
+    function circle(cx, cy, r) {
+      ctx.beginPath();
+      ctx.lineWidth = lineWidth;
+      ctx.strokeStyle = '#3B414D';
+      ctx.arc(cx, cy, r, -Math.PI * 2, Math.PI / 2);
+      ctx.stroke();
+    }
+
+
+    function sector(cx, cy, r, startAngle, endAngle, anti) {
+      ctx.beginPath();
+      ctx.lineWidth = lineWidth;
+
+      // 渐变色 - 可自定义
+      var linGrad = ctx.createLinearGradient(
+        circleX - radius - lineWidth, circleY, circleX + radius + lineWidth, circleY
+      );
+      linGrad.addColorStop(0.0, '#16C0FF');
+      linGrad.addColorStop(1.0, '#008AFF');
+      ctx.strokeStyle = linGrad;
+      ctx.lineCap = 'round';
+
+      ctx.arc(
+        cx, cy, r,
+        -(Math.PI * 2),
+        -(Math.PI * 2) + endAngle / 100 * (Math.PI * 2),
+        false
+      );
+      ctx.stroke();
+    }
+
+
+    function loading() {
+      if (process >= percent) {
+        clearInterval(circleLoading);
+      }
+      ctx.clearRect(0, 0, circleX * 2, circleY * 2);
+
+      ctx.font = fontSize + 'px April';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = '#999';
+      ctx.fillText(parseFloat(process).toFixed(0) + '%', circleX, circleY);
+
+
+      circle(circleX, circleY, radius);
+
+      sector(circleX, circleY, radius, Math.PI * 2, process);
+
+      if (process / percent > 0.90) {
+        process += 0.30;
+      } else if (process / percent > 0.80) {
+        process += 0.55;
+      } else if (process / percent > 0.70) {
+        process += 0.75;
+      } else {
+        process += 1.0;
+      }
+    }
+
+    var process = 0.0;
+
+    var circleLoading = window.setInterval(function () {
+      loading();
+    }, 20);
+
+  }
+
+  //动态时间刷新
+  function getTime() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth();
+    var date = now.getDate();
+    var day = now.getDay();
+    var hour = now.getHours();
+    var minu = now.getMinutes();
+    var sec = now.getSeconds();
+    if (Number(sec) < 10) {
+      sec = "0" + sec.toString();
+    }
+    month = month + 1;
+    var time = year + "年" + month + "月" + date + "日 " + " " + hour + ":" + minu + ":" + sec; //组合系统时间 
+
+    var div1 = document.getElementById("time");//把时间通过通过innerHTML写到div中
+    div1.innerHTML = time;
+
+  }
+
+  //滚动距离超过400px，顶部固定
+  window.onscroll = function () {
+    var topDistance = document.documentElement.scrollTop || document.body.scrollTop;
+    var fixTop = document.getElementsByClassName('fixTop')[0];
+
+    if (topDistance > 400) {
+      fixTop.style.position = 'fixed';
+    } else if (topDistance < 200) {
+      fixTop.style.position = 'unset';
+    }
+  }
+
+  //展开面板
+  function openFormLine(lineName) {
+    var line = document.getElementById(lineName);
+    var isOpen = false;
+
+    for (var i = 0; i < line.classList.length; i++) {
+      if (line.classList[i] == 'openLine') {
+        isOpen = true;
+      }
+    }
+
+    if (!isOpen) {
+      line.classList.add('openLine');
+      line.classList.remove('closeLine');
+      line.style.paddingBottom = '20px';
+    } else {
+      line.classList.remove('openLine');
+      line.classList.add('closeLine');
+      line.style.height = '';
+      line.style.paddingBottom = '';
+    }
+
+  }
+
+  //展开竞猜项
+  function checkMoreItems(bigName) {
+    var itemCard = document.getElementById(bigName + 'itemsCard');
+    var guessItemBoard = document.getElementById(bigName + 'guessItemBoard');
+    var bigBox = document.getElementById(bigName);
+
+    guessItemBoard.style.height = 'fit-content';
+    itemCard.style.height = 'fit-content';
+    bigBox.style.height = 'fit-content';
+    bigBox.style.paddingBottom = '20px';
+    guessItemBoard.querySelector('.forMore').style.display = 'none';
+
+    event.stopPropagation();
+  }
+
+  //选择竞猜项 选择竞猜项后切换后面面板数据写在此处
+  function chooseItems(iName) {
+    var allItems = document.getElementsByClassName('items');
+    var chooseen = document.getElementById(iName);
+
+    for (var i = 0; i < allItems.length; i++) {
+      allItems[i].className = 'items';
+      allItems[i].querySelector('.itemName').className = 'itemName';
+    }
+
+    chooseen.classList.add('chooseItem');
+    chooseen.querySelector('.itemName').classList.add('chooseIName');
+
+    event.stopPropagation();
+
+  }
+
+  //打开弹窗 dealType 1:处理按钮 2:忽略按钮
+  function popup(dealType) {
+    event.stopPropagation();
+    var mask = document.getElementsByClassName('mask')[0];
+
+    if (dealType == 1) {
+      document.getElementById('mwIgnore').style.display = 'none';
+      document.getElementById('mwDeal').style.top = document.documentElement.scrollTop + 150 + 'px';
+      document.getElementById('mwDeal').style.display = 'block';
+    } else {
+      document.getElementById('mwDeal').style.display = 'none';
+      document.getElementById('mwIgnore').style.top = document.documentElement.scrollTop + 150 + 'px';
+      document.getElementById('mwIgnore').style.display = 'block';
+    }
+
+    mask.style.display = 'block';
+
+  }
+
+  //关闭弹窗
+  function closePop() {
+    var mask = document.getElementsByClassName('mask')[0];
+
+    mask.style.display = 'none';
+
+    event.stopPropagation();
+  }
+
+  //弹窗内选择警告项
+  function seltMWItem(itemName) {
+    var allItem = document.getElementsByClassName('mwLeftItem');
+    var seltItem = document.getElementById(itemName);
+
+    for (var i = 0; i < allItem.length; i++) {
+      allItem[i].className = 'mwLeftItem';
+    }
+
+    seltItem.classList.add('mwActive');
+  }
+</script>
+
+</html>

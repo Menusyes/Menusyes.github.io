@@ -1,0 +1,1105 @@
+.fixTop {
+  width: 100%;
+  background: rgba(38, 41, 46, 1);
+  z-index: 3;
+}
+
+.topTitle {
+  width: 100%;
+  height: 32px;
+  padding-top: 10px;
+  background: rgba(42, 45, 51, 1);
+}
+
+.meauIcon {
+  width: 17px;
+  height: 14px;
+  display: block;
+  float: left;
+  margin-left: 29px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.btsName {
+  width: 110px;
+  display: block;
+  float: left;
+  margin-left: 24px;
+}
+
+.topCardsBox {
+  width: 100%;
+  height: 103px;
+  margin-top: 19px;
+  overflow: hidden;
+}
+
+.matchNum {
+  width: 156px;
+  height: 91px;
+  background: rgba(45, 49, 58, 1);
+  border-radius: 6px;
+  float: left;
+  margin-left: 51px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.matchNum div {
+  width: 100%;
+  text-align: center;
+}
+
+.matchNumTitle {
+  height: 20px;
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(118, 129, 153, 1);
+}
+
+.mnNumber {
+  height: 19px;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  font-family: Roboto;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 6px;
+}
+
+.mnDes {
+  height: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: rgba(118, 129, 153, 1);
+  margin-top: 8px;
+}
+
+.tcbDivideLine {
+  height: 69px;
+  border-left: 2px solid rgba(67, 73, 87, 1);
+  float: left;
+  margin: 11px 47px 0 24px;
+}
+
+.futureBox {
+  width: 51px;
+  height: 43px;
+  padding: 12px 8px;
+  border: 2px solid rgba(90, 218, 133, 1);
+  float: left;
+  margin-top: 18px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(90, 218, 133, 1);
+  border-radius: 4px;
+}
+
+.bigMatchNum {
+  width: 242px;
+  height: 103px;
+  background: rgba(45, 49, 58, 1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  float: left;
+  margin-left: 48px;
+  overflow: hidden;
+}
+
+.cardsGreen,
+.cardsRed,
+.cardsYellow,
+.cardsGrey {
+  width: 10px;
+  height: 103px;
+  float: left;
+  border-radius: 6px 0 0 6px;
+}
+
+.cardsGreen {
+  background: rgba(90, 218, 133, 1);
+}
+
+.cardsRed {
+  background: rgba(235, 70, 72, 1);
+}
+
+.cardsYellow {
+  background: rgba(236, 216, 121, 1);
+}
+
+.cardsGrey {
+  background: rgba(204, 204, 204, 1);
+}
+
+.bmnCard {
+  width: 232px;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.bmnCardCont {
+  width: 102px;
+  height: 100%;
+  float: left;
+}
+
+.bmnCardTitle {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(118, 129, 153, 1);
+}
+
+.bmnCardNum {
+  width: 100%;
+  height: 22px;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  font-family: Roboto;
+  color: rgba(255, 255, 255, 1);
+}
+
+.bmnCardDes {
+  width: 100%;
+  height: 13px;
+  text-align: center;
+  margin-top: 13px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+  color: rgba(118, 129, 153, 1);
+}
+
+canvas {
+  position: absolute;
+  right: 23px;
+  top: 19px;
+  z-index: 1;
+}
+
+.ongoing,
+.matchAnomaly,
+.oddsAnomaly,
+.warehousing,
+.noMonitor,
+.noData {
+  width: 175px;
+  height: 103px;
+  background: rgba(45, 49, 58, 1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  float: left;
+  margin-left: 32px;
+}
+
+.ongoingCard,
+.maCard,
+.whCard,
+.nmCard,
+.ndCard {
+  width: 165px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+.cardTitle {
+  width: 100%;
+  height: 20px;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(118, 129, 153, 1);
+}
+
+.cardNum {
+  width: 100%;
+  height: 32px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 32px;
+  font-family: Roboto;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cardNum1,
+.cardNum2 {
+  width: 80px;
+  height: 32px;
+  float: left;
+  font-family: Roboto;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 20px;
+}
+
+.cardNum1 {
+  padding-right: 2px;
+  text-align: right;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 32px;
+
+}
+
+.cardNum2 {
+  padding-left: 2px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31px;
+}
+
+.topDate {
+  width: 1843px;
+  height: 35px;
+  border-bottom: 1px solid rgba(67, 73, 87, 1);
+  margin: 0 auto;
+  margin-top: 17px;
+}
+
+.topDateTitle {
+  width: 184px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(118, 129, 153, 1);
+  float: left;
+}
+
+.topDateTime {
+  width: 200px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 26px;
+  float: left;
+}
+
+.formTitleBox {
+  width: 1835px;
+  height: 18px;
+  margin: 18px auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(118, 129, 153, 1);
+}
+
+.formTitle {
+  height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(118, 129, 153, 1);
+  float: left;
+}
+
+.formLine {
+  width: 1900px;
+  height: 59px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.openLine {
+  animation: openLine 1s 1;
+  min-height: 360px !important;
+}
+
+.closeLine {
+  animation: closeLine 1s 1;
+  min-height: 59px !important;
+}
+
+@keyframes openLine {
+  0% {
+    min-height: 59px;
+  }
+
+  100% {
+    min-height: 360px
+  }
+}
+
+@keyframes closeLine {
+  0% {
+    min-height: 360px;
+  }
+
+  100% {
+    min-height: 59px
+  }
+}
+
+.matchFuture {
+  background: rgba(41, 46, 54, 1);
+}
+
+.matchOngoing {
+  background: rgba(47, 52, 61, 1);
+}
+
+.dangerous {
+  border: 1px solid rgba(255, 77, 78, 1);
+}
+
+.matchState {
+  width: 85px;
+  float: left;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+}
+
+.stateOngoing {
+  height: 16px;
+  margin-top: 21px;
+  color: rgba(90, 218, 133, 1);
+}
+
+.stateFuture {
+  height: 32px;
+  margin-top: 14px;
+  color: rgba(21, 188, 255, 1);
+}
+
+.formDevideLine {
+  height: 20px;
+  border-left: 1px solid rgba(67, 73, 87, 1);
+  float: left;
+  margin-top: 20px;
+}
+
+.projectInfo {
+  width: 111px;
+  height: 20px;
+  float: left;
+  margin-top: 21px;
+}
+
+.projectInfo img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin: 0 7px;
+}
+
+.piName {
+  width: 77px;
+  height: 16px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgba(118, 129, 153, 1);
+  float: left;
+  margin-top: 2px;
+}
+
+.matchName {
+  width: 143px;
+  height: 18px;
+  float: left;
+  margin: 22px 8px 0 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(157, 172, 204, 1);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.odds {
+  width: 53px;
+  height: 26px;
+  float: left;
+  margin: 18px 8px 0 23px;
+  background: rgba(61, 67, 79, 1);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.teamName {
+  width: 84px;
+  height: 16px;
+  float: left;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 23px;
+}
+
+.tnRight {
+  text-align: left;
+  margin-left: 6px;
+}
+
+.tnLeft {
+  text-align: right;
+  margin-right: 6px;
+}
+
+.teamIcon {
+  width: 25px;
+  height: 25px;
+  display: block;
+  float: left;
+  margin-top: 18px;
+}
+
+.handicapNum {
+  width: 29px;
+  height: 29px;
+  background: rgba(43, 47, 56, 1);
+  border-radius: 50%;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 29px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  float: left;
+  margin-top: 15px;
+  margin-left: 21px;
+}
+
+.matchStateBtn {
+  width: 113px;
+  height: 26px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 1);
+  float: left;
+  margin-top: 18px;
+  margin-left: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.mStateBtnSafe {
+  background: rgba(81, 196, 120, 1);
+}
+
+.mStateBtnDanger {
+  background: rgba(201, 60, 62, 1);
+}
+
+.mStBtnNoWH {
+  color: rgba(0, 0, 0, 1) !important;
+  background: rgba(209, 192, 107, 1);
+}
+
+.oddsStateBox {
+  width: 184px;
+  height: 30px;
+  background: rgba(61, 67, 79, 1);
+  border-radius: 4px;
+  float: left;
+  margin: 15px 80px 0 87px;
+}
+
+.oddsStateStop {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(122, 130, 145, 1);
+}
+
+.oddsStateNoWH {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 1);
+  background: rgba(209, 192, 107, 1) !important;
+}
+
+.oddsSContent {
+  width: 136px;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 1);
+  float: left;
+  text-align: center;
+}
+
+.osTips {
+  width: 48px;
+  height: 30px;
+  border-radius: 0px 4px 4px 0px;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+}
+
+.redDot {
+  width: 14px;
+  height: 14px;
+  background: rgba(235, 70, 72, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -7px;
+}
+
+.osTipsSafe {
+  background: rgba(78, 189, 115, 1);
+}
+
+.osTipsDanger {
+  background: rgba(201, 60, 62, 1);
+}
+
+.osTipsWarning {
+  background: rgba(200, 194, 23, 1);
+}
+
+.oOrCState {
+  width: 22px;
+  height: 22px;
+  display: block;
+  float: left;
+  margin-top: 19px;
+  margin-right: 42px;
+}
+
+.realTimeBox {
+  width: 42px;
+  float: left;
+  margin-top: 9px;
+  margin-left: 28px;
+}
+
+.monitorNum {
+  width: 65px;
+  height: 26px;
+  border-radius: 5px;
+  float: left;
+  margin-top: 17px;
+  margin-left: 51px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.monitorGreen {
+  background: rgba(81, 196, 120, 1);
+}
+
+.monitorRed {
+  background: rgba(201, 60, 62, 1);
+}
+
+.monitorYellowG {
+  background: rgba(138, 190, 49, 1);
+}
+
+.monitorGrey {
+  background: rgba(61, 67, 79, 1);
+}
+
+.punctuality {
+  width: 43px;
+  height: 19px;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 19px;
+  float: left;
+  margin-top: 21px;
+  margin-left: 31px;
+  text-align: center;
+}
+
+.puncGreen {
+  color: rgba(78, 189, 115, 1);
+}
+
+.puncOrange {
+  color: rgba(255, 109, 74, 1);
+}
+
+.puncRed {
+  color: rgba(235, 70, 72, 1);
+}
+
+.deal {
+  width: 65px;
+  height: 34px;
+  border-radius: 5px;
+  float: left;
+  margin-top: 13px;
+  margin-left: 38px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+.dealGrey {
+  background: rgba(61, 67, 79, 1);
+  color: rgba(102, 109, 122, 1);
+  cursor: default;
+}
+
+.dealYellow {
+  background: rgba(200, 194, 23, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.dealGreen {
+  background: rgba(81, 196, 120, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.dealYellow2 {
+  background: rgba(217, 199, 111, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.dealIgnore {
+  background: rgba(217, 199, 111, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* 展开后内容 */
+.matchInfoCard {
+  width: 247px;
+  height: 232px;
+  background: rgba(55, 60, 71, 1);
+  border-radius: 4px;
+  float: left;
+  margin-top: 23px;
+  margin-left: 87px;
+  overflow: hidden;
+}
+
+.micTitle {
+  width: 100%;
+  height: 37px;
+  border-bottom: 1px solid rgba(47, 52, 61, 1);
+}
+
+.boNum {
+  width: 54px;
+  height: 21px;
+  background: rgba(61, 67, 79, 1);
+  border-radius: 3px;
+  float: left;
+  margin-top: 9px;
+  margin-left: 22px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.micTName,
+.mictDivide {
+  width: 58px;
+  height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 1);
+  float: left;
+  margin-left: 8px;
+  margin-top: 11px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mictDivide {
+  width: 6px !important;
+  height: 16px !important;
+  font-size: 13px;
+  margin-top: 10px !important;
+}
+
+.eachRound {
+  width: 217px;
+  height: 38px;
+  margin: 0 auto;
+}
+
+.roundNum {
+  width: 68px;
+  height: 18px;
+  float: left;
+  margin-top: 11px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(118, 129, 153, 1);
+  text-align: center;
+}
+
+.scoreBoard {
+  width: 48px;
+  height: 21px;
+  background: rgba(61, 67, 79, 1);
+  border-radius: 3px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 11px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.highScore {
+  color: rgba(235, 70, 72, 1) !important;
+}
+
+.lowScore {
+  color: rgba(90, 218, 133, 1) !important;
+}
+
+.roundDevide {
+  width: 217px;
+  border-top: 1px solid rgba(47, 52, 61, 1);
+  margin: 0 auto;
+}
+
+/* 竞猜项面板 */
+.guessItemBoard {
+  width: 407;
+  height: 275px;
+  float: left;
+  margin-top: 23px;
+  margin-left: 39px;
+  background: rgba(55, 60, 71, 1);
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+
+.itemsCard {
+  width: 407px;
+  height: 245px;
+  overflow: hidden;
+}
+
+.items {
+  width: 391px;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.chooseItem {
+  background: rgba(61, 67, 79, 1);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+}
+
+.itemName {
+  width: 142px;
+  height: 22px;
+  padding-left: 8px;
+  float: left;
+  margin-top: 12px;
+  border-right: 1px solid rgba(67, 74, 87, 1);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(118, 129, 153, 1);
+  overflow: hidden;
+}
+
+.chooseIName {
+  color: rgba(190, 209, 247, 1) !important;
+}
+
+.itemRight {
+  width: 240px;
+  height: 18px;
+  float: left;
+  margin-top: 9px;
+}
+
+.irItems {
+  height: 18px;
+  float: left;
+  text-align: center;
+}
+
+.irItems span {
+  color: rgba(255, 255, 255, 1);
+}
+
+.irItemsName {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.irItemsOdds {
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.itemsDevideLine {
+  width: 399px;
+  border-bottom: 1px solid rgba(47, 52, 61, 1);
+  margin: 0 auto;
+}
+
+.forMore {
+  width: 100%;
+  height: 26px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.forMore img {
+  width: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 盘口数据面板 */
+.handicapBoard {
+  width: 224px;
+  height: 259px;
+  padding-top: 15px;
+  background: rgba(55, 60, 71, 1);
+  border-radius: 4px;
+  float: left;
+  margin-top: 23px;
+  margin-left: 42px;
+  overflow: hidden;
+}
+
+.hbLine {
+  width: 204px;
+  height: 18px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.handicapName {
+  width: 81px;
+  height: 100%;
+  float: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(157, 172, 204, 1);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.handicapTime {
+  width: 78px;
+  height: 17px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 1);
+  float: left;
+}
+
+.handicapState {
+  width: 28px;
+  height: 100%;
+  float: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+}
+
+.hsNormal {
+  color: rgba(78, 189, 115, 1);
+}
+
+.hsClose {
+  color: rgba(201, 60, 62, 1);
+}
+
+.hsNoState {
+  color: rgba(204, 204, 204, 1);
+}
+
+/* 盘口对比比赛详情 */
+.handicapDetail {
+  width: 285px;
+  height: 274px;
+  background: rgba(55, 60, 71, 1);
+  border-radius: 4px;
+  float: left;
+  margin-top: 23px;
+  margin-left: 19px;
+  overflow: hidden;
+}
+
+.hcDTitle {
+  width: 285px;
+  height: 18px;
+  margin-top: 6px;
+}
+
+.hcDName {
+  width: 114px;
+  height: 15px;
+  float: left;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: rgba(157, 172, 204, 1);
+  overflow: hidden;
+}
+
+.hcDNameLeft {
+  text-align: right;
+}
+
+.hcDNameRight {
+  text-align: left;
+}
+
+.hcDTeamIcon {
+  width: 17px;
+  display: block;
+  float: left;
+}
+
+.hcDTeamIcon1 {
+  margin-left: 7px;
+}
+
+.hcDTeamIcon2 {
+  margin-right: 7px;
+}
+
+.hcDTDevide {
+  width: 10px;
+  border-top: 2px solid rgba(118, 129, 153, 1);
+  float: left;
+  margin: 8px 23px;
+}
+
+.hcDLine {
+  width: 269px;
+  height: 16px;
+  padding-left: 16px;
+  margin-top: 11px;
+}
+
+.hcdLineName {
+  width: 39px;
+  height: 15px;
+  float: left;
+  margin-top: 1px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: rgba(157, 172, 204, 1);
+  overflow: hidden;
+}
+
+.hcdItemBox {
+  width: 230px;
+  height: 16px;
+  float: left;
+}
+
+.hcdSmallItems {
+  height: 16px;
+  float: left;
+  max-width: 115px;
+  overflow: hidden;
+}
+
+.hcdSItem {
+  width: fit-content;
+  height: 16px;
+  margin: 0 auto;
+  padding: 0 3px;
+  background: rgba(61, 67, 79, 1);
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.hcdSItemName {
+  max-width: 85px;
+  height: 15px;
+  font-family: Microsoft YaHei UI;
+  font-weight: 400;
+  display: block;
+  float: left;
+  overflow: hidden;
+}
+
+.hcdSItemOdds {
+  max-width: 24px;
+  height: 15px;
+  font-family: Roboto;
+  font-weight: 500;
+  display: block;
+  float: left;
+  overflow: hidden;
+}
